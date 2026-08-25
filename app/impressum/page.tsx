@@ -1,8 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "Impressum · KBS – KI-Beratung Saar"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Impressum",
+  description:
+    "Impressum von KBS – KI-Beratung Saar. Verantwortlich für den Inhalt und rechtliche Angaben gemäß § 5 TMG.",
+  alternates: { canonical: "https://kbsaar.de/impressum" },
+  robots: { index: true, follow: true }
 };
 
 export default function ImpressumPage() {
@@ -29,7 +35,7 @@ export default function ImpressumPage() {
               <h2 className="mb-2 text-lg font-semibold text-ink-900">Kontakt</h2>
               <p>
                 Telefon: 0681 · 000 000 00<br />
-                E-Mail: hallo@kbs-saar.de
+                E-Mail: hallo@kbsaar.de
               </p>
             </div>
             <div>

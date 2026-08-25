@@ -46,7 +46,7 @@ export default function Footer() {
             </p>
             <ul className="mt-5 space-y-2.5 text-[14px] text-ink-700">
               <li><a href="tel:+4968100000000" className="hover:text-ink-900">0681 · 000 000 00</a></li>
-              <li><a href="mailto:hallo@kbs-saar.de" className="hover:text-ink-900">hallo@kbs-saar.de</a></li>
+              <li><a href="mailto:hallo@kbsaar.de" className="hover:text-ink-900">hallo@kbsaar.de</a></li>
               <li className="pt-4 text-[13px] text-ink-400">Mo – Fr · 09 – 18 Uhr</li>
             </ul>
           </div>

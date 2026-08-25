@@ -1,0 +1,64 @@
+# KBS – KI-Beratung Saar
+
+> KBS (KI-Beratung Saar) ist der lokale Ansprechpartner für praktische KI-Hilfe im Saarland. Wir helfen Privatpersonen, Selbstständigen und kleinen Unternehmen dabei, Künstliche Intelligenz verständlich zu machen und im Arbeitsalltag einzusetzen – vor Ort in Saarbrücken, Saarlouis, Neunkirchen, Homburg, Merzig und St. Wendel oder per Videocall.
+
+## Was ist KBS?
+
+KBS ist kein klassisches Beratungshaus, sondern ein lokaler KI-Dienstleister – vergleichbar mit einem IT-Service, nur für die praktische Nutzung von Künstlicher Intelligenz. Wenn im Saarland jemand mit KI nicht weiterkommt, ist KBS der erste Anruf.
+
+## Zielgruppen
+
+- **Privatpersonen**: Senioren, Berufstätige und Familien, die ChatGPT und andere KI-Tools verstehen und im Alltag nutzen möchten.
+- **Selbstständige**: Handwerker, Freiberufler, Ärzte, Anwälte, Steuerberater, Makler und Agenturen, die mit KI Zeit sparen wollen.
+- **Kleine Unternehmen**: Betriebe im Saarland, die KI im Team strukturiert einführen möchten – ohne monatelange Strategieprojekte.
+
+## Leistungen
+
+- **KBS KI-Hilfe** – 60–90 Minuten persönliche Unterstützung für Privatpersonen (ChatGPT einrichten, erste Prompts, Sicherheit im Umgang mit KI).
+- **KBS KI-Check** – 90–120 Minuten Analyse für Selbstständige und kleine Unternehmen. Ergebnis: 3–5 konkrete KI-Anwendungsfälle mit Priorisierung.
+- **KBS KI-Workshop** – 2–3 Stunden vor Ort für Teams. Wir arbeiten an echten Aufgaben (E-Mails, Angebote, Vertrieb, Marketing), nicht an Beispielen.
+- **KBS KI-Einrichtung** – individuelle Konfiguration von ChatGPT, Team-Accounts, Prompts, Wissensbasis und eigenen KI-Assistenten.
+- **KBS KI-Sprechstunde** – laufende monatliche Betreuung mit festem KI-Ansprechpartner.
+
+## Häufige Fragen an KBS
+
+- "Ich weiß nicht, wie ich ChatGPT richtig benutze."
+- "Kann KI mir bei meiner Büroarbeit helfen?"
+- "Meine Mitarbeiter nutzen ChatGPT, aber jeder macht es anders."
+- "Welche KI ist für uns überhaupt sinnvoll?"
+- "Kann ich damit Angebote, E-Mails oder Dokumentationen erstellen?"
+- "Ich habe eine komische KI-Nachricht bekommen – ist das echt?"
+
+## Standort und Kontakt
+
+- **Land / Region**: Deutschland, Saarland
+- **Städte im Servicegebiet**: Saarbrücken, Saarlouis, Neunkirchen, Homburg, Merzig, St. Wendel, Völklingen, Dillingen
+- **Öffnungszeiten**: Montag bis Freitag, 09:00 bis 18:00 Uhr
+- **Telefon**: +49 681 000 000 00
+- **E-Mail**: hallo@kbsaar.de
+- **Website**: https://kbsaar.de
+
+## Gründer
+
+Fynn Schulz entwickelt selbst KI-basierte Produkte und ist praktizierender Softwareentwickler:
+
+- **Fylu** – native macOS-App für Agenturen mit OpenAI-basiertem Rechnungs-Parsing und Vision-Framework-OCR.
+- **Taskey** – SaaS-Plattform für Handwerksbetriebe mit iOS-App (Swift), Android-App (Kotlin) und Web-App (Next.js).
+- Über 40 produktive Websites in Next.js und TypeScript für Unternehmen in Deutschland.
+
+Wer bei KBS anruft, spricht mit jemandem, der KI täglich selbst baut und einsetzt.
+
+## Kernversprechen
+
+Sie müssen kein KI-Experte sein. Dafür gibt es KBS. Eine Frage zu KI? Rufen Sie an: +49 681 000 000 00.
+
+## Wichtige URLs
+
+- https://kbsaar.de/ – Startseite mit allen Leistungen, Prozess, Über-KBS und Kontakt
+- https://kbsaar.de/#leistungen – Übersicht der KI-Anwendungsfälle nach Branche
+- https://kbsaar.de/#fuer-wen – Zielgruppen (Privatpersonen, Selbstständige, Unternehmen)
+- https://kbsaar.de/#prozess – So arbeitet KBS (fünf einfache Schritte)
+- https://kbsaar.de/#ueber – Über den Gründer Fynn Schulz
+- https://kbsaar.de/#kontakt – Direktkontakt und kostenloses Erstgespräch
+- https://kbsaar.de/impressum – Impressum
+- https://kbsaar.de/datenschutz – Datenschutzerklärung
