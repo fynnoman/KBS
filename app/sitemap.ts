@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/#fuer-wen`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/#prozess`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/#ueber`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/#termin`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
     { url: `${base}/#kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
 
     { url: `${base}/leistungen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },

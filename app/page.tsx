@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import HomeCalendly from "@/components/HomeCalendly";
 import AudienceCards from "@/components/AudienceCards";
 import ScrollScaleBackground from "@/components/ScrollScaleBackground";
 import QuoteWall from "@/components/QuoteWall";
@@ -18,6 +19,7 @@ export default function Home() {
     <main className="relative">
       <Navigation />
       <Hero />
+      <HomeCalendly />
       <AudienceCards />
 
       <ScrollScaleBackground

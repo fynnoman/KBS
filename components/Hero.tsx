@@ -60,12 +60,12 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="mt-10 flex flex-wrap items-center gap-3"
             >
-              <Link href="tel:+4915168488999" className="btn-primary">
+              <Link href="#termin" className="btn-primary">
                 <Phone size={16} strokeWidth={2.4} />
-                Jetzt anrufen
+                Termin buchen
               </Link>
-              <Link href="#kontakt" className="btn-ghost">
-                Kostenloses Erstgespräch
+              <Link href="tel:+4915168488999" className="btn-ghost">
+                Jetzt anrufen
                 <ArrowRight size={16} strokeWidth={2.2} />
               </Link>
             </motion.div>
