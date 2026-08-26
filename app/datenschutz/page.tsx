@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Datenschutz",
   description:
     "Datenschutzerklärung von KBS – KI-Beratung Saar. Informationen zum Umgang mit personenbezogenen Daten gemäß DSGVO.",
-  alternates: { canonical: "https://kbsaar.de/datenschutz" },
+  alternates: { canonical: "https://ki-beratung-saar.com/datenschutz" },
   robots: { index: true, follow: true }
 };
 
@@ -33,7 +33,7 @@ export default function DatenschutzPage() {
               <p>
                 KBS – KI-Beratung Saar<br />
                 Musterstraße 1, 66111 Saarbrücken<br />
-                hallo@kbsaar.de
+                hallo@ki-beratung-saar.com
               </p>
             </div>
             <div>

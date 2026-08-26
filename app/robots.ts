@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const base = "https://kbsaar.de";
+  const base = "https://ki-beratung-saar.com";
   return {
     rules: [
       { userAgent: "*", allow: "/" },

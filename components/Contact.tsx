@@ -46,7 +46,7 @@ export default function Contact() {
                 </Link>
 
                 <a
-                  href="mailto:hallo@kbsaar.de"
+                  href="mailto:hallo@ki-beratung-saar.com"
                   className="group flex items-center justify-between rounded-3xl border border-ink-900/10 bg-white p-6 transition-all hover:shadow-lift"
                 >
                   <div className="flex items-center gap-5">
@@ -58,7 +58,7 @@ export default function Contact() {
                         E-Mail
                       </p>
                       <p className="mt-1 text-xl font-medium tracking-tight text-ink-900">
-                        hallo@kbsaar.de
+                        hallo@ki-beratung-saar.com
                       </p>
                     </div>
                   </div>

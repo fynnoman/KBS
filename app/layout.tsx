@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const SITE_URL = "https://kbsaar.de";
+const SITE_URL = "https://ki-beratung-saar.com";
 const SITE_NAME = "KBS – KI-Beratung Saar";
 const DESCRIPTION =
   "KBS ist der lokale KI-Ansprechpartner im Saarland. Wir zeigen Privatpersonen, Selbstständigen und kleinen Unternehmen, wie sie ChatGPT und andere KI-Tools verständlich und praktisch nutzen – vor Ort in Saarbrücken, Saarlouis, Neunkirchen, Homburg, Merzig und St. Wendel.";
@@ -117,7 +117,7 @@ const jsonLdGraph = {
       description: DESCRIPTION,
       slogan: "KI verstehen. Einfach machen.",
       telephone: "+49-681-00000000",
-      email: "hallo@kbsaar.de",
+      email: "hallo@ki-beratung-saar.com",
       priceRange: "€€",
       currenciesAccepted: "EUR",
       paymentAccepted: "Überweisung, Rechnung",

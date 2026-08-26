@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Impressum",
   description:
     "Impressum von KBS – KI-Beratung Saar. Verantwortlich für den Inhalt und rechtliche Angaben gemäß § 5 TMG.",
-  alternates: { canonical: "https://kbsaar.de/impressum" },
+  alternates: { canonical: "https://ki-beratung-saar.com/impressum" },
   robots: { index: true, follow: true }
 };
 
@@ -35,7 +35,7 @@ export default function ImpressumPage() {
               <h2 className="mb-2 text-lg font-semibold text-ink-900">Kontakt</h2>
               <p>
                 Telefon: 0681 · 000 000 00<br />
-                E-Mail: hallo@kbsaar.de
+                E-Mail: hallo@ki-beratung-saar.com
               </p>
             </div>
             <div>

@@ -35,8 +35,8 @@ KBS ist kein klassisches Beratungshaus, sondern ein lokaler KI-Dienstleister –
 - **Städte im Servicegebiet**: Saarbrücken, Saarlouis, Neunkirchen, Homburg, Merzig, St. Wendel, Völklingen, Dillingen
 - **Öffnungszeiten**: Montag bis Freitag, 09:00 bis 18:00 Uhr
 - **Telefon**: +49 681 000 000 00
-- **E-Mail**: hallo@kbsaar.de
-- **Website**: https://kbsaar.de
+- **E-Mail**: hallo@ki-beratung-saar.com
+- **Website**: https://ki-beratung-saar.com
 
 ## Gründer
 
@@ -54,11 +54,11 @@ Sie müssen kein KI-Experte sein. Dafür gibt es KBS. Eine Frage zu KI? Rufen Si
 
 ## Wichtige URLs
 
-- https://kbsaar.de/ – Startseite mit allen Leistungen, Prozess, Über-KBS und Kontakt
-- https://kbsaar.de/#leistungen – Übersicht der KI-Anwendungsfälle nach Branche
-- https://kbsaar.de/#fuer-wen – Zielgruppen (Privatpersonen, Selbstständige, Unternehmen)
-- https://kbsaar.de/#prozess – So arbeitet KBS (fünf einfache Schritte)
-- https://kbsaar.de/#ueber – Über den Gründer Fynn Schulz
-- https://kbsaar.de/#kontakt – Direktkontakt und kostenloses Erstgespräch
-- https://kbsaar.de/impressum – Impressum
-- https://kbsaar.de/datenschutz – Datenschutzerklärung
+- https://ki-beratung-saar.com/ – Startseite mit allen Leistungen, Prozess, Über-KBS und Kontakt
+- https://ki-beratung-saar.com/#leistungen – Übersicht der KI-Anwendungsfälle nach Branche
+- https://ki-beratung-saar.com/#fuer-wen – Zielgruppen (Privatpersonen, Selbstständige, Unternehmen)
+- https://ki-beratung-saar.com/#prozess – So arbeitet KBS (fünf einfache Schritte)
+- https://ki-beratung-saar.com/#ueber – Über den Gründer Fynn Schulz
+- https://ki-beratung-saar.com/#kontakt – Direktkontakt und kostenloses Erstgespräch
+- https://ki-beratung-saar.com/impressum – Impressum
+- https://ki-beratung-saar.com/datenschutz – Datenschutzerklärung

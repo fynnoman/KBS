@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "Wie schnell bekomme ich einen Termin?",
-    a: "In der Regel innerhalb weniger Werktage. Rufen Sie unter +49 681 000 000 00 an oder schreiben Sie an hallo@kbsaar.de. Anrufe außerhalb unserer Erreichbarkeit (Montag bis Freitag, 09:00 bis 18:00 Uhr) rufen wir am selben Werktag zurück."
+    a: "In der Regel innerhalb weniger Werktage. Rufen Sie unter +49 681 000 000 00 an oder schreiben Sie an hallo@ki-beratung-saar.com. Anrufe außerhalb unserer Erreichbarkeit (Montag bis Freitag, 09:00 bis 18:00 Uhr) rufen wir am selben Werktag zurück."
   },
   {
     q: "Ist KBS eine klassische Unternehmensberatung?",

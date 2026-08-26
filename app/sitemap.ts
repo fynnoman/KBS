@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://kbsaar.de";
+  const base = "https://ki-beratung-saar.com";
   const now = new Date();
   return [
     {
