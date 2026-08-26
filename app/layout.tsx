@@ -117,7 +117,7 @@ const jsonLdGraph = {
       description: DESCRIPTION,
       slogan: "KI verstehen. Einfach machen.",
       telephone: "+49-681-00000000",
-      email: "fynnschulzonline@gmail.com",
+      email: "info@ki-beratung-saar.com",
       priceRange: "€€",
       currenciesAccepted: "EUR",
       paymentAccepted: "Überweisung, Rechnung",

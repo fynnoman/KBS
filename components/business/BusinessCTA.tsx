@@ -1,7 +1,7 @@
 "use client";
 
 import { CalendarClock, Phone, Mail, ExternalLink } from "lucide-react";
-import { CALENDLY_URL, PHONE_DISPLAY, PHONE_TEL, EMAIL } from "@/lib/config";
+import { CALENDLY_URL, PHONE_DISPLAY, PHONE_TEL, EMAIL, EMAIL_DISPLAY } from "@/lib/config";
 import Reveal from "../Reveal";
 import CalendlyEmbed from "../CalendlyEmbed";
 
@@ -81,7 +81,7 @@ export default function BusinessCTA() {
                       Oder per E-Mail
                     </p>
                     <p className="mt-0.5 text-[13px] leading-relaxed text-ink-500">
-                      {EMAIL}
+                      {EMAIL_DISPLAY}
                     </p>
                   </div>
                 </a>

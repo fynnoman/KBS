@@ -11,16 +11,17 @@ const HOME_NAV = [
   { href: "/leistungen", label: "Leistungen" },
   { href: "/standorte", label: "Standorte" },
   { href: "/insights", label: "Insights" },
-  { href: "/business", label: "Business" },
+  { href: "/business", label: "Business", highlight: true },
   { href: "/#kontakt", label: "Kontakt" }
 ];
 
 const BUSINESS_NAV = [
   { href: "/business#use-cases", label: "Use-Cases" },
+  { href: "/business#branchen", label: "Branchen" },
   { href: "/business#lokale-ki", label: "Lokale KI" },
   { href: "/business#prozess", label: "Prozess" },
   { href: "/business#faq", label: "FAQ" },
-  { href: "/", label: "Zur KMU-Seite" }
+  { href: "/", label: "Zur KMU-Seite", highlight: true }
 ];
 
 export default function Navigation() {
@@ -41,8 +42,8 @@ export default function Navigation() {
       <nav
         className={`pointer-events-auto grid w-full max-w-6xl grid-cols-[1fr_auto_1fr] items-center rounded-full border px-4 py-2.5 transition-all duration-300 ${
           scrolled
-            ? "border-white/10 bg-ink-900/90 shadow-lift md:bg-ink-900/85 md:backdrop-blur-2xl md:backdrop-saturate-150"
-            : "border-white/5 bg-ink-900/80 md:bg-ink-900/70 md:backdrop-blur-xl"
+            ? "border-white/10 bg-ink-900/85 shadow-lift md:bg-ink-900/80 md:backdrop-blur-2xl md:backdrop-saturate-150"
+            : "border-white/5 bg-ink-900/75 md:bg-ink-900/65 md:backdrop-blur-xl"
         }`}
       >
         {/* Left: nav items */}
@@ -51,7 +52,11 @@ export default function Navigation() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="rounded-full px-3.5 py-2 text-[13.5px] font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white"
+                className={`rounded-full px-3.5 py-2 text-[13.5px] font-medium transition-colors ${
+                  item.highlight
+                    ? "bg-white/10 text-white hover:bg-white/15"
+                    : "text-white/75 hover:bg-white/10 hover:text-white"
+                }`}
               >
                 {item.label}
               </Link>

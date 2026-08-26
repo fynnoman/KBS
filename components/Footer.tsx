@@ -93,10 +93,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:fynnschulzonline@gmail.com"
+                  href="mailto:info@ki-beratung-saar.com"
                   className="hover:text-ink-900"
                 >
-                  fynnschulzonline@gmail.com
+                  info(at)ki-beratung-saar.com
                 </a>
               </li>
               <li className="pt-2 text-[13px] text-ink-400">

@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BusinessHero from "@/components/business/BusinessHero";
 import BusinessUseCases from "@/components/business/BusinessUseCases";
+import BusinessIndustries from "@/components/business/BusinessIndustries";
 import LocalAIFeature from "@/components/business/LocalAIFeature";
 import BusinessProcess from "@/components/business/BusinessProcess";
 import BusinessProof from "@/components/business/BusinessProof";
@@ -190,6 +191,7 @@ export default function BusinessPage() {
       <BusinessHero />
       <BusinessCTA />
       <BusinessUseCases />
+      <BusinessIndustries />
       <LocalAIFeature />
       <BusinessProcess />
       <BusinessProof />

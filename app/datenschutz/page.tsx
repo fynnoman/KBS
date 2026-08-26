@@ -33,7 +33,7 @@ export default function DatenschutzPage() {
               <p>
                 KBS – KI-Beratung Saar<br />
                 Musterstraße 1, 66111 Saarbrücken<br />
-                fynnschulzonline@gmail.com
+                info(at)ki-beratung-saar.com
               </p>
             </div>
             <div>
