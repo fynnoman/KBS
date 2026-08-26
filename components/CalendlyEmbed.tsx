@@ -104,10 +104,10 @@ export default function CalendlyEmbed({
 
   return (
     <div
-      ref={ref}
       className={`relative overflow-hidden rounded-3xl bg-ink-50 ${className}`}
       style={{ minWidth: "280px", height }}
     >
+      <div ref={ref} className="h-full w-full" />
       {state !== "ready" && (
         <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center gap-3 text-center">
           {state === "loading" ? (
