@@ -34,8 +34,8 @@ export default function ImpressumPage() {
             <div>
               <h2 className="mb-2 text-lg font-semibold text-ink-900">Kontakt</h2>
               <p>
-                Telefon: 0681 · 000 000 00<br />
-                E-Mail: hallo@ki-beratung-saar.com
+                Telefon: 0151 · 68488999<br />
+                E-Mail: fynnschulzonline@gmail.com
               </p>
             </div>
             <div>

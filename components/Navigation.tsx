@@ -8,9 +8,9 @@ import Logo from "./Logo";
 import { CALENDLY_URL, PHONE_TEL } from "@/lib/config";
 
 const HOME_NAV = [
-  { href: "/#leistungen", label: "Leistungen" },
-  { href: "/#fuer-wen", label: "Für wen" },
-  { href: "/#prozess", label: "So arbeiten wir" },
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/standorte", label: "Standorte" },
+  { href: "/insights", label: "Insights" },
   { href: "/business", label: "Business" },
   { href: "/#kontakt", label: "Kontakt" }
 ];
@@ -41,8 +41,8 @@ export default function Navigation() {
       <nav
         className={`pointer-events-auto grid w-full max-w-6xl grid-cols-[1fr_auto_1fr] items-center rounded-full border px-4 py-2.5 transition-all duration-300 ${
           scrolled
-            ? "border-white/10 bg-ink-900/85 shadow-lift backdrop-blur-2xl backdrop-saturate-150"
-            : "border-white/5 bg-ink-900/70 backdrop-blur-xl"
+            ? "border-white/10 bg-ink-900/90 shadow-lift md:bg-ink-900/85 md:backdrop-blur-2xl md:backdrop-saturate-150"
+            : "border-white/5 bg-ink-900/80 md:bg-ink-900/70 md:backdrop-blur-xl"
         }`}
       >
         {/* Left: nav items */}

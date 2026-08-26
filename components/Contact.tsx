@@ -24,7 +24,7 @@ export default function Contact() {
 
               <div className="mt-10 space-y-4">
                 <Link
-                  href="tel:+4968100000000"
+                  href="tel:+4915168488999"
                   className="group flex items-center justify-between rounded-3xl border border-ink-900/10 bg-white p-6 transition-all hover:shadow-lift"
                 >
                   <div className="flex items-center gap-5">
@@ -36,7 +36,7 @@ export default function Contact() {
                         Telefon
                       </p>
                       <p className="mt-1 text-xl font-medium tracking-tight text-ink-900">
-                        0681 · 000 000 00
+                        0151 · 68488999
                       </p>
                     </div>
                   </div>
@@ -46,7 +46,7 @@ export default function Contact() {
                 </Link>
 
                 <a
-                  href="mailto:hallo@ki-beratung-saar.com"
+                  href="mailto:fynnschulzonline@gmail.com"
                   className="group flex items-center justify-between rounded-3xl border border-ink-900/10 bg-white p-6 transition-all hover:shadow-lift"
                 >
                   <div className="flex items-center gap-5">
@@ -58,7 +58,7 @@ export default function Contact() {
                         E-Mail
                       </p>
                       <p className="mt-1 text-xl font-medium tracking-tight text-ink-900">
-                        hallo@ki-beratung-saar.com
+                        fynnschulzonline@gmail.com
                       </p>
                     </div>
                   </div>
@@ -107,7 +107,7 @@ export default function Contact() {
               </ul>
 
               <Link
-                href="tel:+4968100000000"
+                href="tel:+4915168488999"
                 className="mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-ink-900 px-5 py-4 text-[14.5px] font-medium text-white transition-all hover:bg-ink-700"
               >
                 <Phone size={15} strokeWidth={2.4} />

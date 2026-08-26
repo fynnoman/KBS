@@ -4,13 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Phone, ArrowRight } from "lucide-react";
+import KIStamp from "./KIStamp";
 
 export default function Hero() {
   const reduce = useReducedMotion();
 
   return (
     <section className="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28">
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
         <div className="absolute -left-40 top-10 h-[480px] w-[480px] rounded-full bg-accent-100 opacity-40 blur-3xl" />
         <div className="absolute -right-40 top-40 h-[520px] w-[520px] rounded-full bg-ink-100 opacity-60 blur-3xl" />
       </div>
@@ -59,7 +60,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="mt-10 flex flex-wrap items-center gap-3"
             >
-              <Link href="tel:+4968100000000" className="btn-primary">
+              <Link href="tel:+4915168488999" className="btn-primary">
                 <Phone size={16} strokeWidth={2.4} />
                 Jetzt anrufen
               </Link>
@@ -77,7 +78,8 @@ export default function Hero() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-4xl border border-ink-900/8 bg-ink-100 shadow-lift">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-4xl border border-ink-900/8 bg-ink-100 shadow-lift sm:aspect-[5/4] lg:aspect-[4/5]">
+              <KIStamp />
               <Image
                 src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80"
                 alt="Modernes Büro – Ort der KI-Beratung im Saarland"

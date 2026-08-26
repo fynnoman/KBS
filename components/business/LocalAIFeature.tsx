@@ -35,8 +35,8 @@ export default function LocalAIFeature() {
     <section id="lokale-ki" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="relative overflow-hidden rounded-4xl border border-ink-900/10 bg-ink-900 px-8 py-16 text-white sm:px-14 sm:py-20 md:px-20 md:py-24">
-          <div className="pointer-events-none absolute -right-40 -top-40 h-[480px] w-[480px] rounded-full bg-accent-500/15 blur-3xl" />
-          <div className="pointer-events-none absolute -left-40 -bottom-40 h-[420px] w-[420px] rounded-full bg-accent-500/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-40 -top-40 hidden h-[480px] w-[480px] rounded-full bg-accent-500/15 blur-3xl md:block" />
+          <div className="pointer-events-none absolute -left-40 -bottom-40 hidden h-[420px] w-[420px] rounded-full bg-accent-500/10 blur-3xl md:block" />
 
           <Reveal>
             <div className="relative max-w-3xl">

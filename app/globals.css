@@ -110,8 +110,10 @@
   .btn-primary {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    padding: 0.85rem 1.4rem;
+    padding: 0.95rem 1.5rem;
+    min-height: 48px;
     border-radius: 999px;
     background: #0E121A;
     color: #FFFFFF;
@@ -128,8 +130,10 @@
   .btn-ghost {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    padding: 0.85rem 1.4rem;
+    padding: 0.95rem 1.5rem;
+    min-height: 48px;
     border-radius: 999px;
     background: #FFFFFF;
     color: #0E121A;
@@ -141,6 +145,14 @@
   .btn-ghost:hover {
     transform: translateY(-1px);
     box-shadow: 0 14px 36px -18px rgba(14, 18, 26, 0.25);
+  }
+
+  /* Mobile: full-width primary/ghost buttons for easy tapping */
+  @media (max-width: 640px) {
+    .btn-primary,
+    .btn-ghost {
+      width: 100%;
+    }
   }
 }
 
@@ -158,4 +170,25 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+/* Mobile density: shrink oversized paddings on small screens.
+   Tailwind's py-24 = 96px which is too much on phones; use py-16 = 64px. */
+@media (max-width: 640px) {
+  .py-24 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .py-32 { padding-top: 4rem; padding-bottom: 4rem; }
+  .py-20 { padding-top: 3rem; padding-bottom: 3rem; }
+  .pt-36 { padding-top: 6.5rem; }
+  .pt-40 { padding-top: 7rem; }
+  .pt-44 { padding-top: 7rem; }
+  .pt-48 { padding-top: 7.5rem; }
+}
+
+/* Content-safe scroll offset so anchor jumps don't get hidden under the nav */
+html { scroll-padding-top: 90px; }
+@media (max-width: 640px) { html { scroll-padding-top: 78px; } }
+
+/* Slightly tighter horizontal padding on tiny screens */
+@media (max-width: 380px) {
+  .px-6 { padding-left: 1rem; padding-right: 1rem; }
 }

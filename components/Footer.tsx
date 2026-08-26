@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import { CITIES } from "@/lib/data/cities";
+import { SERVICES } from "@/lib/data/services";
 
 export default function Footer() {
   return (
@@ -13,7 +15,7 @@ export default function Footer() {
               KI-Hilfe im Saarland.
             </p>
             <p className="mt-6 text-[13px] leading-relaxed text-ink-400">
-              Saarbrücken · Saarlouis · Neunkirchen · Homburg · Merzig · St. Wendel
+              Saarbrücken · Saarlouis · Neunkirchen · Homburg · Merzig · St. Wendel · Völklingen · Dillingen
             </p>
           </div>
 
@@ -22,33 +24,84 @@ export default function Footer() {
               Leistungen
             </p>
             <ul className="mt-5 space-y-2.5 text-[14px] text-ink-700">
-              <li><Link href="/#leistungen" className="hover:text-ink-900">Anwendungsfälle</Link></li>
-              <li><Link href="/#fuer-wen" className="hover:text-ink-900">Privatpersonen</Link></li>
-              <li><Link href="/#fuer-wen" className="hover:text-ink-900">Selbstständige</Link></li>
-              <li><Link href="/#fuer-wen" className="hover:text-ink-900">Kleine Unternehmen</Link></li>
-              <li><Link href="/business" className="font-medium text-accent-700 hover:text-accent-800">KBS Business →</Link></li>
-              <li><Link href="/#prozess" className="hover:text-ink-900">So arbeiten wir</Link></li>
+              {SERVICES.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    href={`/leistungen/${s.slug}`}
+                    className="hover:text-ink-900"
+                  >
+                    {s.name.replace("KBS ", "")}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/business"
+                  className="font-medium text-accent-700 hover:text-accent-800"
+                >
+                  KBS Business →
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-ink-400">
-              Rechtliches
+              Standorte
             </p>
             <ul className="mt-5 space-y-2.5 text-[14px] text-ink-700">
-              <li><Link href="/impressum" className="hover:text-ink-900">Impressum</Link></li>
-              <li><Link href="/datenschutz" className="hover:text-ink-900">Datenschutz</Link></li>
+              {CITIES.slice(0, 6).map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={`/standorte/${c.slug}`}
+                    className="hover:text-ink-900"
+                  >
+                    KI-Beratung {c.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/standorte"
+                  className="text-ink-400 hover:text-ink-700"
+                >
+                  Alle Standorte →
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-ink-400">
-              Kontakt
+              Ressourcen
             </p>
             <ul className="mt-5 space-y-2.5 text-[14px] text-ink-700">
-              <li><a href="tel:+4968100000000" className="hover:text-ink-900">0681 · 000 000 00</a></li>
-              <li><a href="mailto:hallo@ki-beratung-saar.com" className="hover:text-ink-900">hallo@ki-beratung-saar.com</a></li>
-              <li className="pt-4 text-[13px] text-ink-400">Mo – Fr · 09 – 18 Uhr</li>
+              <li>
+                <Link href="/insights" className="hover:text-ink-900">
+                  Insights
+                </Link>
+              </li>
+              <li>
+                <Link href="/ueber/fynn-schulz" className="hover:text-ink-900">
+                  Über Fynn Schulz
+                </Link>
+              </li>
+              <li>
+                <a href="tel:+4915168488999" className="hover:text-ink-900">
+                  0151 · 68488999
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:fynnschulzonline@gmail.com"
+                  className="hover:text-ink-900"
+                >
+                  fynnschulzonline@gmail.com
+                </a>
+              </li>
+              <li className="pt-2 text-[13px] text-ink-400">
+                Mo – Fr · 09 – 18 Uhr
+              </li>
             </ul>
           </div>
         </div>
@@ -56,10 +109,21 @@ export default function Footer() {
         <div className="mt-14 rule" />
 
         <div className="mt-8 flex flex-col items-start justify-between gap-4 text-[12.5px] text-ink-400 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} KBS – KI-Beratung Saar. Alle Rechte vorbehalten.</p>
+          <p>
+            © {new Date().getFullYear()} KBS – KI-Beratung Saar. Alle Rechte
+            vorbehalten.
+          </p>
           <ul className="flex flex-wrap gap-6">
-            <li><Link href="/impressum" className="hover:text-ink-700">Impressum</Link></li>
-            <li><Link href="/datenschutz" className="hover:text-ink-700">Datenschutz</Link></li>
+            <li>
+              <Link href="/impressum" className="hover:text-ink-700">
+                Impressum
+              </Link>
+            </li>
+            <li>
+              <Link href="/datenschutz" className="hover:text-ink-700">
+                Datenschutz
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

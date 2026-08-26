@@ -117,7 +117,7 @@ const jsonLdGraph = {
       description: DESCRIPTION,
       slogan: "KI verstehen. Einfach machen.",
       telephone: "+49-681-00000000",
-      email: "hallo@ki-beratung-saar.com",
+      email: "fynnschulzonline@gmail.com",
       priceRange: "€€",
       currenciesAccepted: "EUR",
       paymentAccepted: "Überweisung, Rechnung",
@@ -242,15 +242,24 @@ const jsonLdGraph = {
       worksFor: { "@id": `${SITE_URL}/#business` },
       knowsAbout: [
         "Künstliche Intelligenz",
+        "Tägliche Nutzung von ChatGPT, Claude und Perplexity (10+ Stunden pro Tag)",
         "ChatGPT und Prompt Engineering",
         "OpenAI API",
-        "Vision Framework OCR",
-        "SwiftUI und macOS-Entwicklung",
+        "Anthropic Claude API",
+        "Google Gemini",
+        "SwiftUI und iOS-Entwicklung",
         "Next.js und React",
+        "TypeScript",
         "SaaS-Entwicklung",
-        "iOS- und Android-Entwicklung"
+        "Webdesign und SEO",
+        "Google Ads",
+        "On-Premise LLM (Llama, Qwen, Mistral)"
       ],
-      sameAs: ["https://github.com/fynnoman"]
+      sameAs: [
+        "https://github.com/fynnoman",
+        "https://fylumarketing.de",
+        "https://taskeyapp.com"
+      ]
     },
     {
       "@type": "WebSite",

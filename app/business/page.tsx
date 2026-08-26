@@ -188,12 +188,12 @@ export default function BusinessPage() {
       />
       <Navigation />
       <BusinessHero />
+      <BusinessCTA />
       <BusinessUseCases />
       <LocalAIFeature />
       <BusinessProcess />
       <BusinessProof />
       <BusinessFAQ />
-      <BusinessCTA />
       <Footer />
     </main>
   );

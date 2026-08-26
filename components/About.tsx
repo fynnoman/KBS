@@ -1,29 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import { Code2, Smartphone, Sparkles, Globe } from "lucide-react";
+import { Code2, Zap, Sparkles, Globe } from "lucide-react";
 import Reveal from "./Reveal";
+import KIStamp from "./KIStamp";
 
 const PROOF = [
   {
     icon: Sparkles,
     label: "Eigene SaaS",
-    value: "Taskey · iOS · Android · Web"
-  },
-  {
-    icon: Smartphone,
-    label: "macOS-App mit KI",
-    value: "Fylu · OpenAI + Vision OCR"
+    value: "Taskey · iOS + Web"
   },
   {
     icon: Globe,
-    label: "40+ Live-Websites",
-    value: "Next.js · TypeScript"
+    label: "Eigenes Studio",
+    value: "Fylu Marketing · Saarlouis"
+  },
+  {
+    icon: Zap,
+    label: "KI-Nutzung",
+    value: "täglich > 10 Stunden"
   },
   {
     icon: Code2,
-    label: "Native Apps",
-    value: "SwiftUI · Kotlin · Prisma"
+    label: "40+ Live-Websites",
+    value: "Next.js · TypeScript"
   }
 ];
 
@@ -36,6 +37,7 @@ export default function About() {
           <Reveal>
             <div className="relative">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-4xl border border-ink-900/8 bg-ink-100 shadow-lift">
+                <KIStamp />
                 <Image
                   src="/fynn-portrait.jpg"
                   alt="Fynn Schulz – Gründer von KBS im Gespräch mit Kunden"
@@ -80,7 +82,7 @@ export default function About() {
                 Wer Ihnen KI zeigt,
                 <br />
                 <span className="display italic text-ink-500">
-                  sollte sie auch selbst bauen.
+                  sollte sie auch selbst nutzen.
                 </span>
               </h2>
             </Reveal>
@@ -89,25 +91,30 @@ export default function About() {
               <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-ink-600 sm:text-[17px]">
                 <p>
                   Ich bin <span className="font-medium text-ink-900">Fynn Schulz</span>.
-                  Neben KBS entwickle ich <span className="font-medium text-ink-900">Taskey</span>{" "}
-                  – eine eigene SaaS-Plattform für Handwerksbetriebe mit iOS-,
-                  Android- und Web-App.
+                  Neben KBS führe ich <span className="font-medium text-ink-900">
+                    Fylu Marketing
+                  </span>{" "}
+                  – ein Webdesign- und Marketing-Studio aus Saarlouis für
+                  konversionsstarke Websites, SEO und Google Ads.
                 </p>
                 <p>
-                  Und <span className="font-medium text-ink-900">Fylu</span>: eine
-                  macOS-Anwendung für Agenturen, in der OpenAI-Modelle deutsche
-                  Rechnungen aus Fließtext auslesen und die Vision-Framework-OCR
-                  gescannte PDFs in strukturierte Positionen zerlegt.
+                  Und ich entwickle <span className="font-medium text-ink-900">Taskey</span>,
+                  eine SaaS-Plattform für Gebäudereinigungsbetriebe im
+                  DACH-Raum: iOS-App und Web, NFC-Zeiterfassung, Auftrags-
+                  koordination und DATEV-Export – damit die Chefs das Telefon
+                  wieder weglegen können.
                 </p>
                 <p>
-                  Über vierzig produktive Websites in{" "}
-                  <span className="font-medium text-ink-900">Next.js und TypeScript</span>{" "}
-                  laufen live bei Handwerksbetrieben, Kanzleien und Agenturen in
-                  Deutschland.
+                  Bei meiner täglichen Arbeit nutze ich{" "}
+                  <span className="font-medium text-ink-900">KI mehr als zehn Stunden am Tag</span>
+                  {" "}– für Code, Content, Recherche, Analyse und Automatisierung.
+                  Dazu über vierzig produktive Websites in Next.js und
+                  TypeScript, die live bei Handwerksbetrieben, Kanzleien und
+                  Agenturen in Deutschland laufen.
                 </p>
                 <p className="text-ink-700">
-                  Wenn ich Ihnen KI zeige, dann weil ich sie selbst jeden Tag baue
-                  und benutze – und weil ich weiß, was funktioniert und was nicht.
+                  Wenn ich Ihnen KI zeige, dann weil ich sie täglich selbst
+                  nutze – und weiß, was funktioniert und was nicht.
                 </p>
               </div>
             </Reveal>

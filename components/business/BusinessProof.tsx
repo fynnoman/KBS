@@ -2,32 +2,33 @@
 
 import Image from "next/image";
 import Reveal from "../Reveal";
-import { Apple, Layers, Boxes, Globe } from "lucide-react";
+import KIStamp from "../KIStamp";
+import { Globe, Layers, Zap, Boxes } from "lucide-react";
 
 const PROOF = [
   {
-    icon: Apple,
-    title: "Native macOS-Entwicklung mit OpenAI",
-    body:
-      "Fylu, unsere macOS-App für Agenturen, nutzt OpenAI-Modelle (GPT-5.4-mini) für Rechnungs-Parsing und das Vision-Framework für OCR gescannter PDFs. SwiftUI, SwiftData, produktiv im Einsatz."
-  },
-  {
     icon: Layers,
-    title: "Multi-Plattform SaaS-Entwicklung",
+    title: "Eigene SaaS-Entwicklung",
     body:
-      "Taskey ist eine eigene SaaS-Plattform für Handwerksbetriebe mit iOS-App (Swift, MVVM), Android-App (Kotlin, Jetpack Compose) und Web-App (Next.js). Über 300 produktive TypeScript-Dateien."
+      "Taskey ist eine eigene SaaS-Plattform für Gebäudereinigungsbetriebe im DACH-Raum: iOS-App (Swift, MVVM) und Web (Next.js), NFC-Zeiterfassung, Auftragskoordination, Rechnungslogik und DATEV-Export. Produktiv im Einsatz."
   },
   {
     icon: Globe,
-    title: "40+ produktive Web-Deployments",
+    title: "Eigenes Marketing-Studio",
     body:
-      "Über vierzig live laufende Websites in Next.js und TypeScript für Handwerksbetriebe, Kanzleien, Praxen und Agenturen in Deutschland. Vercel-Deployments, GDPR-konform, Multi-Locale."
+      "Fylu Marketing ist unser Webdesign- und Marketing-Studio in Saarlouis: konversionsstarke Websites, SEO, Google Ads und Software für Handwerk, Gastronomie, Kanzleien und Praxen im Saarland und darüber hinaus."
+  },
+  {
+    icon: Zap,
+    title: "Tägliche KI-Praxis",
+    body:
+      "Über zehn Stunden pro Tag arbeite ich mit KI-Werkzeugen – für Code, Content, Recherche und Automatisierung. Sie bekommen also keine Powerpoint-Beratung, sondern jemanden, der die Werkzeuge tatsächlich täglich beherrscht."
   },
   {
     icon: Boxes,
-    title: "Enterprise-Integrationen",
+    title: "40+ produktive Web-Deployments",
     body:
-      "Erfahrung mit Prisma ORM, Radix UI, SMTP-Pipelines, VAT-aware Rechnungslogik, PDF-Generation, JWT-Auth, SwiftData/SQLite-Storage und API-basierten Anbindungen an bestehende Systeme."
+      "Über vierzig live laufende Websites in Next.js und TypeScript für Handwerksbetriebe, Kanzleien, Praxen und Agenturen in Deutschland. Vercel-Deployments, DSGVO-konform, mehrsprachig wo nötig, SEO-optimiert."
   }
 ];
 
@@ -39,9 +40,10 @@ export default function BusinessProof() {
           <Reveal>
             <div className="relative">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-4xl border border-ink-900/8 bg-ink-100 shadow-lift">
+                <KIStamp />
                 <Image
                   src="/fynn-portrait.jpg"
-                  alt="Fynn Schulz – Gründer von KBS und aktiver KI-Entwickler"
+                  alt="Fynn Schulz – Gründer von KBS und aktiver KI-Anwender"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-[68%_center]"
@@ -55,7 +57,7 @@ export default function BusinessProof() {
                 />
                 <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
                   <p className="text-[10.5px] font-medium uppercase tracking-[0.2em] text-white/75">
-                    Gründer & KI-Entwickler
+                    Gründer · Aktiver KI-Anwender
                   </p>
                   <p className="mt-1 text-xl font-medium tracking-tight text-white sm:text-2xl">
                     Fynn Schulz
@@ -72,14 +74,15 @@ export default function BusinessProof() {
                 Ein Partner,
                 <br />
                 <span className="display italic text-ink-500">
-                  der selbst KI-Systeme produktiv betreibt.
+                  der KI täglich selbst einsetzt.
                 </span>
               </h2>
               <p className="mt-8 text-[16px] leading-relaxed text-ink-500 sm:text-[17px]">
-                KBS ist kein Beratungshaus ohne eigene Codebase. Fynn Schulz
-                entwickelt und betreibt seit 2025 mehrere produktive KI-basierte
-                Anwendungen – von nativen macOS-Apps mit OpenAI-Integration bis
-                zu Multi-Plattform-SaaS für den Mittelstand.
+                KBS ist kein Beratungshaus, das über KI redet. Fynn Schulz
+                betreibt seit 2024 das Webdesign-Studio Fylu Marketing in
+                Saarlouis, entwickelt die SaaS-Plattform Taskey für die
+                Gebäudereinigung im DACH-Raum und arbeitet täglich mehr als
+                zehn Stunden aktiv mit KI-Werkzeugen.
               </p>
             </Reveal>
 

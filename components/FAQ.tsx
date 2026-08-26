@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "Wie schnell bekomme ich einen Termin?",
-    a: "In der Regel innerhalb weniger Werktage. Rufen Sie unter +49 681 000 000 00 an oder schreiben Sie an hallo@ki-beratung-saar.com. Anrufe außerhalb unserer Erreichbarkeit (Montag bis Freitag, 09:00 bis 18:00 Uhr) rufen wir am selben Werktag zurück."
+    a: "In der Regel innerhalb weniger Werktage. Rufen Sie unter +49 151 68488999 an oder schreiben Sie an fynnschulzonline@gmail.com. Anrufe außerhalb unserer Erreichbarkeit (Montag bis Freitag, 09:00 bis 18:00 Uhr) rufen wir am selben Werktag zurück."
   },
   {
     q: "Ist KBS eine klassische Unternehmensberatung?",
@@ -36,7 +36,7 @@ const FAQS = [
   },
   {
     q: "Warum sollte ich KBS statt einer großen Agentur anrufen?",
-    a: "Weil bei KBS jemand ans Telefon geht, der KI selbst jeden Tag baut und einsetzt. Fynn Schulz, Gründer von KBS, entwickelt unter anderem die macOS-App Fylu mit OpenAI-Integration und die SaaS-Plattform Taskey für Handwerksbetriebe. Bei KBS bekommen Sie deshalb keine Theorie, sondern gelebte KI-Praxis."
+    a: "Weil bei KBS jemand ans Telefon geht, der KI täglich selbst einsetzt – im Schnitt mehr als zehn Stunden pro Tag. Fynn Schulz führt neben KBS das Webdesign-Studio Fylu Marketing in Saarlouis und entwickelt die SaaS-Plattform Taskey für Gebäudereinigungsbetriebe. Bei KBS bekommen Sie deshalb keine Theorie, sondern gelebte KI-Praxis."
   }
 ];
 
@@ -44,6 +44,10 @@ export default function FAQ() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h2", "details summary h3", "details p"]
+    },
     mainEntity: FAQS.map((f) => ({
       "@type": "Question",
       name: f.q,

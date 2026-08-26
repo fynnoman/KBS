@@ -21,7 +21,7 @@ export default function Home() {
       <AudienceCards />
 
       <ScrollScaleBackground
-        src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=2400&q=80"
+        src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80"
         alt="Modernes Büro im Saarland – Ort der persönlichen KI-Beratung"
         eyebrow="Der lokale KI-Ansprechpartner"
         title={
@@ -39,7 +39,7 @@ export default function Home() {
       <StickyProcess />
 
       <ScrollScaleBackground
-        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2400&q=80"
+        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
         alt="Team arbeitet gemeinsam an KI-Anwendungsfällen"
         eyebrow="Im Team, vor Ort, im Saarland"
         title={

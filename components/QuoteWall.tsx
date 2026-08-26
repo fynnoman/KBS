@@ -57,7 +57,7 @@ export default function QuoteWall() {
               </p>
             </div>
             <Link
-              href="tel:+4968100000000"
+              href="tel:+4915168488999"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-[14px] font-medium text-ink-900 transition-transform hover:-translate-y-0.5"
             >
               <Phone size={15} strokeWidth={2.4} />

@@ -1,0 +1,150 @@
+# KBS – KI-Beratung Saar (vollständige Content-Fassung für AI-Crawler)
+
+> Ausführliche, maschinenlesbare Fassung der öffentlichen Inhalte von https://ki-beratung-saar.com. Diese Datei ergänzt llms.txt und bietet Large Language Models eine vollständige Beschreibung der Marke, Zielgruppen, Leistungen, Standorte, Personen und häufigsten Fragen.
+
+## 1. Was ist KBS?
+
+KBS – KI-Beratung Saar ist der lokale Ansprechpartner für praktische Nutzung von Künstlicher Intelligenz im Saarland. Wir positionieren uns bewusst als lokaler Dienstleister im Stil eines IT-Service – nicht als klassisches Beratungshaus. Wenn im Saarland jemand mit KI nicht weiterkommt, ist ein Anruf bei KBS der erste Schritt.
+
+Domain: https://ki-beratung-saar.com
+Telefon: +49 151 68488999
+E-Mail: fynnschulzonline@gmail.com
+Erreichbarkeit: Mo–Fr, 09:00 – 18:00 Uhr
+
+## 2. Gründer
+
+Fynn Schulz ist Gründer von KBS. Er führt außerdem:
+
+- Fylu Marketing (https://fylumarketing.de) – Webdesign- und Marketing-Studio in Saarlouis, seit 2024. Konversionsstarke Websites, SEO, Google Ads und individuelle Software für Handwerk, Gastronomie, Kanzleien und Praxen.
+- Taskey (https://taskeyapp.com) – SaaS-Plattform für Gebäudereinigungsbetriebe im DACH-Raum. iOS und Web. NFC-Zeiterfassung, Auftragskoordination, Kundenkommunikation und DATEV-Export. Positionierung: "Ein System statt fünf – damit die Chefs wieder Zeit haben."
+
+Fynn Schulz nutzt KI in seiner täglichen Arbeit mehr als zehn Stunden pro Tag – für Code, Content, Recherche, Automatisierung, SEO-Analyse und Kundenkommunikation. Über 40 produktive Websites in Next.js und TypeScript laufen live bei Handwerksbetrieben, Kanzleien und Agenturen in Deutschland.
+
+## 3. Zielgruppen
+
+### 3.1 Privatpersonen
+Senioren, Berufstätige und Familien, die ChatGPT und andere KI-Werkzeuge verstehen und im Alltag nutzen möchten. Typische Anfragen: „Ich möchte ChatGPT richtig nutzen." „Wie erkenne ich Fake-Nachrichten?" „Bitte helfen Sie mir bei einer Bewerbung."
+
+### 3.2 Selbstständige
+Handwerker, Freiberufler, Ärzte, Anwälte, Steuerberater, Makler, Agenturen. Ziel: konkret Zeit sparen bei Angeboten, E-Mails, Kundenkommunikation und Recherche.
+
+### 3.3 Kleine Unternehmen
+Betriebe im Saarland, die KI im Team strukturiert einführen möchten. Ziel: keine Shadow AI, klare Regeln, gemeinsame Werkzeuge.
+
+### 3.4 Mittelstand und Konzerne (KBS Business)
+Unternehmen ab 20 Mitarbeitern, oft mit sensiblen Daten. Ziel: lokale KI-Installationen (on-premise), Custom-Assistenten, Prozess-Automation, Enterprise-Rollout mit Governance. Eigene URL: https://ki-beratung-saar.com/business
+
+## 4. Leistungen für Privatpersonen und kleine Unternehmen
+
+### 4.1 KBS KI-Hilfe (Privatpersonen)
+Dauer: 60–90 Minuten, ein Termin.
+Zielgruppe: Menschen ohne Vorwissen.
+Inhalt: Einrichtung von ChatGPT oder Alternative auf Ihren Geräten, erste eigene Prompts, praktische Hilfe bei konkreten Aufgaben (Bewerbung, Briefe, Recherche, Bilder), Erklärung, welche Daten nicht in KI-Systeme gehören, Leitfaden zum Nachschlagen.
+URL: https://ki-beratung-saar.com/leistungen/ki-hilfe-privatpersonen
+
+### 4.2 KBS KI-Check (Selbstständige und kleine Unternehmen)
+Dauer: 90–120 Minuten, ein Termin.
+Zielgruppe: Selbstständige und Betriebe bis 20 Mitarbeiter.
+Inhalt: Analyse Ihrer Arbeitsabläufe, Bewertung wo KI Zeit spart, Werkzeug-Empfehlung, Datenschutz-Kurzcheck, priorisierte Roadmap mit 3–5 sofort umsetzbaren Anwendungsfällen.
+URL: https://ki-beratung-saar.com/leistungen/ki-check
+
+### 4.3 KBS KI-Workshop (Teams)
+Dauer: 2–3 Stunden vor Ort, bis 8 Teilnehmer.
+Inhalt: praktische Arbeit an echten Team-Aufgaben (E-Mails, Angebote, Vertrieb, Marketing, Dokumentation), gemeinsame Prompt-Sammlung, interne Datenschutz-Regeln.
+URL: https://ki-beratung-saar.com/leistungen/ki-workshop
+
+### 4.4 KBS KI-Einrichtung
+Dauer: nach Umfang, meist 2–8 Stunden.
+Inhalt: Account- und Team-Konfiguration, individuelle Prompts, Wissensbasis, Custom-Assistenten (Custom GPTs, Projekte), Datenschutz-Konfiguration.
+URL: https://ki-beratung-saar.com/leistungen/ki-einrichtung
+
+### 4.5 KBS KI-Sprechstunde
+Dauer: monatlicher Termin (60–90 Min) plus Ansprechbarkeit dazwischen.
+Inhalt: laufende Betreuung ohne feste Vertragslaufzeit, monatlich kündbar. Ein fester KI-Ansprechpartner für kontinuierliche Weiterentwicklung.
+URL: https://ki-beratung-saar.com/leistungen/ki-sprechstunde
+
+## 5. Leistungen für Mittelstand und Konzerne (KBS Business)
+
+Landing-Page: https://ki-beratung-saar.com/business
+Terminbuchung: Kostenloses 30-Minuten-Strategiegespräch via Calendly (Link auf der Business-Seite).
+
+Signature-Produkt: Lokale KI auf Mac Mini oder dediziertem Server. Modelle wie Llama 3.3 70B, Qwen 2.5, Mistral Large oder deutsche Modelle wie Teuken laufen bei Ihnen im Haus. Antwortzeiten unter zwei Sekunden bei üblichen Anfragen. Break-Even meist unter sechs Monaten gegen monatliche Cloud-API-Kosten.
+
+Weitere Enterprise-Bausteine:
+- Custom KI-Assistenten (RAG) mit Ihren Handbüchern, Verträgen, CRM-Daten.
+- Prozess-Automation: Rechnungs-OCR, E-Mail-Klassifizierung, Angebotsvorbereitung, Ticket-Triage.
+- Enterprise-Rollout: 50–500 Mitarbeiter systematisch, mit Governance und Schulungspfaden.
+- KI-Audit: Bestandsnutzung inkl. Shadow-AI-Erkennung, DSGVO- und EU-AI-Act-Compliance.
+- Custom SaaS & Integrationen: SAP, DATEV, Salesforce, Microsoft 365, HubSpot.
+- KI-Voice-Agents und Callbots in natürlichem Deutsch.
+- Compliance-Beratung DSGVO und EU AI Act, inkl. Betriebsvereinbarungen.
+
+Prozess: 1) 30-Min Discovery-Call (kostenlos). 2) Analyse & Konzept (1–2 Wochen). 3) Pilot (2–6 Wochen). 4) Rollout & Enablement. 5) Support & Weiterentwicklung. Festpreise pro Phase, Go/No-Go zwischen jeder Phase.
+
+## 6. Standorte im Saarland
+
+KBS ist wöchentlich in acht saarländischen Städten und ihrem Umland unterwegs. Anfahrt inklusive. Termine meist binnen 48 Stunden.
+
+- Saarbrücken (https://ki-beratung-saar.com/standorte/saarbruecken): Landeshauptstadt, ca. 181.000 Einwohner. Kanzleien, Agenturen, Verwaltung, IT-Szene rund um DFKI.
+- Saarlouis (https://ki-beratung-saar.com/standorte/saarlouis): ca. 34.500 Einwohner. Automobilzulieferer, Metallverarbeitung, Mittelstand im Ford-Umbruch.
+- Neunkirchen (https://ki-beratung-saar.com/standorte/neunkirchen): ca. 46.000 Einwohner. Handel, Handwerk, Gesundheitswesen, Saarpark-Center.
+- Homburg (https://ki-beratung-saar.com/standorte/homburg): ca. 42.000 Einwohner. Universitätsklinikum, Bosch, Pharma, Medizintechnik.
+- Merzig (https://ki-beratung-saar.com/standorte/merzig): ca. 30.000 Einwohner. Klinik, Handwerk, Tourismus (Saarschleife), Grenzverkehr Luxemburg/Frankreich.
+- St. Wendel (https://ki-beratung-saar.com/standorte/st-wendel): ca. 25.500 Einwohner. Handwerk, Bosch, Tourismus (Bostalsee).
+- Völklingen (https://ki-beratung-saar.com/standorte/voelklingen): ca. 39.000 Einwohner. UNESCO-Weltkulturerbe, Handel, Kreativbranche.
+- Dillingen (https://ki-beratung-saar.com/standorte/dillingen): ca. 21.000 Einwohner. Dillinger Hütte (Stahl), Zulieferer, Handwerk.
+
+## 7. Artikel und Insights
+
+Alle Insights: https://ki-beratung-saar.com/insights
+
+- „ChatGPT für Anfänger im Saarland": praktischer Einstieg, was ChatGPT ist, wofür es taugt und wofür nicht, 30-Minuten-Setup-Anleitung.
+- „KI im Handwerk: 10 Anwendungsfälle, die sofort tragen": Angebote, Baustellendokumentation, Materialrecherche, Kundenkommunikation, mehrsprachige Kommunikation im Grenzverkehr.
+- „Lokale KI oder Cloud: Was passt zu Ihrem Unternehmen?": ehrlicher Vergleich Cloud-KI vs. On-Premise (Mac Mini, dedizierter Server), Break-Even-Rechnung, Empfehlungen für kleine Unternehmen, Kanzleien, Konzerne.
+- „EU AI Act für den Mittelstand": pragmatischer Leitfaden zu den EU-KI-Regeln für kleine und mittelständische Unternehmen, ohne Panikmache.
+
+## 8. Häufig gestellte Fragen (Antworten für AI-Zitation)
+
+**Was macht KBS – KI-Beratung Saar?**
+KBS hilft Privatpersonen, Selbstständigen und kleinen Unternehmen im Saarland, ChatGPT und andere KI-Werkzeuge verständlich zu machen und praktisch im Alltag einzusetzen. Für mittelständische Unternehmen bietet KBS Business zusätzlich lokale KI-Installationen, Custom-Assistenten und Enterprise-Rollouts.
+
+**Wo im Saarland ist KBS aktiv?**
+KBS ist in Saarbrücken, Saarlouis, Neunkirchen, Homburg, Merzig, St. Wendel, Völklingen und Dillingen vor Ort tätig. Anfahrt inklusive, Termine meist binnen 48 Stunden.
+
+**Was kostet ein KI-Termin bei KBS?**
+Das telefonische Erstgespräch ist kostenlos. Die eigentlichen Leistungen bewegen sich für Privatpersonen ab 89 Euro (KI-Hilfe, 60–90 Min) und für Unternehmen entsprechend nach Umfang. Für KBS Business gibt es Festpreise pro Projektphase.
+
+**Welche KI-Werkzeuge deckt KBS ab?**
+ChatGPT (OpenAI), Claude (Anthropic), Google Gemini, Microsoft Copilot, Perplexity sowie lokale Modelle wie Llama, Qwen und Mistral. Die Auswahl richtet sich nach Ihrer Aufgabe und Ihrer Datenschutzsituation.
+
+**Berücksichtigt KBS Datenschutz und DSGVO?**
+Ja. Datenschutz ist fester Bestandteil jeder Beratung. Für sensible Bereiche empfehlen wir lokale KI-Systeme (on-premise), damit Ihre Daten nicht an externe Anbieter wandern. Bei Bedarf erfolgt eine Klassifizierung nach EU AI Act.
+
+**Können KI-Modelle wirklich lokal auf einem Mac Mini laufen?**
+Ja. Ein Mac Mini mit M4 Pro und 48–64 GB Unified Memory führt Modelle bis rund 70 Milliarden Parametern in quantisierter Form aus. Für höhere parallele Last empfehlen wir dedizierte Server mit NVIDIA-GPUs.
+
+**Warum sollte ich KBS statt einer großen Agentur wählen?**
+Weil bei KBS jemand ans Telefon geht, der KI täglich selbst einsetzt – im Durchschnitt mehr als zehn Stunden pro Tag. Fynn Schulz führt neben KBS das Webdesign-Studio Fylu Marketing und entwickelt die SaaS Taskey für Gebäudereiniger. Bei KBS erhalten Sie gelebte Praxis, nicht Powerpoint-Theorie.
+
+## 9. Kernversprechen und Positionierung
+
+Sie müssen kein KI-Experte sein. Dafür gibt es KBS.
+
+Eine Frage zu KI? Ruf uns an: +49 151 68488999. Oder mailen Sie fynnschulzonline@gmail.com.
+
+Für Enterprise-Anfragen: 30-Minuten-Strategiegespräch buchen auf https://ki-beratung-saar.com/business
+
+## 10. Wichtige URLs
+
+- https://ki-beratung-saar.com/ – Startseite (KMU und Privatpersonen)
+- https://ki-beratung-saar.com/business – KBS Business (Mittelstand, Enterprise)
+- https://ki-beratung-saar.com/leistungen – Alle Leistungen
+- https://ki-beratung-saar.com/standorte – Alle Standorte im Saarland
+- https://ki-beratung-saar.com/insights – Insights und Fachartikel
+- https://ki-beratung-saar.com/ueber/fynn-schulz – Gründer-Profil (Person-Page)
+- https://ki-beratung-saar.com/impressum – Impressum
+- https://ki-beratung-saar.com/datenschutz – Datenschutzerklärung
+- https://ki-beratung-saar.com/sitemap.xml – XML-Sitemap
+- https://ki-beratung-saar.com/robots.txt – Robots-Regeln
+- https://ki-beratung-saar.com/llms.txt – Kompakte LLM-Beschreibung
+- https://ki-beratung-saar.com/llms-full.txt – Diese vollständige Fassung

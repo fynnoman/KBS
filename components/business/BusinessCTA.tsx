@@ -81,7 +81,7 @@ export default function BusinessCTA() {
               <div
                 className="calendly-inline-widget rounded-3xl"
                 data-url={CALENDLY_URL}
-                style={{ minWidth: "320px", height: "720px" }}
+                style={{ minWidth: "280px", height: "680px" }}
               />
             </div>
           </Reveal>
