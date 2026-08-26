@@ -22,11 +22,12 @@ export default function Footer() {
               Leistungen
             </p>
             <ul className="mt-5 space-y-2.5 text-[14px] text-ink-700">
-              <li><a href="#leistungen" className="hover:text-ink-900">Anwendungsfälle</a></li>
-              <li><a href="#fuer-wen" className="hover:text-ink-900">Privatpersonen</a></li>
-              <li><a href="#fuer-wen" className="hover:text-ink-900">Selbstständige</a></li>
-              <li><a href="#fuer-wen" className="hover:text-ink-900">Unternehmen</a></li>
-              <li><a href="#prozess" className="hover:text-ink-900">So arbeiten wir</a></li>
+              <li><Link href="/#leistungen" className="hover:text-ink-900">Anwendungsfälle</Link></li>
+              <li><Link href="/#fuer-wen" className="hover:text-ink-900">Privatpersonen</Link></li>
+              <li><Link href="/#fuer-wen" className="hover:text-ink-900">Selbstständige</Link></li>
+              <li><Link href="/#fuer-wen" className="hover:text-ink-900">Kleine Unternehmen</Link></li>
+              <li><Link href="/business" className="font-medium text-accent-700 hover:text-accent-800">KBS Business →</Link></li>
+              <li><Link href="/#prozess" className="hover:text-ink-900">So arbeiten wir</Link></li>
             </ul>
           </div>
 

@@ -2,18 +2,32 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Phone } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Phone, Calendar } from "lucide-react";
 import Logo from "./Logo";
+import { CALENDLY_URL, PHONE_TEL } from "@/lib/config";
 
-const NAV = [
-  { href: "#leistungen", label: "Leistungen" },
-  { href: "#fuer-wen", label: "Für wen" },
-  { href: "#prozess", label: "So arbeiten wir" },
-  { href: "#kontakt", label: "Kontakt" }
+const HOME_NAV = [
+  { href: "/#leistungen", label: "Leistungen" },
+  { href: "/#fuer-wen", label: "Für wen" },
+  { href: "/#prozess", label: "So arbeiten wir" },
+  { href: "/business", label: "Business" },
+  { href: "/#kontakt", label: "Kontakt" }
+];
+
+const BUSINESS_NAV = [
+  { href: "/business#use-cases", label: "Use-Cases" },
+  { href: "/business#lokale-ki", label: "Lokale KI" },
+  { href: "/business#prozess", label: "Prozess" },
+  { href: "/business#faq", label: "FAQ" },
+  { href: "/", label: "Zur KMU-Seite" }
 ];
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const onBusiness = pathname?.startsWith("/business");
+  const NAV = onBusiness ? BUSINESS_NAV : HOME_NAV;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -35,17 +49,16 @@ export default function Navigation() {
         <ul className="hidden items-center gap-1 justify-self-start md:flex">
           {NAV.map((item) => (
             <li key={item.href}>
-              <a
+              <Link
                 href={item.href}
                 className="rounded-full px-3.5 py-2 text-[13.5px] font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white"
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
-        {/* Left mobile spacer */}
         <span className="md:hidden" />
 
         {/* Center: logo */}
@@ -53,22 +66,47 @@ export default function Navigation() {
           <Logo height={44} />
         </div>
 
-        {/* Right: CTA */}
+        {/* Right: contextual CTA */}
         <div className="flex items-center justify-end">
-          <Link
-            href="tel:+4968100000000"
-            className="hidden items-center gap-2 rounded-full bg-white px-4 py-2.5 text-[13px] font-medium text-ink-900 shadow-soft transition-all hover:-translate-y-0.5 hover:bg-white sm:inline-flex"
-          >
-            <Phone size={14} strokeWidth={2.4} />
-            Jetzt anrufen
-          </Link>
-          <Link
-            href="tel:+4968100000000"
-            className="inline-flex items-center gap-2 rounded-full bg-white p-2.5 text-ink-900 sm:hidden"
-            aria-label="Jetzt anrufen"
-          >
-            <Phone size={16} strokeWidth={2.4} />
-          </Link>
+          {onBusiness ? (
+            <>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden items-center gap-2 rounded-full bg-white px-4 py-2.5 text-[13px] font-medium text-ink-900 shadow-soft transition-all hover:-translate-y-0.5 sm:inline-flex"
+              >
+                <Calendar size={14} strokeWidth={2.4} />
+                Termin buchen
+              </a>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-white p-2.5 text-ink-900 sm:hidden"
+                aria-label="Termin buchen"
+              >
+                <Calendar size={16} strokeWidth={2.4} />
+              </a>
+            </>
+          ) : (
+            <>
+              <Link
+                href={`tel:${PHONE_TEL}`}
+                className="hidden items-center gap-2 rounded-full bg-white px-4 py-2.5 text-[13px] font-medium text-ink-900 shadow-soft transition-all hover:-translate-y-0.5 sm:inline-flex"
+              >
+                <Phone size={14} strokeWidth={2.4} />
+                Jetzt anrufen
+              </Link>
+              <Link
+                href={`tel:${PHONE_TEL}`}
+                className="inline-flex items-center gap-2 rounded-full bg-white p-2.5 text-ink-900 sm:hidden"
+                aria-label="Jetzt anrufen"
+              >
+                <Phone size={16} strokeWidth={2.4} />
+              </Link>
+            </>
+          )}
         </div>
       </nav>
     </div>

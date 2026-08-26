@@ -7,6 +7,7 @@ import UseCases from "@/components/UseCases";
 import StickyProcess from "@/components/StickyProcess";
 import Industries from "@/components/Industries";
 import About from "@/components/About";
+import BusinessBridge from "@/components/BusinessBridge";
 import FAQ from "@/components/FAQ";
 import PromiseBanner from "@/components/PromiseBanner";
 import Contact from "@/components/Contact";
@@ -53,6 +54,7 @@ export default function Home() {
 
       <Industries />
       <About />
+      <BusinessBridge />
       <FAQ />
       <PromiseBanner />
       <Contact />
