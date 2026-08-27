@@ -9,7 +9,9 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Logo />
+            <div className="inline-flex rounded-2xl bg-ink-900 px-4 py-3">
+              <Logo />
+            </div>
             <p className="mt-6 max-w-sm text-[14px] leading-relaxed text-ink-500">
               KBS – KI-Beratung Saar. Der lokale Ansprechpartner für praktische
               KI-Hilfe im Saarland.
