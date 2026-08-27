@@ -41,39 +41,34 @@ export default function Navigation() {
   return (
     <div className="pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
       <nav
-        className={`pointer-events-auto grid w-full max-w-6xl grid-cols-[1fr_auto_1fr] items-center rounded-full border px-4 py-2.5 transition-all duration-300 ${
+        className={`pointer-events-auto flex w-full max-w-6xl items-center justify-between rounded-full border px-4 py-2.5 transition-all duration-300 ${
           scrolled
             ? "border-white/10 bg-ink-900/85 shadow-lift md:bg-ink-900/80 md:backdrop-blur-2xl md:backdrop-saturate-150"
             : "border-white/5 bg-ink-900/75 md:bg-ink-900/65 md:backdrop-blur-xl"
         }`}
       >
-        {/* Left: nav items */}
-        <ul className="hidden items-center gap-1 justify-self-start md:flex">
-          {NAV.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className={`rounded-full px-3.5 py-2 text-[13.5px] font-medium transition-colors ${
-                  item.highlight
-                    ? "text-accent-400 hover:bg-white/10 hover:text-accent-300"
-                    : "text-white/75 hover:bg-white/10 hover:text-white"
-                }`}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Left: logo */}
+        <Logo height={44} />
 
-        <span className="md:hidden" />
+        {/* Right: nav items + contextual CTA */}
+        <div className="flex items-center gap-2 md:gap-4">
+          <ul className="hidden items-center gap-1 md:flex">
+            {NAV.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`rounded-full px-3.5 py-2 text-[13.5px] font-medium transition-colors ${
+                    item.highlight
+                      ? "text-accent-400 hover:bg-white/10 hover:text-accent-300"
+                      : "text-white/75 hover:bg-white/10 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-        {/* Center: logo */}
-        <div className="justify-self-center">
-          <Logo height={44} />
-        </div>
-
-        {/* Right: contextual CTA */}
-        <div className="flex items-center justify-end">
           {onBusiness ? (
             <>
               <a
