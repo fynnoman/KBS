@@ -4,12 +4,15 @@ import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import Reveal from "../Reveal";
 
+type LogoBg = "light" | "dark";
+
 type Reference = {
   name: string;
   tag: string;
   body: string;
   href: string;
   logo: string;
+  logoBg?: LogoBg;
 };
 
 const REFERENCES: Reference[] = [
@@ -19,15 +22,16 @@ const REFERENCES: Reference[] = [
     body:
       "Eigene SaaS-Plattform für Gebäudereinigungs- und Facility-Betriebe. iOS-App und Web-Client, NFC-Zeiterfassung, Auftragssteuerung, Rechnungslogik und DATEV-Export – produktiv im Kundeneinsatz.",
     href: "https://taskeyapp.com",
-    logo: "/logos/taskey.png"
+    logo: "/logos/taskey.jpg"
   },
   {
-    name: "Immovation",
-    tag: "Proptech · Immobilien",
+    name: "Pavan-Rent",
+    tag: "Vermietung · Ferien- und Wohnimmobilien",
     body:
-      "Digitale Plattform für den professionellen Immobilienbereich. Automatisierte Objektaufbereitung, KI-gestützte Recherche und optimierte Verwaltungsprozesse für Makler und Verwalter.",
-    href: "https://immovation.app",
-    logo: "/logos/immovation.png"
+      "Digitale Vermietungs- und Verwaltungslösung für einen professionellen Vermieter. Buchungs- und Anfragestrecke, Belegverarbeitung sowie Objekt- und Gastverwaltung – alles KI-gestützt und ohne Portalkosten.",
+    href: "https://pavan-rent.de",
+    logo: "/logos/pavan.png",
+    logoBg: "dark"
   },
   {
     name: "Fylu Marketing",
@@ -35,7 +39,15 @@ const REFERENCES: Reference[] = [
     body:
       "Marketing- und Webdesign-Studio mit Fokus auf Conversion-Analysen und Neubau hochwertiger Firmen-Websites. Über vierzig produktive Deployments in Next.js für Kanzleien, Praxen, Handwerk und Dienstleister.",
     href: "https://fylumarketing.de",
-    logo: "/logos/fylu.png"
+    logo: "/logos/fylu.jpg"
+  },
+  {
+    name: "Syncrony",
+    tag: "Systemintegration · Enterprise-Software",
+    body:
+      "Systemintegrations- und Softwarehaus. Wir liefern die KI-Bausteine, die in die Enterprise-Landschaften der Syncrony-Kunden – ERP, CRM, DMS – produktiv eingebunden werden.",
+    href: "https://syncrony-systems.com",
+    logo: "/logos/syncrony.jpg"
   },
   {
     name: "Triathlon Saarbrücken",
@@ -43,12 +55,21 @@ const REFERENCES: Reference[] = [
     body:
       "Teilnahme am Gründungs- und Innovationsprogramm der Universität des Saarlandes. Enge Verzahnung mit Forschung, universitären Partnern und dem regionalen Startup-Ökosystem.",
     href: "https://www.uni-saarland.de/",
-    logo: "/logos/triathlon.png"
+    logo: "/logos/triathlon.jpg"
   }
 ];
 
-function LogoTile({ src, name }: { src: string; name: string }) {
+function LogoTile({
+  src,
+  name,
+  bg = "light"
+}: {
+  src: string;
+  name: string;
+  bg?: LogoBg;
+}) {
   const [failed, setFailed] = useState(false);
+  const tileBg = bg === "dark" ? "bg-ink-900 border-ink-900" : "bg-white border-ink-900/10";
   if (failed) {
     return (
       <div className="inline-flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl border border-ink-900/10 bg-ink-50 text-[15px] font-semibold text-ink-700">
@@ -57,7 +78,9 @@ function LogoTile({ src, name }: { src: string; name: string }) {
     );
   }
   return (
-    <div className="inline-flex h-11 w-11 flex-shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-ink-900/10 bg-white">
+    <div
+      className={`inline-flex h-11 w-11 flex-shrink-0 items-center justify-center overflow-hidden rounded-2xl border ${tileBg}`}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
@@ -93,7 +116,7 @@ export default function BusinessReferences() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {REFERENCES.map((ref, i) => (
             <Reveal key={ref.name} delay={i * 0.04}>
               <a
@@ -103,7 +126,7 @@ export default function BusinessReferences() {
                 className="card group flex h-full flex-col p-6 md:p-7 transition-all hover:shadow-lift"
               >
                 <div className="flex items-start gap-4">
-                  <LogoTile src={ref.logo} name={ref.name} />
+                  <LogoTile src={ref.logo} name={ref.name} bg={ref.logoBg} />
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2">
                       <h3 className="text-lg font-medium tracking-tight text-ink-900 sm:text-xl">
