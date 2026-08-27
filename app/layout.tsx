@@ -116,23 +116,25 @@ const jsonLdGraph = {
       image: `${SITE_URL}/opengraph-image`,
       description: DESCRIPTION,
       slogan: "KI verstehen. Einfach machen.",
-      telephone: "+49-681-00000000",
+      telephone: "+49-151-68488999",
       email: "info@ki-beratung-saar.com",
       priceRange: "€€",
       currenciesAccepted: "EUR",
       paymentAccepted: "Überweisung, Rechnung",
+      vatID: "DE458914838",
+      legalName: "Schulz Stosse GbR",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Musterstraße 1",
-        postalCode: "66111",
-        addressLocality: "Saarbrücken",
+        streetAddress: "Heiligenbronstr. 7",
+        postalCode: "66359",
+        addressLocality: "Bous",
         addressRegion: "Saarland",
         addressCountry: "DE"
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 49.2354,
-        longitude: 6.9969
+        latitude: 49.2793,
+        longitude: 6.8103
       },
       areaServed: [
         { "@type": "State", name: "Saarland" },

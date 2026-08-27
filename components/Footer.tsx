@@ -79,11 +79,6 @@ export default function Footer() {
             </p>
             <ul className="mt-5 space-y-2.5 text-[14px] text-ink-700">
               <li>
-                <Link href="/insights" className="hover:text-ink-900">
-                  Insights
-                </Link>
-              </li>
-              <li>
                 <a href="tel:+4915168488999" className="hover:text-ink-900">
                   0151 · 68488999
                 </a>

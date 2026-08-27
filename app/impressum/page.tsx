@@ -26,9 +26,18 @@ export default function ImpressumPage() {
                 Angaben gemäß § 5 TMG
               </h2>
               <p>
-                KBS – KI-Beratung Saar<br />
-                Musterstraße 1<br />
-                66111 Saarbrücken
+                Schulz Stosse GbR<br />
+                Heiligenbronstr. 7<br />
+                66359 Bous
+              </p>
+            </div>
+            <div>
+              <h2 className="mb-2 text-lg font-semibold text-ink-900">
+                Vertretungsberechtigte Gesellschafter
+              </h2>
+              <p>
+                Julian Stosse<br />
+                Fynn Schulz
               </p>
             </div>
             <div>
@@ -40,9 +49,22 @@ export default function ImpressumPage() {
             </div>
             <div>
               <h2 className="mb-2 text-lg font-semibold text-ink-900">
-                Verantwortlich für den Inhalt
+                Umsatzsteuer-Identifikationsnummer
               </h2>
-              <p>Fynn Schulz</p>
+              <p>
+                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+                <br />
+                DE458914838
+              </p>
+            </div>
+            <div>
+              <h2 className="mb-2 text-lg font-semibold text-ink-900">
+                Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+              </h2>
+              <p>
+                Julian Stosse und Fynn Schulz<br />
+                Anschrift wie oben
+              </p>
             </div>
             <div>
               <h2 className="mb-2 text-lg font-semibold text-ink-900">Haftungsausschluss</h2>

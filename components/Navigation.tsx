@@ -10,7 +10,6 @@ import { CALENDLY_URL, PHONE_TEL } from "@/lib/config";
 const HOME_NAV = [
   { href: "/leistungen", label: "Leistungen" },
   { href: "/standorte", label: "Standorte" },
-  { href: "/insights", label: "Insights" },
   { href: "/business", label: "Business", highlight: true },
   { href: "/#kontakt", label: "Kontakt" }
 ];

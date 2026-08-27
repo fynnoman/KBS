@@ -14,6 +14,7 @@ export type Course = {
   learnings: string[];
   certificate: string;
   formats: string[];
+  image: string;
 };
 
 export const CATEGORY_LABEL: Record<CourseCategory, string> = {
@@ -51,7 +52,8 @@ export const COURSES: Course[] = [
       "Praktische Übungen für den eigenen Arbeitsalltag"
     ],
     certificate: "KBS Certified AI User",
-    formats: ["Präsenz", "Remote", "Inhouse"]
+    formats: ["Präsenz", "Remote", "Inhouse"],
+    image: "/kurse-images/ki-anwender.jpg"
   },
   {
     slug: "prompt-engineering",
@@ -69,7 +71,8 @@ export const COURSES: Course[] = [
       "Fallstricke: Halluzinationen, Bias, Kontextlängen"
     ],
     certificate: "KBS Prompt Practitioner",
-    formats: ["Präsenz", "Remote", "Inhouse"]
+    formats: ["Präsenz", "Remote", "Inhouse"],
+    image: "/kurse-images/prompt-engineering.jpg"
   },
   {
     slug: "vertrieb",
@@ -87,7 +90,8 @@ export const COURSES: Course[] = [
       "Erfolgs- und Conversion-Analyse mit KI-Unterstützung"
     ],
     certificate: "KBS AI for Sales",
-    formats: ["Präsenz", "Remote", "Inhouse"]
+    formats: ["Präsenz", "Remote", "Inhouse"],
+    image: "/kurse-images/vertrieb.jpg"
   },
   {
     slug: "marketing",
@@ -105,7 +109,8 @@ export const COURSES: Course[] = [
       "Analytics-Auswertung und Reporting"
     ],
     certificate: "KBS AI for Marketing",
-    formats: ["Präsenz", "Remote", "Inhouse"]
+    formats: ["Präsenz", "Remote", "Inhouse"],
+    image: "/kurse-images/marketing.jpg"
   },
   {
     slug: "finanzen",
@@ -123,7 +128,8 @@ export const COURSES: Course[] = [
       "Zusammenspiel mit dem Steuerbüro"
     ],
     certificate: "KBS AI for Finance",
-    formats: ["Präsenz", "Remote", "Inhouse"]
+    formats: ["Präsenz", "Remote", "Inhouse"],
+    image: "/kurse-images/finanzen.jpg"
   },
   {
     slug: "hr",
@@ -141,7 +147,8 @@ export const COURSES: Course[] = [
       "Betriebsrat und Mitbestimmung von Anfang an mitdenken"
     ],
     certificate: "KBS AI for HR",
-    formats: ["Präsenz", "Remote", "Inhouse"]
+    formats: ["Präsenz", "Remote", "Inhouse"],
+    image: "/kurse-images/hr.jpg"
   },
   {
     slug: "kundenservice",
@@ -159,7 +166,8 @@ export const COURSES: Course[] = [
       "Eskalationspfade und Grenzen automatischer Bearbeitung"
     ],
     certificate: "KBS AI for Customer Service",
-    formats: ["Präsenz", "Remote", "Inhouse"]
+    formats: ["Präsenz", "Remote", "Inhouse"],
+    image: "/kurse-images/kundenservice.jpg"
   },
   {
     slug: "strategie",
@@ -177,7 +185,8 @@ export const COURSES: Course[] = [
       "Risikoklassen nach EU AI Act – im Überblick"
     ],
     certificate: "KBS Executive AI Briefing",
-    formats: ["Präsenz", "Inhouse"]
+    formats: ["Präsenz", "Inhouse"],
+    image: "/kurse-images/strategie.jpg"
   },
   {
     slug: "ai-act",
@@ -195,7 +204,8 @@ export const COURSES: Course[] = [
       "Interne Audits und Bewertungen durchführen"
     ],
     certificate: "KBS AI Act Compliance Officer (mit Wissenscheck)",
-    formats: ["Präsenz", "Inhouse"]
+    formats: ["Präsenz", "Inhouse"],
+    image: "/kurse-images/ai-act.jpg"
   },
   {
     slug: "betriebsvereinbarung",
@@ -213,7 +223,8 @@ export const COURSES: Course[] = [
       "Rolle des Betriebsrats im laufenden Betrieb"
     ],
     certificate: "KBS Teilnahmezertifikat",
-    formats: ["Präsenz", "Inhouse"]
+    formats: ["Präsenz", "Inhouse"],
+    image: "/kurse-images/betriebsvereinbarung.jpg"
   },
   {
     slug: "lokale-ki",
@@ -231,7 +242,8 @@ export const COURSES: Course[] = [
       "Wartung, Updates, Monitoring, Sicherheit"
     ],
     certificate: "KBS Local AI Administrator",
-    formats: ["Präsenz", "Inhouse"]
+    formats: ["Präsenz", "Inhouse"],
+    image: "/kurse-images/lokale-ki.jpg"
   },
   {
     slug: "rag",
@@ -249,6 +261,7 @@ export const COURSES: Course[] = [
       "Evaluation: Antwortqualität, Halluzinationen, Kosten"
     ],
     certificate: "KBS RAG Developer",
-    formats: ["Präsenz", "Inhouse"]
+    formats: ["Präsenz", "Inhouse"],
+    image: "/kurse-images/rag.jpg"
   }
 ];

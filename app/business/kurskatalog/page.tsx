@@ -13,6 +13,7 @@ import {
   CalendarClock,
   CheckCircle2
 } from "lucide-react";
+import PlaceholderImage from "@/components/PlaceholderImage";
 import {
   COURSES,
   CATEGORY_LABEL,
@@ -216,8 +217,16 @@ export default function CourseCatalogPage() {
                   <Reveal key={c.slug} delay={i * 0.04}>
                     <article
                       id={c.slug}
-                      className="card scroll-mt-32 h-full p-7 md:p-8"
+                      className="card scroll-mt-32 h-full overflow-hidden p-0"
                     >
+                      <PlaceholderImage
+                        src={c.image}
+                        alt={c.title}
+                        iconName="course"
+                        aspect="aspect-[16/9]"
+                        className="border-b border-ink-900/8"
+                      />
+                      <div className="p-7 md:p-8">
                       <div className="flex items-start justify-between gap-4">
                         <h3 className="text-xl leading-snug tracking-tight text-ink-900 sm:text-2xl">
                           {c.title}
@@ -280,6 +289,7 @@ export default function CourseCatalogPage() {
                         <p className="text-[13px] font-medium text-white">
                           Zertifikat: {c.certificate}
                         </p>
+                      </div>
                       </div>
                     </article>
                   </Reveal>

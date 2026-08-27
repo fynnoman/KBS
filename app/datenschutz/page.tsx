@@ -31,8 +31,8 @@ export default function DatenschutzPage() {
                 Verantwortlich
               </h2>
               <p>
-                KBS – KI-Beratung Saar<br />
-                Musterstraße 1, 66111 Saarbrücken<br />
+                Schulz Stosse GbR<br />
+                Heiligenbronstr. 7, 66359 Bous<br />
                 info@ki-beratung-saar.com
               </p>
             </div>
