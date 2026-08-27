@@ -58,7 +58,7 @@ export default function Contact() {
                         E-Mail
                       </p>
                       <p className="mt-1 text-xl font-medium tracking-tight text-ink-900">
-                        info(at)ki-beratung-saar.com
+                        info@ki-beratung-saar.com
                       </p>
                     </div>
                   </div>

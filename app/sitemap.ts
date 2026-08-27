@@ -19,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/leistungen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/standorte`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/insights`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${base}/ueber/fynn-schulz`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     { url: `${base}/business`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${base}/business/kurskatalog`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },

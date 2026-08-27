@@ -36,7 +36,7 @@ export async function generateMetadata({
       siteName: "KBS – KI-Beratung Saar",
       publishedTime: a.publishedAt,
       modifiedTime: a.updatedAt,
-      authors: [`${SITE_URL}/ueber/fynn-schulz`],
+      authors: ["KBS Redaktion"],
       images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
     }
   };
@@ -76,10 +76,10 @@ export default async function InsightPage({
         mainEntityOfPage: url,
         image: `${SITE_URL}/opengraph-image`,
         author: {
-          "@type": "Person",
-          "@id": `${SITE_URL}/#person`,
-          name: "Fynn Schulz",
-          url: `${SITE_URL}/ueber/fynn-schulz`
+          "@type": "Organization",
+          "@id": `${SITE_URL}/#business`,
+          name: "KBS – KI-Beratung Saar",
+          url: SITE_URL
         },
         publisher: { "@id": `${SITE_URL}/#business` }
       },
@@ -189,24 +189,23 @@ export default async function InsightPage({
           <Reveal>
             <div className="card p-6 sm:p-7">
               <p className="text-[10.5px] font-medium uppercase tracking-[0.18em] text-ink-400">
-                Autor
+                Herausgeber
               </p>
               <div className="mt-4 flex items-start justify-between gap-4">
                 <div>
                   <p className="text-lg font-medium tracking-tight text-ink-900">
-                    Fynn Schulz
+                    KBS Redaktion
                   </p>
                   <p className="mt-1 text-[14px] leading-relaxed text-ink-500">
-                    Gründer von KBS. Führt das Webdesign-Studio Fylu Marketing
-                    in Saarlouis, entwickelt die SaaS Taskey für
-                    Gebäudereiniger und nutzt KI täglich über zehn Stunden.
+                    Praxisnahe Analysen und Anleitungen aus dem Beratungs- und
+                    Entwicklungsalltag von KBS – KI-Beratung Saar.
                   </p>
                 </div>
                 <Link
-                  href="/ueber/fynn-schulz"
+                  href="/business"
                   className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink-700 hover:text-ink-900"
                 >
-                  Mehr
+                  Über KBS
                   <ArrowUpRight size={14} strokeWidth={2.2} />
                 </Link>
               </div>

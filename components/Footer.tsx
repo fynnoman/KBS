@@ -84,11 +84,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/ueber/fynn-schulz" className="hover:text-ink-900">
-                  Über Fynn Schulz
-                </Link>
-              </li>
-              <li>
                 <a href="tel:+4915168488999" className="hover:text-ink-900">
                   0151 · 68488999
                 </a>
@@ -98,7 +93,7 @@ export default function Footer() {
                   href="mailto:info@ki-beratung-saar.com"
                   className="hover:text-ink-900"
                 >
-                  info(at)ki-beratung-saar.com
+                  info@ki-beratung-saar.com
                 </a>
               </li>
               <li className="pt-2 text-[13px] text-ink-400">
