@@ -22,10 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/ueber/fynn-schulz`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
 
     { url: `${base}/business`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${base}/business/kurskatalog`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/business#use-cases`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/business#branchen`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/business#lokale-ki`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/business#schulungen`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/business#kurskatalog`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${base}/business#referenzen`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${base}/business#faq`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${base}/business#termin`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },

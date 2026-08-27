@@ -61,12 +61,12 @@ export default function Hero() {
               className="mt-10 flex flex-wrap items-center gap-3"
             >
               <Link href="#termin" className="btn-primary">
-                <Phone size={16} strokeWidth={2.4} />
                 Termin buchen
+                <ArrowRight size={16} strokeWidth={2.4} />
               </Link>
               <Link href="tel:+4915168488999" className="btn-ghost">
+                <Phone size={16} strokeWidth={2.2} />
                 Jetzt anrufen
-                <ArrowRight size={16} strokeWidth={2.2} />
               </Link>
             </motion.div>
           </div>
