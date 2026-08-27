@@ -19,7 +19,8 @@ const BUSINESS_NAV = [
   { href: "/business#use-cases", label: "Use-Cases" },
   { href: "/business#branchen", label: "Branchen" },
   { href: "/business#lokale-ki", label: "Lokale KI" },
-  { href: "/business#prozess", label: "Prozess" },
+  { href: "/business#schulungen", label: "Schulungen" },
+  { href: "/business#referenzen", label: "Referenzen" },
   { href: "/business#faq", label: "FAQ" },
   { href: "/", label: "Zur KMU-Seite", highlight: true }
 ];
@@ -54,7 +55,7 @@ export default function Navigation() {
                 href={item.href}
                 className={`rounded-full px-3.5 py-2 text-[13.5px] font-medium transition-colors ${
                   item.highlight
-                    ? "bg-white/10 text-white hover:bg-white/15"
+                    ? "text-accent-400 hover:bg-white/10 hover:text-accent-300"
                     : "text-white/75 hover:bg-white/10 hover:text-white"
                 }`}
               >
