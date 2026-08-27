@@ -26,11 +26,11 @@ export default function HomeCatalogsNote() {
               />
             </Link>
             <Link
-              href="/business/module"
+              href="/business/loesungen"
               className="group inline-flex items-center gap-2.5 rounded-full border border-ink-900/10 bg-ink-50 px-4 py-2.5 text-[13.5px] font-medium text-ink-700 transition-colors hover:border-ink-900/25 hover:text-ink-900"
             >
               <Boxes size={14} strokeWidth={2.2} />
-              12 Software-Module
+              12 Software-Lösungen
               <ArrowUpRight
                 size={13}
                 strokeWidth={2.2}

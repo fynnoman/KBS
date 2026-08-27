@@ -11,7 +11,8 @@ import {
   MapPin,
   ArrowLeft,
   CalendarClock,
-  CheckCircle2
+  CheckCircle2,
+  Mail
 } from "lucide-react";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import {
@@ -20,7 +21,23 @@ import {
   CATEGORY_INTRO,
   type CourseCategory
 } from "@/lib/data/courses";
-import { CALENDLY_URL, SITE_URL } from "@/lib/config";
+import { CALENDLY_URL, EMAIL, SITE_URL } from "@/lib/config";
+
+function buildCourseMailto(title: string): string {
+  const subject = `Anfrage zu KBS-Kurs: ${title}`;
+  const body = `Guten Tag KBS-Team,
+
+ich interessiere mich für den Kurs "${title}" und möchte gerne mehr über Ablauf, Termine und Konditionen erfahren.
+
+Angaben zu unserem Unternehmen:
+- Firma:
+- Anzahl Teilnehmender:
+- Wunschzeitraum:
+- Format (Inhouse / Remote):
+
+Vielen Dank und mit freundlichen Grüßen`;
+  return `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
 
 const PAGE_URL = `${SITE_URL}/business/kurskatalog`;
 const DESCRIPTION =
@@ -290,6 +307,14 @@ export default function CourseCatalogPage() {
                           Zertifikat: {c.certificate}
                         </p>
                       </div>
+
+                      <a
+                        href={buildCourseMailto(c.title)}
+                        className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-[13px] font-medium text-ink-900 transition-all hover:border-ink-900/25 hover:-translate-y-0.5"
+                      >
+                        <Mail size={13} strokeWidth={2.2} />
+                        Direkte E-Mail zu diesem Kurs
+                      </a>
                       </div>
                     </article>
                   </Reveal>

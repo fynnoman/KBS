@@ -193,13 +193,13 @@ export default function BusinessPage() {
       <Navigation />
       <BusinessHero />
       <BusinessCTA />
+      <BusinessCurriculum />
+      <BusinessModules />
       <BusinessUseCases />
       <BusinessIndustries />
       <LocalAIFeature />
       <BusinessProcess />
       <BusinessTraining />
-      <BusinessCurriculum />
-      <BusinessModules />
       <BusinessReferences />
       <BusinessFAQ />
       <Footer />

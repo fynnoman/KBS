@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ImageIcon, GraduationCap, Cpu, Boxes, Award } from "lucide-react";
+import KIStamp from "./KIStamp";
 
 const ICON_MAP = {
   image: ImageIcon,
@@ -19,6 +20,7 @@ type Props = {
   iconName?: PlaceholderIconName;
   aspect?: string;
   className?: string;
+  showKIStamp?: boolean;
 };
 
 export default function PlaceholderImage({
@@ -26,7 +28,8 @@ export default function PlaceholderImage({
   alt,
   iconName = "image",
   aspect = "aspect-[4/3]",
-  className = ""
+  className = "",
+  showKIStamp = true
 }: Props) {
   const [failed, setFailed] = useState(false);
   const Icon = ICON_MAP[iconName];
@@ -45,13 +48,16 @@ export default function PlaceholderImage({
           </p>
         </div>
       ) : (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={src}
-          alt={alt}
-          onError={() => setFailed(true)}
-          className="h-full w-full object-cover"
-        />
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={src}
+            alt={alt}
+            onError={() => setFailed(true)}
+            className="h-full w-full object-cover"
+          />
+          {showKIStamp && <KIStamp />}
+        </>
       )}
     </div>
   );

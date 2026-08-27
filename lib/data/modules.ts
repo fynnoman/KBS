@@ -206,7 +206,7 @@ export const MODULES: SoftwareModule[] = [
   },
   {
     slug: "policy-templates",
-    title: "KBS Policy Templates",
+    title: "KBS Policy Baukasten",
     category: "governance",
     tagline: "Nutzungsrichtlinien und Betriebsvereinbarungen",
     summary:

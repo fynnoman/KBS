@@ -3,8 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { Phone, ArrowRight } from "lucide-react";
+import { Phone, ArrowRight, MessageCircle } from "lucide-react";
 import KIStamp from "./KIStamp";
+import { WHATSAPP_URL } from "@/lib/config";
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -68,6 +69,15 @@ export default function Hero() {
                 <Phone size={16} strokeWidth={2.2} />
                 Jetzt anrufen
               </Link>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                <MessageCircle size={16} strokeWidth={2.2} />
+                WhatsApp
+              </a>
             </motion.div>
           </div>
 

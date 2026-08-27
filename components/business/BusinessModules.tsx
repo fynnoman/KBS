@@ -18,17 +18,17 @@ const CATEGORY_ORDER: ModuleCategory[] = [
 
 export default function BusinessModules() {
   return (
-    <section id="module" className="relative py-24 md:py-32">
+    <section id="loesungen" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="mb-14 flex flex-col items-start justify-between gap-6 md:mb-16 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <span className="chip">
                 <Boxes size={12} strokeWidth={2.4} />
-                Software-Module
+                Software-Lösungen
               </span>
               <h2 className="mt-5 text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-5xl md:text-6xl">
-                {MODULES.length} Templates,
+                {MODULES.length} Software-Lösungen,
                 <br />
                 <span className="display italic text-ink-500">
                   aus produktiver Praxis.
@@ -36,9 +36,9 @@ export default function BusinessModules() {
               </h2>
             </div>
             <p className="max-w-sm text-[15px] leading-relaxed text-ink-500">
-              Jedes Modul entsteht aus einem Beratungsprojekt und wird zum
+              Jede Lösung entsteht aus einem Beratungsprojekt und wird zum
               wiederverwendbaren Baustein. Sie bekommen keine Green-Field-
-              Entwicklung, sondern erprobte Templates.
+              Entwicklung, sondern erprobte Software-Lösungen.
             </p>
           </div>
         </Reveal>
@@ -49,12 +49,12 @@ export default function BusinessModules() {
             return (
               <Reveal key={cat} delay={i * 0.05}>
                 <Link
-                  href={`/business/module#${cat}`}
+                  href={`/business/loesungen#${cat}`}
                   className="card group flex h-full flex-col p-6 md:p-7 transition-all hover:shadow-lift"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-ink-400">
-                      {items.length} Module
+                      {items.length} Lösungen
                     </p>
                     <ArrowUpRight
                       size={16}
@@ -103,10 +103,10 @@ export default function BusinessModules() {
               </div>
             </div>
             <Link
-              href="/business/module"
+              href="/business/loesungen"
               className="inline-flex items-center gap-2 rounded-full bg-ink-900 px-5 py-3 text-[14px] font-medium text-white transition-all hover:-translate-y-0.5"
             >
-              Zur vollständigen Modul-Übersicht
+              Zur vollständigen Übersicht
               <ArrowUpRight size={15} strokeWidth={2.2} />
             </Link>
           </div>
