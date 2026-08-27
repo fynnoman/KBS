@@ -48,12 +48,12 @@ export default function Navigation() {
         }`}
       >
         {/* Left: nav items */}
-        <ul className="hidden items-center gap-1 justify-self-start md:flex">
+        <ul className="hidden min-w-0 items-center gap-0.5 justify-self-start md:flex">
           {NAV.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={`rounded-full px-3.5 py-2 text-[13.5px] font-medium transition-colors ${
+                className={`inline-flex whitespace-nowrap rounded-full px-2.5 py-2 text-[12.5px] font-medium transition-colors ${
                   item.highlight
                     ? "text-accent-400 hover:bg-white/10 hover:text-accent-300"
                     : "text-white/75 hover:bg-white/10 hover:text-white"
