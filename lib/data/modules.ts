@@ -7,7 +7,7 @@ export type ModuleCategory =
 export type ModulePriceTier = {
   label: string;
   price: number;
-  unit?: "einmalig" | "pro Monat" | "pro Tag";
+  unit?: "einmalig" | "pro Monat" | "pro Woche" | "pro Tag";
   note?: string;
 };
 
@@ -445,9 +445,9 @@ export const MODULES: SoftwareModule[] = [
     image: "/module-images/content-studio.jpg",
     pricing: {
       tiers: [
-        { label: "Tagessatz", price: 700, unit: "pro Tag" }
+        { label: "Wochensatz", price: 700, unit: "pro Woche" }
       ],
-      note: "Mindestumfang 10 Tage"
+      note: "Mindestumfang 2 Wochen"
     }
   },
   {
