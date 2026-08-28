@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-ink-900/8 bg-white">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-12">
           <div>
             <div className="inline-flex rounded-2xl bg-ink-900 px-4 py-3">
               <Logo />

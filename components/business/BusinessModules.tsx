@@ -116,7 +116,7 @@ export default function BusinessModules() {
                     <Reveal key={m.slug} delay={i * 0.03}>
                       <article
                         id={m.slug}
-                        className="card scroll-mt-32 flex h-full flex-col p-7 md:p-8"
+                        className="card scroll-mt-32 flex h-full flex-col p-5 sm:p-7 md:p-8"
                       >
                         <div className="flex items-start justify-between gap-4">
                           <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-accent-700">

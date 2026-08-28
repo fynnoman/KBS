@@ -137,7 +137,7 @@ export default function BusinessCurriculum() {
                           Live
                         </span>
                       </div>
-                      <div className="flex flex-1 flex-col p-7 md:p-8">
+                      <div className="flex flex-1 flex-col p-5 sm:p-7 md:p-8">
                       <div className="flex items-start justify-between gap-4">
                         <h4 className="text-lg leading-snug tracking-tight text-ink-900 sm:text-xl">
                           {c.title}

@@ -67,9 +67,9 @@ function ensureCalendlyAssets(): Promise<void> {
 }
 
 export default function CalendlyEmbed({
-  height = 700,
   className = ""
 }: {
+  /** Deprecated – height is now handled by responsive Tailwind classes. */
   height?: number;
   className?: string;
 }) {
@@ -104,8 +104,8 @@ export default function CalendlyEmbed({
 
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl bg-ink-50 ${className}`}
-      style={{ minWidth: "280px", height }}
+      className={`relative h-[540px] overflow-hidden rounded-3xl bg-ink-50 md:h-[680px] ${className}`}
+      style={{ minWidth: "280px" }}
     >
       <div ref={ref} className="h-full w-full" />
       {state !== "ready" && (

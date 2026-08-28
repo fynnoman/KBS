@@ -10,6 +10,8 @@ import BusinessReferences from "@/components/business/BusinessReferences";
 import BusinessFAQ from "@/components/business/BusinessFAQ";
 import BusinessCTA from "@/components/business/BusinessCTA";
 import { SITE_URL } from "@/lib/config";
+import { COURSES } from "@/lib/data/courses";
+import { MODULES } from "@/lib/data/modules";
 
 const PAGE_URL = `${SITE_URL}/business`;
 const DESCRIPTION =
@@ -176,7 +178,105 @@ const jsonLd = {
           item: PAGE_URL
         }
       ]
-    }
+    },
+    // Every course as a Course entity with inline Offer (Inhouse-Pauschale)
+    ...COURSES.map((c) => ({
+      "@type": "Course",
+      "@id": `${PAGE_URL}#${c.slug}`,
+      name: c.title,
+      description: c.summary,
+      provider: { "@id": `${SITE_URL}/#business` },
+      educationalLevel: "Professional",
+      audience: {
+        "@type": "BusinessAudience",
+        audienceType: c.audience
+      },
+      hasCourseInstance: {
+        "@type": "CourseInstance",
+        courseMode: c.formats.join(", "),
+        courseWorkload: c.duration
+      },
+      ...(c.pricing?.inhousePrice !== undefined && {
+        offers: {
+          "@type": "Offer",
+          price: c.pricing.inhousePrice,
+          priceCurrency: "EUR",
+          category: "Business",
+          eligibleCustomerType: "Business",
+          availability: "https://schema.org/InStock",
+          description:
+            c.pricing.customLabel ??
+            "Inhouse-Pauschale bis 12 Teilnehmer, netto zzgl. USt."
+        }
+      })
+    })),
+    // Every module as a SoftwareApplication with priced Offers
+    ...MODULES.map((m) => {
+      const offers: unknown[] = [];
+      if (m.pricing?.bundle) {
+        offers.push({
+          "@type": "Offer",
+          name: "Baustein-Einrichtung",
+          price: m.pricing.bundle.setup,
+          priceCurrency: "EUR",
+          category: "Business",
+          eligibleCustomerType: "Business"
+        });
+        offers.push({
+          "@type": "Offer",
+          name: "Lizenz",
+          price: m.pricing.bundle.monthly,
+          priceCurrency: "EUR",
+          category: "Business",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: m.pricing.bundle.monthly,
+            priceCurrency: "EUR",
+            unitCode: "MON",
+            unitText: "monatlich"
+          }
+        });
+      }
+      if (m.pricing?.tiers) {
+        for (const t of m.pricing.tiers) {
+          offers.push({
+            "@type": "Offer",
+            name: t.label,
+            price: t.price,
+            priceCurrency: "EUR",
+            category: "Business",
+            ...(t.unit === "pro Monat" && {
+              priceSpecification: {
+                "@type": "UnitPriceSpecification",
+                price: t.price,
+                priceCurrency: "EUR",
+                unitCode: "MON",
+                unitText: "monatlich"
+              }
+            }),
+            ...(t.unit === "pro Woche" && {
+              priceSpecification: {
+                "@type": "UnitPriceSpecification",
+                price: t.price,
+                priceCurrency: "EUR",
+                unitCode: "WEE",
+                unitText: "wöchentlich"
+              }
+            })
+          });
+        }
+      }
+      return {
+        "@type": "SoftwareApplication",
+        "@id": `${PAGE_URL}#${m.slug}`,
+        name: m.title,
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, On-Premise",
+        description: m.summary,
+        provider: { "@id": `${SITE_URL}/#business` },
+        ...(offers.length > 0 && { offers })
+      };
+    })
   ]
 };
 

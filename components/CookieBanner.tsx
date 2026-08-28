@@ -92,7 +92,7 @@ export default function CookieBanner() {
                 type="button"
                 onClick={() => handle("essential")}
                 aria-label="Schließen und nur essenzielle Cookies erlauben"
-                className="hidden h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-ink-900/10 bg-white text-ink-400 transition-colors hover:text-ink-900 md:inline-flex"
+                className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-ink-900/10 bg-white text-ink-400 transition-colors hover:text-ink-900"
               >
                 <X size={14} strokeWidth={2.2} />
               </button>
