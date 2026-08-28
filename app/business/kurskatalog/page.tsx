@@ -12,7 +12,8 @@ import {
   ArrowLeft,
   CalendarClock,
   CheckCircle2,
-  Mail
+  Mail,
+  Radio
 } from "lucide-react";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import {
@@ -161,10 +162,17 @@ export default function CourseCatalogPage() {
               <ArrowLeft size={14} strokeWidth={2.2} />
               Zurück zu KBS Business
             </Link>
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <span className="chip">
                 <GraduationCap size={12} strokeWidth={2.4} />
                 Kurskatalog
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-500/25 bg-accent-500/10 px-2.5 py-1 text-[11px] font-medium tracking-tight text-accent-800">
+                <span className="relative inline-flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-500 opacity-70" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-500" />
+                </span>
+                Live-Format
               </span>
               <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-ink-400">
                 {COURSES.length} Zertifikatskurse
@@ -181,6 +189,14 @@ export default function CourseCatalogPage() {
               Jeder Kurs mündet in einem KBS-Zertifikat. Ausschließlich inhouse
               oder in geschlossenen Firmengruppen – kein offener Kalender, kein
               Massenformat. Grundlagen bis Governance, Rolle bis Technik.
+            </p>
+            <p className="mt-4 max-w-2xl text-[14.5px] leading-relaxed text-ink-500">
+              <strong className="font-semibold text-ink-700">
+                Alle Kurse sind Live-Kurse.
+              </strong>{" "}
+              Präsenz vor Ort oder Remote im Videocall in Echtzeit – geleitet,
+              mit Rückfragen und Übungen. Keine Aufzeichnungen, keine
+              Self-Paced-Videos.
             </p>
           </Reveal>
         </div>
@@ -258,6 +274,10 @@ export default function CourseCatalogPage() {
                       </div>
 
                       <div className="mt-5 flex flex-wrap gap-2">
+                        <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-500/25 bg-accent-500/10 px-3 py-1 text-[12px] font-medium text-accent-800">
+                          <Radio size={11} strokeWidth={2.2} />
+                          Live-Kurs
+                        </span>
                         <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-900/10 bg-ink-50 px-3 py-1 text-[12px] font-medium text-ink-700">
                           <Clock size={11} strokeWidth={2.2} />
                           {c.duration}

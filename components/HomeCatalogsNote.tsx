@@ -19,6 +19,13 @@ export default function HomeCatalogsNote() {
             >
               <GraduationCap size={14} strokeWidth={2.2} />
               12 Zertifikatskurse
+              <span className="inline-flex items-center gap-1 rounded-full bg-accent-500/15 px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-accent-800">
+                <span className="relative inline-flex h-1 w-1">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-500 opacity-70" />
+                  <span className="relative inline-flex h-1 w-1 rounded-full bg-accent-500" />
+                </span>
+                Live
+              </span>
               <ArrowUpRight
                 size={13}
                 strokeWidth={2.2}

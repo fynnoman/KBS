@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRight, Award, Clock, GraduationCap } from "lucide-react";
+import { ArrowUpRight, Award, Clock, GraduationCap, Radio } from "lucide-react";
 import Reveal from "../Reveal";
 import PlaceholderImage from "../PlaceholderImage";
 import {
@@ -28,10 +28,19 @@ export default function BusinessCurriculum() {
         <Reveal>
           <div className="mb-10 flex flex-col items-start justify-between gap-6 md:mb-14 md:flex-row md:items-end">
             <div className="max-w-2xl">
-              <span className="chip">
-                <GraduationCap size={12} strokeWidth={2.4} />
-                Kurskatalog
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="chip">
+                  <GraduationCap size={12} strokeWidth={2.4} />
+                  Kurskatalog
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-500/25 bg-accent-500/10 px-2.5 py-1 text-[11px] font-medium tracking-tight text-accent-800">
+                  <span className="relative inline-flex h-1.5 w-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-500 opacity-70" />
+                    <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-500" />
+                  </span>
+                  Live-Format
+                </span>
+              </div>
               <h2 className="mt-5 text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-5xl md:text-6xl">
                 {COURSES.length} Zertifikatskurse,
                 <br />
@@ -42,7 +51,8 @@ export default function BusinessCurriculum() {
               <p className="mt-6 max-w-xl text-[15.5px] leading-relaxed text-ink-500">
                 Vier Kategorien vom Grundlagen-Tag bis zum zweitägigen
                 Compliance-Officer-Kurs. Jeder Abschluss dokumentiert mit
-                einem eigenen KBS-Zertifikat.
+                einem eigenen KBS-Zertifikat. Alle Kurse laufen live – Präsenz
+                oder Remote im Videocall, keine Aufzeichnungen.
               </p>
             </div>
           </div>
@@ -85,6 +95,10 @@ export default function BusinessCurriculum() {
                   <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[10.5px] font-medium uppercase tracking-[0.14em] text-ink-700 shadow-soft backdrop-blur">
                     <Clock size={10} strokeWidth={2.4} />
                     {c.duration}
+                  </span>
+                  <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-accent-500/95 px-2.5 py-1 text-[10.5px] font-medium uppercase tracking-[0.14em] text-white shadow-soft backdrop-blur">
+                    <Radio size={10} strokeWidth={2.4} />
+                    Live
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-5">
