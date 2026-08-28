@@ -323,7 +323,7 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
               {relatedCourses.map((c, idx) => (
                 <Reveal key={c.slug} delay={idx * 0.05}>
                   <Link
-                    href={`/ki-schulung/${c.slug}`}
+                    href="/business#kurskatalog"
                     className="group card block h-full p-7 transition-all hover:shadow-lift"
                   >
                     <p className="text-[10.5px] font-medium uppercase tracking-[0.18em] text-ink-400">

@@ -9,7 +9,6 @@ import { CALENDLY_URL, PHONE_TEL } from "@/lib/config";
 
 const HOME_NAV = [
   { href: "/leistungen", label: "Leistungen" },
-  { href: "/ki-schulung", label: "Schulungen" },
   { href: "/branchen", label: "Branchen" },
   { href: "/ki-anwendungsfaelle", label: "Anwendungen" },
   { href: "/standorte", label: "Standorte" },

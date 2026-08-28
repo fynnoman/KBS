@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { CITIES } from "@/lib/data/cities";
 import { SERVICES } from "@/lib/data/services";
-import { COURSES } from "@/lib/data/courses";
 import { INDUSTRIES } from "@/lib/data/industries";
 import { DEPARTMENTS } from "@/lib/data/useCases";
 
@@ -20,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     { url: `${base}/leistungen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/standorte`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/ki-schulung`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/branchen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/ki-anwendungsfaelle`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/kontaktformular`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
@@ -52,13 +50,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85
   }));
 
-  const courseEntries: MetadataRoute.Sitemap = COURSES.map((c) => ({
-    url: `${base}/ki-schulung/${c.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.8
-  }));
-
   const industryEntries: MetadataRoute.Sitemap = INDUSTRIES.map((i) => ({
     url: `${base}/branchen/${i.slug}`,
     lastModified: now,
@@ -77,7 +68,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticEntries,
     ...cityEntries,
     ...serviceEntries,
-    ...courseEntries,
     ...industryEntries,
     ...departmentEntries
   ];
