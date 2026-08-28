@@ -67,7 +67,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/ki-anwender.jpg",
     pricing: {
-      inhousePrice: 1200
+      inhousePrice: 2400
     }
   },
   {
@@ -89,7 +89,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/prompt-engineering.jpg",
     pricing: {
-      inhousePrice: 1200
+      inhousePrice: 2400
     }
   },
   {
@@ -111,7 +111,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/vertrieb.jpg",
     pricing: {
-      inhousePrice: 1450
+      inhousePrice: 2900
     }
   },
   {
@@ -133,7 +133,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/marketing.jpg",
     pricing: {
-      inhousePrice: 1450
+      inhousePrice: 2900
     }
   },
   {
@@ -155,7 +155,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/finanzen.jpg",
     pricing: {
-      inhousePrice: 1450
+      inhousePrice: 2900
     }
   },
   {
@@ -177,7 +177,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/hr.jpg",
     pricing: {
-      inhousePrice: 1450
+      inhousePrice: 2900
     }
   },
   {
@@ -199,7 +199,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/kundenservice.jpg",
     pricing: {
-      inhousePrice: 1450
+      inhousePrice: 2900
     }
   },
   {
@@ -221,7 +221,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Inhouse"],
     image: "/kurse-images/strategie.jpg",
     pricing: {
-      inhousePrice: 700
+      inhousePrice: 1400
     }
   },
   {
@@ -265,7 +265,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Inhouse"],
     image: "/kurse-images/betriebsvereinbarung.jpg",
     pricing: {
-      inhousePrice: 700
+      inhousePrice: 1400
     }
   },
   {
@@ -332,7 +332,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/strategie.jpg",
     pricing: {
-      inhousePrice: 950,
+      inhousePrice: 1900,
       customLabel: "Führungskreis-Format"
     }
   },
