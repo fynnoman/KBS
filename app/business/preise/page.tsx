@@ -12,7 +12,10 @@ import {
   Clock,
   Wallet,
   MapPin,
-  CalendarClock
+  CalendarClock,
+  GraduationCap,
+  Radio,
+  Award
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -112,6 +115,7 @@ function renderUnit(unit: PriceUnit): string {
 }
 
 const BUSINESS_ITEMS = PRICING.filter((p) => p.segment === "business");
+const SEMINAR_ITEMS = PRICING.filter((p) => p.segment === "kurse");
 
 // ─── JSON-LD ──────────────────────────────────────────────────────
 const jsonLd = {
@@ -129,7 +133,7 @@ const jsonLd = {
       "@type": "OfferCatalog",
       "@id": `${PAGE_URL}#offers`,
       name: "KBS Business – Preisübersicht",
-      itemListElement: BUSINESS_ITEMS.map((item) => ({
+      itemListElement: [...BUSINESS_ITEMS, ...SEMINAR_ITEMS].map((item) => ({
         "@type": "Offer",
         name: item.name,
         priceCurrency: "EUR",
@@ -149,7 +153,7 @@ const jsonLd = {
         priceValidUntil: "2027-08-31",
         eligibleCustomerType: "Business",
         description: item.note ?? undefined,
-        category: "business"
+        category: item.segment
       }))
     },
     {
@@ -169,14 +173,32 @@ const jsonLd = {
 };
 
 // ─── Card ─────────────────────────────────────────────────────────
-function PriceCard({ item }: { item: PriceItem }) {
+function participantsLabel(item: PriceItem): string | null {
+  if (item.minParticipants && item.maxParticipants) {
+    return `${item.minParticipants}–${item.maxParticipants} Teilnehmer`;
+  }
+  if (item.maxParticipants) return `bis ${item.maxParticipants} Teilnehmer`;
+  return null;
+}
+
+function PriceCard({ item, live = false }: { item: PriceItem; live?: boolean }) {
   const { main, unit } = formatPrice(item);
   const isRange = item.priceFrom !== undefined;
+  const participants = participantsLabel(item);
 
   return (
     <article className="flex h-full flex-col rounded-3xl border border-ink-900/10 bg-white p-6 shadow-soft transition-all md:p-7">
       <header>
         <div className="flex flex-wrap items-center gap-1.5">
+          {live && (
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-500/25 bg-accent-500/10 px-2.5 py-1 text-[11px] font-medium tracking-tight text-accent-800">
+              <span className="relative inline-flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-500 opacity-70" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-500" />
+              </span>
+              Live-Kurs
+            </span>
+          )}
           {isRange && (
             <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-500/25 bg-accent-500/10 px-2.5 py-1 text-[11px] font-medium tracking-tight text-accent-800">
               Festpreis-Korridor
@@ -186,6 +208,12 @@ function PriceCard({ item }: { item: PriceItem }) {
             <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-900/10 bg-ink-50 px-2.5 py-1 text-[11px] font-medium text-ink-600">
               <Clock size={10} strokeWidth={2.4} />
               {item.duration}
+            </span>
+          )}
+          {participants && (
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-ink-900/10 bg-ink-50 px-2.5 py-1 text-[11px] font-medium text-ink-600">
+              <Users size={10} strokeWidth={2.4} />
+              {participants}
             </span>
           )}
         </div>
@@ -269,11 +297,12 @@ export default function BusinessPreisePage() {
 
           <Reveal delay={0.15}>
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink-500 sm:text-xl">
-              Preise gelten für KBS Business – Projekte für mittelständische
-              Unternehmen und Konzerne. Alle Angebote netto zzgl. USt.,
-              Preisspannen dienen der frühen Orientierung. Der verbindliche
-              Festpreis wird nach einer Anforderungsanalyse im
-              Kennenlerngespräch fixiert – ohne offene Stundenzettel.
+              Preise gelten für KBS Business – Software-Projekte und
+              Zertifikatskurse für mittelständische Unternehmen und Konzerne.
+              Alle Angebote netto zzgl. USt., Preisspannen dienen der frühen
+              Orientierung. Der verbindliche Festpreis wird nach einer
+              Anforderungsanalyse im Kennenlerngespräch fixiert – ohne offene
+              Stundenzettel.
             </p>
           </Reveal>
 
@@ -378,6 +407,86 @@ export default function BusinessPreisePage() {
         </div>
       </section>
 
+      {/* Zertifikatskurse ---------------------------------------- */}
+      <section id="seminare" className="relative py-24 md:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <div className="mb-12 flex flex-col items-start justify-between gap-6 md:mb-14 md:flex-row md:items-end">
+              <div className="max-w-2xl">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="chip">
+                    <GraduationCap size={12} strokeWidth={2.4} />
+                    Zertifikatskurse & Seminare
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-500/25 bg-accent-500/10 px-2.5 py-1 text-[11px] font-medium tracking-tight text-accent-800">
+                    <span className="relative inline-flex h-1.5 w-1.5">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-500 opacity-70" />
+                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-500" />
+                    </span>
+                    Live-Format
+                  </span>
+                </div>
+                <h2 className="mt-5 text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-5xl md:text-6xl">
+                  Live-Kurse für Ihr Team,
+                  <br />
+                  <span className="display italic text-ink-500">
+                    mit KBS-Zertifikat.
+                  </span>
+                </h2>
+                <p className="mt-6 max-w-xl text-[15.5px] leading-relaxed text-ink-500">
+                  Live-Termine mit maximal 12 Teilnehmern – Präsenz oder Remote
+                  im Videocall, geleitet und mit Rückfragen. Frühbucherpreis
+                  bei Anmeldung mindestens {PRICING_META.earlyBirdWeeks} Wochen
+                  im Voraus.
+                </p>
+              </div>
+              <div className="inline-flex items-start gap-2 rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-[12.5px] leading-snug text-ink-500 backdrop-blur-sm">
+                <Info size={13} strokeWidth={2.2} className="mt-0.5 flex-shrink-0" />
+                <span>
+                  Alle Preise pro Person, netto zzgl. gesetzlicher USt. Inhouse
+                  oder in geschlossenen Firmengruppen.
+                </span>
+              </div>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {SEMINAR_ITEMS.map((item, i) => (
+              <Reveal key={item.id} delay={i * 0.04}>
+                <PriceCard item={item} live />
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.2}>
+            <div className="mt-10 flex flex-col items-start justify-between gap-6 rounded-3xl border border-ink-900/10 bg-white p-8 md:flex-row md:items-center md:p-10">
+              <div className="flex items-start gap-4">
+                <div className="inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl border border-accent-500/20 bg-accent-500/10">
+                  <Award size={18} strokeWidth={1.9} className="text-accent-700" />
+                </div>
+                <div>
+                  <p className="text-[15px] font-medium text-ink-900">
+                    Kompletter Kurskatalog mit allen Formaten
+                  </p>
+                  <p className="mt-1 text-[13.5px] leading-relaxed text-ink-500">
+                    Weitere Rollen- und Governance-Kurse (HR, Finance, Support,
+                    EU AI Act, RAG-Entwicklung, lokale KI für IT) auf Anfrage,
+                    Preise nach Umfang.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/business/kurskatalog"
+                className="inline-flex items-center gap-2 rounded-full bg-ink-900 px-5 py-3 text-[14px] font-medium text-white transition-all hover:-translate-y-0.5"
+              >
+                Zum Kurskatalog
+                <ArrowUpRight size={15} strokeWidth={2.2} />
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Konditionen ---------------------------------------------- */}
       <section id="konditionen" className="relative py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
@@ -410,9 +519,9 @@ export default function BusinessPreisePage() {
                 icon: Wallet
               },
               {
-                title: "Anforderungsanalyse",
-                body: "Vor jedem Business-Projekt findet eine kostenlose Anforderungsanalyse statt, aus der der verbindliche Festpreis abgeleitet wird.",
-                icon: Users
+                title: "Frühbucher",
+                body: `${PRICING_META.earlyBirdWeeks} Wochen vor Kursstart gilt der Frühbucherpreis. Danach reguläre Kondition.`,
+                icon: Clock
               },
               {
                 title: "Gültigkeit",
