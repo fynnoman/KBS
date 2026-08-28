@@ -38,14 +38,6 @@ export default function Footer() {
               ))}
               <li>
                 <Link
-                  href="/preise"
-                  className="text-ink-500 hover:text-ink-900"
-                >
-                  Preise
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/business"
                   className="font-medium text-accent-700 hover:text-accent-800"
                 >

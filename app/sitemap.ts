@@ -17,10 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/#kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
 
     { url: `${base}/leistungen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/preise`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/standorte`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
 
     { url: `${base}/business`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${base}/business/preise`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/business/kurskatalog`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/business/loesungen`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/business#use-cases`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
