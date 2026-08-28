@@ -6,7 +6,6 @@ import BusinessUseCases from "@/components/business/BusinessUseCases";
 import BusinessIndustries from "@/components/business/BusinessIndustries";
 import LocalAIFeature from "@/components/business/LocalAIFeature";
 import BusinessProcess from "@/components/business/BusinessProcess";
-import BusinessTraining from "@/components/business/BusinessTraining";
 import BusinessCurriculum from "@/components/business/BusinessCurriculum";
 import BusinessModules from "@/components/business/BusinessModules";
 import BusinessReferences from "@/components/business/BusinessReferences";
@@ -199,7 +198,6 @@ export default function BusinessPage() {
       <BusinessIndustries />
       <LocalAIFeature />
       <BusinessProcess />
-      <BusinessTraining />
       <BusinessReferences />
       <BusinessFAQ />
       <Footer />

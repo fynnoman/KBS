@@ -31,7 +31,7 @@ export default function BusinessCurriculum() {
               <div className="flex flex-wrap items-center gap-2">
                 <span className="chip">
                   <GraduationCap size={12} strokeWidth={2.4} />
-                  Kurskatalog
+                  Schulungen & Kurskatalog
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-accent-500/25 bg-accent-500/10 px-2.5 py-1 text-[11px] font-medium tracking-tight text-accent-800">
                   <span className="relative inline-flex h-1.5 w-1.5">
@@ -42,19 +42,26 @@ export default function BusinessCurriculum() {
                 </span>
               </div>
               <h2 className="mt-5 text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-5xl md:text-6xl">
-                {COURSES.length} Zertifikatskurse,
+                KI wirkt erst,
                 <br />
                 <span className="display italic text-ink-500">
-                  buchbar für Ihr Team.
+                  wenn Ihr Team sie beherrscht.
                 </span>
               </h2>
               <p className="mt-6 max-w-xl text-[15.5px] leading-relaxed text-ink-500">
-                Vier Kategorien vom Grundlagen-Tag bis zum zweitägigen
-                Compliance-Officer-Kurs. Jeder Abschluss dokumentiert mit
-                einem eigenen KBS-Zertifikat. Alle Kurse laufen live – Präsenz
-                oder Remote im Videocall, keine Aufzeichnungen.
+                Wir liefern nicht nur Systeme, sondern befähigen Ihre
+                Belegschaft. {COURSES.length} Live-Zertifikatskurse in vier
+                Kategorien – vom Grundlagen-Tag bis zum zweitägigen
+                Compliance-Officer-Kurs, Präsenz oder Remote im Videocall,
+                geleitet und mit Rückfragen. Jeder Abschluss dokumentiert
+                mit einem eigenen KBS-Zertifikat.
               </p>
             </div>
+            <p className="max-w-sm text-[15px] leading-relaxed text-ink-500">
+              Inhouse, Remote oder als geschlossene Firmengruppe. Wir
+              dokumentieren den Kompetenzzuwachs, damit Ihr Rollout messbar
+              bleibt – keine Aufzeichnungen, keine Self-Paced-Videos.
+            </p>
           </div>
         </Reveal>
 
