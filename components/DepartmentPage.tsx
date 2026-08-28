@@ -9,7 +9,8 @@ import {
   Plus,
   Wrench,
   Timer,
-  Flame
+  Flame,
+  Gauge
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -48,10 +49,13 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
         "@id": `${url}#article`,
         headline: dept.name,
         description: dept.intro,
+        articleBody: (dept.longIntro ?? [dept.intro]).join("\n\n"),
+        keywords: dept.keywords.join(", "),
+        about: dept.keywords.map((k) => ({ "@type": "Thing", name: k })),
         author: {
-          "@type": "Organization",
-          name: "KBS – KI-Beratung Saar",
-          "@id": `${SITE_URL}/#business`
+          "@type": "Person",
+          "@id": `${SITE_URL}/#person`,
+          name: "Fynn Schulz"
         },
         publisher: {
           "@type": "Organization",
@@ -59,7 +63,39 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
           "@id": `${SITE_URL}/#business`
         },
         inLanguage: "de-DE",
-        mainEntityOfPage: url
+        mainEntityOfPage: url,
+        image: `${SITE_URL}/opengraph-image`,
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: [
+            "article h1",
+            "article h2",
+            "article p"
+          ]
+        }
+      },
+      {
+        "@type": "HowTo",
+        "@id": `${url}#howto`,
+        name: `${dept.name} einführen`,
+        description: `Fünf konkrete Anwendungsfälle für ${dept.displayName} – in empfohlener Reihenfolge nach Priorität und Aufwand.`,
+        inLanguage: "de-DE",
+        totalTime: "P8W",
+        supply: [
+          { "@type": "HowToSupply", name: "Business-Konto ChatGPT Team, Claude for Work oder Microsoft Copilot mit DVV" },
+          { "@type": "HowToSupply", name: "Interne Nutzungsrichtlinie für KI (ein Seitendokument)" }
+        ],
+        tool: [
+          { "@type": "HowToTool", name: "Text-KI in Business-Variante" },
+          { "@type": "HowToTool", name: "Bestehendes CRM, Ticketsystem oder Buchhaltungssystem" }
+        ],
+        step: dept.cases.map((c, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: c.title,
+          text: c.aiSolution,
+          url: `${url}#case-${i + 1}`
+        }))
       },
       {
         "@type": "FAQPage",
@@ -120,14 +156,25 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink-500 sm:text-xl">
               {dept.intro}
             </p>
+            {dept.longIntro && (
+              <div className="mt-8 max-w-3xl space-y-4 text-[16px] leading-relaxed text-ink-700">
+                {dept.longIntro.map((paragraph, idx) => (
+                  <p key={idx}>{paragraph}</p>
+                ))}
+              </div>
+            )}
             <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link href="/ki-potenzial-check" className="btn-primary">
+                <Gauge size={16} strokeWidth={2.4} />
+                Kostenloser KI-Potenzial-Check
+              </Link>
               <a
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-ghost"
               >
-                <Calendar size={16} strokeWidth={2.4} />
+                <Calendar size={16} strokeWidth={2.2} />
                 Erstgespräch buchen
               </a>
               <Link href={`tel:${PHONE_TEL}`} className="btn-ghost">
@@ -438,19 +485,24 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
               </span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-ink-500">
-              Im kostenlosen Erstgespräch besprechen wir, welche der fünf
-              Anwendungen für Ihre Betriebsgröße und Ihr Software-Umfeld die
-              richtige Reihenfolge ergibt.
+              Starten Sie mit dem kostenlosen KI-Potenzial-Check. In drei
+              Minuten erhalten Sie eine individuelle Reihenfolge Ihrer
+              Anwendungen und wissen, welcher nächste Schritt für Ihre
+              Betriebsgröße wirklich passt.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <Link href="/ki-potenzial-check" className="btn-primary">
+                <Gauge size={16} strokeWidth={2.4} />
+                KI-Potenzial-Check starten
+              </Link>
               <a
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary"
+                className="btn-ghost"
               >
-                <Calendar size={16} strokeWidth={2.4} />
-                Termin buchen
+                <Calendar size={16} strokeWidth={2.2} />
+                Erstgespräch buchen
               </a>
               <Link href={`tel:${PHONE_TEL}`} className="btn-ghost">
                 <Phone size={16} strokeWidth={2.2} />

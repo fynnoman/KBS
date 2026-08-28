@@ -11,8 +11,9 @@ const HOME_NAV = [
   { href: "/leistungen", label: "Leistungen" },
   { href: "/branchen", label: "Branchen" },
   { href: "/ki-anwendungsfaelle", label: "Anwendungen" },
+  { href: "/ki-potenzial-check", label: "KI-Check", highlight: true },
   { href: "/standorte", label: "Standorte" },
-  { href: "/business", label: "Business", highlight: true },
+  { href: "/business", label: "Business" },
   { href: "/#kontakt", label: "Kontakt" }
 ];
 

@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/standorte`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/branchen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/ki-anwendungsfaelle`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/ki-potenzial-check`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${base}/kontaktformular`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
 
     { url: `${base}/business`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },

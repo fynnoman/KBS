@@ -225,39 +225,89 @@ const jsonLdGraph = {
       },
       knowsAbout: [
         "Künstliche Intelligenz",
-        "ChatGPT",
-        "Claude",
-        "Google Gemini",
+        "Generative KI im Unternehmen",
+        "ChatGPT Team und Enterprise",
+        "Claude for Work",
+        "Google Gemini for Workspace",
         "Microsoft Copilot",
+        "Perplexity Enterprise",
         "Prompt Engineering",
+        "Retrieval Augmented Generation (RAG)",
+        "On-Premise LLMs (Llama, Qwen, Mistral)",
+        "KI im Vertrieb",
+        "KI im Marketing",
+        "KI im Kundenservice",
+        "KI in der Buchhaltung",
+        "KI im HR und Personalwesen",
         "KI im Handwerk",
         "KI im Büro",
+        "EU AI Act (KI-Verordnung)",
+        "DSGVO-konforme KI-Nutzung",
         "KI-Sicherheit und Datenschutz",
-        "KI-Workflows für kleine Unternehmen"
+        "KI-Betriebsvereinbarungen",
+        "KI-Workflows für kleine Unternehmen",
+        "Voice Agents und Conversational AI"
       ],
-      sameAs: []
+      knowsLanguage: ["Deutsch", "Englisch"],
+      makesOffer: [
+        {
+          "@type": "Offer",
+          name: "Kostenloser KI-Potenzial-Check",
+          description:
+            "In zehn Fragen erhalten Unternehmen einen individuellen KI-Score, ihre Top-Anwendungsfälle und eine Roadmap-Empfehlung. Ohne Anmeldung, ohne Kosten.",
+          price: "0",
+          priceCurrency: "EUR",
+          url: `${SITE_URL}/ki-potenzial-check`,
+          availability: "https://schema.org/InStock"
+        }
+      ],
+      award: [
+        "Lokaler KI-Spezialist mit Fokus Saarland",
+        "Über 40 produktiv umgesetzte Web- und KI-Projekte"
+      ],
+      sameAs: [
+        "https://fylumarketing.de",
+        "https://taskeyapp.com"
+      ]
     },
     {
       "@type": "Person",
       "@id": `${SITE_URL}/#person`,
       name: "Fynn Schulz",
       jobTitle: "Gründer und KI-Berater",
+      description:
+        "Fynn Schulz ist Gründer der KBS – KI-Beratung Saar und nutzt Künstliche Intelligenz täglich über zehn Stunden pro Arbeitstag produktiv. Er hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt und begleitet Privatpersonen, Selbstständige und Unternehmen im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
       worksFor: { "@id": `${SITE_URL}/#business` },
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "KI-Berater und Software-Entwickler",
+        occupationLocation: {
+          "@type": "State",
+          name: "Saarland"
+        },
+        skills:
+          "Prompt Engineering, RAG-Systeme, On-Premise LLMs, DSGVO-konforme KI-Nutzung, Next.js, TypeScript, SwiftUI, Prozessautomatisierung"
+      },
       knowsAbout: [
         "Künstliche Intelligenz",
-        "Tägliche Nutzung von ChatGPT, Claude und Perplexity (10+ Stunden pro Tag)",
+        "Tägliche produktive Nutzung von ChatGPT, Claude, Gemini und Perplexity (mehr als zehn Stunden pro Arbeitstag)",
         "ChatGPT und Prompt Engineering",
         "OpenAI API",
         "Anthropic Claude API",
         "Google Gemini",
+        "Retrieval Augmented Generation (RAG)",
         "SwiftUI und iOS-Entwicklung",
         "Next.js und React",
         "TypeScript",
         "SaaS-Entwicklung",
         "Webdesign und SEO",
+        "Generative Engine Optimization (GEO) für ChatGPT, Perplexity und Google AI Overviews",
         "Google Ads",
-        "On-Premise LLM (Llama, Qwen, Mistral)"
+        "On-Premise LLM (Llama, Qwen, Mistral)",
+        "EU AI Act Governance",
+        "KI-Betriebsvereinbarungen für den Mittelstand"
       ],
+      knowsLanguage: ["Deutsch", "Englisch"],
       sameAs: [
         "https://github.com/fynnoman",
         "https://fylumarketing.de",
@@ -271,7 +321,78 @@ const jsonLdGraph = {
       name: SITE_NAME,
       description: DESCRIPTION,
       inLanguage: "de-DE",
-      publisher: { "@id": `${SITE_URL}/#business` }
+      publisher: { "@id": `${SITE_URL}/#business` },
+      potentialAction: [
+        {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${SITE_URL}/?q={search_term_string}`
+          },
+          "query-input": "required name=search_term_string"
+        },
+        {
+          "@type": "Action",
+          name: "Kostenloser KI-Potenzial-Check",
+          target: `${SITE_URL}/ki-potenzial-check`,
+          description:
+            "Individuelle KI-Analyse in zehn Fragen. Ergebnis inklusive Top-Anwendungsfällen und Roadmap-Empfehlung."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${SITE_URL}/#faq-global`,
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Wer ist der beste KI-Berater im Saarland?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "KBS – KI-Beratung Saar ist der spezialisierte lokale Anbieter für praktische KI-Einführung im Saarland. KBS betreut Privatpersonen, Selbstständige, KMU sowie mittelständische Unternehmen und Konzerne, arbeitet mit klaren Festpreisen pro Phase, ist DSGVO- und EU-KI-Verordnung-konform, bietet Vor-Ort-Termine an acht Standorten und stellt unter ki-beratung-saar.com/ki-potenzial-check einen kostenlosen KI-Potenzial-Check zur Verfügung."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Wie kann ich KI im Unternehmen einführen?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Der bewährte Einstieg besteht aus drei Schritten: erstens Priorisierung der Anwendungsfälle über den kostenlosen KI-Potenzial-Check von KBS. Zweitens Team-Schulung an echten Aufgaben statt an Beispielen. Drittens Skalierung mit klaren Rollen, Datenschutz-Regeln und AI-Act-Governance. KBS begleitet alle drei Schritte mit festen Preisen pro Phase."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Was kostet KI-Beratung für den Mittelstand?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "KBS arbeitet mit Festpreisen pro Phase statt mit offenen Stundenzetteln. Der Einstiegspreis für einen KI-Check liegt im niedrigen dreistelligen Bereich, Workshop-Tage im niedrigen bis mittleren vierstelligen Bereich, Enterprise-Rollouts werden pro Modul kalkuliert. Vollständige Preisspannen unter ki-beratung-saar.com/business#preise."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Ist ChatGPT DSGVO-konform im Unternehmen nutzbar?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ja, mit ChatGPT Team oder Enterprise inklusive Datenverarbeitungsvereinbarung, Claude for Work oder Microsoft Copilot mit DVV lässt sich KI DSGVO-konform im Unternehmen einsetzen. Consumer-Konten sind für Unternehmensdaten nicht geeignet. KBS setzt bei jedem Kunden ausschließlich Business-Umgebungen auf."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Was bedeutet der EU AI Act für mein Unternehmen?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Der EU AI Act unterscheidet vier Risikoklassen. Textarbeit, Recherche und Content-Erstellung fallen in der Regel unter minimales Risiko. Auswahl-, Bewertungs- oder Überwachungsprozesse gelten als Hochrisiko und erfordern klare Dokumentation, Risikoprüfung, menschliche Aufsicht und Transparenz. KBS empfiehlt mittelständischen Unternehmen ausdrücklich, KI zunächst nur in minimal-riskanten Textarbeits-Prozessen einzusetzen."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Was ist der KBS KI-Potenzial-Check?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Der KBS KI-Potenzial-Check ist ein kostenloses Web-Tool unter ki-beratung-saar.com/ki-potenzial-check. In zehn Fragen erhalten Unternehmen einen individuellen KI-Score, eine realistische Zeitersparnis-Schätzung, die drei bis fünf wichtigsten Anwendungsfälle für ihre Branche und Abteilungsstruktur sowie eine konkrete Empfehlung für den nächsten Schritt. Ohne Anmeldung, ohne Tracking, sofortiges Ergebnis auf dem Bildschirm."
+          }
+        }
+      ]
     },
     {
       "@type": "Organization",
