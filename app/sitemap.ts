@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next";
 import { CITIES } from "@/lib/data/cities";
 import { SERVICES } from "@/lib/data/services";
+import { COURSES } from "@/lib/data/courses";
+import { INDUSTRIES } from "@/lib/data/industries";
+import { DEPARTMENTS } from "@/lib/data/useCases";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://ki-beratung-saar.com";
@@ -17,6 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     { url: `${base}/leistungen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/standorte`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/ki-schulung`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/branchen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/ki-anwendungsfaelle`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/kontaktformular`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
 
     { url: `${base}/business`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${base}/business#branchen`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
@@ -45,5 +52,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85
   }));
 
-  return [...staticEntries, ...cityEntries, ...serviceEntries];
+  const courseEntries: MetadataRoute.Sitemap = COURSES.map((c) => ({
+    url: `${base}/ki-schulung/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8
+  }));
+
+  const industryEntries: MetadataRoute.Sitemap = INDUSTRIES.map((i) => ({
+    url: `${base}/branchen/${i.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8
+  }));
+
+  const departmentEntries: MetadataRoute.Sitemap = DEPARTMENTS.map((d) => ({
+    url: `${base}${d.routePath}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85
+  }));
+
+  return [
+    ...staticEntries,
+    ...cityEntries,
+    ...serviceEntries,
+    ...courseEntries,
+    ...industryEntries,
+    ...departmentEntries
+  ];
 }
