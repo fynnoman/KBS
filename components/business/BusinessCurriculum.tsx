@@ -196,46 +196,28 @@ export default function BusinessCurriculum() {
                       </div>
 
                       <div className="mt-auto pt-6">
-                        {c.pricing && (
+                        {c.pricing?.inhousePrice !== undefined && (
                           <div className="mb-3 rounded-2xl border border-accent-500/25 bg-accent-500/10 p-4">
                             <p className="text-[10.5px] font-semibold uppercase tracking-[0.16em] text-accent-800">
-                              Preise · netto zzgl. USt.
+                              Preis · netto zzgl. USt.
                             </p>
                             <div className="mt-2 space-y-2">
-                              {c.pricing.inhousePrice !== undefined && (
-                                <div className="flex items-baseline justify-between gap-3">
-                                  <p className="text-[12.5px] font-medium text-ink-700">
-                                    Inhouse ·{" "}
-                                    {c.pricing.customLabel ??
-                                      "Pauschale bis 12 TN"}
-                                  </p>
-                                  <p className="text-[16px] font-semibold tracking-tight text-ink-900">
-                                    {euro.format(c.pricing.inhousePrice)}
-                                  </p>
-                                </div>
-                              )}
-                              {c.pricing.openPricePerPerson !== undefined && (
-                                <div className="flex items-baseline justify-between gap-3">
-                                  <p className="text-[12.5px] font-medium text-ink-700">
-                                    Offener Kurs · pro Person
-                                  </p>
-                                  <p className="text-[16px] font-semibold tracking-tight text-ink-900">
-                                    {euro.format(c.pricing.openPricePerPerson)}
-                                  </p>
-                                </div>
-                              )}
-                              {c.pricing.openPriceNote && (
+                              <div className="flex items-baseline justify-between gap-3">
+                                <p className="text-[12.5px] font-medium text-ink-700">
+                                  Inhouse ·{" "}
+                                  {c.pricing.customLabel ??
+                                    "Pauschale bis 12 TN"}
+                                </p>
+                                <p className="text-[16px] font-semibold tracking-tight text-ink-900">
+                                  {euro.format(c.pricing.inhousePrice)}
+                                </p>
+                              </div>
+                              {!c.pricing.customLabel && (
                                 <p className="text-[11.5px] leading-snug text-ink-500">
-                                  {c.pricing.openPriceNote}
+                                  Ab dem 13. Teilnehmer 120 € pro Person.
+                                  Remote ohne Aufschlag.
                                 </p>
                               )}
-                              {c.pricing.inhousePrice !== undefined &&
-                                !c.pricing.customLabel && (
-                                  <p className="text-[11.5px] leading-snug text-ink-500">
-                                    Ab dem 13. Teilnehmer 120 € pro Person.
-                                    Remote ohne Aufschlag.
-                                  </p>
-                                )}
                             </div>
                           </div>
                         )}

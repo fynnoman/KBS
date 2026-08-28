@@ -8,10 +8,6 @@ export type CourseCategory =
 export type CoursePricing = {
   /** Inhouse-Pauschale bis 12 TN (netto). Ab 13. TN 120 € pro Person. */
   inhousePrice?: number;
-  /** Preis pro Person für offene Live-Kurse (netto). */
-  openPricePerPerson?: number;
-  /** Zusätzliche Preis-Info, z. B. „Frühbucher 199 €, danach 229 €". */
-  openPriceNote?: string;
   /** Ersetzt inhousePrice-Anzeige durch ein Sonderformat-Label. */
   customLabel?: string;
 };
@@ -71,9 +67,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/ki-anwender.jpg",
     pricing: {
-      inhousePrice: 2400,
-      openPricePerPerson: 199,
-      openPriceNote: "Frühbucher bis 4 Wochen vorher 199 €, danach 229 €"
+      inhousePrice: 2400
     }
   },
   {
@@ -95,8 +89,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/prompt-engineering.jpg",
     pricing: {
-      inhousePrice: 2400,
-      openPricePerPerson: 449
+      inhousePrice: 2400
     }
   },
   {
@@ -118,8 +111,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/vertrieb.jpg",
     pricing: {
-      inhousePrice: 2900,
-      openPricePerPerson: 849
+      inhousePrice: 2900
     }
   },
   {
