@@ -39,11 +39,11 @@ export default function Industries() {
 
         <Reveal delay={0.1}>
           <div className="card p-6 sm:p-8">
-            <div className="grid grid-cols-2 gap-1 sm:grid-cols-3 md:grid-cols-4">
+            <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {INDUSTRIES.map((i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 rounded-2xl px-4 py-4 text-[14px] font-medium text-ink-700 transition-colors hover:bg-ink-50"
+                  className="flex items-center gap-3 rounded-2xl px-3 py-3 text-[14px] font-medium text-ink-700 transition-colors hover:bg-ink-50 sm:px-4 sm:py-4"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-ink-900" />
                   {i}

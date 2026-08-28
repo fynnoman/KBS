@@ -69,10 +69,33 @@ export default async function CityPage({
         name: `KBS – KI-Beratung Saar (${c.name})`,
         parentOrganization: { "@id": `${SITE_URL}/#business` },
         url: pageUrl,
-        image: `${SITE_URL}/opengraph-image`,
+        image: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/opengraph-image`,
+          width: 1200,
+          height: 630
+        },
+        logo: `${SITE_URL}/kbs-logo.png`,
         description: `KI-Beratung, ChatGPT-Hilfe und KI-Workshops in ${c.name} und Umgebung.`,
         telephone: PHONE_TEL,
+        email: "info@ki-beratung-saar.com",
         priceRange: "€€",
+        currenciesAccepted: "EUR",
+        paymentAccepted: "Überweisung, Rechnung",
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            opens: "09:00",
+            closes: "18:00"
+          }
+        ],
         areaServed: [
           { "@type": "City", name: c.name },
           ...c.postalCodes.slice(0, 4).map((p) => ({

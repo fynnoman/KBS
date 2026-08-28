@@ -66,12 +66,12 @@ export default function AudienceCards() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
           {AUDIENCES.map((a, i) => {
             const Icon = a.icon;
             return (
               <Reveal key={a.label} delay={i * 0.08}>
-                <div className="group card flex h-full flex-col p-7 transition-shadow hover:shadow-lift">
+                <div className="group card flex h-full flex-col p-5 transition-shadow hover:shadow-lift sm:p-7">
                   <div className="flex items-center justify-between">
                     <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-ink-900/8 bg-ink-50">
                       <Icon size={18} strokeWidth={1.8} className="text-ink-700" />

@@ -73,6 +73,13 @@ export default async function ServicePage({
         provider: { "@id": `${SITE_URL}/#business` },
         serviceType: s.name,
         description: s.intro,
+        image: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/opengraph-image`,
+          width: 1200,
+          height: 630
+        },
+        url: pageUrl,
         areaServed: { "@type": "State", name: "Saarland" },
         audience: {
           "@type": "Audience",
