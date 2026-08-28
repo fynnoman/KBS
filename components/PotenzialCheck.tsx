@@ -60,7 +60,7 @@ export default function PotenzialCheck() {
   };
 
   if (finished && result) {
-    return <PotenzialCheckResult result={result} answers={answers} />;
+    return <PotenzialCheckResult result={result} />;
   }
 
   return (

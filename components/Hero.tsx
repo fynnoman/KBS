@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { Phone, ArrowRight, MessageCircle } from "lucide-react";
+import { Phone, ArrowRight, MessageCircle, Gauge } from "lucide-react";
 import KIStamp from "./KIStamp";
 import { WHATSAPP_URL } from "@/lib/config";
 
@@ -61,9 +61,13 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="mt-10 flex flex-wrap items-center gap-3"
             >
-              <Link href="#termin" className="btn-primary">
+              <Link href="/ki-potenzial-check" className="btn-primary">
+                <Gauge size={16} strokeWidth={2.4} />
+                Kostenloser KI-Check
+              </Link>
+              <Link href="#termin" className="btn-ghost">
                 Termin buchen
-                <ArrowRight size={16} strokeWidth={2.4} />
+                <ArrowRight size={16} strokeWidth={2.2} />
               </Link>
               <Link href="tel:+4915168488999" className="btn-ghost">
                 <Phone size={16} strokeWidth={2.2} />

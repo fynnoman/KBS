@@ -1,25 +1,17 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import {
   ArrowUpRight,
   Calendar,
-  CheckCircle2,
   Gauge,
-  Loader2,
-  Mail,
   ShieldCheck,
   Sparkles,
   Target
 } from "lucide-react";
-import type { CheckAnswers } from "@/lib/data/potenzialCheckQuestions";
 import type { PotenzialResult } from "@/lib/data/potenzialCheckRecommendations";
 import { CALENDLY_URL } from "@/lib/config";
 
 type Props = {
   result: PotenzialResult;
-  answers: CheckAnswers;
 };
 
 const SCORE_COLORS: Record<PotenzialResult["scoreLabel"], string> = {
@@ -34,46 +26,7 @@ const SCORE_RING: Record<PotenzialResult["scoreLabel"], string> = {
   niedrig: "border-ink-900/15 bg-ink-50"
 };
 
-export default function PotenzialCheckResult({ result, answers }: Props) {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [company, setCompany] = useState("");
-  const [wantsCall, setWantsCall] = useState(true);
-  const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-    setStatus("sending");
-    setErrorMessage(null);
-    try {
-      const res = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: email.trim(),
-          name: name.trim() || undefined,
-          company: company.trim() || undefined,
-          wantsCall,
-          answers,
-          result,
-          source: "potenzial-check"
-        })
-      });
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body?.error ?? `Fehler ${res.status}`);
-      }
-      setStatus("ok");
-    } catch (err) {
-      setStatus("error");
-      setErrorMessage(
-        err instanceof Error ? err.message : "Unbekannter Fehler"
-      );
-    }
-  };
-
+export default function PotenzialCheckResult({ result }: Props) {
   return (
     <div className="mx-auto max-w-5xl">
       {/* Score Hero */}
@@ -230,166 +183,32 @@ export default function PotenzialCheckResult({ result, answers }: Props) {
         </div>
       </section>
 
-      {/* Lead form */}
+      {/* Calendly CTA */}
       <section className="mt-16">
-        <div className="card p-7 md:p-10">
-          {status === "ok" ? (
-            <div className="flex flex-col items-center gap-5 py-8 text-center">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent-500/10 text-accent-700">
-                <CheckCircle2 size={26} strokeWidth={2} />
-              </div>
-              <h3 className="text-2xl leading-tight tracking-tight text-ink-900 sm:text-3xl">
-                Ergebnis unterwegs zu Ihnen.
-              </h3>
-              <p className="max-w-xl text-[15.5px] leading-relaxed text-ink-500">
-                Innerhalb der nächsten Minuten liegt Ihr ausführlicher
-                Auswertungsbericht in Ihrem Postfach. In den nächsten Tagen
-                erhalten Sie zusätzlich konkrete Praxis-Impulse zu Ihren Top-Use-Cases.
-                Kein Werbe-Verteiler – jederzeit mit einem Klick abbestellbar.
-              </p>
-              {wantsCall && (
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  <Calendar size={16} strokeWidth={2.4} />
-                  Termin für kostenloses Strategiegespräch wählen
-                </a>
-              )}
-            </div>
-          ) : (
-            <form onSubmit={submit} className="grid gap-8 md:grid-cols-2">
-              <div>
-                <span className="chip">
-                  <Mail size={11} strokeWidth={2} />
-                  Ergebnis per E-Mail
-                </span>
-                <h3 className="mt-5 text-2xl leading-tight tracking-tight text-ink-900 sm:text-3xl">
-                  Ergebnis speichern und Praxis-Impulse erhalten.
-                </h3>
-                <p className="mt-4 text-[14.5px] leading-relaxed text-ink-500">
-                  Wir schicken Ihnen eine ausführliche Auswertung inklusive
-                  Priorisierung der Anwendungen und eine kurze
-                  Praxis-Sequenz zu Ihren Top-Themen. Ihre Daten werden
-                  ausschließlich für die persönliche Antwort verwendet.
-                </p>
-                <ul className="mt-6 space-y-2 text-[13.5px] text-ink-700">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2
-                      size={14}
-                      strokeWidth={2.4}
-                      className="mt-0.5 flex-shrink-0 text-accent-700"
-                    />
-                    Vollständige Auswertung inkl. Roadmap-Vorschlag
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2
-                      size={14}
-                      strokeWidth={2.4}
-                      className="mt-0.5 flex-shrink-0 text-accent-700"
-                    />
-                    Drei Follow-up-Mails mit Beispielen aus Ihrer Branche
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2
-                      size={14}
-                      strokeWidth={2.4}
-                      className="mt-0.5 flex-shrink-0 text-accent-700"
-                    />
-                    Optional: kostenloses 30-Minuten-Strategiegespräch
-                  </li>
-                </ul>
-              </div>
-
-              <div className="space-y-4">
-                <label className="block">
-                  <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-ink-500">
-                    E-Mail *
-                  </span>
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-[15px] text-ink-900 outline-none transition-colors placeholder:text-ink-300 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
-                    placeholder="ihre.adresse@firma.de"
-                    autoComplete="email"
-                  />
-                </label>
-                <label className="block">
-                  <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-ink-500">
-                    Name (optional)
-                  </span>
-                  <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-[15px] text-ink-900 outline-none transition-colors placeholder:text-ink-300 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
-                    placeholder="Vorname Nachname"
-                    autoComplete="name"
-                  />
-                </label>
-                <label className="block">
-                  <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-ink-500">
-                    Unternehmen (optional)
-                  </span>
-                  <input
-                    type="text"
-                    value={company}
-                    onChange={(e) => setCompany(e.target.value)}
-                    className="mt-2 w-full rounded-2xl border border-ink-900/10 bg-white px-4 py-3 text-[15px] text-ink-900 outline-none transition-colors placeholder:text-ink-300 focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
-                    placeholder="Musterfirma GmbH"
-                    autoComplete="organization"
-                  />
-                </label>
-                <label className="flex cursor-pointer items-start gap-3 rounded-2xl border border-ink-900/10 bg-white p-4">
-                  <input
-                    type="checkbox"
-                    checked={wantsCall}
-                    onChange={(e) => setWantsCall(e.target.checked)}
-                    className="mt-0.5 h-4 w-4 rounded border-ink-900/20 text-accent-500 focus:ring-accent-500"
-                  />
-                  <span className="text-[13.5px] leading-snug text-ink-700">
-                    Ja, ich möchte im Anschluss ein kostenloses
-                    30-Minuten-Strategiegespräch angeboten bekommen.
-                  </span>
-                </label>
-
-                <button
-                  type="submit"
-                  disabled={status === "sending"}
-                  className="btn-primary w-full justify-center"
-                >
-                  {status === "sending" ? (
-                    <>
-                      <Loader2 size={16} strokeWidth={2.4} className="animate-spin" />
-                      Wird gesendet
-                    </>
-                  ) : (
-                    <>
-                      <Mail size={16} strokeWidth={2.4} />
-                      Ergebnis per E-Mail erhalten
-                    </>
-                  )}
-                </button>
-                {status === "error" && (
-                  <p className="text-[13px] text-red-600">
-                    {errorMessage ?? "Bitte versuchen Sie es in einem Moment erneut."}
-                  </p>
-                )}
-                <p className="text-[11.5px] leading-relaxed text-ink-400">
-                  Mit dem Absenden willigen Sie in die Verarbeitung Ihrer
-                  Angaben ein. Details in unserer{" "}
-                  <Link href="/datenschutz" className="underline underline-offset-2">
-                    Datenschutzerklärung
-                  </Link>
-                  .
-                </p>
-              </div>
-            </form>
-          )}
+        <div className="card border-accent-500/30 bg-accent-500/5 p-8 md:p-12 text-center">
+          <span className="chip">
+            <Calendar size={11} strokeWidth={2} />
+            Direkt weitermachen
+          </span>
+          <h3 className="mt-5 text-3xl leading-tight tracking-tight text-ink-900 sm:text-4xl">
+            Ergebnis besprechen im kostenlosen Erstgespräch.
+          </h3>
+          <p className="mt-4 max-w-2xl mx-auto text-[15.5px] leading-relaxed text-ink-500">
+            In 20 bis 30 Minuten gehen wir gemeinsam durch Ihre Auswertung und
+            klären, welches der oben gezeigten Pakete für Ihre Ausgangslage
+            wirklich passt. Kein Verkaufsdruck, kein Vertrag.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              <Calendar size={16} strokeWidth={2.4} />
+              Termin auswählen
+            </a>
+          </div>
         </div>
       </section>
     </div>
