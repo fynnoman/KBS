@@ -67,7 +67,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/ki-anwender.jpg",
     pricing: {
-      inhousePrice: 2400
+      inhousePrice: 1200
     }
   },
   {
@@ -89,7 +89,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/prompt-engineering.jpg",
     pricing: {
-      inhousePrice: 2400
+      inhousePrice: 1200
     }
   },
   {
@@ -111,7 +111,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/vertrieb.jpg",
     pricing: {
-      inhousePrice: 2900
+      inhousePrice: 1450
     }
   },
   {
@@ -133,7 +133,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/marketing.jpg",
     pricing: {
-      inhousePrice: 2900
+      inhousePrice: 1450
     }
   },
   {
@@ -155,7 +155,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/finanzen.jpg",
     pricing: {
-      inhousePrice: 2900
+      inhousePrice: 1450
     }
   },
   {
@@ -177,7 +177,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/hr.jpg",
     pricing: {
-      inhousePrice: 2900
+      inhousePrice: 1450
     }
   },
   {
@@ -199,7 +199,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/kundenservice.jpg",
     pricing: {
-      inhousePrice: 2900
+      inhousePrice: 1450
     }
   },
   {
@@ -221,7 +221,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Inhouse"],
     image: "/kurse-images/strategie.jpg",
     pricing: {
-      inhousePrice: 1400
+      inhousePrice: 700
     }
   },
   {
@@ -243,7 +243,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Inhouse"],
     image: "/kurse-images/ai-act.jpg",
     pricing: {
-      inhousePrice: 6400
+      inhousePrice: 3200
     }
   },
   {
@@ -265,7 +265,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Inhouse"],
     image: "/kurse-images/betriebsvereinbarung.jpg",
     pricing: {
-      inhousePrice: 1400
+      inhousePrice: 700
     }
   },
   {
@@ -287,7 +287,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Inhouse"],
     image: "/kurse-images/lokale-ki.jpg",
     pricing: {
-      inhousePrice: 6900
+      inhousePrice: 3450
     }
   },
   {
@@ -309,7 +309,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Inhouse"],
     image: "/kurse-images/rag.jpg",
     pricing: {
-      inhousePrice: 6900
+      inhousePrice: 3450
     }
   },
 
@@ -332,7 +332,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/strategie.jpg",
     pricing: {
-      inhousePrice: 1900,
+      inhousePrice: 950,
       customLabel: "Führungskreis-Format"
     }
   },
@@ -355,7 +355,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Inhouse"],
     image: "/kurse-images/ki-anwender.jpg",
     pricing: {
-      inhousePrice: 8900,
+      inhousePrice: 4450,
       customLabel: "Programm inkl. Begleitung"
     }
   },
@@ -378,7 +378,7 @@ export const COURSES: Course[] = [
     formats: ["Präsenz", "Remote", "Inhouse"],
     image: "/kurse-images/prompt-engineering.jpg",
     pricing: {
-      inhousePrice: 14900,
+      inhousePrice: 7450,
       customLabel: "Mehrstufiges Programm inkl. Sprechstunden"
     }
   }

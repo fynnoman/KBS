@@ -57,10 +57,10 @@ export default function BusinessModules() {
                 </span>
               </div>
               <h2 className="mt-5 text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-5xl md:text-6xl">
-                Wiederverwendbare Bausteine,
+                Unsere gängigen
                 <br />
                 <span className="display italic text-ink-500">
-                  aus produktiver Praxis.
+                  Softwarelösungen.
                 </span>
               </h2>
               <p className="mt-6 max-w-xl text-[15.5px] leading-relaxed text-ink-500">

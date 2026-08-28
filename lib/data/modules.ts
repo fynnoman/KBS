@@ -50,9 +50,9 @@ export const MODULE_CATEGORY_INTRO: Record<ModuleCategory, string> = {
     "Werkzeuge für Führung, Datenschutz-Beauftragte und den Betriebsrat – damit KI-Einsatz nachvollziehbar bleibt."
 };
 
-const INFRA_BUNDLE = { setup: 4900, monthly: 290 };
-const FACH_BUNDLE = { setup: 6900, monthly: 390 };
-const AUTO_GOV_BUNDLE = { setup: 5900, monthly: 340 };
+const INFRA_BUNDLE = { setup: 2450, monthly: 145 };
+const FACH_BUNDLE = { setup: 3450, monthly: 195 };
+const AUTO_GOV_BUNDLE = { setup: 2950, monthly: 170 };
 
 export const MODULES: SoftwareModule[] = [
   {
@@ -112,17 +112,17 @@ export const MODULES: SoftwareModule[] = [
       tiers: [
         {
           label: "Kompakt · eine Abteilung, eine Wissensquelle",
-          price: 9800,
+          price: 4900,
           unit: "einmalig"
         },
         {
           label: "Standard · mehrere Quellen, Outlook/Teams-Integration",
-          price: 18500,
+          price: 9250,
           unit: "einmalig"
         },
         {
           label: "Enterprise · ERP, CRM, DMS mit Rechtekonzept",
-          price: 29900,
+          price: 14950,
           unit: "einmalig"
         }
       ],
@@ -240,17 +240,17 @@ export const MODULES: SoftwareModule[] = [
       tiers: [
         {
           label: "Basis · Annahme, Triage, Weiterleitung",
-          price: 6900,
+          price: 3450,
           unit: "einmalig"
         },
         {
           label: "Ausbau · Terminvereinbarung, CRM-Anbindung",
-          price: 14900,
+          price: 7450,
           unit: "einmalig"
         },
         {
           label: "Laufender Betrieb",
-          price: 390,
+          price: 195,
           unit: "pro Monat"
         }
       ],
@@ -333,17 +333,17 @@ export const MODULES: SoftwareModule[] = [
       tiers: [
         {
           label: "Starter · Mac Mini M4 Pro, bis 25 Nutzer",
-          price: 15900,
+          price: 7950,
           unit: "einmalig"
         },
         {
           label: "Professional · dedizierter Server, bis 100 Nutzer",
-          price: 28500,
+          price: 14250,
           unit: "einmalig"
         },
         {
           label: "Enterprise · GPU-Server, bis 500 Nutzer",
-          price: 44900,
+          price: 22450,
           unit: "einmalig"
         }
       ],
@@ -368,8 +368,8 @@ export const MODULES: SoftwareModule[] = [
     image: "/module-images/support-triage.jpg",
     pricing: {
       tiers: [
-        { label: "Ein Prozess", price: 8900, unit: "einmalig" },
-        { label: "Drei Prozesse als Paket", price: 19500, unit: "einmalig" }
+        { label: "Ein Prozess", price: 4450, unit: "einmalig" },
+        { label: "Drei Prozesse als Paket", price: 9750, unit: "einmalig" }
       ]
     }
   },
@@ -391,9 +391,9 @@ export const MODULES: SoftwareModule[] = [
     image: "/module-images/usage-analytics.jpg",
     pricing: {
       tiers: [
-        { label: "Bis 100 Mitarbeiter", price: 12900, unit: "einmalig" },
-        { label: "Bis 300 Mitarbeiter", price: 24500, unit: "einmalig" },
-        { label: "Bis 500 Mitarbeiter", price: 34900, unit: "einmalig" }
+        { label: "Bis 100 Mitarbeiter", price: 6450, unit: "einmalig" },
+        { label: "Bis 300 Mitarbeiter", price: 12250, unit: "einmalig" },
+        { label: "Bis 500 Mitarbeiter", price: 17450, unit: "einmalig" }
       ]
     }
   },
@@ -417,12 +417,12 @@ export const MODULES: SoftwareModule[] = [
       tiers: [
         {
           label: "Prüfung & Risikoklassifizierung",
-          price: 3400,
+          price: 1700,
           unit: "einmalig"
         },
         {
           label: "Vollpaket inkl. Betriebsvereinbarung & Schulung",
-          price: 6900,
+          price: 3450,
           unit: "einmalig"
         }
       ]
@@ -445,7 +445,7 @@ export const MODULES: SoftwareModule[] = [
     image: "/module-images/content-studio.jpg",
     pricing: {
       tiers: [
-        { label: "Tagessatz", price: 1400, unit: "pro Tag" }
+        { label: "Tagessatz", price: 700, unit: "pro Tag" }
       ],
       note: "Mindestumfang 10 Tage"
     }
@@ -467,7 +467,7 @@ export const MODULES: SoftwareModule[] = [
     relatedCourse: "strategie",
     image: "/module-images/usage-analytics.jpg",
     pricing: {
-      tiers: [{ label: "Enterprise-Betreuung", price: 890, unit: "pro Monat" }],
+      tiers: [{ label: "Enterprise-Betreuung", price: 445, unit: "pro Monat" }],
       note: "Nur für Business-Kunden nach Rollout"
     }
   }

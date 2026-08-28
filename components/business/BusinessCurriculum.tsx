@@ -214,8 +214,8 @@ export default function BusinessCurriculum() {
                               </div>
                               {!c.pricing.customLabel && (
                                 <p className="text-[11.5px] leading-snug text-ink-500">
-                                  Ab dem 13. Teilnehmer 120 € pro Person.
-                                  Remote ohne Aufschlag.
+                                  Ab dem 13. Teilnehmer 60 € pro Person. Remote
+                                  ohne Aufschlag.
                                 </p>
                               )}
                             </div>
