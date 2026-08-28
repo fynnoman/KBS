@@ -13,6 +13,7 @@ import {
   Mail
 } from "lucide-react";
 import Reveal from "../Reveal";
+import PlaceholderImage from "../PlaceholderImage";
 import {
   COURSES,
   CATEGORY_LABEL,
@@ -114,8 +115,22 @@ export default function BusinessCurriculum() {
                   <Reveal key={c.slug} delay={i * 0.03}>
                     <article
                       id={c.slug}
-                      className="card scroll-mt-32 flex h-full flex-col p-7 md:p-8"
+                      className="card scroll-mt-32 flex h-full flex-col overflow-hidden p-0"
                     >
+                      <div className="relative">
+                        <PlaceholderImage
+                          src={c.image}
+                          alt={c.title}
+                          iconName="course"
+                          aspect="aspect-[16/9]"
+                          className="border-b border-ink-900/8"
+                        />
+                        <span className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-accent-500/95 px-2.5 py-1 text-[10.5px] font-medium uppercase tracking-[0.14em] text-white shadow-soft backdrop-blur">
+                          <Radio size={10} strokeWidth={2.4} />
+                          Live
+                        </span>
+                      </div>
+                      <div className="flex flex-1 flex-col p-7 md:p-8">
                       <div className="flex items-start justify-between gap-4">
                         <h4 className="text-lg leading-snug tracking-tight text-ink-900 sm:text-xl">
                           {c.title}
@@ -191,6 +206,7 @@ export default function BusinessCurriculum() {
                           <Mail size={13} strokeWidth={2.2} />
                           Direkte E-Mail zu dieser Schulung
                         </a>
+                      </div>
                       </div>
                     </article>
                   </Reveal>
