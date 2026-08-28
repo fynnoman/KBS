@@ -4,6 +4,22 @@ export type ModuleCategory =
   | "automation"
   | "governance";
 
+export type ModulePriceTier = {
+  label: string;
+  price: number;
+  unit?: "einmalig" | "pro Monat" | "pro Tag";
+  note?: string;
+};
+
+export type ModulePricing = {
+  /** Wiederverwendbares Baustein-Bundle (Einrichtung + Lizenz pro Monat). */
+  bundle?: { setup: number; monthly: number };
+  /** Zusätzliche Custom-Tiers, z. B. Ausbaustufen für RAG oder Voice-Agent. */
+  tiers?: ModulePriceTier[];
+  /** Optionaler Preishinweis. */
+  note?: string;
+};
+
 export type SoftwareModule = {
   slug: string;
   title: string;
@@ -13,6 +29,7 @@ export type SoftwareModule = {
   features: string[];
   relatedCourse?: string;
   image: string;
+  pricing?: ModulePricing;
 };
 
 export const MODULE_CATEGORY_LABEL: Record<ModuleCategory, string> = {
@@ -33,6 +50,10 @@ export const MODULE_CATEGORY_INTRO: Record<ModuleCategory, string> = {
     "Werkzeuge für Führung, Datenschutz-Beauftragte und den Betriebsrat – damit KI-Einsatz nachvollziehbar bleibt."
 };
 
+const INFRA_BUNDLE = { setup: 4900, monthly: 290 };
+const FACH_BUNDLE = { setup: 6900, monthly: 390 };
+const AUTO_GOV_BUNDLE = { setup: 5900, monthly: 340 };
+
 export const MODULES: SoftwareModule[] = [
   {
     slug: "ai-gateway",
@@ -49,7 +70,8 @@ export const MODULES: SoftwareModule[] = [
       "Einmal-Anmeldung über Ihr bestehendes Firmen-Verzeichnis"
     ],
     relatedCourse: "ki-anwender",
-    image: "/module-images/ai-gateway.jpg"
+    image: "/module-images/ai-gateway.jpg",
+    pricing: { bundle: INFRA_BUNDLE }
   },
   {
     slug: "prompt-library",
@@ -66,7 +88,8 @@ export const MODULES: SoftwareModule[] = [
       "Export in bestehende Werkzeug-Landschaften"
     ],
     relatedCourse: "prompt-engineering",
-    image: "/module-images/prompt-library.jpg"
+    image: "/module-images/prompt-library.jpg",
+    pricing: { bundle: INFRA_BUNDLE }
   },
   {
     slug: "corporate-knowledge",
@@ -83,7 +106,28 @@ export const MODULES: SoftwareModule[] = [
       "Feedback der Nutzer verbessert die Antworten laufend"
     ],
     relatedCourse: "rag",
-    image: "/module-images/corporate-knowledge.jpg"
+    image: "/module-images/corporate-knowledge.jpg",
+    pricing: {
+      bundle: INFRA_BUNDLE,
+      tiers: [
+        {
+          label: "Kompakt · eine Abteilung, eine Wissensquelle",
+          price: 9800,
+          unit: "einmalig"
+        },
+        {
+          label: "Standard · mehrere Quellen, Outlook/Teams-Integration",
+          price: 18500,
+          unit: "einmalig"
+        },
+        {
+          label: "Enterprise · ERP, CRM, DMS mit Rechtekonzept",
+          price: 29900,
+          unit: "einmalig"
+        }
+      ],
+      note: "Umsetzungspreis anstelle des Baustein-Bundles bei individueller Anbindung"
+    }
   },
   {
     slug: "sales-assistant",
@@ -100,7 +144,8 @@ export const MODULES: SoftwareModule[] = [
       "Auswertung mit Zeitgewinn pro Vertriebsmitarbeiter"
     ],
     relatedCourse: "vertrieb",
-    image: "/module-images/sales-assistant.jpg"
+    image: "/module-images/sales-assistant.jpg",
+    pricing: { bundle: FACH_BUNDLE }
   },
   {
     slug: "content-studio",
@@ -117,7 +162,8 @@ export const MODULES: SoftwareModule[] = [
       "Direkte Veröffentlichung in gängige Redaktionssysteme"
     ],
     relatedCourse: "marketing",
-    image: "/module-images/content-studio.jpg"
+    image: "/module-images/content-studio.jpg",
+    pricing: { bundle: FACH_BUNDLE }
   },
   {
     slug: "invoice-ocr",
@@ -134,7 +180,8 @@ export const MODULES: SoftwareModule[] = [
       "Revisionssichere Ablage inkl. Nachweis-Protokoll"
     ],
     relatedCourse: "finanzen",
-    image: "/module-images/invoice-ocr.jpg"
+    image: "/module-images/invoice-ocr.jpg",
+    pricing: { bundle: FACH_BUNDLE }
   },
   {
     slug: "hr-copilot",
@@ -151,7 +198,8 @@ export const MODULES: SoftwareModule[] = [
       "Betriebsrats-freundliche Nutzungsdokumentation"
     ],
     relatedCourse: "hr",
-    image: "/module-images/hr-copilot.jpg"
+    image: "/module-images/hr-copilot.jpg",
+    pricing: { bundle: FACH_BUNDLE }
   },
   {
     slug: "support-triage",
@@ -168,7 +216,8 @@ export const MODULES: SoftwareModule[] = [
       "Auswertung und Bericht zu Bearbeitungszeiten"
     ],
     relatedCourse: "kundenservice",
-    image: "/module-images/support-triage.jpg"
+    image: "/module-images/support-triage.jpg",
+    pricing: { bundle: AUTO_GOV_BUNDLE }
   },
   {
     slug: "voice-reception",
@@ -185,7 +234,28 @@ export const MODULES: SoftwareModule[] = [
       "Nutzungs- und Zufriedenheits-Berichte"
     ],
     relatedCourse: "kundenservice",
-    image: "/module-images/voice-reception.jpg"
+    image: "/module-images/voice-reception.jpg",
+    pricing: {
+      bundle: AUTO_GOV_BUNDLE,
+      tiers: [
+        {
+          label: "Basis · Annahme, Triage, Weiterleitung",
+          price: 6900,
+          unit: "einmalig"
+        },
+        {
+          label: "Ausbau · Terminvereinbarung, CRM-Anbindung",
+          price: 14900,
+          unit: "einmalig"
+        },
+        {
+          label: "Laufender Betrieb",
+          price: 390,
+          unit: "pro Monat"
+        }
+      ],
+      note: "Umsetzungspreis anstelle des Baustein-Bundles bei individueller Voice-Anbindung"
+    }
   },
   {
     slug: "compliance-register",
@@ -202,7 +272,8 @@ export const MODULES: SoftwareModule[] = [
       "Export für interne Prüfer und Aufsichtsbehörden"
     ],
     relatedCourse: "ai-act",
-    image: "/module-images/compliance-register.jpg"
+    image: "/module-images/compliance-register.jpg",
+    pricing: { bundle: AUTO_GOV_BUNDLE }
   },
   {
     slug: "policy-templates",
@@ -219,7 +290,8 @@ export const MODULES: SoftwareModule[] = [
       "Übertragbar auf Konzernstrukturen"
     ],
     relatedCourse: "betriebsvereinbarung",
-    image: "/module-images/policy-templates.jpg"
+    image: "/module-images/policy-templates.jpg",
+    pricing: { bundle: AUTO_GOV_BUNDLE }
   },
   {
     slug: "usage-analytics",
@@ -236,6 +308,167 @@ export const MODULES: SoftwareModule[] = [
       "Führungs-Berichte auf Knopfdruck"
     ],
     relatedCourse: "strategie",
-    image: "/module-images/usage-analytics.jpg"
+    image: "/module-images/usage-analytics.jpg",
+    pricing: { bundle: AUTO_GOV_BUNDLE }
+  },
+
+  // ── Neue Lösungen aus dem Preiskatalog ────────────────────────
+  {
+    slug: "lokale-ki-infrastruktur",
+    title: "Lokale KI auf Ihrem Server",
+    category: "infrastruktur",
+    tagline: "On-Premise-Installation inkl. Hardware, Einweisung und Wartung",
+    summary:
+      "Damit Ihre Daten das Haus nicht verlassen: eigene KI auf Ihrer Hardware. Wir wählen Hardware und Modell nach Ihrer Aufgabe, installieren und übergeben wartungsfähig – von Mac Mini bis GPU-Server.",
+    features: [
+      "Hardware-Auswahl passend zur Nutzergröße",
+      "Modellauswahl (Llama, Qwen, Mistral) nach Aufgabe",
+      "Installation und Anbindung an Ihr Netz",
+      "Einweisung Ihrer IT für die spätere Wartung",
+      "Volle Datenhoheit, kein Cloud-Sync"
+    ],
+    relatedCourse: "lokale-ki",
+    image: "/module-images/ai-gateway.jpg",
+    pricing: {
+      tiers: [
+        {
+          label: "Starter · Mac Mini M4 Pro, bis 25 Nutzer",
+          price: 15900,
+          unit: "einmalig"
+        },
+        {
+          label: "Professional · dedizierter Server, bis 100 Nutzer",
+          price: 28500,
+          unit: "einmalig"
+        },
+        {
+          label: "Enterprise · GPU-Server, bis 500 Nutzer",
+          price: 44900,
+          unit: "einmalig"
+        }
+      ],
+      note: "Inkl. Hardware, Installation, Modellauswahl und Einweisung"
+    }
+  },
+  {
+    slug: "prozess-automation",
+    title: "Prozess-Automatisierung",
+    category: "automation",
+    tagline: "Wiederkehrende Abläufe automatisch abarbeiten lassen",
+    summary:
+      "Wir bilden abgegrenzte, wiederkehrende Prozesse als KI-Ablauf ab – von der Angebotsvorbereitung über die Rechnungs-OCR bis zur E-Mail-Klassifizierung. Mit klaren Regeln und menschlicher Kontrolle an den richtigen Punkten.",
+    features: [
+      "Prozess-Aufnahme mit Ihrer Fachabteilung",
+      "KI-Ablauf inkl. Prüfpunkten für den Menschen",
+      "Anbindung an bestehende Systeme (Outlook, DATEV, ERP)",
+      "Fehler-Behandlung und Monitoring",
+      "Regelmäßige Nachjustierung nach Nutzung"
+    ],
+    relatedCourse: "kundenservice",
+    image: "/module-images/support-triage.jpg",
+    pricing: {
+      tiers: [
+        { label: "Ein Prozess", price: 8900, unit: "einmalig" },
+        { label: "Drei Prozesse als Paket", price: 19500, unit: "einmalig" }
+      ]
+    }
+  },
+  {
+    slug: "enterprise-rollout",
+    title: "Enterprise-Rollout",
+    category: "governance",
+    tagline: "KI-Einführung über die ganze Belegschaft",
+    summary:
+      "Ausrollen von KI-Lösungen im gesamten Unternehmen: Nutzungsrichtlinien, Schulung der Belegschaft, Betriebsrats-Kommunikation und laufende Erfolgsmessung. Wir übergeben ein tragfähiges Betriebssystem für den weiteren Ausbau.",
+    features: [
+      "Rollout-Plan mit klaren Meilensteinen",
+      "Erstellung interner Nutzungsrichtlinien",
+      "Schulung der Belegschaft in Wellen",
+      "Betriebsrats-Kommunikation und Dokumentation",
+      "Erfolgsmessung und Nachjustierung"
+    ],
+    relatedCourse: "strategie",
+    image: "/module-images/usage-analytics.jpg",
+    pricing: {
+      tiers: [
+        { label: "Bis 100 Mitarbeiter", price: 12900, unit: "einmalig" },
+        { label: "Bis 300 Mitarbeiter", price: 24500, unit: "einmalig" },
+        { label: "Bis 500 Mitarbeiter", price: 34900, unit: "einmalig" }
+      ]
+    }
+  },
+  {
+    slug: "rechtssicherheit-ki",
+    title: "Rechtssicherheit für KI",
+    category: "governance",
+    tagline: "Datenschutz- und EU-KI-Verordnung-Prüfung mit Betriebsvereinbarung",
+    summary:
+      "Wir klassifizieren Ihre bestehenden und geplanten KI-Anwendungen nach der EU-KI-Verordnung, dokumentieren die notwendigen Nachweise und beraten bei Betriebsvereinbarungen mit dem Betriebsrat.",
+    features: [
+      "Bestandsaufnahme aller KI-Anwendungen im Haus",
+      "Risiko-Klassifikation nach EU-KI-Verordnung",
+      "Datenschutz-Prüfung nach DSGVO",
+      "Muster-Betriebsvereinbarung, an Ihre Struktur angepasst",
+      "Schulung Ihrer Verantwortlichen"
+    ],
+    relatedCourse: "ai-act",
+    image: "/module-images/compliance-register.jpg",
+    pricing: {
+      tiers: [
+        {
+          label: "Prüfung & Risikoklassifizierung",
+          price: 3400,
+          unit: "einmalig"
+        },
+        {
+          label: "Vollpaket inkl. Betriebsvereinbarung & Schulung",
+          price: 6900,
+          unit: "einmalig"
+        }
+      ]
+    }
+  },
+  {
+    slug: "custom-saas",
+    title: "Custom SaaS & Integrationen",
+    category: "automation",
+    tagline: "Individuelle Software-Entwicklung nach Ihren Anforderungen",
+    summary:
+      "Wenn keine Standard-Lösung passt: Wir entwickeln individuelle SaaS-Bausteine und Integrationen zwischen Ihren Systemen. Nach Aufwand, im Rahmen eines festen Tagessatzes.",
+    features: [
+      "Anforderungs-Workshop mit Ihrer Fachabteilung",
+      "Wöchentliche Fortschritts-Termine",
+      "Übergabe inkl. Dokumentation und Quellcode",
+      "Anbindung an bestehende Systeme (SAP, DATEV, Salesforce)",
+      "Optionale Wartungs-Vereinbarung nach Go-Live"
+    ],
+    image: "/module-images/content-studio.jpg",
+    pricing: {
+      tiers: [
+        { label: "Tagessatz", price: 1400, unit: "pro Tag" }
+      ],
+      note: "Mindestumfang 10 Tage"
+    }
+  },
+  {
+    slug: "managed-ki",
+    title: "Managed KI Enterprise",
+    category: "governance",
+    tagline: "Fester Ansprechpartner für den laufenden KI-Betrieb",
+    summary:
+      "Nach dem Rollout: fester Ansprechpartner für Fehlerbehebung, Anpassungen, Updates der Vorlagen und laufende Optimierung – ohne dass Sie ein neues Angebot einholen müssen.",
+    features: [
+      "Fester Ansprechpartner mit fester Reaktionszeit",
+      "Monatlicher Termin und Fortschritts-Bericht",
+      "Vorlagen- und Regelwerks-Pflege",
+      "Kleinere Anpassungen ohne Zusatzangebot",
+      "Empfehlung neuer Werkzeuge und Ausbaustufen"
+    ],
+    relatedCourse: "strategie",
+    image: "/module-images/usage-analytics.jpg",
+    pricing: {
+      tiers: [{ label: "Enterprise-Betreuung", price: 890, unit: "pro Monat" }],
+      note: "Nur für Business-Kunden nach Rollout"
+    }
   }
 ];

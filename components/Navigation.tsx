@@ -9,18 +9,16 @@ import { CALENDLY_URL, PHONE_TEL } from "@/lib/config";
 
 const HOME_NAV = [
   { href: "/leistungen", label: "Leistungen" },
-  { href: "/preise", label: "Preise" },
   { href: "/standorte", label: "Standorte" },
   { href: "/business", label: "Business", highlight: true },
   { href: "/#kontakt", label: "Kontakt" }
 ];
 
 const BUSINESS_NAV = [
-  { href: "/business#use-cases", label: "Use-Cases" },
+  { href: "/business#loesungen", label: "Lösungen" },
   { href: "/business#branchen", label: "Branchen" },
-  { href: "/business#lokale-ki", label: "Lokale KI" },
   { href: "/business#kurskatalog", label: "Schulungen" },
-  { href: "/preise#business", label: "Preise" },
+  { href: "/business#preise", label: "Preise" },
   { href: "/business#referenzen", label: "Referenzen" },
   { href: "/business#faq", label: "FAQ" },
   { href: "/", label: "Zur KMU-Seite", highlight: true }

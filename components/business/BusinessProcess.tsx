@@ -50,11 +50,7 @@ export default function BusinessProcess() {
               <Reveal>
                 <span className="chip">Unser Prozess</span>
                 <h2 className="mt-5 text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-5xl">
-                  Fünf klare Phasen,
-                  <br />
-                  <span className="display italic text-ink-500">
-                    ein Festpreis pro Phase.
-                  </span>
+                  Fünf klare Phasen.
                 </h2>
                 <p className="mt-6 text-[15.5px] leading-relaxed text-ink-500">
                   Jede Phase hat ein festes Ergebnis, einen festen Preis und

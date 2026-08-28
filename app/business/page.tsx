@@ -6,7 +6,6 @@ import BusinessIndustries from "@/components/business/BusinessIndustries";
 import BusinessProcess from "@/components/business/BusinessProcess";
 import BusinessCurriculum from "@/components/business/BusinessCurriculum";
 import BusinessModules from "@/components/business/BusinessModules";
-import BusinessPreise from "@/components/business/BusinessPreise";
 import BusinessReferences from "@/components/business/BusinessReferences";
 import BusinessFAQ from "@/components/business/BusinessFAQ";
 import BusinessCTA from "@/components/business/BusinessCTA";
@@ -196,7 +195,6 @@ export default function BusinessPage() {
       <BusinessIndustries />
       <BusinessProcess />
       <BusinessReferences />
-      <BusinessPreise />
       <BusinessFAQ />
       <Footer />
     </main>

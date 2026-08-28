@@ -27,6 +27,12 @@ const CATEGORY_ORDER: ModuleCategory[] = [
   "governance"
 ];
 
+const euro = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
+  maximumFractionDigits: 0
+});
+
 const CATEGORY_ICON: Record<ModuleCategory, typeof Layers> = {
   infrastruktur: Layers,
   fachfunktion: Users,
@@ -153,9 +159,72 @@ export default function BusinessModules() {
                         </div>
 
                         <div className="mt-auto pt-6">
+                          {m.pricing && (
+                            <div className="mb-3 rounded-2xl border border-accent-500/25 bg-accent-500/10 p-4">
+                              <p className="text-[10.5px] font-semibold uppercase tracking-[0.16em] text-accent-800">
+                                Preise · netto zzgl. USt.
+                              </p>
+                              <div className="mt-3 space-y-2">
+                                {m.pricing.bundle && (
+                                  <div className="flex items-baseline justify-between gap-3">
+                                    <p className="text-[12.5px] font-medium text-ink-700">
+                                      Baustein-Einrichtung
+                                      <span className="ml-1 text-ink-400">
+                                        + Lizenz
+                                      </span>
+                                    </p>
+                                    <p className="text-right text-[15px] font-semibold tracking-tight text-ink-900">
+                                      {euro.format(m.pricing.bundle.setup)}
+                                      <span className="ml-1 text-[11.5px] font-medium uppercase tracking-[0.14em] text-ink-500">
+                                        einmalig
+                                      </span>
+                                      <br />
+                                      {euro.format(m.pricing.bundle.monthly)}
+                                      <span className="ml-1 text-[11.5px] font-medium uppercase tracking-[0.14em] text-ink-500">
+                                        pro Monat
+                                      </span>
+                                    </p>
+                                  </div>
+                                )}
+                                {m.pricing.tiers && m.pricing.tiers.length > 0 && (
+                                  <div
+                                    className={`${
+                                      m.pricing.bundle
+                                        ? "mt-3 border-t border-accent-500/20 pt-3"
+                                        : ""
+                                    } space-y-1.5`}
+                                  >
+                                    {m.pricing.tiers.map((t) => (
+                                      <div
+                                        key={t.label}
+                                        className="flex items-baseline justify-between gap-3"
+                                      >
+                                        <p className="text-[12.5px] leading-snug text-ink-700">
+                                          {t.label}
+                                        </p>
+                                        <p className="text-right text-[14px] font-semibold tracking-tight text-ink-900">
+                                          {euro.format(t.price)}
+                                          {t.unit && (
+                                            <span className="ml-1 text-[11px] font-medium uppercase tracking-[0.14em] text-ink-500">
+                                              {t.unit}
+                                            </span>
+                                          )}
+                                        </p>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                                {m.pricing.note && (
+                                  <p className="pt-1 text-[11.5px] leading-snug text-ink-500">
+                                    {m.pricing.note}
+                                  </p>
+                                )}
+                              </div>
+                            </div>
+                          )}
                           {relCourse && (
                             <Link
-                              href={`/business/kurskatalog#${relCourse.slug}`}
+                              href={`/business#${relCourse.slug}`}
                               className="inline-flex w-full items-center justify-between gap-2 rounded-2xl border border-ink-900/10 bg-ink-50 px-4 py-3 text-[13px] font-medium text-ink-700 transition-colors hover:border-ink-900/25 hover:text-ink-900"
                             >
                               <span>Passende Schulung: {relCourse.title}</span>
@@ -173,28 +242,19 @@ export default function BusinessModules() {
         })}
 
         <Reveal delay={0.15}>
-          <div className="mt-10 flex flex-col items-start justify-between gap-6 rounded-3xl border border-ink-900/10 bg-white p-8 md:flex-row md:items-center md:p-10">
-            <div className="flex items-start gap-4">
-              <div className="inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl border border-accent-500/20 bg-accent-500/10">
-                <Cpu size={18} strokeWidth={1.9} className="text-accent-700" />
-              </div>
-              <div>
-                <p className="text-[15px] font-medium text-ink-900">
-                  Cloud- oder On-Premise, verheiratet mit Ihrer Systemlandschaft
-                </p>
-                <p className="mt-1 text-[13.5px] leading-relaxed text-ink-500">
-                  Anbindung an SAP, DATEV, Salesforce, Microsoft 365 oder Ihr
-                  eigenes ERP. Kein Off-the-Shelf-Kompromiss.
-                </p>
-              </div>
+          <div className="mt-10 flex items-start gap-4 rounded-3xl border border-ink-900/10 bg-white p-8 md:p-10">
+            <div className="inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl border border-accent-500/20 bg-accent-500/10">
+              <Cpu size={18} strokeWidth={1.9} className="text-accent-700" />
             </div>
-            <Link
-              href="/business/loesungen"
-              className="inline-flex items-center gap-2 rounded-full bg-ink-900 px-5 py-3 text-[14px] font-medium text-white transition-all hover:-translate-y-0.5"
-            >
-              Detaillierte Lösungs-Seite
-              <ArrowUpRight size={15} strokeWidth={2.2} />
-            </Link>
+            <div>
+              <p className="text-[15px] font-medium text-ink-900">
+                Cloud- oder On-Premise, verheiratet mit Ihrer Systemlandschaft
+              </p>
+              <p className="mt-1 text-[13.5px] leading-relaxed text-ink-500">
+                Anbindung an SAP, DATEV, Salesforce, Microsoft 365 oder Ihr
+                eigenes ERP. Kein Off-the-Shelf-Kompromiss.
+              </p>
+            </div>
           </div>
         </Reveal>
       </div>

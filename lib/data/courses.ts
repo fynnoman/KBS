@@ -2,7 +2,19 @@ export type CourseCategory =
   | "grundlagen"
   | "rollen"
   | "governance"
-  | "technisch";
+  | "technisch"
+  | "programme";
+
+export type CoursePricing = {
+  /** Inhouse-Pauschale bis 12 TN (netto). Ab 13. TN 120 € pro Person. */
+  inhousePrice?: number;
+  /** Preis pro Person für offene Live-Kurse (netto). */
+  openPricePerPerson?: number;
+  /** Zusätzliche Preis-Info, z. B. „Frühbucher 199 €, danach 229 €". */
+  openPriceNote?: string;
+  /** Ersetzt inhousePrice-Anzeige durch ein Sonderformat-Label. */
+  customLabel?: string;
+};
 
 export type Course = {
   slug: string;
@@ -15,13 +27,15 @@ export type Course = {
   certificate: string;
   formats: string[];
   image: string;
+  pricing?: CoursePricing;
 };
 
 export const CATEGORY_LABEL: Record<CourseCategory, string> = {
   grundlagen: "Grundkurse",
   rollen: "Rollenspezifische Vertiefungen",
   governance: "Führung & Governance",
-  technisch: "Technisch & IT"
+  technisch: "Technisch & IT",
+  programme: "Programme & Sonderformate"
 };
 
 export const CATEGORY_INTRO: Record<CourseCategory, string> = {
@@ -32,7 +46,9 @@ export const CATEGORY_INTRO: Record<CourseCategory, string> = {
   governance:
     "Führungsebene, Compliance, Personalvertretung. Verantwortung ohne Blindflug.",
   technisch:
-    "Für IT, DevOps und Entwicklung – vom On-Premise-Deployment bis zum eigenen RAG-Assistenten."
+    "Für IT, DevOps und Entwicklung – vom On-Premise-Deployment bis zum eigenen RAG-Assistenten.",
+  programme:
+    "Impulsvorträge, Multiplikatoren-Programme und mehrmonatige Curricula – Formate über die Einzelkurse hinaus."
 };
 
 export const COURSES: Course[] = [
@@ -53,7 +69,12 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS Certified AI User",
     formats: ["Präsenz", "Remote", "Inhouse"],
-    image: "/kurse-images/ki-anwender.jpg"
+    image: "/kurse-images/ki-anwender.jpg",
+    pricing: {
+      inhousePrice: 2400,
+      openPricePerPerson: 199,
+      openPriceNote: "Frühbucher bis 4 Wochen vorher 199 €, danach 229 €"
+    }
   },
   {
     slug: "prompt-engineering",
@@ -72,7 +93,11 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS Prompt Practitioner",
     formats: ["Präsenz", "Remote", "Inhouse"],
-    image: "/kurse-images/prompt-engineering.jpg"
+    image: "/kurse-images/prompt-engineering.jpg",
+    pricing: {
+      inhousePrice: 2400,
+      openPricePerPerson: 449
+    }
   },
   {
     slug: "vertrieb",
@@ -91,7 +116,11 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS AI for Sales",
     formats: ["Präsenz", "Remote", "Inhouse"],
-    image: "/kurse-images/vertrieb.jpg"
+    image: "/kurse-images/vertrieb.jpg",
+    pricing: {
+      inhousePrice: 2900,
+      openPricePerPerson: 849
+    }
   },
   {
     slug: "marketing",
@@ -110,7 +139,10 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS AI for Marketing",
     formats: ["Präsenz", "Remote", "Inhouse"],
-    image: "/kurse-images/marketing.jpg"
+    image: "/kurse-images/marketing.jpg",
+    pricing: {
+      inhousePrice: 2900
+    }
   },
   {
     slug: "finanzen",
@@ -129,7 +161,10 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS AI for Finance",
     formats: ["Präsenz", "Remote", "Inhouse"],
-    image: "/kurse-images/finanzen.jpg"
+    image: "/kurse-images/finanzen.jpg",
+    pricing: {
+      inhousePrice: 2900
+    }
   },
   {
     slug: "hr",
@@ -148,7 +183,10 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS AI for HR",
     formats: ["Präsenz", "Remote", "Inhouse"],
-    image: "/kurse-images/hr.jpg"
+    image: "/kurse-images/hr.jpg",
+    pricing: {
+      inhousePrice: 2900
+    }
   },
   {
     slug: "kundenservice",
@@ -167,7 +205,10 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS AI for Customer Service",
     formats: ["Präsenz", "Remote", "Inhouse"],
-    image: "/kurse-images/kundenservice.jpg"
+    image: "/kurse-images/kundenservice.jpg",
+    pricing: {
+      inhousePrice: 2900
+    }
   },
   {
     slug: "strategie",
@@ -186,7 +227,10 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS Executive AI Briefing",
     formats: ["Präsenz", "Inhouse"],
-    image: "/kurse-images/strategie.jpg"
+    image: "/kurse-images/strategie.jpg",
+    pricing: {
+      inhousePrice: 1400
+    }
   },
   {
     slug: "ai-act",
@@ -205,7 +249,10 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS AI Act Compliance Officer (mit Wissenscheck)",
     formats: ["Präsenz", "Inhouse"],
-    image: "/kurse-images/ai-act.jpg"
+    image: "/kurse-images/ai-act.jpg",
+    pricing: {
+      inhousePrice: 6400
+    }
   },
   {
     slug: "betriebsvereinbarung",
@@ -224,7 +271,10 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS Teilnahmezertifikat",
     formats: ["Präsenz", "Inhouse"],
-    image: "/kurse-images/betriebsvereinbarung.jpg"
+    image: "/kurse-images/betriebsvereinbarung.jpg",
+    pricing: {
+      inhousePrice: 1400
+    }
   },
   {
     slug: "lokale-ki",
@@ -243,7 +293,10 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS Local AI Administrator",
     formats: ["Präsenz", "Inhouse"],
-    image: "/kurse-images/lokale-ki.jpg"
+    image: "/kurse-images/lokale-ki.jpg",
+    pricing: {
+      inhousePrice: 6900
+    }
   },
   {
     slug: "rag",
@@ -262,6 +315,79 @@ export const COURSES: Course[] = [
     ],
     certificate: "KBS RAG Developer",
     formats: ["Präsenz", "Inhouse"],
-    image: "/kurse-images/rag.jpg"
+    image: "/kurse-images/rag.jpg",
+    pricing: {
+      inhousePrice: 6900
+    }
+  },
+
+  // ── Programme & Sonderformate ─────────────────────────────────
+  {
+    slug: "impulsvortrag",
+    title: "Impulsvortrag für den Führungskreis",
+    category: "programme",
+    duration: "45–90 Min",
+    audience: "Geschäftsführung, Vorstand, Bereichsleitung",
+    summary:
+      "Kompaktes Führungskreis-Format: Wo steht Ihr Unternehmen im KI-Zyklus, welche Investitionen zahlen sich in zwölf Monaten aus, welche Risiken sind real. Impuls, kein Verkauf.",
+    learnings: [
+      "KI-Reifegrad des eigenen Unternehmens einschätzen",
+      "Investitions-Einordnung: Nutzen, Risiken, Gesamtkosten",
+      "Roadmap-Ansatzpunkte für das nächste Geschäftsjahr",
+      "Diskussion konkreter Vorhaben im Führungskreis"
+    ],
+    certificate: "KBS Executive Impulse",
+    formats: ["Präsenz", "Remote", "Inhouse"],
+    image: "/kurse-images/strategie.jpg",
+    pricing: {
+      inhousePrice: 1900,
+      customLabel: "Führungskreis-Format"
+    }
+  },
+  {
+    slug: "multiplikatoren",
+    title: "Multiplikatoren-Programm",
+    category: "programme",
+    duration: "3 Tage + Begleitung",
+    audience: "Interne KI-Champions, Change-Verantwortliche",
+    summary:
+      "Wir bilden interne KI-Champions aus, die anschließend die Wissensweitergabe im Betrieb übernehmen. Kein Dauerabo, sondern messbare Selbstständigkeit Ihres Teams.",
+    learnings: [
+      "Didaktik und Format-Auswahl für interne Weitergabe",
+      "Aufbau einer internen Prompt- und Vorlagen-Bibliothek",
+      "Betreuung der ersten Mitarbeiter-Schulungen durch Champions",
+      "Umgang mit typischen Widerständen und Fragen",
+      "Anschließende Sprechstunden-Begleitung für 4 Wochen"
+    ],
+    certificate: "KBS AI Champion",
+    formats: ["Präsenz", "Inhouse"],
+    image: "/kurse-images/ki-anwender.jpg",
+    pricing: {
+      inhousePrice: 8900,
+      customLabel: "Programm inkl. Begleitung"
+    }
+  },
+  {
+    slug: "curriculum-3monate",
+    title: "Curriculum · 3 Monate mehrstufig",
+    category: "programme",
+    duration: "3 Monate",
+    audience: "Ganze Abteilungen oder standortübergreifende Rollouts",
+    summary:
+      "Mehrstufiges Programm über drei Monate, abgestimmt auf Ihren Rollout-Plan. Inklusive Lernpfade, Übungsaufgaben, Sprechstunden und Erfolgsmessung.",
+    learnings: [
+      "Individueller Lernpfad pro Rolle und Abteilung",
+      "Feste Übungsaufgaben mit Bezug zur echten Arbeit",
+      "Regelmäßige Sprechstunden zwischen den Modulen",
+      "Kompetenz-Messung vor und nach dem Programm",
+      "Abschluss-Zertifikat für alle Teilnehmenden"
+    ],
+    certificate: "KBS Curriculum Certificate",
+    formats: ["Präsenz", "Remote", "Inhouse"],
+    image: "/kurse-images/prompt-engineering.jpg",
+    pricing: {
+      inhousePrice: 14900,
+      customLabel: "Mehrstufiges Programm inkl. Sprechstunden"
+    }
   }
 ];

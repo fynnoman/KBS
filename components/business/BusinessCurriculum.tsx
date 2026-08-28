@@ -20,14 +20,21 @@ import {
   CATEGORY_INTRO,
   type CourseCategory
 } from "@/lib/data/courses";
-import { EMAIL } from "@/lib/config";
+import { EMAIL, CALENDLY_URL } from "@/lib/config";
 
 const CATEGORY_ORDER: CourseCategory[] = [
   "grundlagen",
   "rollen",
   "governance",
-  "technisch"
+  "technisch",
+  "programme"
 ];
+
+const euro = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
+  maximumFractionDigits: 0
+});
 
 function buildCourseMailto(title: string): string {
   const subject = `Anfrage zu KBS-Schulung: ${title}`;
@@ -189,6 +196,49 @@ export default function BusinessCurriculum() {
                       </div>
 
                       <div className="mt-auto pt-6">
+                        {c.pricing && (
+                          <div className="mb-3 rounded-2xl border border-accent-500/25 bg-accent-500/10 p-4">
+                            <p className="text-[10.5px] font-semibold uppercase tracking-[0.16em] text-accent-800">
+                              Preise · netto zzgl. USt.
+                            </p>
+                            <div className="mt-2 space-y-2">
+                              {c.pricing.inhousePrice !== undefined && (
+                                <div className="flex items-baseline justify-between gap-3">
+                                  <p className="text-[12.5px] font-medium text-ink-700">
+                                    Inhouse ·{" "}
+                                    {c.pricing.customLabel ??
+                                      "Pauschale bis 12 TN"}
+                                  </p>
+                                  <p className="text-[16px] font-semibold tracking-tight text-ink-900">
+                                    {euro.format(c.pricing.inhousePrice)}
+                                  </p>
+                                </div>
+                              )}
+                              {c.pricing.openPricePerPerson !== undefined && (
+                                <div className="flex items-baseline justify-between gap-3">
+                                  <p className="text-[12.5px] font-medium text-ink-700">
+                                    Offener Kurs · pro Person
+                                  </p>
+                                  <p className="text-[16px] font-semibold tracking-tight text-ink-900">
+                                    {euro.format(c.pricing.openPricePerPerson)}
+                                  </p>
+                                </div>
+                              )}
+                              {c.pricing.openPriceNote && (
+                                <p className="text-[11.5px] leading-snug text-ink-500">
+                                  {c.pricing.openPriceNote}
+                                </p>
+                              )}
+                              {c.pricing.inhousePrice !== undefined &&
+                                !c.pricing.customLabel && (
+                                  <p className="text-[11.5px] leading-snug text-ink-500">
+                                    Ab dem 13. Teilnehmer 120 € pro Person.
+                                    Remote ohne Aufschlag.
+                                  </p>
+                                )}
+                            </div>
+                          </div>
+                        )}
                         <div className="flex items-center gap-2 rounded-2xl bg-ink-900 px-4 py-3">
                           <Award
                             size={14}
@@ -238,13 +288,15 @@ export default function BusinessCurriculum() {
                 </p>
               </div>
             </div>
-            <Link
-              href="/business/kurskatalog"
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-[14px] font-medium text-ink-900 transition-all hover:-translate-y-0.5"
             >
-              Zur eigenen Kurskatalog-Seite
+              Schulungsplan besprechen
               <ArrowUpRight size={15} strokeWidth={2.2} />
-            </Link>
+            </a>
           </div>
         </Reveal>
       </div>
