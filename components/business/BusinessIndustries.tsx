@@ -12,56 +12,93 @@ import {
   ShieldCheck
 } from "lucide-react";
 
-const INDUSTRIES = [
+type Industry = {
+  icon: typeof Scale;
+  label: string;
+  body: string;
+  highlights: string[];
+};
+
+const INDUSTRIES: Industry[] = [
   {
     icon: Scale,
     label: "Anwaltskanzleien",
     body:
-      "Vertragsanalyse, Aktenrecherche, Schriftsatz-Vorbereitung – lokal, mandantsgeschützt, ohne dass ein Zeichen die Kanzlei verlässt."
+      "Vertragsanalyse, Aktenrecherche, Schriftsatz-Vorbereitung – lokal, mandantsgeschützt, ohne dass ein Zeichen die Kanzlei verlässt.",
+    highlights: ["Vertragsanalyse", "mandantsgeschützt", "lokal"]
   },
   {
     icon: Calculator,
     label: "Steuerkanzleien & WP",
     body:
-      "DATEV-nahe Assistenten, automatisierte Belegerkennung, Mandanten-Kommunikation und interne Recherche auf lokaler KI."
+      "DATEV-nahe Assistenten, automatisierte Belegerkennung, Mandanten-Kommunikation und interne Recherche auf lokaler KI.",
+    highlights: ["DATEV-nahe", "Belegerkennung", "lokaler KI"]
   },
   {
     icon: Stethoscope,
     label: "Arzt- & Zahnarztpraxen",
     body:
-      "Arztbrief-Diktate, Anamnese-Vorbereitung, Rezeptions-Voice-Agents und Terminvereinbarung – DSGVO- und Patientendaten-konform on-premise."
+      "Arztbrief-Diktate, Anamnese-Vorbereitung, Rezeptions-Voice-Agents und Terminvereinbarung – DSGVO- und Patientendaten-konform on-premise.",
+    highlights: ["Arztbrief-Diktate", "Terminvereinbarung", "on-premise"]
   },
   {
     icon: HeartPulse,
     label: "Kliniken & MVZ",
     body:
-      "Dokumentations-Assistenten für Pflege und Ärzteschaft, Kodierhilfe, interne Wissensdatenbank über Leitlinien und SOPs."
+      "Dokumentations-Assistenten für Pflege und Ärzteschaft, Kodierhilfe, interne Wissensdatenbank über Leitlinien und SOPs.",
+    highlights: ["Kodierhilfe", "Wissensdatenbank", "Leitlinien"]
   },
   {
     icon: Factory,
     label: "Maschinenbau & Fertigung",
     body:
-      "Technische Dokumentation, Ersatzteil-Recherche, Angebots- und Ausschreibungsvorbereitung, Wartungs-Handbücher als KI-Assistent."
+      "Technische Dokumentation, Ersatzteil-Recherche, Angebots- und Ausschreibungsvorbereitung, Wartungs-Handbücher als KI-Assistent.",
+    highlights: ["Ersatzteil-Recherche", "Angebots-", "Wartungs-Handbücher"]
   },
   {
     icon: Building2,
     label: "Immobilien & Verwaltung",
     body:
-      "Mieterkommunikation, Betriebskostenabrechnung, Objektakten-Recherche und Ausschreibungs-Vorbereitung für Verwalter und Makler."
+      "Mieterkommunikation, Betriebskostenabrechnung, Objektakten-Recherche und Ausschreibungs-Vorbereitung für Verwalter und Makler.",
+    highlights: ["Betriebskostenabrechnung", "Objektakten-Recherche"]
   },
   {
     icon: ShoppingBag,
     label: "Handel & Großhandel",
     body:
-      "Produktdaten-Pflege, Angebotserstellung, Reklamations-Triage, Lieferanten-Kommunikation und interne Sortiments-Suche."
+      "Produktdaten-Pflege, Angebotserstellung, Reklamations-Triage, Lieferanten-Kommunikation und interne Sortiments-Suche.",
+    highlights: ["Produktdaten-Pflege", "Reklamations-Triage", "Sortiments-Suche"]
   },
   {
     icon: ShieldCheck,
     label: "Versicherung & Finanz",
     body:
-      "Schadenprüfung, Vertragsanalyse, Kunden-Korrespondenz und regulatorische Recherche – auf Wunsch vollständig ohne Cloud-Übermittlung."
+      "Schadenprüfung, Vertragsanalyse, Kunden-Korrespondenz und regulatorische Recherche – auf Wunsch vollständig ohne Cloud-Übermittlung.",
+    highlights: ["Schadenprüfung", "regulatorische Recherche", "ohne Cloud"]
   }
 ];
+
+function escapeRegExp(s: string) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function renderHighlighted(text: string, highlights: string[]) {
+  if (highlights.length === 0) return text;
+  const pattern = new RegExp(`(${highlights.map(escapeRegExp).join("|")})`, "g");
+  const parts = text.split(pattern);
+  return parts.map((part, i) =>
+    highlights.includes(part) ? (
+      <mark
+        key={i}
+        className="bg-accent-500/15 px-0.5 font-semibold text-accent-800 rounded"
+      >
+        {part}
+      </mark>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
 
 export default function BusinessIndustries() {
   return (
@@ -99,7 +136,7 @@ export default function BusinessIndustries() {
                     {ind.label}
                   </h3>
                   <p className="mt-3 text-[14.5px] leading-relaxed text-ink-500">
-                    {ind.body}
+                    {renderHighlighted(ind.body, ind.highlights)}
                   </p>
                 </div>
               </Reveal>

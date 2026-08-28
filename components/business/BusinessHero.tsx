@@ -49,9 +49,10 @@ export default function BusinessHero() {
               className="mt-7 max-w-xl text-lg leading-relaxed text-ink-500 sm:text-xl"
             >
               Wir installieren lokale KI-Systeme auf Ihrer Hardware, bauen
-              maßgeschneiderte Assistenten für Ihr Firmenwissen und rollen
-              KI-Workflows über ganze Abteilungen aus – DSGVO-konform, ohne
-              Cloud-Zwang und mit klaren Festpreisen pro Phase.
+              maßgeschneiderte Assistenten für Ihr Firmenwissen, rollen
+              KI-Workflows über ganze Abteilungen aus und schulen Ihre
+              Belegschaft mit Live-Kursen – DSGVO-konform, ohne Cloud-Zwang
+              und mit klaren Festpreisen pro Phase.
             </motion.p>
 
             <motion.div
@@ -147,7 +148,7 @@ export default function BusinessHero() {
           {[
             "Festpreise pro Phase",
             "EU AI Act-konform",
-            "Integration in bestehende Systeme",
+            "Live-Schulungen für Ihr Team",
             "Fester Ansprechpartner nach Go-Live"
           ].map((item) => (
             <div

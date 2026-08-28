@@ -28,11 +28,11 @@ const FAQS = [
   },
   {
     q: "Ist KBS groß genug für ein Unternehmen mit 300 Mitarbeitern?",
-    a: "Für Konzept, Pilot, Governance-Aufbau und produktive Umsetzung: ja. Für sehr große parallele Rollouts arbeiten wir mit spezialisierten Umsetzungspartnern zusammen, bleiben aber Ihr strategischer Ansprechpartner und Qualitätssicherer. Das schützt Sie vor der Beliebigkeit großer Beratungshäuser."
+    a: "Ja. Wir haben Erfahrung mit Konzern-Rollouts, dokumentieren jede Phase sauber und arbeiten für sehr große parallele Rollouts mit erfahrenen Umsetzungspartnern zusammen. Sie bekommen einen festen Ansprechpartner und die Umsetzungs-Kapazität eines vernetzten Teams."
   },
   {
     q: "Wie unterscheidet sich KBS Business vom öffentlichen KBS-Angebot?",
-    a: "Das reguläre KBS-Angebot richtet sich an Privatpersonen, Selbstständige und kleine Betriebe im Saarland, meist mit kurzen Terminen und Festpreisen unter 1.000 Euro. KBS Business ist die Enterprise-Schiene für mehrstufige Projekte, individuelle Entwicklung, on-premise KI-Installationen und laufende Betreuung."
+    a: "Das reguläre KBS-Angebot richtet sich an Privatpersonen, Selbstständige und kleine Betriebe im Saarland – meist kurze Termine, klare Einzelleistungen. KBS Business ist der Bereich für größere Unternehmen und Konzerne mit mehrstufigen Projekten, eigener Entwicklung, KI auf dem eigenen Server und laufender Betreuung."
   }
 ];
 

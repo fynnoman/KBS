@@ -99,19 +99,18 @@ export default function BusinessReferences() {
         <Reveal>
           <div className="mb-14 flex flex-col items-start justify-between gap-6 md:mb-16 md:flex-row md:items-end">
             <div className="max-w-2xl">
-              <span className="chip">Referenzen &amp; Portfolio</span>
+              <span className="chip">Referenzen</span>
               <h2 className="mt-5 text-4xl leading-[1.05] tracking-tight text-ink-900 sm:text-5xl md:text-6xl">
-                Produkte, die wir
+                Unsere
                 <br />
                 <span className="display italic text-ink-500">
-                  selbst betreiben.
+                  Referenzen.
                 </span>
               </h2>
             </div>
             <p className="max-w-sm text-[15px] leading-relaxed text-ink-500">
-              KBS entsteht nicht aus PowerPoint-Theorie. Hinter der Beratung
-              steht eine Gruppe aktiver Produkt- und Softwareentwickler mit
-              eigenem SaaS, eigener Agentur und universitären Gründungsprojekten.
+              Eigene Produkte, Partnerprojekte und universitäre Programme, aus
+              denen wir tägliche Praxis in die Beratung mitbringen.
             </p>
           </div>
         </Reveal>

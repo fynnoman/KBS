@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BusinessHero from "@/components/business/BusinessHero";
-import BusinessUseCases from "@/components/business/BusinessUseCases";
 import BusinessIndustries from "@/components/business/BusinessIndustries";
-import LocalAIFeature from "@/components/business/LocalAIFeature";
 import BusinessProcess from "@/components/business/BusinessProcess";
 import BusinessCurriculum from "@/components/business/BusinessCurriculum";
 import BusinessModules from "@/components/business/BusinessModules";
+import BusinessPreise from "@/components/business/BusinessPreise";
 import BusinessReferences from "@/components/business/BusinessReferences";
 import BusinessFAQ from "@/components/business/BusinessFAQ";
 import BusinessCTA from "@/components/business/BusinessCTA";
@@ -194,11 +193,10 @@ export default function BusinessPage() {
       <BusinessCTA />
       <BusinessCurriculum />
       <BusinessModules />
-      <BusinessUseCases />
       <BusinessIndustries />
-      <LocalAIFeature />
       <BusinessProcess />
       <BusinessReferences />
+      <BusinessPreise />
       <BusinessFAQ />
       <Footer />
     </main>
