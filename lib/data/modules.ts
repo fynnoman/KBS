@@ -17,136 +17,136 @@ export type SoftwareModule = {
 
 export const MODULE_CATEGORY_LABEL: Record<ModuleCategory, string> = {
   infrastruktur: "Basis-Infrastruktur",
-  fachfunktion: "Fachfunktions-Assistenten",
-  automation: "Automation & Support",
-  governance: "Governance & Steuerung"
+  fachfunktion: "Assistenten für Fachabteilungen",
+  automation: "Automatisierung & Kundenkontakt",
+  governance: "Steuerung & Regelwerk"
 };
 
 export const MODULE_CATEGORY_INTRO: Record<ModuleCategory, string> = {
   infrastruktur:
-    "Die Bausteine, auf denen alles andere aufsetzt – zentraler Zugang, Prompt-Verwaltung, Wissensretrieval.",
+    "Die Grundbausteine für KI im Unternehmen – zentraler Zugang, gemeinsame Vorlagen und der Zugriff auf Ihr Firmenwissen.",
   fachfunktion:
-    "Direkt in die Fachabteilung integrierbare Assistenten mit spürbarem Effekt in wenigen Tagen.",
+    "KI-Assistenten für einzelne Abteilungen mit spürbarem Effekt in wenigen Tagen.",
   automation:
-    "Wiederkehrende, hoch-volumige Prozesse mit klaren Regeln und menschlicher Kontrolle an den richtigen Punkten.",
+    "Wiederkehrende Abläufe automatisch erledigen lassen – mit klaren Regeln und menschlicher Kontrolle an den richtigen Punkten.",
   governance:
-    "Steuerungs- und Compliance-Werkzeuge für Führung, Compliance-Beauftragte und den Betriebsrat."
+    "Werkzeuge für Führung, Datenschutz-Beauftragte und den Betriebsrat – damit KI-Einsatz nachvollziehbar bleibt."
 };
 
 export const MODULES: SoftwareModule[] = [
   {
     slug: "ai-gateway",
-    title: "KBS AI Gateway",
+    title: "Zentraler KI-Zugang",
     category: "infrastruktur",
-    tagline: "Zentraler LLM-Zugang für Ihre Belegschaft",
+    tagline: "Ein Zugang zu allen KI-Werkzeugen für Ihre Belegschaft",
     summary:
-      "Ein einzelner Zugangspunkt zu allen relevanten KI-Anbietern. Rollen, Rechte, Kostenkontrolle und lückenloses Audit-Log – kompatibel mit Cloud- und On-Premise-Modellen.",
+      "Ein einziger Zugangspunkt zu allen relevanten KI-Anbietern. Rollen, Rechte, Kostenkontrolle und lückenloses Nutzungs-Protokoll – funktioniert mit KI in der Cloud und mit KI auf Ihrem eigenen Server.",
     features: [
       "Zentrale Rechte- und Rollenverwaltung",
-      "Kostenzuordnung pro Team und Nutzer",
-      "Vollständiges Audit-Log für Revision",
-      "Cloud- und On-Premise-Modelle parallel nutzbar",
-      "Single Sign-On über bestehendes Directory"
+      "Kosten pro Team und Nutzer zuordnen",
+      "Vollständiges Nutzungs-Protokoll für die Revision",
+      "Cloud-KI und KI auf dem eigenen Server parallel nutzbar",
+      "Einmal-Anmeldung über Ihr bestehendes Firmen-Verzeichnis"
     ],
     relatedCourse: "ki-anwender",
     image: "/module-images/ai-gateway.jpg"
   },
   {
     slug: "prompt-library",
-    title: "KBS Prompt Library",
+    title: "KI-Vorlagen-Bibliothek",
     category: "infrastruktur",
-    tagline: "Kuratierte Prompt-Bibliothek für Ihr gesamtes Team",
+    tagline: "Gemeinsame KI-Anweisungen für Ihr ganzes Team",
     summary:
-      "Wiederverwendbare, versionierte Prompts – organisiert nach Rolle und Anwendungsfall. Champions pflegen zentral, das Team nutzt konsistent und immer auf aktuellem Stand.",
+      'Wiederverwendbare, versionierte KI-Anweisungen (auch „Prompts" genannt) – organisiert nach Rolle und Anwendungsfall. Champions pflegen zentral, das Team nutzt konsistent und immer auf aktuellem Stand.',
     features: [
-      "Versionierte Prompts mit Änderungshistorie",
+      "Versionierte Anweisungen mit Änderungshistorie",
       "Rollen- und teamspezifische Ordner",
-      "Freigabe-Workflow für neue Prompts",
-      "Nutzungsstatistik pro Prompt",
-      "Export in bestehende Tool-Landschaften"
+      "Freigabe-Ablauf für neue Anweisungen",
+      "Nutzungsstatistik pro Anweisung",
+      "Export in bestehende Werkzeug-Landschaften"
     ],
     relatedCourse: "prompt-engineering",
     image: "/module-images/prompt-library.jpg"
   },
   {
     slug: "corporate-knowledge",
-    title: "KBS Corporate Knowledge Assistant",
+    title: "Firmen-Wissens-Assistent",
     category: "infrastruktur",
-    tagline: "RAG-Assistent auf Ihrem gesamten Firmenwissen",
+    tagline: "Ein KI-Assistent, der Ihr komplettes Firmenwissen kennt",
     summary:
-      "Antworten aus Handbüchern, Verträgen, Wikis, CRM- und Ablagesystemen – mit klaren Quellenangaben und ohne Halluzinationsrisiko auf firmenrelevante Fakten.",
+      'Antworten aus Handbüchern, Verträgen, Wikis, CRM- und Ablagesystemen – mit klaren Quellenangaben und ohne dass die KI zu firmenrelevanten Fakten „halluziniert".',
     features: [
-      "Retrieval über SharePoint, Confluence, Nextcloud, S3",
+      "Zugriff auf SharePoint, Confluence, Nextcloud, Cloud-Speicher",
       "Antworten mit klaren Quellenangaben",
-      "Sensible Dokumente per Berechtigungslogik geschützt",
-      "Auf Wunsch vollständig on-premise",
-      "Feedback-Loop zur laufenden Ergebnisverbesserung"
+      "Sensible Dokumente per Berechtigung geschützt",
+      "Auf Wunsch komplett auf Ihrem eigenen Server",
+      "Feedback der Nutzer verbessert die Antworten laufend"
     ],
     relatedCourse: "rag",
     image: "/module-images/corporate-knowledge.jpg"
   },
   {
     slug: "sales-assistant",
-    title: "KBS Sales Assistant",
+    title: "Vertriebs-Assistent",
     category: "fachfunktion",
-    tagline: "Ihr Vertrieb als Multiplikator",
+    tagline: "Ihr Vertrieb erreicht mehr in derselben Zeit",
     summary:
-      "Lead-Recherche, Angebotsentwürfe, Follow-up-Kaskaden und CRM-Anbindung in einem Werkzeug. Der Assistent lernt Ihren Vertriebsstil – keine generischen Textbausteine.",
+      "Firmenrecherche, Angebotsentwürfe, Nachfass-Serien und Anbindung an Ihr CRM in einem Werkzeug. Der Assistent lernt Ihren Vertriebsstil – keine generischen Textbausteine.",
     features: [
-      "Account-Intelligence per Firmenname oder Website",
+      "Firmenrecherche per Firmenname oder Website",
       "Angebotsentwürfe aus Ihrer Preis- und Textlogik",
-      "Personalisierte Follow-up-Kaskaden auf Deutsch",
-      "Integration in HubSpot, Salesforce, Pipedrive",
-      "Reporting mit Zeitgewinn pro Vertriebsmitarbeiter"
+      "Personalisierte Nachfass-E-Mails auf Deutsch",
+      "Anbindung an HubSpot, Salesforce, Pipedrive",
+      "Auswertung mit Zeitgewinn pro Vertriebsmitarbeiter"
     ],
     relatedCourse: "vertrieb",
     image: "/module-images/sales-assistant.jpg"
   },
   {
     slug: "content-studio",
-    title: "KBS Content Studio",
+    title: "Marketing-Studio",
     category: "fachfunktion",
-    tagline: "Redaktion, Bildproduktion, SEO – markenkonform",
+    tagline: "Texte, Bilder, SEO – im Look Ihrer Marke",
     summary:
-      "Content-Produktion für Web, Newsletter und Social Media mit hinterlegtem Corporate Design. Bilder werden markenkonsistent generiert, Texte im hinterlegten Tone of Voice.",
+      "Content-Produktion für Web, Newsletter und Social Media mit Ihrem hinterlegten Design. Bilder werden markenkonsistent erzeugt, Texte in der Sprache Ihrer Marke.",
     features: [
-      "Corporate-Design-Regeln als Systemprompt hinterlegt",
+      "Ihre Design-Regeln als Grundeinstellung hinterlegt",
       "Bildgenerierung in Ihrer Marken-Farbwelt",
-      "SEO-Recherche und Cluster-Vorschläge",
-      "Content-Kalender mit Freigabe-Workflow",
-      "Direkte Publikation in gängige CMS-Systeme"
+      "SEO-Recherche und Themen-Vorschläge",
+      "Redaktionsplan mit Freigabe-Ablauf",
+      "Direkte Veröffentlichung in gängige Redaktionssysteme"
     ],
     relatedCourse: "marketing",
     image: "/module-images/content-studio.jpg"
   },
   {
     slug: "invoice-ocr",
-    title: "KBS Invoice OCR",
+    title: "Beleg-Erfassung",
     category: "fachfunktion",
-    tagline: "Belegverarbeitung mit DATEV-Anbindung",
+    tagline: "Rechnungen automatisch erfassen und an DATEV übergeben",
     summary:
       "Rechnungen und Belege werden erkannt, kontiert und in Ihre Buchhaltung übergeben. Ausreißer landen automatisch auf einem Prüf-Stapel für die Fachkraft.",
     features: [
-      "OCR für Papierbelege, PDFs und E-Mail-Anhänge",
-      "Automatische Kontierungsvorschläge",
-      "DATEV-Export und weitere Fibu-Schnittstellen",
+      "Automatische Erkennung von Papierbelegen, PDFs und E-Mail-Anhängen",
+      "Kontierungsvorschläge",
+      "DATEV-Export und weitere Buchhaltungs-Schnittstellen",
       "Prüf-Stapel für Ausreißer und Sonderfälle",
-      "Revisionssichere Ablage inkl. Audit-Trail"
+      "Revisionssichere Ablage inkl. Nachweis-Protokoll"
     ],
     relatedCourse: "finanzen",
     image: "/module-images/invoice-ocr.jpg"
   },
   {
     slug: "hr-copilot",
-    title: "KBS HR Copilot",
+    title: "Personal-Assistent",
     category: "fachfunktion",
-    tagline: "HR-Assistent mit klaren AI-Act-Guardrails",
+    tagline: "KI für Personalarbeit – mit klaren Grenzen",
     summary:
-      "Stellenanzeigen, Onboarding-Materialien, Skill-Mapping und Recherche – mit klar dokumentierten Grenzen dort, wo der EU AI Act Hochrisiko-Anwendungen definiert.",
+      "Stellenanzeigen, Onboarding-Materialien, Recherche und Weiterbildungspläne – mit klar dokumentierten Grenzen dort, wo die EU-KI-Verordnung Hochrisiko-Anwendungen definiert.",
     features: [
-      "Stellenausschreibungen im Employer-Branding-Ton",
-      "Onboarding-Guides pro Rolle und Standort",
-      "Skill-Gap-Analyse für Weiterbildungspläne",
+      "Stellenausschreibungen im Ton Ihrer Arbeitgebermarke",
+      "Onboarding-Anleitungen pro Rolle und Standort",
+      "Analyse fehlender Fähigkeiten für Weiterbildungspläne",
       "Klare Trennung erlaubter Nutzung und Hochrisiko",
       "Betriebsrats-freundliche Nutzungsdokumentation"
     ],
@@ -155,65 +155,65 @@ export const MODULES: SoftwareModule[] = [
   },
   {
     slug: "support-triage",
-    title: "KBS Support Triage",
+    title: "Support-Sortierung",
     category: "automation",
-    tagline: "Ticket-Triage und Antwortentwürfe",
+    tagline: "Kundenanfragen sortieren und Antwortentwürfe erstellen",
     summary:
-      "Eingehende Anfragen werden klassifiziert, priorisiert und mit einem Antwortentwurf versehen. Der Mensch entscheidet – aber schneller und mit besseren Vorlagen.",
+      "Eingehende Anfragen werden nach Art und Dringlichkeit sortiert und mit einem Antwortentwurf versehen. Der Mensch entscheidet – aber schneller und mit besseren Vorlagen.",
     features: [
-      "Klassifikation nach Anfragentyp und Priorität",
+      "Sortierung nach Anfragentyp und Dringlichkeit",
       "Antwortentwürfe aus Ihrer Wissensdatenbank",
-      "Integration in Zendesk, Freshdesk, Outlook",
+      "Anbindung an Zendesk, Freshdesk, Outlook",
       "Eskalationsregeln für kritische Fälle",
-      "SLA-Monitoring und Reporting"
+      "Auswertung und Bericht zu Bearbeitungszeiten"
     ],
     relatedCourse: "kundenservice",
     image: "/module-images/support-triage.jpg"
   },
   {
     slug: "voice-reception",
-    title: "KBS Voice Reception",
+    title: "KI-Telefonannahme",
     category: "automation",
-    tagline: "KI-Telefonzentrale in natürlichem Deutsch",
+    tagline: "Anrufe automatisch entgegennehmen – in natürlichem Deutsch",
     summary:
-      "Automatisierte Erstannahme, Anrufer-Triage und Terminvereinbarung. Entlastet Assistenzteams messbar – mit Sprachqualität, die Anrufende nicht als Bot erkennen.",
+      "Automatische Erstannahme, Anrufer-Sortierung und Terminvereinbarung. Entlastet Assistenzteams messbar – mit Sprachqualität, die Anrufende nicht als Bot erkennen.",
     features: [
-      "Natürliche deutsche Stimme mit geringer Latenz",
-      "Terminvereinbarung mit Kalendersynchronisation",
+      "Natürliche deutsche Stimme mit geringer Reaktionszeit",
+      "Terminvereinbarung mit Kalender-Anbindung",
       "Saubere Übergabe an menschliche Mitarbeiter",
-      "Anrufer-Historie und Kontextübergabe",
-      "Nutzungs- und Zufriedenheits-Reports"
+      "Anrufer-Historie und Zusammenfassung mitgeliefert",
+      "Nutzungs- und Zufriedenheits-Berichte"
     ],
     relatedCourse: "kundenservice",
     image: "/module-images/voice-reception.jpg"
   },
   {
     slug: "compliance-register",
-    title: "KBS Compliance Register",
+    title: "KI-Register",
     category: "governance",
-    tagline: "EU-AI-Act-Register für Ihr Unternehmen",
+    tagline: "Übersicht aller KI-Anwendungen in Ihrem Unternehmen",
     summary:
-      "Alle KI-Anwendungen im Haus mit Risikoklassifikation, Verantwortlichen, Dokumenten und Prüfständen. Bereit für interne Audits und externe Nachweise.",
+      "Alle KI-Anwendungen im Haus mit Risiko-Einstufung, Verantwortlichen, Dokumenten und Prüfterminen. Bereit für interne Kontrollen und externe Nachweise.",
     features: [
-      "Risikoklassen nach EU AI Act automatisch vorgeschlagen",
+      "Risiko-Klassen nach EU-KI-Verordnung automatisch vorgeschlagen",
       "Zuordnung von Verantwortlichen und Freigebern",
       "Dokumentenablage mit Versionierung",
       "Prüftermine und Erinnerungen",
-      "Export für Auditoren und Aufsichtsbehörden"
+      "Export für interne Prüfer und Aufsichtsbehörden"
     ],
     relatedCourse: "ai-act",
     image: "/module-images/compliance-register.jpg"
   },
   {
     slug: "policy-templates",
-    title: "KBS Policy Baukasten",
+    title: "Regelwerk-Baukasten",
     category: "governance",
     tagline: "Nutzungsrichtlinien und Betriebsvereinbarungen",
     summary:
-      "Vorlagen für interne KI-Nutzungsrichtlinien und Betriebsvereinbarungen – anpassbar an Branche, Standort und Konzernstruktur, geprüft auf aktuellen Marktstand.",
+      "Vorlagen für interne KI-Nutzungsrichtlinien und Betriebsvereinbarungen – anpassbar an Branche, Standort und Konzernstruktur, geprüft auf aktuellen Stand.",
     features: [
       "Muster für Nutzungsrichtlinien nach Abteilung",
-      "Betriebsvereinbarungs-Textbausteine mit Kommentaren",
+      "Textbausteine für Betriebsvereinbarungen, mit Kommentaren",
       "Branchenspezifische Anpassungen",
       "Änderungshistorie und Rechtsstands-Datum",
       "Übertragbar auf Konzernstrukturen"
@@ -223,17 +223,17 @@ export const MODULES: SoftwareModule[] = [
   },
   {
     slug: "usage-analytics",
-    title: "KBS Usage Analytics",
+    title: "KI-Auswertung",
     category: "governance",
     tagline: "KI-Nutzung im Unternehmen messbar machen",
     summary:
-      "Wo wird KI wie viel genutzt, was kostet es, welche Abteilung erzielt welchen Effekt. Datenbasis für Investment-Entscheidungen der Führung.",
+      "Wo wird KI wie viel genutzt, was kostet es, welche Abteilung erzielt welchen Effekt. Datenbasis für Investitions-Entscheidungen der Führung.",
     features: [
-      "Nutzungs-Dashboards pro Abteilung und Nutzer",
+      "Nutzungs-Übersichten pro Abteilung und Nutzer",
       "Kostenverteilung und Budgetalarme",
       "Effekt- und Zeitgewinn-Messung",
       "Adoption-Kurven für Rollout-Planung",
-      "Board-Reports auf Knopfdruck"
+      "Führungs-Berichte auf Knopfdruck"
     ],
     relatedCourse: "strategie",
     image: "/module-images/usage-analytics.jpg"
