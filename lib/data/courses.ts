@@ -42,9 +42,9 @@ export const CATEGORY_INTRO: Record<CourseCategory, string> = {
   governance:
     "Führungsebene, Compliance, Personalvertretung. Verantwortung ohne Blindflug.",
   technisch:
-    "Für IT, DevOps und Entwicklung – vom On-Premise-Deployment bis zum eigenen RAG-Assistenten.",
+    "Für IT, DevOps und Entwicklung, vom On-Premise-Deployment bis zum eigenen RAG-Assistenten.",
   programme:
-    "Impulsvorträge, Multiplikatoren-Programme und mehrmonatige Curricula – Formate über die Einzelkurse hinaus."
+    "Impulsvorträge, Multiplikatoren-Programme und mehrmonatige Curricula, Formate über die Einzelkurse hinaus."
 };
 
 export const COURSES: Course[] = [
@@ -53,13 +53,13 @@ export const COURSES: Course[] = [
     title: "Zertifizierter KI-Anwender",
     category: "grundlagen",
     duration: "1 Tag",
-    audience: "Alle Mitarbeitenden – ohne technisches Vorwissen",
+    audience: "Alle Mitarbeitenden, ohne technisches Vorwissen",
     summary:
       "Solide Grundlage im Umgang mit ChatGPT, Claude und vergleichbaren Werkzeugen. Nach diesem Kurs nutzen Ihre Mitarbeitenden generative KI produktiv, datenschutzkonform und im Rahmen Ihrer Nutzungsrichtlinien.",
     learnings: [
       "Funktionsweise moderner Sprachmodelle in verständlicher Form",
       "Prompt-Basics: klare Instruktionen, Rollen, Beispiele, Kontext",
-      "Datenschutz-Regeln im Alltag – was darf rein, was nicht",
+      "Datenschutz-Regeln im Alltag, was darf rein, was nicht",
       "Umgang mit sensiblen Inhalten und internen Nutzungsrichtlinien",
       "Praktische Übungen für den eigenen Arbeitsalltag"
     ],
@@ -121,7 +121,7 @@ export const COURSES: Course[] = [
     duration: "1 Tag",
     audience: "Marketing, Kommunikation, Content, PR",
     summary:
-      "Redaktionsplanung, Content-Produktion, Bildgenerierung, SEO-Recherche und Analytics – alles mit klarem Fokus auf Markenkonsistenz und rechtssichere Verwendung.",
+      "Redaktionsplanung, Content-Produktion, Bildgenerierung, SEO-Recherche und Analytics, alles mit klarem Fokus auf Markenkonsistenz und rechtssichere Verwendung.",
     learnings: [
       "Redaktionsplanung und Themenrecherche mit KI",
       "Content-Produktion für Web, Newsletter, Social Media",
@@ -143,7 +143,7 @@ export const COURSES: Course[] = [
     duration: "1 Tag",
     audience: "Buchhaltung, Controlling, Finance-Teams",
     summary:
-      "Belegverarbeitung, OCR, Reporting-Automation und DATEV-nahe Workflows. Der Kurs zeigt, wo KI verlässlich einsetzbar ist – und wo aus Compliance-Gründen die manuelle Kontrolle bleiben muss.",
+      "Belegverarbeitung, OCR, Reporting-Automation und DATEV-nahe Workflows. Der Kurs zeigt, wo KI verlässlich einsetzbar ist, und wo aus Compliance-Gründen die manuelle Kontrolle bleiben muss.",
     learnings: [
       "OCR- und Belegverarbeitung mit modernen KI-Systemen",
       "Standardreports automatisieren, Ausreißer erkennen lassen",
@@ -170,7 +170,7 @@ export const COURSES: Course[] = [
       "Stellenanzeigen und Employer-Branding-Texte",
       "Onboarding-Materialien und Wissensdatenbanken",
       "Skill-Gap-Analyse und Weiterbildungspläne",
-      "Was nach EU AI Act als Hochrisiko gilt – klare Abgrenzung",
+      "Was nach EU AI Act als Hochrisiko gilt, klare Abgrenzung",
       "Betriebsrat und Mitbestimmung von Anfang an mitdenken"
     ],
     certificate: "KBS AI for HR",
@@ -215,7 +215,7 @@ export const COURSES: Course[] = [
       "Investment-Framing: Nutzen, Risiken, Total Cost of Ownership",
       "Roadmap-Bau: welche Bausteine wann sinnvoll sind",
       "Governance-Struktur: wer ist wofür verantwortlich",
-      "Risikoklassen nach EU AI Act – im Überblick"
+      "Risikoklassen nach EU AI Act, im Überblick"
     ],
     certificate: "KBS Executive AI Briefing",
     formats: ["Präsenz", "Inhouse"],
@@ -278,7 +278,7 @@ export const COURSES: Course[] = [
       "Praxiskurs zur Installation, Wartung und Absicherung lokaler LLMs. Von der Hardware-Auswahl über Ollama und LM Studio bis zur produktiven Anbindung an das interne Netz.",
     learnings: [
       "Hardware-Auswahl: Mac Mini, dedizierte Linux-Server, GPU-Optionen",
-      "Modellauswahl: Llama, Qwen, Mistral – Trade-offs",
+      "Modellauswahl: Llama, Qwen, Mistral, Trade-offs",
       "Ollama, LM Studio und produktive Deployments",
       "RAG-Basics: Vektor-DB, Embeddings, Retrieval",
       "Wartung, Updates, Monitoring, Sicherheit"
@@ -318,7 +318,7 @@ export const COURSES: Course[] = [
     slug: "impulsvortrag",
     title: "Impulsvortrag für den Führungskreis",
     category: "programme",
-    duration: "45–90 Min",
+    duration: "45 bis 90 Min",
     audience: "Geschäftsführung, Vorstand, Bereichsleitung",
     summary:
       "Kompaktes Führungskreis-Format: Wo steht Ihr Unternehmen im KI-Zyklus, welche Investitionen zahlen sich in zwölf Monaten aus, welche Risiken sind real. Impuls, kein Verkauf.",

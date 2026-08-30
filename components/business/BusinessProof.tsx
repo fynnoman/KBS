@@ -22,7 +22,7 @@ const PROOF = [
     icon: Zap,
     title: "Tägliche KI-Praxis",
     body:
-      "Über zehn Stunden pro Tag arbeite ich mit KI-Werkzeugen – für Code, Content, Recherche und Automatisierung. Sie bekommen also keine Powerpoint-Beratung, sondern jemanden, der die Werkzeuge tatsächlich täglich beherrscht."
+      "Über zehn Stunden pro Tag arbeite ich mit KI-Werkzeugen, für Code, Content, Recherche und Automatisierung. Sie bekommen also keine Powerpoint-Beratung, sondern jemanden, der die Werkzeuge tatsächlich täglich beherrscht."
   },
   {
     icon: Boxes,
@@ -43,7 +43,7 @@ export default function BusinessProof() {
                 <KIStamp />
                 <Image
                   src="/fynn-portrait.jpg"
-                  alt="Fynn Schulz – Gründer von KBS und aktiver KI-Anwender"
+                  alt="Fynn Schulz, Gründer von KBS und aktiver KI-Anwender"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-[68%_center]"

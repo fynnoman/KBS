@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Datenschutz",
   description:
-    "Datenschutzerklärung von KBS – KI-Beratung Saar. Informationen zum Umgang mit personenbezogenen Daten gemäß DSGVO.",
+    "Datenschutzerklärung von KBS KI-Beratung Saar. Informationen zum Umgang mit personenbezogenen Daten gemäß DSGVO.",
   alternates: { canonical: "https://ki-beratung-saar.com/datenschutz" },
   robots: { index: true, follow: true }
 };

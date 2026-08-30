@@ -17,7 +17,7 @@ const USE_CASES = [
     icon: Server,
     label: "Lokale KI auf Ihrer Hardware",
     body:
-      "Ein Mac Mini M4 Pro oder ein dedizierter Linux-Server läuft bei Ihnen im Haus. Modelle wie Llama 3.3 70B oder Qwen 2.5 antworten in unter zwei Sekunden – ohne dass ein einziges Byte Ihre Infrastruktur verlässt.",
+      "Ein Mac Mini M4 Pro oder ein dedizierter Linux-Server läuft bei Ihnen im Haus. Modelle wie Llama 3.3 70B oder Qwen 2.5 antworten in unter zwei Sekunden, ohne dass ein einziges Byte Ihre Infrastruktur verlässt.",
     tag: "Datenhoheit"
   },
   {
@@ -31,7 +31,7 @@ const USE_CASES = [
     icon: Workflow,
     label: "Prozess-Automation mit KI",
     body:
-      "Rechnungs-OCR, E-Mail-Klassifizierung, Angebotsvorbereitung, Ticket-Triage. Wir bauen die Automation, die spürbar Personalkosten spart – und dokumentieren jeden Schritt für Ihre Revision.",
+      "Rechnungs-OCR, E-Mail-Klassifizierung, Angebotsvorbereitung, Ticket-Triage. Wir bauen die Automation, die spürbar Personalkosten spart, und dokumentieren jeden Schritt für Ihre Revision.",
     tag: "Effizienz"
   },
   {
@@ -52,14 +52,14 @@ const USE_CASES = [
     icon: Code2,
     label: "Custom SaaS & Integrationen",
     body:
-      "Wir bauen individuelle KI-Tools, die in Ihre Systemlandschaft passen – SAP, DATEV, Salesforce, Microsoft 365, HubSpot oder Ihr eigenes ERP. Kein Off-the-Shelf-Kompromiss, sondern präzise auf Ihre Prozesse zugeschnitten.",
+      "Wir bauen individuelle KI-Tools, die in Ihre Systemlandschaft passen, SAP, DATEV, Salesforce, Microsoft 365, HubSpot oder Ihr eigenes ERP. Kein Off-the-Shelf-Kompromiss, sondern präzise auf Ihre Prozesse zugeschnitten.",
     tag: "Entwicklung"
   },
   {
     icon: Phone,
     label: "KI-Voice-Agents & Callbots",
     body:
-      "Automatisierte Telefonannahme, Terminvereinbarung, Anrufer-Triage und Weiterleitung. Reduziert die Last auf Ihrer Zentrale und entlastet Assistenz-Teams messbar – auf Deutsch und mit natürlicher Stimme.",
+      "Automatisierte Telefonannahme, Terminvereinbarung, Anrufer-Triage und Weiterleitung. Reduziert die Last auf Ihrer Zentrale und entlastet Assistenz-Teams messbar, auf Deutsch und mit natürlicher Stimme.",
     tag: "Voice"
   },
   {
@@ -88,7 +88,7 @@ export default function BusinessUseCases() {
               </h2>
             </div>
             <p className="max-w-sm text-[15px] leading-relaxed text-ink-500">
-              Alle Bausteine funktionieren einzeln oder kombiniert – abhängig
+              Alle Bausteine funktionieren einzeln oder kombiniert, abhängig
               davon, wo Sie heute stehen und wohin Sie wollen.
             </p>
           </div>

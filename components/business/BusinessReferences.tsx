@@ -20,7 +20,7 @@ const REFERENCES: Reference[] = [
     name: "Taskey",
     tag: "SaaS · Facility Management DACH",
     body:
-      "Eigene SaaS-Plattform für Gebäudereinigungs- und Facility-Betriebe. iOS-App und Web-Client, NFC-Zeiterfassung, Auftragssteuerung, Rechnungslogik und DATEV-Export – produktiv im Kundeneinsatz.",
+      "Eigene SaaS-Plattform für Gebäudereinigungs- und Facility-Betriebe. iOS-App und Web-Client, NFC-Zeiterfassung, Auftragssteuerung, Rechnungslogik und DATEV-Export, produktiv im Kundeneinsatz.",
     href: "https://taskeyapp.com",
     logo: "/logos/taskey.jpg"
   },
@@ -28,7 +28,7 @@ const REFERENCES: Reference[] = [
     name: "Pavan-Rent",
     tag: "Vermietung · Ferien- und Wohnimmobilien",
     body:
-      "Digitale Vermietungs- und Verwaltungslösung für einen professionellen Vermieter. Buchungs- und Anfragestrecke, Belegverarbeitung sowie Objekt- und Gastverwaltung – alles KI-gestützt und ohne Portalkosten.",
+      "Digitale Vermietungs- und Verwaltungslösung für einen professionellen Vermieter. Buchungs- und Anfragestrecke, Belegverarbeitung sowie Objekt- und Gastverwaltung, alles KI-gestützt und ohne Portalkosten.",
     href: "https://pavan-rent.de",
     logo: "/logos/pavan.png",
     logoBg: "dark"
@@ -45,7 +45,7 @@ const REFERENCES: Reference[] = [
     name: "Syncrony",
     tag: "Systemintegration · Enterprise-Software",
     body:
-      "Systemintegrations- und Softwarehaus. Wir liefern die KI-Bausteine, die in die Enterprise-Landschaften der Syncrony-Kunden – ERP, CRM, DMS – produktiv eingebunden werden.",
+      "Systemintegrations- und Softwarehaus. Wir liefern die KI-Bausteine, die in die Enterprise-Landschaften der Syncrony-Kunden, ERP, CRM, DMS, produktiv eingebunden werden.",
     href: "https://syncrony-systems.com",
     logo: "/logos/syncrony.jpg"
   },

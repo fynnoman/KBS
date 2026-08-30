@@ -14,7 +14,7 @@ const PILLARS = [
     icon: Wallet,
     title: "Klare Kostenkontrolle",
     body:
-      "Einmaliger Hardware-Investment statt monatlicher API-Kosten pro Nutzer. Bei aktiven Teams rechnet sich ein Mac Mini M4 Pro (48–64 GB) oft in unter sechs Monaten."
+      "Einmaliger Hardware-Investment statt monatlicher API-Kosten pro Nutzer. Bei aktiven Teams rechnet sich ein Mac Mini M4 Pro (48 bis 64 GB) oft in unter sechs Monaten."
   },
   {
     icon: Zap,
@@ -26,7 +26,7 @@ const PILLARS = [
     icon: Cpu,
     title: "Passende Modelle",
     body:
-      "Llama 3.3 70B, Qwen 2.5, Mistral Large oder deutsche Modelle wie Teuken. Wir wählen das Modell nach Ihrer Aufgabe – nicht nach dem lautesten Marketing."
+      "Llama 3.3 70B, Qwen 2.5, Mistral Large oder deutsche Modelle wie Teuken. Wir wählen das Modell nach Ihrer Aufgabe, nicht nach dem lautesten Marketing."
   }
 ];
 

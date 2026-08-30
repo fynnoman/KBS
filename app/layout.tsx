@@ -3,15 +3,15 @@ import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
 
 const SITE_URL = "https://ki-beratung-saar.com";
-const SITE_NAME = "KBS – KI-Beratung Saar";
+const SITE_NAME = "KBS KI-Beratung Saar";
 const DESCRIPTION =
-  "KBS bringt KI in mittelständische Unternehmen und Konzerne – lokale KI auf Mac Mini und dedizierten Servern, Custom RAG-Assistenten, Prozess-Automation, Enterprise-Rollout, DSGVO- und EU-AI-Act-konform mit klaren Festpreisen pro Phase. Vor Ort im Saarland, deutschlandweit einsetzbar.";
+  "KBS bringt KI in mittelständische Unternehmen und Konzerne, lokale KI auf Mac Mini und dedizierten Servern, Custom RAG-Assistenten, Prozess-Automation, Enterprise-Rollout, DSGVO- und EU-AI-Act-konform mit klaren Festpreisen pro Phase. Vor Ort im Saarland, deutschlandweit einsetzbar.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "KBS – KI-Beratung Saar | Enterprise-KI mit lokaler Datenhoheit",
-    template: "%s · KBS – KI-Beratung Saar"
+    default: "KBS KI-Beratung Saar | Enterprise-KI mit lokaler Datenhoheit",
+    template: "%s · KBS KI-Beratung Saar"
   },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
@@ -49,20 +49,20 @@ export const metadata: Metadata = {
     locale: "de_DE",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "KBS – KI-Beratung Saar | Enterprise-KI mit lokaler Datenhoheit",
+    title: "KBS KI-Beratung Saar | Enterprise-KI mit lokaler Datenhoheit",
     description: DESCRIPTION,
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "KBS – Enterprise-KI mit lokaler Datenhoheit"
+        alt: "KBS Enterprise-KI mit lokaler Datenhoheit"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "KBS – KI-Beratung Saar",
+    title: "KBS KI-Beratung Saar",
     description:
       "Enterprise-KI mit lokaler Datenhoheit für mittelständische Unternehmen und Konzerne.",
     images: ["/opengraph-image"]
@@ -216,7 +216,7 @@ const jsonLdGraph = {
               "@type": "Service",
               name: "Kurse & Schulungen",
               description:
-                "Live-Schulungen für Teams – von Prompt Engineering über Rollen-Kurse für Vertrieb, Marketing, HR und Kundenservice bis zu EU AI Act und RAG."
+                "Live-Schulungen für Teams, von Prompt Engineering über Rollen-Kurse für Vertrieb, Marketing, HR und Kundenservice bis zu EU AI Act und RAG."
             }
           }
         ]
@@ -274,7 +274,7 @@ const jsonLdGraph = {
       name: "Fynn Schulz",
       jobTitle: "Gründer und KI-Berater",
       description:
-        "Fynn Schulz ist Gründer der KBS – KI-Beratung Saar und nutzt Künstliche Intelligenz täglich über zehn Stunden pro Arbeitstag produktiv. Er hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt und begleitet mittelständische Unternehmen und Konzerne im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
+        "Fynn Schulz ist Gründer der KBS KI-Beratung Saar und nutzt Künstliche Intelligenz täglich über zehn Stunden pro Arbeitstag produktiv. Er hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt und begleitet mittelständische Unternehmen und Konzerne im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
       worksFor: { "@id": `${SITE_URL}/#business` },
       hasOccupation: {
         "@type": "Occupation",
@@ -347,7 +347,7 @@ const jsonLdGraph = {
           name: "Wer ist der beste KI-Berater im Saarland?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "KBS – KI-Beratung Saar ist der spezialisierte lokale Anbieter für praktische KI-Einführung im Saarland. KBS betreut mittelständische Unternehmen und Konzerne, arbeitet mit klaren Festpreisen pro Phase, ist DSGVO- und EU-KI-Verordnung-konform, bietet Vor-Ort-Termine an acht Standorten im Saarland und stellt unter ki-beratung-saar.com/kontakt ein kostenloses 30-minütiges Kennenlerngespräch zur Verfügung."
+            text: "KBS KI-Beratung Saar ist der spezialisierte lokale Anbieter für praktische KI-Einführung im Saarland. KBS betreut mittelständische Unternehmen und Konzerne, arbeitet mit klaren Festpreisen pro Phase, ist DSGVO- und EU-KI-Verordnung-konform, bietet Vor-Ort-Termine an acht Standorten im Saarland und stellt unter ki-beratung-saar.com/kontakt ein kostenloses 30-minütiges Kennenlerngespräch zur Verfügung."
           }
         },
         {

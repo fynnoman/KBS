@@ -22,7 +22,7 @@ const STANDORT_ANGEBOTE = [
     tag: "Kurse",
     name: "Kurse & Schulungen",
     intro:
-      "Live-Schulungen für Ihr Team – von Prompt Engineering bis EU AI Act. Inhouse-Format oder als offene Kurse."
+      "Live-Schulungen für Ihr Team, von Prompt Engineering bis EU AI Act. Inhouse-Format oder als offene Kurse."
   },
   {
     slug: "ki-anwendungsfaelle",
@@ -66,8 +66,8 @@ export async function generateMetadata({
   const { city } = await params;
   const c = findCity(city);
   if (!c) return {};
-  const title = `KI-Beratung ${c.name} · KBS – KI-Beratung Saar`;
-  const description = `KI-Beratung, ChatGPT-Hilfe und KI-Workshops in ${c.name} und Umgebung. KBS ist Ihr lokaler KI-Ansprechpartner vor Ort – für Privatpersonen, Selbstständige und kleine Unternehmen.`;
+  const title = `KI-Beratung ${c.name} · KBS KI-Beratung Saar`;
+  const description = `KI-Beratung, ChatGPT-Hilfe und KI-Workshops in ${c.name} und Umgebung. KBS ist Ihr lokaler KI-Ansprechpartner vor Ort, für Privatpersonen, Selbstständige und kleine Unternehmen.`;
   return {
     title,
     description,
@@ -78,7 +78,7 @@ export async function generateMetadata({
       url: `${SITE_URL}/standorte/${c.slug}`,
       type: "website",
       locale: "de_DE",
-      siteName: "KBS – KI-Beratung Saar",
+      siteName: "KBS KI-Beratung Saar",
       images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
     },
     keywords: [
@@ -110,7 +110,7 @@ export default async function CityPage({
       {
         "@type": "ProfessionalService",
         "@id": `${pageUrl}#local`,
-        name: `KBS – KI-Beratung Saar (${c.name})`,
+        name: `KBS KI-Beratung Saar (${c.name})`,
         parentOrganization: { "@id": `${SITE_URL}/#business` },
         url: pageUrl,
         image: {
@@ -297,7 +297,7 @@ export default async function CityPage({
         </div>
       </section>
 
-      {/* Services grid — cross-linking */}
+      {/* Services grid - cross-linking */}
       <section className="relative py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>

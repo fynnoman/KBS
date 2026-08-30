@@ -69,7 +69,7 @@ function ensureCalendlyAssets(): Promise<void> {
 export default function CalendlyEmbed({
   className = ""
 }: {
-  /** Deprecated – height is now handled by responsive Tailwind classes. */
+  /** Deprecated, height is now handled by responsive Tailwind classes. */
   height?: number;
   className?: string;
 }) {

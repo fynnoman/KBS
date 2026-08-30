@@ -11,14 +11,14 @@ const DESCRIPTION =
   "Alle Softwarelösungen von KBS im Überblick: lokale KI-Infrastruktur, Custom RAG-Assistenten, Prozess-Automation, Voice-Agents, Governance-Bausteine und Enterprise-Rollout. Klare Festpreise pro Baustein.";
 
 export const metadata: Metadata = {
-  title: "Softwarelösungen · KBS – KI-Beratung Saar",
+  title: "Softwarelösungen · KBS KI-Beratung Saar",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: PAGE_URL,
-    siteName: "KBS – KI-Beratung Saar",
+    siteName: "KBS KI-Beratung Saar",
     title: "Softwarelösungen · KBS",
     description: DESCRIPTION,
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }]

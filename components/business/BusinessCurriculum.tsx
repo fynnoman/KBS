@@ -87,13 +87,13 @@ export default function BusinessCurriculum() {
               <p className="mt-6 max-w-xl text-[15.5px] leading-relaxed text-ink-500">
                 Wir liefern nicht nur Systeme, sondern befähigen Ihre
                 Belegschaft. Ausschließlich inhouse oder in geschlossenen
-                Firmengruppen – kein offener Kalender, kein Massenformat.
+                Firmengruppen, kein offener Kalender, kein Massenformat.
                 Grundlagen bis Governance, Rolle bis Technik.
               </p>
             </div>
             <p className="max-w-sm text-[15px] leading-relaxed text-ink-500">
               Alle Schulungen sind Live-Kurse. Präsenz vor Ort oder Remote im
-              Videocall in Echtzeit – geleitet, mit Rückfragen und Übungen.
+              Videocall in Echtzeit, geleitet, mit Rückfragen und Übungen.
               Keine Aufzeichnungen, keine Self-Paced-Videos.
             </p>
           </div>

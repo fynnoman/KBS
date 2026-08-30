@@ -1,4 +1,4 @@
-// Central config — replace with real values before launch.
+// Central config - replace with real values before launch.
 
 export const SITE_URL = "https://ki-beratung-saar.com";
 

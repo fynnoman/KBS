@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: "*", allow: "/" },
 
-      // Explicitly allow major AI crawlers — GEO / AI-search visibility
+      // Explicitly allow major AI crawlers - GEO / AI-search visibility
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "OAI-SearchBot", allow: "/" },
       { userAgent: "ChatGPT-User", allow: "/" },

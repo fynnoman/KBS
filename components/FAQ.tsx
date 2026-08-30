@@ -3,8 +3,8 @@ import { Plus } from "lucide-react";
 
 const FAQS = [
   {
-    q: "Was macht KBS – KI-Beratung Saar?",
-    a: "KBS ist der lokale KI-Ansprechpartner im Saarland. Wir helfen Privatpersonen, Selbstständigen und kleinen Unternehmen, ChatGPT und andere KI-Tools verständlich zu machen und praktisch im Arbeitsalltag einzusetzen. Kein Fachjargon, kein monatelanger Beratungsprozess – ein Anruf reicht."
+    q: "Was macht KBS KI-Beratung Saar?",
+    a: "KBS ist der lokale KI-Ansprechpartner im Saarland. Wir helfen Privatpersonen, Selbstständigen und kleinen Unternehmen, ChatGPT und andere KI-Tools verständlich zu machen und praktisch im Arbeitsalltag einzusetzen. Kein Fachjargon, kein monatelanger Beratungsprozess, ein Anruf reicht."
   },
   {
     q: "Für wen ist eine KI-Beratung von KBS geeignet?",
@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: "Was kostet ein KI-Termin bei KBS?",
-    a: "Das telefonische Erstgespräch von rund 15 Minuten ist kostenlos und unverbindlich. Der Umfang und Preis der eigentlichen Leistung wird transparent im Erstgespräch besprochen – abhängig davon, ob es um eine kurze KI-Hilfe für eine Privatperson oder um einen mehrstündigen Workshop für ein Team geht."
+    a: "Das telefonische Erstgespräch von rund 15 Minuten ist kostenlos und unverbindlich. Der Umfang und Preis der eigentlichen Leistung wird transparent im Erstgespräch besprochen, abhängig davon, ob es um eine kurze KI-Hilfe für eine Privatperson oder um einen mehrstündigen Workshop für ein Team geht."
   },
   {
     q: "Wie schnell bekomme ich einen Termin?",
@@ -36,7 +36,7 @@ const FAQS = [
   },
   {
     q: "Warum sollte ich KBS statt einer großen Agentur anrufen?",
-    a: "Weil bei KBS jemand ans Telefon geht, der KI täglich selbst einsetzt – im Schnitt mehr als zehn Stunden pro Tag. Fynn Schulz führt neben KBS das Webdesign-Studio Fylu Marketing in Saarlouis und entwickelt die SaaS-Plattform Taskey für Gebäudereinigungsbetriebe. Bei KBS bekommen Sie deshalb keine Theorie, sondern gelebte KI-Praxis."
+    a: "Weil bei KBS jemand ans Telefon geht, der KI täglich selbst einsetzt, im Schnitt mehr als zehn Stunden pro Tag. Fynn Schulz führt neben KBS das Webdesign-Studio Fylu Marketing in Saarlouis und entwickelt die SaaS-Plattform Taskey für Gebäudereinigungsbetriebe. Bei KBS bekommen Sie deshalb keine Theorie, sondern gelebte KI-Praxis."
   }
 ];
 

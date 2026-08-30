@@ -40,7 +40,7 @@ export default function About() {
                 <KIStamp />
                 <Image
                   src="/fynn-portrait.jpg"
-                  alt="Fynn Schulz – Gründer von KBS im Gespräch mit Kunden"
+                  alt="Fynn Schulz, Gründer von KBS im Gespräch mit Kunden"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-[68%_center]"
@@ -94,27 +94,27 @@ export default function About() {
                   Neben KBS führe ich <span className="font-medium text-ink-900">
                     Fylu Marketing
                   </span>{" "}
-                  – ein Webdesign- und Marketing-Studio aus Saarlouis für
+                 , ein Webdesign- und Marketing-Studio aus Saarlouis für
                   konversionsstarke Websites, SEO und Google Ads.
                 </p>
                 <p>
                   Und ich entwickle <span className="font-medium text-ink-900">Taskey</span>,
                   eine SaaS-Plattform für Gebäudereinigungsbetriebe im
                   DACH-Raum: iOS-App und Web, NFC-Zeiterfassung, Auftrags-
-                  koordination und DATEV-Export – damit die Chefs das Telefon
+                  koordination und DATEV-Export, damit die Chefs das Telefon
                   wieder weglegen können.
                 </p>
                 <p>
                   Bei meiner täglichen Arbeit nutze ich{" "}
                   <span className="font-medium text-ink-900">KI mehr als zehn Stunden am Tag</span>
-                  {" "}– für Code, Content, Recherche, Analyse und Automatisierung.
+                  {" "}für Code, Content, Recherche, Analyse und Automatisierung.
                   Dazu über vierzig produktive Websites in Next.js und
                   TypeScript, die live bei Handwerksbetrieben, Kanzleien und
                   Agenturen in Deutschland laufen.
                 </p>
                 <p className="text-ink-700">
                   Wenn ich Ihnen KI zeige, dann weil ich sie täglich selbst
-                  nutze – und weiß, was funktioniert und was nicht.
+                  nutze, und weiß, was funktioniert und was nicht.
                 </p>
               </div>
             </Reveal>

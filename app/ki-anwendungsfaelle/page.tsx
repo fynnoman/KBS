@@ -13,7 +13,7 @@ const DESCRIPTION =
   "Konkrete KI-Anwendungsfälle nach Abteilung: Vertrieb, Marketing, Buchhaltung, Kundenservice, HR. Fünf Beispiele je Bereich mit Prozess, Werkzeug, Aufwand, Risiko und Priorität.";
 
 export const metadata: Metadata = {
-  title: "KI-Anwendungsfälle nach Abteilung · KBS – KI-Beratung Saar",
+  title: "KI-Anwendungsfälle nach Abteilung · KBS KI-Beratung Saar",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     type: "website",
     locale: "de_DE",
-    siteName: "KBS – KI-Beratung Saar",
+    siteName: "KBS KI-Beratung Saar",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
   }
 };
@@ -86,7 +86,7 @@ export default function AnwendungsfaellePage() {
           <Reveal>
             <span className="chip">Anwendungsfälle nach Abteilung</span>
             <h1 className="mt-5 max-w-4xl text-[42px] leading-[1.02] tracking-tight text-ink-900 sm:text-6xl md:text-[64px]">
-              KI im Unternehmen –
+              KI im Unternehmen,
               <br />
               <span className="display italic text-ink-500">
                 konkret, nicht abstrakt.

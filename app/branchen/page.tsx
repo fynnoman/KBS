@@ -13,7 +13,7 @@ const DESCRIPTION =
   "KI-Beratung nach Branche: Handwerk, Gebäudereinigung, Immobilien, Steuerkanzlei, Versicherung, Arztpraxis, Agentur, Einzelhandel, Gastronomie, Produktion, Verein, Dienstleister.";
 
 export const metadata: Metadata = {
-  title: "KI nach Branche · KBS – KI-Beratung Saar",
+  title: "KI nach Branche · KBS KI-Beratung Saar",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   keywords: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     type: "website",
     locale: "de_DE",
-    siteName: "KBS – KI-Beratung Saar",
+    siteName: "KBS KI-Beratung Saar",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
   }
 };
@@ -97,7 +97,7 @@ export default function BranchenPage() {
           <Reveal>
             <span className="chip">KI nach Branche</span>
             <h1 className="mt-5 max-w-4xl text-[42px] leading-[1.02] tracking-tight text-ink-900 sm:text-6xl md:text-[64px]">
-              KI-Beratung –
+              KI-Beratung,
               <br />
               <span className="display italic text-ink-500">
                 zugeschnitten auf Ihre Branche.

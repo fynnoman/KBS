@@ -24,7 +24,7 @@ const INDUSTRIES: Industry[] = [
     icon: Scale,
     label: "Anwaltskanzleien",
     body:
-      "Vertragsanalyse, Aktenrecherche, Schriftsatz-Vorbereitung – lokal, mandantsgeschützt, ohne dass ein Zeichen die Kanzlei verlässt.",
+      "Vertragsanalyse, Aktenrecherche, Schriftsatz-Vorbereitung, lokal, mandantsgeschützt, ohne dass ein Zeichen die Kanzlei verlässt.",
     highlights: ["Vertragsanalyse", "mandantsgeschützt", "lokal"]
   },
   {
@@ -38,7 +38,7 @@ const INDUSTRIES: Industry[] = [
     icon: Stethoscope,
     label: "Arzt- & Zahnarztpraxen",
     body:
-      "Arztbrief-Diktate, Anamnese-Vorbereitung, Rezeptions-Voice-Agents und Terminvereinbarung – DSGVO- und Patientendaten-konform on-premise.",
+      "Arztbrief-Diktate, Anamnese-Vorbereitung, Rezeptions-Voice-Agents und Terminvereinbarung, DSGVO- und Patientendaten-konform on-premise.",
     highlights: ["Arztbrief-Diktate", "Terminvereinbarung", "on-premise"]
   },
   {
@@ -73,7 +73,7 @@ const INDUSTRIES: Industry[] = [
     icon: ShieldCheck,
     label: "Versicherung & Finanz",
     body:
-      "Schadenprüfung, Vertragsanalyse, Kunden-Korrespondenz und regulatorische Recherche – auf Wunsch vollständig ohne Cloud-Übermittlung.",
+      "Schadenprüfung, Vertragsanalyse, Kunden-Korrespondenz und regulatorische Recherche, auf Wunsch vollständig ohne Cloud-Übermittlung.",
     highlights: ["Schadenprüfung", "regulatorische Recherche", "ohne Cloud"]
   }
 ];

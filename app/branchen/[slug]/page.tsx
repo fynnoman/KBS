@@ -39,7 +39,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const ind = findIndustry(slug);
   if (!ind) return {};
-  const title = `${ind.tag} · KBS – KI-Beratung Saar`;
+  const title = `${ind.tag} · KBS KI-Beratung Saar`;
   const description = ind.intro.slice(0, 158);
   const url = `${SITE_URL}/branchen/${ind.slug}`;
   return {
@@ -53,7 +53,7 @@ export async function generateMetadata({
       url,
       type: "website",
       locale: "de_DE",
-      siteName: "KBS – KI-Beratung Saar",
+      siteName: "KBS KI-Beratung Saar",
       images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
     }
   };
@@ -478,7 +478,7 @@ export default async function IndustryPage({
             <p className="mt-6 text-lg leading-relaxed text-ink-500">
               Im kostenlosen Erstgespräch schauen wir gemeinsam, welche der
               genannten Ansätze für Ihre Betriebsgröße und Ihr Software-Umfeld
-              realistisch sind – und wo Sie zuerst anfangen sollten.
+              realistisch sind, und wo Sie zuerst anfangen sollten.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <a

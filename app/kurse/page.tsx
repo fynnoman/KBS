@@ -11,14 +11,14 @@ const DESCRIPTION =
   "Kurse und Schulungen von KBS für Ihr Team: Grundlagen, Prompt Engineering, Rollen-Kurse für Vertrieb, Marketing, HR und Kundenservice, EU AI Act, RAG und mehrmonatige Curricula. Inhouse oder als offene Kurse.";
 
 export const metadata: Metadata = {
-  title: "Kurse & Schulungen · KBS – KI-Beratung Saar",
+  title: "Kurse & Schulungen · KBS KI-Beratung Saar",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: PAGE_URL,
-    siteName: "KBS – KI-Beratung Saar",
+    siteName: "KBS KI-Beratung Saar",
     title: "Kurse & Schulungen · KBS",
     description: DESCRIPTION,
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }]

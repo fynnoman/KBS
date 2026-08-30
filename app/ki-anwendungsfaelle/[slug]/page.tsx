@@ -19,7 +19,7 @@ export async function generateMetadata({
   const url = `${SITE_URL}/ki-anwendungsfaelle/${d.slug}`;
   const description = d.intro.slice(0, 158);
   return {
-    title: `${d.name} · KBS – KI-Beratung Saar`,
+    title: `${d.name} · KBS KI-Beratung Saar`,
     description,
     alternates: { canonical: url },
     keywords: d.keywords,
@@ -29,7 +29,7 @@ export async function generateMetadata({
       url,
       type: "article",
       locale: "de_DE",
-      siteName: "KBS – KI-Beratung Saar",
+      siteName: "KBS KI-Beratung Saar",
       images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
     }
   };

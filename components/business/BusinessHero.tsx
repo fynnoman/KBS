@@ -51,7 +51,7 @@ export default function BusinessHero() {
               Wir installieren lokale KI-Systeme auf Ihrer Hardware, bauen
               maßgeschneiderte Assistenten für Ihr Firmenwissen, rollen
               KI-Workflows über ganze Abteilungen aus und schulen Ihre
-              Belegschaft mit Live-Kursen – DSGVO-konform, ohne Cloud-Zwang
+              Belegschaft mit Live-Kursen, DSGVO-konform, ohne Cloud-Zwang
               und mit klaren Festpreisen pro Phase.
             </motion.p>
 
@@ -83,7 +83,7 @@ export default function BusinessHero() {
               <KIStamp />
               <Image
                 src="/business-office.png"
-                alt="Modernes Büro – konzentrierte KI-gestützte Arbeit"
+                alt="Modernes Büro, konzentrierte KI-gestützte Arbeit"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 45vw"

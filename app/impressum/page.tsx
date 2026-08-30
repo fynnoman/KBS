@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum von KBS – KI-Beratung Saar. Verantwortlich für den Inhalt und rechtliche Angaben gemäß § 5 TMG.",
+    "Impressum von KBS KI-Beratung Saar. Verantwortlich für den Inhalt und rechtliche Angaben gemäß § 5 TMG.",
   alternates: { canonical: "https://ki-beratung-saar.com/impressum" },
   robots: { index: true, follow: true }
 };

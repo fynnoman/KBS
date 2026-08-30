@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "KBS – KI-Beratung Saar",
+    name: "KBS KI-Beratung Saar",
     short_name: "KBS",
     description:
       "Lokaler KI-Ansprechpartner im Saarland. Für Privatpersonen, Selbstständige und kleine Unternehmen.",

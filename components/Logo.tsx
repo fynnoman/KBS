@@ -6,7 +6,7 @@ export default function Logo({ height = 34 }: { height?: number }) {
     <Link
       href="/"
       className="inline-flex items-center"
-      aria-label="KBS – KI-Beratung Saar"
+      aria-label="KBS KI-Beratung Saar"
     >
       <Image
         src="/kbs-logo.png"

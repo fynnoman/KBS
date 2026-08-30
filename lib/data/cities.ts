@@ -1,4 +1,4 @@
-// Saarland city landing pages — each city gets genuinely unique content
+// Saarland city landing pages - each city gets genuinely unique content
 // (economy, industries, use cases, FAQ) so the pages hold real local
 // relevance for both Google and AI Overviews.
 
@@ -70,7 +70,7 @@ export const CITIES: City[] = [
     slug: "saarlouis",
     name: "Saarlouis",
     intro:
-      "Saarlouis ist geprägt vom Ford-Werk und einer dichten Zuliefererlandschaft, dazu kommt ein starker Mittelstand und Einzelhandel in der Kreisstadt. Der wirtschaftliche Umbruch macht KI-Kompetenz aktuell besonders wertvoll – für Prozessoptimierung ebenso wie für neue Geschäftsmodelle.",
+      "Saarlouis ist geprägt vom Ford-Werk und einer dichten Zuliefererlandschaft, dazu kommt ein starker Mittelstand und Einzelhandel in der Kreisstadt. Der wirtschaftliche Umbruch macht KI-Kompetenz aktuell besonders wertvoll, für Prozessoptimierung ebenso wie für neue Geschäftsmodelle.",
     economy:
       "Automobilzulieferer, Metallverarbeitung, Logistik, klassischer Mittelstand und Einzelhandel. Der Ford-Standortumbruch treibt viele Betriebe zur Suche nach neuen Effizienzhebeln.",
     latitude: 49.3134,
@@ -104,7 +104,7 @@ export const CITIES: City[] = [
     faqs: [
       {
         q: "Ist KBS auch für kleine Zulieferbetriebe interessant?",
-        a: "Gerade für die. Ein Vormittag KI-Check kann zeigen, welche wiederkehrenden Angebots- und Kalkulationsarbeiten sich automatisieren lassen – ohne Investition in neue Software."
+        a: "Gerade für die. Ein Vormittag KI-Check kann zeigen, welche wiederkehrenden Angebots- und Kalkulationsarbeiten sich automatisieren lassen, ohne Investition in neue Software."
       },
       {
         q: "Kommt KBS auch in die Industriegebiete rund um Saarlouis?",
@@ -118,7 +118,7 @@ export const CITIES: City[] = [
     slug: "neunkirchen",
     name: "Neunkirchen",
     intro:
-      "Neunkirchen hat den Wandel von der Stahlstadt zur modernen Dienstleistungs- und Handelsstadt weitgehend vollzogen. Handel, Handwerk, Gesundheitswesen und ein starker Mittelstand prägen heute die Kreisstadt. KI-Werkzeuge helfen genau dort, wo Personal knapp ist – im Büro und in der Kundenkommunikation.",
+      "Neunkirchen hat den Wandel von der Stahlstadt zur modernen Dienstleistungs- und Handelsstadt weitgehend vollzogen. Handel, Handwerk, Gesundheitswesen und ein starker Mittelstand prägen heute die Kreisstadt. KI-Werkzeuge helfen genau dort, wo Personal knapp ist, im Büro und in der Kundenkommunikation.",
     economy:
       "Handel (Saarpark-Center und Innenstadt), Handwerk, Gesundheitswesen, Logistik und mittelständische Dienstleister.",
     latitude: 49.3466,
@@ -166,7 +166,7 @@ export const CITIES: City[] = [
     slug: "homburg",
     name: "Homburg",
     intro:
-      "Homburg ist mit dem Bosch-Werk, dem Universitätsklinikum des Saarlandes und mehreren Pharma- und Medizintechnik-Standorten ein wissenschaftlich und industriell dichtes Umfeld. Genau hier zahlt sich KI-Kompetenz besonders schnell aus – wenn sie datenschutz-souverän eingesetzt wird.",
+      "Homburg ist mit dem Bosch-Werk, dem Universitätsklinikum des Saarlandes und mehreren Pharma- und Medizintechnik-Standorten ein wissenschaftlich und industriell dichtes Umfeld. Genau hier zahlt sich KI-Kompetenz besonders schnell aus, wenn sie datenschutz-souverän eingesetzt wird.",
     economy:
       "Universitätsklinikum, medizinische Fakultät, Bosch-Werk (Kraftstoffeinspritzsysteme), Pharma- und Medizintechnik, Verwaltung.",
     latitude: 49.3227,
@@ -194,7 +194,7 @@ export const CITIES: City[] = [
       {
         title: "Lokale KI für Kliniken und Pharma",
         body:
-          "Für sensible Bereiche installieren wir Modelle direkt auf Ihrer Hardware. Anfragen und Antworten verlassen Ihre Infrastruktur nicht – ideal bei Patientendaten oder Forschungsdaten."
+          "Für sensible Bereiche installieren wir Modelle direkt auf Ihrer Hardware. Anfragen und Antworten verlassen Ihre Infrastruktur nicht, ideal bei Patientendaten oder Forschungsdaten."
       }
     ],
     faqs: [
@@ -232,7 +232,7 @@ export const CITIES: City[] = [
       {
         title: "Mehrsprachige KI für Betriebe im Dreiländer-Grenzgebiet",
         body:
-          "Angebote und Rechnungen in Deutsch, Französisch und Englisch. Antworten auf Anfragen aus Luxemburg, Metz oder Trier – ohne Wartezeit auf Übersetzer."
+          "Angebote und Rechnungen in Deutsch, Französisch und Englisch. Antworten auf Anfragen aus Luxemburg, Metz oder Trier, ohne Wartezeit auf Übersetzer."
       },
       {
         title: "KI für Handwerksbetriebe in Merzig und Umland",
@@ -290,7 +290,7 @@ export const CITIES: City[] = [
       {
         title: "KI für den lokalen Einzelhandel und Gastronomie",
         body:
-          "Wochenkarten, Sonderaktionen, Beantwortung von Bewertungen. Wir bringen die Werkzeuge in Ihre Sprache – nicht in die eines Software-Handbuchs."
+          "Wochenkarten, Sonderaktionen, Beantwortung von Bewertungen. Wir bringen die Werkzeuge in Ihre Sprache, nicht in die eines Software-Handbuchs."
       }
     ],
     faqs: [
@@ -310,7 +310,7 @@ export const CITIES: City[] = [
     slug: "voelklingen",
     name: "Völklingen",
     intro:
-      "Völklingen befindet sich mitten im Wandel vom Industriestandort zum Kreativ- und Dienstleistungsstandort – prominent sichtbar am UNESCO-Weltkulturerbe Völklinger Hütte. Für Handel, Gastronomie, Kreative und Handwerk in der Stadt zahlen sich schlanke KI-Werkzeuge sofort aus.",
+      "Völklingen befindet sich mitten im Wandel vom Industriestandort zum Kreativ- und Dienstleistungsstandort, prominent sichtbar am UNESCO-Weltkulturerbe Völklinger Hütte. Für Handel, Gastronomie, Kreative und Handwerk in der Stadt zahlen sich schlanke KI-Werkzeuge sofort aus.",
     economy:
       "Stadtbild geprägt vom Weltkulturerbe Völklinger Hütte. Handel, Gastronomie, Handwerk, produzierendes Gewerbe, kreative und kulturelle Institutionen.",
     latitude: 49.2506,
@@ -348,7 +348,7 @@ export const CITIES: City[] = [
       },
       {
         q: "Welche KI-Werkzeuge lohnen sich für einen kleinen Betrieb in Völklingen?",
-        a: "Meist genügen zwei bis drei gut eingerichtete Werkzeuge – etwa ChatGPT oder Claude für Text, ein Bildgenerator und ein Assistent für E-Mails. Ein KI-Check klärt in unter zwei Stunden, was zu Ihnen passt."
+        a: "Meist genügen zwei bis drei gut eingerichtete Werkzeuge, etwa ChatGPT oder Claude für Text, ein Bildgenerator und ein Assistent für E-Mails. Ein KI-Check klärt in unter zwei Stunden, was zu Ihnen passt."
       }
     ],
     travelNote:

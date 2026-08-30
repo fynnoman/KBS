@@ -59,7 +59,7 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
         },
         publisher: {
           "@type": "Organization",
-          name: "KBS – KI-Beratung Saar",
+          name: "KBS KI-Beratung Saar",
           "@id": `${SITE_URL}/#business`
         },
         inLanguage: "de-DE",
@@ -78,7 +78,7 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
         "@type": "HowTo",
         "@id": `${url}#howto`,
         name: `${dept.name} einführen`,
-        description: `Fünf konkrete Anwendungsfälle für ${dept.displayName} – in empfohlener Reihenfolge nach Priorität und Aufwand.`,
+        description: `Fünf konkrete Anwendungsfälle für ${dept.displayName}, in empfohlener Reihenfolge nach Priorität und Aufwand.`,
         inLanguage: "de-DE",
         totalTime: "P8W",
         supply: [
@@ -478,7 +478,7 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
           <Reveal>
             <span className="chip">Nächster Schritt</span>
             <h2 className="mt-5 text-3xl leading-tight tracking-tight text-ink-900 sm:text-4xl md:text-5xl">
-              {dept.name} –
+              {dept.name},
               <br />
               <span className="display italic text-ink-500">
                 für Ihr Team konkret machen.
@@ -487,7 +487,7 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
             <p className="mt-6 text-lg leading-relaxed text-ink-500">
               Starten Sie mit einem 30-minütigen Kennenlerngespräch. Wir
               bewerten Machbarkeit, Potenzial und ROI für Ihre konkrete
-              Situation – ehrlich und ohne Verkaufsdruck.
+              Situation, ehrlich und ohne Verkaufsdruck.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link href="/kontakt" className="btn-primary">

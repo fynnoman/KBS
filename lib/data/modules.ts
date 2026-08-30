@@ -41,13 +41,13 @@ export const MODULE_CATEGORY_LABEL: Record<ModuleCategory, string> = {
 
 export const MODULE_CATEGORY_INTRO: Record<ModuleCategory, string> = {
   infrastruktur:
-    "Die Grundbausteine für KI im Unternehmen – zentraler Zugang, gemeinsame Vorlagen und der Zugriff auf Ihr Firmenwissen.",
+    "Die Grundbausteine für KI im Unternehmen, zentraler Zugang, gemeinsame Vorlagen und der Zugriff auf Ihr Firmenwissen.",
   fachfunktion:
     "KI-Assistenten für einzelne Abteilungen mit spürbarem Effekt in wenigen Tagen.",
   automation:
-    "Wiederkehrende Abläufe automatisch erledigen lassen – mit klaren Regeln und menschlicher Kontrolle an den richtigen Punkten.",
+    "Wiederkehrende Abläufe automatisch erledigen lassen, mit klaren Regeln und menschlicher Kontrolle an den richtigen Punkten.",
   governance:
-    "Werkzeuge für Führung, Datenschutz-Beauftragte und den Betriebsrat – damit KI-Einsatz nachvollziehbar bleibt."
+    "Werkzeuge für Führung, Datenschutz-Beauftragte und den Betriebsrat, damit KI-Einsatz nachvollziehbar bleibt."
 };
 
 const INFRA_BUNDLE = { setup: 2450, monthly: 145 };
@@ -61,7 +61,7 @@ export const MODULES: SoftwareModule[] = [
     category: "infrastruktur",
     tagline: "Ein Zugang zu allen KI-Werkzeugen für Ihre Belegschaft",
     summary:
-      "Ein einziger Zugangspunkt zu allen relevanten KI-Anbietern. Rollen, Rechte, Kostenkontrolle und lückenloses Nutzungs-Protokoll – funktioniert mit KI in der Cloud und mit KI auf Ihrem eigenen Server.",
+      "Ein einziger Zugangspunkt zu allen relevanten KI-Anbietern. Rollen, Rechte, Kostenkontrolle und lückenloses Nutzungs-Protokoll, funktioniert mit KI in der Cloud und mit KI auf Ihrem eigenen Server.",
     features: [
       "Zentrale Rechte- und Rollenverwaltung",
       "Kosten pro Team und Nutzer zuordnen",
@@ -79,7 +79,7 @@ export const MODULES: SoftwareModule[] = [
     category: "infrastruktur",
     tagline: "Gemeinsame KI-Anweisungen für Ihr ganzes Team",
     summary:
-      'Wiederverwendbare, versionierte KI-Anweisungen (auch „Prompts" genannt) – organisiert nach Rolle und Anwendungsfall. Champions pflegen zentral, das Team nutzt konsistent und immer auf aktuellem Stand.',
+      'Wiederverwendbare, versionierte KI-Anweisungen (auch „Prompts" genannt), organisiert nach Rolle und Anwendungsfall. Champions pflegen zentral, das Team nutzt konsistent und immer auf aktuellem Stand.',
     features: [
       "Versionierte Anweisungen mit Änderungshistorie",
       "Rollen- und teamspezifische Ordner",
@@ -97,7 +97,7 @@ export const MODULES: SoftwareModule[] = [
     category: "infrastruktur",
     tagline: "Ein KI-Assistent, der Ihr komplettes Firmenwissen kennt",
     summary:
-      'Antworten aus Handbüchern, Verträgen, Wikis, CRM- und Ablagesystemen – mit klaren Quellenangaben und ohne dass die KI zu firmenrelevanten Fakten „halluziniert".',
+      'Antworten aus Handbüchern, Verträgen, Wikis, CRM- und Ablagesystemen, mit klaren Quellenangaben und ohne dass die KI zu firmenrelevanten Fakten „halluziniert".',
     features: [
       "Zugriff auf SharePoint, Confluence, Nextcloud, Cloud-Speicher",
       "Antworten mit klaren Quellenangaben",
@@ -135,7 +135,7 @@ export const MODULES: SoftwareModule[] = [
     category: "fachfunktion",
     tagline: "Ihr Vertrieb erreicht mehr in derselben Zeit",
     summary:
-      "Firmenrecherche, Angebotsentwürfe, Nachfass-Serien und Anbindung an Ihr CRM in einem Werkzeug. Der Assistent lernt Ihren Vertriebsstil – keine generischen Textbausteine.",
+      "Firmenrecherche, Angebotsentwürfe, Nachfass-Serien und Anbindung an Ihr CRM in einem Werkzeug. Der Assistent lernt Ihren Vertriebsstil, keine generischen Textbausteine.",
     features: [
       "Firmenrecherche per Firmenname oder Website",
       "Angebotsentwürfe aus Ihrer Preis- und Textlogik",
@@ -151,7 +151,7 @@ export const MODULES: SoftwareModule[] = [
     slug: "content-studio",
     title: "Marketing-Studio",
     category: "fachfunktion",
-    tagline: "Texte, Bilder, SEO – im Look Ihrer Marke",
+    tagline: "Texte, Bilder, SEO, im Look Ihrer Marke",
     summary:
       "Content-Produktion für Web, Newsletter und Social Media mit Ihrem hinterlegten Design. Bilder werden markenkonsistent erzeugt, Texte in der Sprache Ihrer Marke.",
     features: [
@@ -187,9 +187,9 @@ export const MODULES: SoftwareModule[] = [
     slug: "hr-copilot",
     title: "Personal-Assistent",
     category: "fachfunktion",
-    tagline: "KI für Personalarbeit – mit klaren Grenzen",
+    tagline: "KI für Personalarbeit, mit klaren Grenzen",
     summary:
-      "Stellenanzeigen, Onboarding-Materialien, Recherche und Weiterbildungspläne – mit klar dokumentierten Grenzen dort, wo die EU-KI-Verordnung Hochrisiko-Anwendungen definiert.",
+      "Stellenanzeigen, Onboarding-Materialien, Recherche und Weiterbildungspläne, mit klar dokumentierten Grenzen dort, wo die EU-KI-Verordnung Hochrisiko-Anwendungen definiert.",
     features: [
       "Stellenausschreibungen im Ton Ihrer Arbeitgebermarke",
       "Onboarding-Anleitungen pro Rolle und Standort",
@@ -207,7 +207,7 @@ export const MODULES: SoftwareModule[] = [
     category: "automation",
     tagline: "Kundenanfragen sortieren und Antwortentwürfe erstellen",
     summary:
-      "Eingehende Anfragen werden nach Art und Dringlichkeit sortiert und mit einem Antwortentwurf versehen. Der Mensch entscheidet – aber schneller und mit besseren Vorlagen.",
+      "Eingehende Anfragen werden nach Art und Dringlichkeit sortiert und mit einem Antwortentwurf versehen. Der Mensch entscheidet, aber schneller und mit besseren Vorlagen.",
     features: [
       "Sortierung nach Anfragentyp und Dringlichkeit",
       "Antwortentwürfe aus Ihrer Wissensdatenbank",
@@ -223,9 +223,9 @@ export const MODULES: SoftwareModule[] = [
     slug: "voice-reception",
     title: "KI-Telefonannahme",
     category: "automation",
-    tagline: "Anrufe automatisch entgegennehmen – in natürlichem Deutsch",
+    tagline: "Anrufe automatisch entgegennehmen, in natürlichem Deutsch",
     summary:
-      "Automatische Erstannahme, Anrufer-Sortierung und Terminvereinbarung. Entlastet Assistenzteams messbar – mit Sprachqualität, die Anrufende nicht als Bot erkennen.",
+      "Automatische Erstannahme, Anrufer-Sortierung und Terminvereinbarung. Entlastet Assistenzteams messbar, mit Sprachqualität, die Anrufende nicht als Bot erkennen.",
     features: [
       "Natürliche deutsche Stimme mit geringer Reaktionszeit",
       "Terminvereinbarung mit Kalender-Anbindung",
@@ -281,7 +281,7 @@ export const MODULES: SoftwareModule[] = [
     category: "governance",
     tagline: "Nutzungsrichtlinien und Betriebsvereinbarungen",
     summary:
-      "Vorlagen für interne KI-Nutzungsrichtlinien und Betriebsvereinbarungen – anpassbar an Branche, Standort und Konzernstruktur, geprüft auf aktuellen Stand.",
+      "Vorlagen für interne KI-Nutzungsrichtlinien und Betriebsvereinbarungen, anpassbar an Branche, Standort und Konzernstruktur, geprüft auf aktuellen Stand.",
     features: [
       "Muster für Nutzungsrichtlinien nach Abteilung",
       "Textbausteine für Betriebsvereinbarungen, mit Kommentaren",
@@ -319,7 +319,7 @@ export const MODULES: SoftwareModule[] = [
     category: "infrastruktur",
     tagline: "On-Premise-Installation inkl. Hardware, Einweisung und Wartung",
     summary:
-      "Damit Ihre Daten das Haus nicht verlassen: eigene KI auf Ihrer Hardware. Wir wählen Hardware und Modell nach Ihrer Aufgabe, installieren und übergeben wartungsfähig – von Mac Mini bis GPU-Server.",
+      "Damit Ihre Daten das Haus nicht verlassen: eigene KI auf Ihrer Hardware. Wir wählen Hardware und Modell nach Ihrer Aufgabe, installieren und übergeben wartungsfähig, von Mac Mini bis GPU-Server.",
     features: [
       "Hardware-Auswahl passend zur Nutzergröße",
       "Modellauswahl (Llama, Qwen, Mistral) nach Aufgabe",
@@ -356,7 +356,7 @@ export const MODULES: SoftwareModule[] = [
     category: "automation",
     tagline: "Wiederkehrende Abläufe automatisch abarbeiten lassen",
     summary:
-      "Wir bilden abgegrenzte, wiederkehrende Prozesse als KI-Ablauf ab – von der Angebotsvorbereitung über die Rechnungs-OCR bis zur E-Mail-Klassifizierung. Mit klaren Regeln und menschlicher Kontrolle an den richtigen Punkten.",
+      "Wir bilden abgegrenzte, wiederkehrende Prozesse als KI-Ablauf ab, von der Angebotsvorbereitung über die Rechnungs-OCR bis zur E-Mail-Klassifizierung. Mit klaren Regeln und menschlicher Kontrolle an den richtigen Punkten.",
     features: [
       "Prozess-Aufnahme mit Ihrer Fachabteilung",
       "KI-Ablauf inkl. Prüfpunkten für den Menschen",
@@ -456,7 +456,7 @@ export const MODULES: SoftwareModule[] = [
     category: "governance",
     tagline: "Fester Ansprechpartner für den laufenden KI-Betrieb",
     summary:
-      "Nach dem Rollout: fester Ansprechpartner für Fehlerbehebung, Anpassungen, Updates der Vorlagen und laufende Optimierung – ohne dass Sie ein neues Angebot einholen müssen.",
+      "Nach dem Rollout: fester Ansprechpartner für Fehlerbehebung, Anpassungen, Updates der Vorlagen und laufende Optimierung, ohne dass Sie ein neues Angebot einholen müssen.",
     features: [
       "Fester Ansprechpartner mit fester Reaktionszeit",
       "Monatlicher Termin und Fortschritts-Bericht",

@@ -43,11 +43,11 @@ export const DEPARTMENTS: Department[] = [
     headlineSecondary:
       "Recherche, Angebote und Follow-ups schneller. Der Kunde bleibt Mensch.",
     intro:
-      "Vertriebsteams verbringen einen Großteil des Tages nicht mit Kundengesprächen, sondern mit deren Vor- und Nachbereitung. Recherche, Notizen, Angebote, CRM-Pflege, Follow-ups – all das ist textlastige Arbeit. Genau hier setzt generative KI an. Sie ersetzt keinen guten Vertriebler, aber sie hebt einen erheblichen Teil der Formalitäten vom Tisch. Fünf konkrete Anwendungen mit klarer Priorisierung.",
+      "Vertriebsteams verbringen einen Großteil des Tages nicht mit Kundengesprächen, sondern mit deren Vor- und Nachbereitung. Recherche, Notizen, Angebote, CRM-Pflege, Follow-ups, all das ist textlastige Arbeit. Genau hier setzt generative KI an. Sie ersetzt keinen guten Vertriebler, aber sie hebt einen erheblichen Teil der Formalitäten vom Tisch. Fünf konkrete Anwendungen mit klarer Priorisierung.",
     longIntro: [
-      "Wer die Zeitverwendung eines erfahrenen Vertrieblers ehrlich misst, kommt selten unter fünfzig Prozent Non-Selling-Time. Recherche vor dem Termin, Notizen danach, Angebotserstellung, CRM-Pflege, Follow-up-Sequenzen. All das ist notwendige Arbeit – aber nichts davon ist der Job, für den der Vertriebler eingestellt wurde. Genau in diesen Zwischenschritten entfaltet generative KI ihren realen Nutzen im Mittelstand.",
-      "Der Reiz ist nicht die Automatisierung der Kundenbeziehung, sondern die Beschleunigung der Formalitäten drumherum. Eine gute Lead-Recherche vor dem Erstgespräch kostet dreißig Minuten Handarbeit und fünf Minuten mit KI-Unterstützung. Ein individuell formuliertes Follow-up braucht zwanzig Minuten oder zwei. Ein sauber strukturierter CRM-Eintrag nach dem Termin wird aus einer Sprachnotiz statt aus einem freien Nachmittag. Der Kunde bemerkt davon nichts – außer, dass der Vertriebler vorbereiteter erscheint und schneller reagiert.",
-      "Wichtig ist die Reihenfolge. Wer mit CRM-Automatisierung startet, scheitert. Wer mit Lead-Research beginnt, hat nach zwei Wochen ein Team, das den Nutzen unmittelbar spürt und selbst nach weiteren Anwendungen fragt. In den folgenden fünf Anwendungsfällen zeigen wir die Reihenfolge, die wir bei mittelständischen Vertriebseinheiten im Saarland und deutschlandweit erprobt haben – inklusive der Punkte, an denen KI nicht helfen sollte."
+      "Wer die Zeitverwendung eines erfahrenen Vertrieblers ehrlich misst, kommt selten unter fünfzig Prozent Non-Selling-Time. Recherche vor dem Termin, Notizen danach, Angebotserstellung, CRM-Pflege, Follow-up-Sequenzen. All das ist notwendige Arbeit, aber nichts davon ist der Job, für den der Vertriebler eingestellt wurde. Genau in diesen Zwischenschritten entfaltet generative KI ihren realen Nutzen im Mittelstand.",
+      "Der Reiz ist nicht die Automatisierung der Kundenbeziehung, sondern die Beschleunigung der Formalitäten drumherum. Eine gute Lead-Recherche vor dem Erstgespräch kostet dreißig Minuten Handarbeit und fünf Minuten mit KI-Unterstützung. Ein individuell formuliertes Follow-up braucht zwanzig Minuten oder zwei. Ein sauber strukturierter CRM-Eintrag nach dem Termin wird aus einer Sprachnotiz statt aus einem freien Nachmittag. Der Kunde bemerkt davon nichts, außer, dass der Vertriebler vorbereiteter erscheint und schneller reagiert.",
+      "Wichtig ist die Reihenfolge. Wer mit CRM-Automatisierung startet, scheitert. Wer mit Lead-Research beginnt, hat nach zwei Wochen ein Team, das den Nutzen unmittelbar spürt und selbst nach weiteren Anwendungen fragt. In den folgenden fünf Anwendungsfällen zeigen wir die Reihenfolge, die wir bei mittelständischen Vertriebseinheiten im Saarland und deutschlandweit erprobt haben, inklusive der Punkte, an denen KI nicht helfen sollte."
     ],
     cases: [
       {
@@ -194,11 +194,11 @@ export const DEPARTMENTS: Department[] = [
     headlineSecondary:
       "Content-Produktion, SEO und Analyse. Die Kernidee bleibt bei Ihnen.",
     intro:
-      "Marketing-Teams sind traditionell Vorreiter beim Einsatz generativer KI. Die Werkzeuge sind reif, die Use Cases zahlreich – aber der reale Nutzen entsteht nur, wenn die Marke, die Zielgruppe und die Prozesse sauber definiert sind. KI beschleunigt Content-Produktion, aber sie erfindet keine Markenstrategie. Fünf Anwendungen, die im deutschen Mittelstand funktionieren.",
+      "Marketing-Teams sind traditionell Vorreiter beim Einsatz generativer KI. Die Werkzeuge sind reif, die Use Cases zahlreich, aber der reale Nutzen entsteht nur, wenn die Marke, die Zielgruppe und die Prozesse sauber definiert sind. KI beschleunigt Content-Produktion, aber sie erfindet keine Markenstrategie. Fünf Anwendungen, die im deutschen Mittelstand funktionieren.",
     longIntro: [
-      "Marketing ist der Bereich, in dem KI zuerst produktiv angekommen ist – und zugleich der, in dem am meisten Zeit auf schlechte Ergebnisse verschwendet wird. Der Unterschied liegt selten am Werkzeug. Er liegt daran, ob eine Marke ihre Tonalität, ihre Zielgruppe und ihren Redaktionsprozess klar beschreiben kann. Wo diese Grundlagen fehlen, produziert KI zuverlässig austauschbaren Content. Wo sie vorhanden sind, verdreifacht sich die Ausspielfrequenz bei gleicher Qualität.",
+      "Marketing ist der Bereich, in dem KI zuerst produktiv angekommen ist, und zugleich der, in dem am meisten Zeit auf schlechte Ergebnisse verschwendet wird. Der Unterschied liegt selten am Werkzeug. Er liegt daran, ob eine Marke ihre Tonalität, ihre Zielgruppe und ihren Redaktionsprozess klar beschreiben kann. Wo diese Grundlagen fehlen, produziert KI zuverlässig austauschbaren Content. Wo sie vorhanden sind, verdreifacht sich die Ausspielfrequenz bei gleicher Qualität.",
       "Für mittelständische Marketing-Teams ergibt sich daraus eine klare Reihenfolge. Zuerst kommt die Redaktionsplanung: KI hilft, aus Themenfeldern einen Wochen- und Monatsplan mit Formaten und Kanälen abzuleiten. Dann folgen Blog-Rohfassungen, SEO-Cluster-Recherche und Newsletter-Produktion. Erst dann lohnt sich der Blick auf tiefere Anwendungen wie Analytics-Auswertungen in verständlicher Sprache. Wer diese Reihenfolge umdreht, kämpft mit generischen Texten und verpasstem Suchvolumen.",
-      "Ein Punkt, den wir im Gespräch mit Marketing-Verantwortlichen früh klären: Google straft KI-generierten Content nicht per se ab. Was Google und die neuen AI-Overviews abstrafen, ist Beliebigkeit. Ein KI-Text ohne redaktionelle Nacharbeit, ohne konkrete Beispiele, ohne echten Standpunkt rangiert schlecht. Ein KI-Text, der einen Erstentwurf liefert und den Redakteur um Faktenprüfung, Beispiele und Meinung ergänzt, gewinnt an Reichweite. KI ist Beschleuniger, nicht Redakteur – diese Trennung ist die wichtigste."
+      "Ein Punkt, den wir im Gespräch mit Marketing-Verantwortlichen früh klären: Google straft KI-generierten Content nicht per se ab. Was Google und die neuen AI-Overviews abstrafen, ist Beliebigkeit. Ein KI-Text ohne redaktionelle Nacharbeit, ohne konkrete Beispiele, ohne echten Standpunkt rangiert schlecht. Ein KI-Text, der einen Erstentwurf liefert und den Redakteur um Faktenprüfung, Beispiele und Meinung ergänzt, gewinnt an Reichweite. KI ist Beschleuniger, nicht Redakteur, diese Trennung ist die wichtigste."
     ],
     cases: [
       {
@@ -316,7 +316,7 @@ export const DEPARTMENTS: Department[] = [
     faqs: [
       {
         q: "Erkennt Google KI-generierte Texte und straft sie ab?",
-        a: "Google straft nach eigener Auskunft nicht KI-generierte Texte per se ab, sondern minderwertige, nicht-hilfreiche Inhalte – unabhängig davon, ob Mensch oder Maschine sie geschrieben hat. Der Fokus muss auf Nützlichkeit, Fachlichkeit und Originalität liegen. Rohe KI-Ausgaben ohne Redaktion sind meist zu generisch und rangieren schlecht."
+        a: "Google straft nach eigener Auskunft nicht KI-generierte Texte per se ab, sondern minderwertige, nicht-hilfreiche Inhalte, unabhängig davon, ob Mensch oder Maschine sie geschrieben hat. Der Fokus muss auf Nützlichkeit, Fachlichkeit und Originalität liegen. Rohe KI-Ausgaben ohne Redaktion sind meist zu generisch und rangieren schlecht."
       },
       {
         q: "Können wir das Corporate Design auf KI-generierte Bilder übertragen?",
@@ -347,15 +347,15 @@ export const DEPARTMENTS: Department[] = [
     intro:
       "Buchhaltung ist ein reguliertes, prüfungspflichtiges Feld. Genau deshalb ist der KI-Einsatz hier nicht revolutionär, sondern schrittweise: Belegverarbeitung, Standard-Reports, Recherche in Fachfragen. Was bleibt: die Verantwortung des Berufsträgers oder der internen Fachkraft. Was fällt weg: ein erheblicher Teil der wiederkehrenden Text- und Sortierarbeit.",
     longIntro: [
-      "Buchhaltung ist eine der letzten Bastionen im Mittelstand, in denen Handarbeit als Qualitätsmerkmal gilt. Belege werden gesichtet, Kontierungen manuell gesetzt, Reports einzeln geschrieben. Genau das ist der Grund, warum KI hier nicht mit einem Paukenschlag ankommt, sondern schrittweise – dort, wo die Arbeit textlastig und die Datenlage stabil ist. Die Verantwortung des Berufsträgers oder der internen Fachkraft bleibt erhalten. Was sich verändert, ist die Verteilung der Arbeitszeit.",
-      "Der Einstieg gelingt am zuverlässigsten über die Belegvorerfassung. KI-gestützte OCR erkennt Absender, Positionen und Beträge und schlägt eine Kontierung vor. Die Fachkraft prüft, korrigiert bei Bedarf und bucht. Was früher zwanzig Minuten pro Beleg gekostet hat, dauert fünf. Die Zeit wird nicht wegrationalisiert, sondern in die Prüfung ungewöhnlicher Vorgänge investiert – dort, wo Fachkompetenz wirklich zählt.",
+      "Buchhaltung ist eine der letzten Bastionen im Mittelstand, in denen Handarbeit als Qualitätsmerkmal gilt. Belege werden gesichtet, Kontierungen manuell gesetzt, Reports einzeln geschrieben. Genau das ist der Grund, warum KI hier nicht mit einem Paukenschlag ankommt, sondern schrittweise, dort, wo die Arbeit textlastig und die Datenlage stabil ist. Die Verantwortung des Berufsträgers oder der internen Fachkraft bleibt erhalten. Was sich verändert, ist die Verteilung der Arbeitszeit.",
+      "Der Einstieg gelingt am zuverlässigsten über die Belegvorerfassung. KI-gestützte OCR erkennt Absender, Positionen und Beträge und schlägt eine Kontierung vor. Die Fachkraft prüft, korrigiert bei Bedarf und bucht. Was früher zwanzig Minuten pro Beleg gekostet hat, dauert fünf. Die Zeit wird nicht wegrationalisiert, sondern in die Prüfung ungewöhnlicher Vorgänge investiert, dort, wo Fachkompetenz wirklich zählt.",
       "Zwei Bereiche verdienen besondere Sorgfalt: Standard-Reports und steuerliche Recherche. Bei Reports beschleunigt KI die Kommentierung von BWA und Monatsberichten, ohne die Zahlen selbst zu berechnen. Bei Recherchefragen liefert sie eine strukturierte Vor-Einschätzung, die die Fachkraft mit einer verifizierten Quelle abgleicht. In beiden Fällen bleibt die Verantwortung menschlich, aber die Zeit bis zur ersten belastbaren Antwort verkürzt sich spürbar. Wer diese drei Bereiche systematisch einführt, hat innerhalb weniger Monate ein Buchhaltungsteam, das mehr Fälle bewältigt, ohne wachsen zu müssen."
     ],
     cases: [
       {
         title: "Belegvorerfassung mit KI-OCR",
         problem:
-          "Papierbelege und PDF-Rechnungen müssen manuell erfasst werden. Lieferant, Datum, Betrag, Steuersatz – bei zwanzig Rechnungen am Tag summiert sich das auf mehrere Stunden pro Woche.",
+          "Papierbelege und PDF-Rechnungen müssen manuell erfasst werden. Lieferant, Datum, Betrag, Steuersatz, bei zwanzig Rechnungen am Tag summiert sich das auf mehrere Stunden pro Woche.",
         process:
           "Klassisch: Beleg scannen, Daten manuell ins Buchhaltungssystem tippen, Konto zuordnen. Oder externes Ablage-System, das nur einen Teil der Daten erkennt.",
         aiSolution:
@@ -377,7 +377,7 @@ export const DEPARTMENTS: Department[] = [
       {
         title: "Standard-Reports automatisieren",
         problem:
-          "Monatliche BWA-Kommentierung, Umsatzsteuervoranmeldung, Standardberichte für die Geschäftsführung – all das ist Textarbeit, die auf immer denselben Grundzahlen aufsetzt.",
+          "Monatliche BWA-Kommentierung, Umsatzsteuervoranmeldung, Standardberichte für die Geschäftsführung, all das ist Textarbeit, die auf immer denselben Grundzahlen aufsetzt.",
         process:
           "Klassisch: Zahlen aus dem Buchhaltungssystem ziehen, in Excel oder Word übertragen, kommentieren, verschicken. Der Formulierungsteil dauert oft länger als die Zahlen selbst.",
         aiSolution:
@@ -498,9 +498,9 @@ export const DEPARTMENTS: Department[] = [
     intro:
       "Kundenservice-Teams stehen unter Dauerdruck: hohe Anzahl von Anfragen, unterschiedliche Kanäle, Erwartung an schnelle Antworten. Generative KI kann dabei helfen, Anfragen zu klassifizieren, Antworten vorzubereiten und Wissen konsistent verfügbar zu halten. Was bleibt: die menschliche Beziehung zum Kunden, gerade bei Beschwerden und Sonderfällen.",
     longIntro: [
-      "Kundenservice ist der Bereich, in dem die Erwartung an KI am höchsten und die Enttäuschung am größten ist – wenn er falsch aufgesetzt wird. Der Impuls, alles automatisieren zu wollen, führt zu Bots, die Kunden verärgern, statt sie zu entlasten. Der bessere Zugang ist die Frage: An welchen Stellen im Service-Prozess ist der Mensch heute mit reiner Formulierungs- oder Klassifizierungsarbeit beschäftigt? Dort hat KI ihren Platz. Alles andere bleibt menschlich, gerade bei Beschwerden und Sonderfällen.",
+      "Kundenservice ist der Bereich, in dem die Erwartung an KI am höchsten und die Enttäuschung am größten ist, wenn er falsch aufgesetzt wird. Der Impuls, alles automatisieren zu wollen, führt zu Bots, die Kunden verärgern, statt sie zu entlasten. Der bessere Zugang ist die Frage: An welchen Stellen im Service-Prozess ist der Mensch heute mit reiner Formulierungs- oder Klassifizierungsarbeit beschäftigt? Dort hat KI ihren Platz. Alles andere bleibt menschlich, gerade bei Beschwerden und Sonderfällen.",
       "Der schnellste Effekt entsteht bei zwei Anwendungen. Erstens: Anfragen-Triage über alle Kanäle. Die KI liest eingehende Nachrichten, klassifiziert nach Dringlichkeit und Kategorie und leitet sie in die passende Warteschlange. Beschwerden landen sofort beim Teamleiter, Standardfragen bei der zuständigen Rolle. Zweitens: Antwortentwürfe für wiederkehrende Fragen. Der Agent bekommt einen sauberen Entwurf, prüft die konkreten Angaben, ergänzt eine persönliche Note und versendet. Reine Formulierungszeit sinkt drastisch, die Antwortqualität steigt.",
-      "Anspruchsvoller, aber lohnend: die interne Wissensdatenbank KI-fähig aufbereiten. Wer heute Antworten mühsam in SharePoint oder Ordnern sucht, bekommt mit einem gut gebauten Retrieval-System sofortige Antworten mit Quellenverweis. Voice-Agents für Terminvereinbarung und Standardauskünfte sind der nächste, größere Sprung – sinnvoll, wenn die Anrufmenge das rechtfertigt, mit klarer Ansage an den Anrufer und einem sauberen Übergabepunkt zum Menschen bei komplexeren Themen."
+      "Anspruchsvoller, aber lohnend: die interne Wissensdatenbank KI-fähig aufbereiten. Wer heute Antworten mühsam in SharePoint oder Ordnern sucht, bekommt mit einem gut gebauten Retrieval-System sofortige Antworten mit Quellenverweis. Voice-Agents für Terminvereinbarung und Standardauskünfte sind der nächste, größere Sprung, sinnvoll, wenn die Anrufmenge das rechtfertigt, mit klarer Ansage an den Anrufer und einem sauberen Übergabepunkt zum Menschen bei komplexeren Themen."
     ],
     cases: [
       {
@@ -650,8 +650,8 @@ export const DEPARTMENTS: Department[] = [
       "HR ist einer der sensibelsten Bereiche für KI-Einsatz: Bewerberauswahl, Personalbewertung und Zugang zu Arbeitsverhältnissen fallen unter die Hochrisiko-Kategorie des EU AI Act. Umso wichtiger ist die klare Trennung zwischen unkritischen Text-Aufgaben (Stellenanzeigen, Onboarding-Materialien) und regulierten Bereichen (Vorauswahl, Bewertung). Fünf Use Cases, die klar auf der ersten Seite liegen.",
     longIntro: [
       "HR-Abteilungen erleben derzeit zwei gegensätzliche Impulse gleichzeitig. Der eine kommt aus dem Alltag: Textarbeit für Stellenanzeigen, Onboarding, interne Richtlinien und Personalkommunikation kostet Zeit, die für strategische Personalentwicklung fehlt. Der andere kommt aus dem Rechtsrahmen: Der EU AI Act stuft Personalauswahl und Personalbewertung ausdrücklich als Hochrisiko-Anwendung ein. Beide Impulse lassen sich nur bedienen, wenn man die Bereiche sauber trennt.",
-      "In der Praxis heißt das: Alles, was reine Textarbeit ohne Bezug zu einer konkreten Person ist – Stellenanzeigen, Onboarding-Unterlagen, Betriebsvereinbarungs-Entwürfe, Personal-Newsletter – ist ein sicheres Einstiegsfeld für generative KI. Der Effekt ist unmittelbar spürbar, das rechtliche Risiko überschaubar, und das Team gewinnt Zeit für Aufgaben, die tatsächlich Personalarbeit sind. Skill-Gap-Analysen und Weiterbildungsplanung folgen als nächster Schritt, sobald der Betriebsrat eingebunden ist.",
-      "Was wir mittelständischen Unternehmen konsequent nicht empfehlen: KI-gestützte Vorauswahl von Bewerbenden, automatisierte Bewertungen oder Überwachungsanwendungen. Nicht weil sie technisch nicht möglich wären, sondern weil sie einen Dokumentations-, Risikoprüfungs- und Transparenzaufwand mit sich bringen, den kleine und mittlere Unternehmen selten stemmen können – und weil das Signal an Bewerbende und Mitarbeitende oft mehr Schaden anrichtet als der Zeitgewinn wert ist. Der richtige HR-Einstieg ist der textzentrierte Einstieg."
+      "In der Praxis heißt das: Alles, was reine Textarbeit ohne Bezug zu einer konkreten Person ist, Stellenanzeigen, Onboarding-Unterlagen, Betriebsvereinbarungs-Entwürfe, Personal-Newsletter, ist ein sicheres Einstiegsfeld für generative KI. Der Effekt ist unmittelbar spürbar, das rechtliche Risiko überschaubar, und das Team gewinnt Zeit für Aufgaben, die tatsächlich Personalarbeit sind. Skill-Gap-Analysen und Weiterbildungsplanung folgen als nächster Schritt, sobald der Betriebsrat eingebunden ist.",
+      "Was wir mittelständischen Unternehmen konsequent nicht empfehlen: KI-gestützte Vorauswahl von Bewerbenden, automatisierte Bewertungen oder Überwachungsanwendungen. Nicht weil sie technisch nicht möglich wären, sondern weil sie einen Dokumentations-, Risikoprüfungs- und Transparenzaufwand mit sich bringen, den kleine und mittlere Unternehmen selten stemmen können, und weil das Signal an Bewerbende und Mitarbeitende oft mehr Schaden anrichtet als der Zeitgewinn wert ist. Der richtige HR-Einstieg ist der textzentrierte Einstieg."
     ],
     cases: [
       {
@@ -671,7 +671,7 @@ export const DEPARTMENTS: Department[] = [
         ],
         effort: "niedrig",
         risk:
-          "AGG-Konformität ist Pflicht (keine diskriminierenden Formulierungen). KI kann versehentlich problematische Wortwahl produzieren – rechtliche Prüfung durch HR bleibt erforderlich.",
+          "AGG-Konformität ist Pflicht (keine diskriminierenden Formulierungen). KI kann versehentlich problematische Wortwahl produzieren, rechtliche Prüfung durch HR bleibt erforderlich.",
         privacy:
           "Bei rein textlichem Aufsetzen (keine Bewerberdaten) ist der Datenschutz unkritisch. Business-Umgebung empfohlen, auch für nicht-personenbezogene Aufgaben.",
         priority: "hoch"
@@ -695,7 +695,7 @@ export const DEPARTMENTS: Department[] = [
         risk:
           "Feedback von neuen Mitarbeitenden anonymisieren, wenn möglich. Direktes personenbezogenes Feedback erfordert klaren Umgang mit den Rückmeldungen.",
         privacy:
-          "Onboarding-Dokumente sind intern und meist unkritisch. Persönliche Rückmeldungen brauchen sensiblen Umgang – kein automatisches Speichern in offenen Systemen.",
+          "Onboarding-Dokumente sind intern und meist unkritisch. Persönliche Rückmeldungen brauchen sensiblen Umgang, kein automatisches Speichern in offenen Systemen.",
         priority: "mittel"
       },
       {

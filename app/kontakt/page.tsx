@@ -7,17 +7,17 @@ import { SITE_URL } from "@/lib/config";
 
 const PAGE_URL = `${SITE_URL}/kontakt`;
 const DESCRIPTION =
-  "Kontakt zu KBS – KI-Beratung Saar. Kostenloses 30-minütiges Kennenlerngespräch per Videocall. Ehrliche Einschätzung von Machbarkeit, Potenzial und ROI. Ohne Verkaufsdruck.";
+  "Kontakt zu KBS KI-Beratung Saar. Kostenloses 30-minütiges Kennenlerngespräch per Videocall. Ehrliche Einschätzung von Machbarkeit, Potenzial und ROI. Ohne Verkaufsdruck.";
 
 export const metadata: Metadata = {
-  title: "Kontakt · KBS – KI-Beratung Saar",
+  title: "Kontakt · KBS KI-Beratung Saar",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: PAGE_URL,
-    siteName: "KBS – KI-Beratung Saar",
+    siteName: "KBS KI-Beratung Saar",
     title: "Kontakt · KBS",
     description: DESCRIPTION,
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }]

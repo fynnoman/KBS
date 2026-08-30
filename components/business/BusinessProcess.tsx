@@ -8,18 +8,18 @@ const STEPS = [
     duration: "30 Minuten",
     title: "Erstgespräch",
     body:
-      "Kostenloser Videocall. Sie schildern Ihre Situation, wir sagen ehrlich, ob und wie wir helfen können – auch wenn eine Zusammenarbeit nicht passt."
+      "Kostenloser Videocall. Sie schildern Ihre Situation, wir sagen ehrlich, ob und wie wir helfen können, auch wenn eine Zusammenarbeit nicht passt."
   },
   {
     n: "02",
-    duration: "1 – 2 Wochen",
+    duration: "1 bis 2 Wochen",
     title: "Analyse & Konzept",
     body:
       "Termin vor Ort oder per Videocall mit den relevanten Personen. Ergebnis: ein konkretes Umsetzungskonzept mit Kosten, Zeitplan und einer belastbaren Nutzen-Schätzung."
   },
   {
     n: "03",
-    duration: "2 – 6 Wochen",
+    duration: "2 bis 6 Wochen",
     title: "Pilot",
     body:
       "Ein abgegrenzter Anwendungsfall in einer Abteilung. Sie sehen den Effekt in echt, bevor Sie über einen breiten Rollout entscheiden."
@@ -36,7 +36,7 @@ const STEPS = [
     duration: "Laufend",
     title: "Betreuung",
     body:
-      "Fester Ansprechpartner, monatliche Termine, feste Reaktionszeiten. Kein Projektabbruch nach Go-Live – wir bleiben Ihr Ansprechpartner für KI."
+      "Fester Ansprechpartner, monatliche Termine, feste Reaktionszeiten. Kein Projektabbruch nach Go-Live, wir bleiben Ihr Ansprechpartner für KI."
   }
 ];
 

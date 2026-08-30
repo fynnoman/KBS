@@ -1,6 +1,6 @@
 /**
  * Kleiner Marker "KI" auf Content-Bildern.
- * Wird absolut positioniert – Elternelement muss `relative` sein.
+ * Wird absolut positioniert, Elternelement muss `relative` sein.
  */
 export default function KIStamp({
   position = "bottom-right"

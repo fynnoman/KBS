@@ -19,7 +19,7 @@ export default function Footer() {
               <Logo />
             </div>
             <p className="mt-6 max-w-sm text-[14px] leading-relaxed text-ink-500">
-              KBS – KI-Beratung Saar. Enterprise-KI mit lokaler Datenhoheit
+              KBS KI-Beratung Saar. Enterprise-KI mit lokaler Datenhoheit
               für mittelständische Unternehmen und Konzerne.
             </p>
             <p className="mt-6 text-[13px] leading-relaxed text-ink-400">
@@ -87,7 +87,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="pt-2 text-[13px] text-ink-400">
-                Mo – Fr · 09 – 18 Uhr
+                Mo bis Fr · 09 bis 18 Uhr
               </li>
             </ul>
           </div>
@@ -97,7 +97,7 @@ export default function Footer() {
 
         <div className="mt-8 flex flex-col items-start justify-between gap-4 text-[12.5px] text-ink-400 md:flex-row md:items-center">
           <p>
-            © {new Date().getFullYear()} KBS – KI-Beratung Saar. Alle Rechte
+            © {new Date().getFullYear()} KBS KI-Beratung Saar. Alle Rechte
             vorbehalten.
           </p>
           <ul className="flex flex-wrap gap-6">

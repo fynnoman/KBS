@@ -13,7 +13,7 @@ const DESCRIPTION =
   "KBS ist an acht Standorten im Saarland vor Ort tätig: Saarbrücken, Saarlouis, Neunkirchen, Homburg, Merzig, St. Wendel, Völklingen und Dillingen. Kostenloses Erstgespräch, Termin binnen weniger Werktage.";
 
 export const metadata: Metadata = {
-  title: "Standorte im Saarland · KBS – KI-Beratung Saar",
+  title: "Standorte im Saarland · KBS KI-Beratung Saar",
   description: DESCRIPTION,
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: PAGE_URL,
     type: "website",
     locale: "de_DE",
-    siteName: "KBS – KI-Beratung Saar",
+    siteName: "KBS KI-Beratung Saar",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }]
   }
 };

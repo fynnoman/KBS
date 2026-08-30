@@ -22,7 +22,7 @@ export default function BusinessCTA() {
               </h2>
               <p className="mt-7 max-w-lg text-lg leading-relaxed text-ink-500">
                 Sie schildern Ihre Situation, wir bewerten Machbarkeit,
-                Potenzial und ROI. Ohne Verkaufsdruck – und ohne dass Ihre IT
+                Potenzial und ROI. Ohne Verkaufsdruck, und ohne dass Ihre IT
                 oder Ihr Betriebsrat vorher zustimmen muss.
               </p>
 
@@ -65,7 +65,7 @@ export default function BusinessCTA() {
                       Lieber telefonisch?
                     </p>
                     <p className="mt-0.5 text-[13px] leading-relaxed text-ink-500">
-                      {PHONE_DISPLAY} · Mo – Fr, 09 – 18 Uhr
+                      {PHONE_DISPLAY} · Mo bis Fr, 09 bis 18 Uhr
                     </p>
                   </div>
                 </a>

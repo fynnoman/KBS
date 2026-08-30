@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     q: "Können Sie in bestehende Systeme (SAP, DATEV, Microsoft 365, Salesforce) integrieren?",
-    a: "Ja. Wir arbeiten API-basiert und haben Erfahrung mit den gängigen Enterprise-Systemen und deren Authentifizierungs-Modellen. Wo eine offizielle API fehlt, bauen wir gezielte Adapter – etwa über RPA-Bridges, iPaaS-Konnektoren oder direkte Datenbank-Anbindungen mit Ihrer IT-Zustimmung."
+    a: "Ja. Wir arbeiten API-basiert und haben Erfahrung mit den gängigen Enterprise-Systemen und deren Authentifizierungs-Modellen. Wo eine offizielle API fehlt, bauen wir gezielte Adapter, etwa über RPA-Bridges, iPaaS-Konnektoren oder direkte Datenbank-Anbindungen mit Ihrer IT-Zustimmung."
   },
   {
     q: "Wie gehen Sie mit dem EU AI Act um?",
@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     q: "Wie unterscheidet sich KBS Business vom öffentlichen KBS-Angebot?",
-    a: "Das reguläre KBS-Angebot richtet sich an Privatpersonen, Selbstständige und kleine Betriebe im Saarland – meist kurze Termine, klare Einzelleistungen. KBS Business ist der Bereich für größere Unternehmen und Konzerne mit mehrstufigen Projekten, eigener Entwicklung, KI auf dem eigenen Server und laufender Betreuung."
+    a: "Das reguläre KBS-Angebot richtet sich an Privatpersonen, Selbstständige und kleine Betriebe im Saarland, meist kurze Termine, klare Einzelleistungen. KBS Business ist der Bereich für größere Unternehmen und Konzerne mit mehrstufigen Projekten, eigener Entwicklung, KI auf dem eigenen Server und laufender Betreuung."
   }
 ];
 
