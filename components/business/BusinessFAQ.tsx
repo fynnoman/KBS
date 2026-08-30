@@ -40,7 +40,7 @@ export default function BusinessFAQ() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://ki-beratung-saar.com/business#faq",
+    "@id": "https://ki-beratung-saar.com/#faq",
     mainEntity: FAQS.map((f) => ({
       "@type": "Question",
       name: f.q,

@@ -7,8 +7,52 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Reveal from "@/components/Reveal";
 import { CITIES, findCity } from "@/lib/data/cities";
-import { SERVICES } from "@/lib/data/services";
 import { SITE_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/config";
+
+const STANDORT_ANGEBOTE = [
+  {
+    slug: "softwareloesungen",
+    tag: "Software",
+    name: "Softwarelösungen",
+    intro:
+      "Lokale KI auf Ihrer Hardware, Custom-Assistenten für Firmenwissen, Prozess-Automation und Integrationen in bestehende Systeme."
+  },
+  {
+    slug: "kurse",
+    tag: "Kurse",
+    name: "Kurse & Schulungen",
+    intro:
+      "Live-Schulungen für Ihr Team – von Prompt Engineering bis EU AI Act. Inhouse-Format oder als offene Kurse."
+  },
+  {
+    slug: "ki-anwendungsfaelle",
+    tag: "Abteilungen",
+    name: "Anwendungsfälle",
+    intro:
+      "Konkrete KI-Bausteine für Vertrieb, Marketing, Buchhaltung, Kundenservice und HR."
+  },
+  {
+    slug: "branchen",
+    tag: "Branchen",
+    name: "Branchen-Lösungen",
+    intro:
+      "Vorkonfigurierte Assistenten und Workflows für Kanzleien, Praxen, Immobilien, Versicherungen, Agenturen und weitere."
+  },
+  {
+    slug: "ueber-uns",
+    tag: "Über uns",
+    name: "Über KBS",
+    intro:
+      "Der lokale KI-Partner im Saarland. Feste Ansprechpartner, klare Festpreise pro Phase, DSGVO- und EU-AI-Act-konform."
+  },
+  {
+    slug: "kontakt",
+    tag: "Kontakt",
+    name: "Kennenlerngespräch",
+    intro:
+      "30 Minuten Videocall, ehrliche Einschätzung von Machbarkeit, Potenzial und ROI. Ohne Verkaufsdruck."
+  }
+];
 
 export async function generateStaticParams() {
   return CITIES.map((c) => ({ city: c.slug }));
@@ -261,10 +305,10 @@ export default async function CityPage({
               <div className="max-w-2xl">
                 <span className="chip">Leistungen für {c.name}</span>
                 <h2 className="mt-5 text-3xl leading-tight tracking-tight text-ink-900 sm:text-4xl md:text-5xl">
-                  Fünf Wege,
+                  Was wir für Sie
                   <br />
                   <span className="display italic text-ink-500">
-                    mit uns zu starten.
+                    vor Ort tun.
                   </span>
                 </h2>
               </div>
@@ -274,10 +318,10 @@ export default async function CityPage({
             </div>
           </Reveal>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s, i) => (
+            {STANDORT_ANGEBOTE.map((s, i) => (
               <Reveal key={s.slug} delay={i * 0.04}>
                 <Link
-                  href={`/leistungen/${s.slug}`}
+                  href={`/${s.slug}`}
                   className="group card block h-full p-6 transition-all hover:shadow-lift"
                 >
                   <p className="text-[10.5px] font-medium uppercase tracking-[0.18em] text-ink-400">
@@ -287,7 +331,7 @@ export default async function CityPage({
                     {s.name}
                   </h3>
                   <p className="mt-3 text-[13.5px] leading-relaxed text-ink-500">
-                    {s.intro.slice(0, 120)}…
+                    {s.intro}
                   </p>
                   <div className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-medium text-ink-700 group-hover:text-ink-900">
                     Mehr erfahren

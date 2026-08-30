@@ -2,36 +2,20 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import { Phone, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import Logo from "./Logo";
-import { CALENDLY_URL, PHONE_TEL } from "@/lib/config";
+import { CALENDLY_URL } from "@/lib/config";
 
-const HOME_NAV = [
-  { href: "/leistungen", label: "Leistungen" },
-  { href: "/branchen", label: "Branchen" },
-  { href: "/ki-anwendungsfaelle", label: "Anwendungen" },
-  { href: "/ki-potenzial-check", label: "KI-Check", highlight: true },
+const NAV = [
+  { href: "/softwareloesungen", label: "Softwarelösungen" },
+  { href: "/kurse", label: "Kurse" },
   { href: "/standorte", label: "Standorte" },
-  { href: "/business", label: "Business" },
-  { href: "/#kontakt", label: "Kontakt" }
-];
-
-const BUSINESS_NAV = [
-  { href: "/business#loesungen", label: "Lösungen" },
-  { href: "/business#branchen", label: "Branchen" },
-  { href: "/business#kurskatalog", label: "Schulungen" },
-  { href: "/business#preise", label: "Preise" },
-  { href: "/business#referenzen", label: "Referenzen" },
-  { href: "/business#faq", label: "FAQ" },
-  { href: "/", label: "Zur KMU-Seite", highlight: true }
+  { href: "/ueber-uns", label: "Über uns" },
+  { href: "/kontakt", label: "Kontakt" }
 ];
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
-  const onBusiness = pathname?.startsWith("/business");
-  const NAV = onBusiness ? BUSINESS_NAV : HOME_NAV;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -49,21 +33,15 @@ export default function Navigation() {
             : "border-white/5 bg-ink-900/75 md:bg-ink-900/65 md:backdrop-blur-xl"
         }`}
       >
-        {/* Left: logo */}
         <Logo height={44} />
 
-        {/* Right: nav items + contextual CTA */}
         <div className="flex items-center gap-2 md:gap-4">
           <ul className="hidden items-center gap-1 md:flex">
             {NAV.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`rounded-full px-3.5 py-2 text-[13.5px] font-medium transition-colors ${
-                    item.highlight
-                      ? "text-accent-400 hover:bg-white/10 hover:text-accent-300"
-                      : "text-white/75 hover:bg-white/10 hover:text-white"
-                  }`}
+                  className="rounded-full px-3.5 py-2 text-[13.5px] font-medium text-white/75 transition-colors hover:bg-white/10 hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -71,45 +49,24 @@ export default function Navigation() {
             ))}
           </ul>
 
-          {onBusiness ? (
-            <>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden items-center gap-2 rounded-full bg-white px-4 py-2.5 text-[13px] font-medium text-ink-900 shadow-soft transition-all hover:-translate-y-0.5 sm:inline-flex"
-              >
-                <Calendar size={14} strokeWidth={2.4} />
-                Termin buchen
-              </a>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-white p-2.5 text-ink-900 sm:hidden"
-                aria-label="Termin buchen"
-              >
-                <Calendar size={16} strokeWidth={2.4} />
-              </a>
-            </>
-          ) : (
-            <>
-              <Link
-                href={`tel:${PHONE_TEL}`}
-                className="hidden items-center gap-2 rounded-full bg-white px-4 py-2.5 text-[13px] font-medium text-ink-900 shadow-soft transition-all hover:-translate-y-0.5 sm:inline-flex"
-              >
-                <Phone size={14} strokeWidth={2.4} />
-                Jetzt anrufen
-              </Link>
-              <Link
-                href={`tel:${PHONE_TEL}`}
-                className="inline-flex items-center gap-2 rounded-full bg-white p-2.5 text-ink-900 sm:hidden"
-                aria-label="Jetzt anrufen"
-              >
-                <Phone size={16} strokeWidth={2.4} />
-              </Link>
-            </>
-          )}
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden items-center gap-2 rounded-full bg-white px-4 py-2.5 text-[13px] font-medium text-ink-900 shadow-soft transition-all hover:-translate-y-0.5 sm:inline-flex"
+          >
+            <Calendar size={14} strokeWidth={2.4} />
+            Termin buchen
+          </a>
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-white p-2.5 text-ink-900 sm:hidden"
+            aria-label="Termin buchen"
+          >
+            <Calendar size={16} strokeWidth={2.4} />
+          </a>
         </div>
       </nav>
     </div>

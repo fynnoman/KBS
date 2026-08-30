@@ -1,7 +1,13 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { CITIES } from "@/lib/data/cities";
-import { SERVICES } from "@/lib/data/services";
+
+const LEISTUNGEN = [
+  { href: "/softwareloesungen", label: "Softwarelösungen" },
+  { href: "/kurse", label: "Kurse & Schulungen" },
+  { href: "/ueber-uns", label: "Über uns" },
+  { href: "/kontakt", label: "Kontakt" }
+];
 
 export default function Footer() {
   return (
@@ -13,8 +19,8 @@ export default function Footer() {
               <Logo />
             </div>
             <p className="mt-6 max-w-sm text-[14px] leading-relaxed text-ink-500">
-              KBS – KI-Beratung Saar. Der lokale Ansprechpartner für praktische
-              KI-Hilfe im Saarland.
+              KBS – KI-Beratung Saar. Enterprise-KI mit lokaler Datenhoheit
+              für mittelständische Unternehmen und Konzerne.
             </p>
             <p className="mt-6 text-[13px] leading-relaxed text-ink-400">
               Saarbrücken · Saarlouis · Neunkirchen · Homburg · Merzig · St. Wendel · Völklingen · Dillingen
@@ -26,24 +32,13 @@ export default function Footer() {
               Leistungen
             </p>
             <ul className="mt-5 space-y-2.5 text-[14px] text-ink-700">
-              {SERVICES.map((s) => (
-                <li key={s.slug}>
-                  <Link
-                    href={`/leistungen/${s.slug}`}
-                    className="hover:text-ink-900"
-                  >
-                    {s.name.replace("KBS ", "")}
+              {LEISTUNGEN.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="hover:text-ink-900">
+                    {l.label}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/business"
-                  className="font-medium text-accent-700 hover:text-accent-800"
-                >
-                  KBS Business →
-                </Link>
-              </li>
             </ul>
           </div>
 

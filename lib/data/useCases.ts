@@ -35,7 +35,7 @@ export type Department = {
 export const DEPARTMENTS: Department[] = [
   {
     slug: "vertrieb",
-    routePath: "/ki-im-vertrieb",
+    routePath: "/ki-anwendungsfaelle/vertrieb",
     displayName: "Vertrieb",
     name: "KI im Vertrieb",
     tag: "KI im Vertrieb",
@@ -186,7 +186,7 @@ export const DEPARTMENTS: Department[] = [
   },
   {
     slug: "marketing",
-    routePath: "/ki-im-marketing",
+    routePath: "/ki-anwendungsfaelle/marketing",
     displayName: "Marketing",
     name: "KI im Marketing",
     tag: "KI im Marketing",
@@ -337,7 +337,7 @@ export const DEPARTMENTS: Department[] = [
   },
   {
     slug: "buchhaltung",
-    routePath: "/ki-in-der-buchhaltung",
+    routePath: "/ki-anwendungsfaelle/buchhaltung",
     displayName: "Buchhaltung",
     name: "KI in der Buchhaltung",
     tag: "KI in der Buchhaltung",
@@ -488,7 +488,7 @@ export const DEPARTMENTS: Department[] = [
   },
   {
     slug: "kundenservice",
-    routePath: "/ki-im-kundenservice",
+    routePath: "/ki-anwendungsfaelle/kundenservice",
     displayName: "Kundenservice",
     name: "KI im Kundenservice",
     tag: "KI im Kundenservice",
@@ -639,7 +639,7 @@ export const DEPARTMENTS: Department[] = [
   },
   {
     slug: "hr",
-    routePath: "/ki-im-hr",
+    routePath: "/ki-anwendungsfaelle/hr",
     displayName: "HR",
     name: "KI im HR",
     tag: "KI im HR",

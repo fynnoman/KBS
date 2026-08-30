@@ -224,7 +224,7 @@ export default function BusinessModules() {
                           )}
                           {relCourse && (
                             <Link
-                              href={`/business#${relCourse.slug}`}
+                              href={`/kurse#${relCourse.slug}`}
                               className="inline-flex w-full items-center justify-between gap-2 rounded-2xl border border-ink-900/10 bg-ink-50 px-4 py-3 text-[13px] font-medium text-ink-700 transition-colors hover:border-ink-900/25 hover:text-ink-900"
                             >
                               <span>Passende Schulung: {relCourse.title}</span>

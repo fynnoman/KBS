@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { Calendar, ArrowRight, ShieldCheck, Gauge } from "lucide-react";
+import { Calendar, ArrowRight, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import KIStamp from "../KIStamp";
 
@@ -61,16 +61,12 @@ export default function BusinessHero() {
               transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="mt-10 flex flex-wrap items-center gap-3"
             >
-              <Link href="/ki-potenzial-check" className="btn-primary">
-                <Gauge size={16} strokeWidth={2.4} />
-                Kostenloser KI-Potenzial-Check
-              </Link>
-              <Link href="#termin" className="btn-ghost">
-                <Calendar size={16} strokeWidth={2.2} />
+              <Link href="#termin" className="btn-primary">
+                <Calendar size={16} strokeWidth={2.4} />
                 Strategiegespräch buchen
               </Link>
-              <Link href="#use-cases" className="btn-ghost">
-                Enterprise-Use-Cases
+              <Link href="/softwareloesungen" className="btn-ghost">
+                Softwarelösungen
                 <ArrowRight size={16} strokeWidth={2.2} />
               </Link>
             </motion.div>

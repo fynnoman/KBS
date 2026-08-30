@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { CITIES } from "@/lib/data/cities";
-import { SERVICES } from "@/lib/data/services";
 import { INDUSTRIES } from "@/lib/data/industries";
 import { DEPARTMENTS } from "@/lib/data/useCases";
 
@@ -10,29 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticEntries: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { url: `${base}/#leistungen`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/#fuer-wen`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/#prozess`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/#ueber`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/#termin`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
-    { url: `${base}/#kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-
-    { url: `${base}/leistungen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/standorte`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/softwareloesungen`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${base}/kurse`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/branchen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/ki-anwendungsfaelle`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/ki-potenzial-check`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
-    { url: `${base}/kontaktformular`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-
-    { url: `${base}/business`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
-    { url: `${base}/business#branchen`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/business#kurskatalog`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${base}/business#loesungen`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${base}/business#preise`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${base}/business#referenzen`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${base}/business#faq`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${base}/business#termin`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
-
+    { url: `${base}/standorte`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${base}/ueber-uns`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/impressum`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
     { url: `${base}/datenschutz`, lastModified: now, changeFrequency: "yearly", priority: 0.2 }
   ];
@@ -41,14 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}/standorte/${c.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
-    priority: 0.85
-  }));
-
-  const serviceEntries: MetadataRoute.Sitemap = SERVICES.map((s) => ({
-    url: `${base}/leistungen/${s.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.85
+    priority: 0.8
   }));
 
   const industryEntries: MetadataRoute.Sitemap = INDUSTRIES.map((i) => ({
@@ -68,7 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticEntries,
     ...cityEntries,
-    ...serviceEntries,
     ...industryEntries,
     ...departmentEntries
   ];

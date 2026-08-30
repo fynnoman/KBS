@@ -1,15 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DepartmentPage from "@/components/DepartmentPage";
-import { findDepartment } from "@/lib/data/useCases";
+import { DEPARTMENTS, findDepartment } from "@/lib/data/useCases";
 import { SITE_URL } from "@/lib/config";
 
-const SLUG = "kundenservice";
+export function generateStaticParams() {
+  return DEPARTMENTS.map((d) => ({ slug: d.slug }));
+}
 
-export function generateMetadata(): Metadata {
-  const d = findDepartment(SLUG);
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const d = findDepartment(slug);
   if (!d) return {};
-  const url = `${SITE_URL}${d.routePath}`;
+  const url = `${SITE_URL}/ki-anwendungsfaelle/${d.slug}`;
   const description = d.intro.slice(0, 158);
   return {
     title: `${d.name} · KBS – KI-Beratung Saar`,
@@ -28,8 +35,13 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default function Page() {
-  const d = findDepartment(SLUG);
+export default async function Page({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const d = findDepartment(slug);
   if (!d) return notFound();
   return <DepartmentPage dept={d} />;
 }

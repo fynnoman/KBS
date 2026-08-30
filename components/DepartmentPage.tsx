@@ -164,9 +164,9 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
               </div>
             )}
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link href="/ki-potenzial-check" className="btn-primary">
+              <Link href="/kontakt" className="btn-primary">
                 <Gauge size={16} strokeWidth={2.4} />
-                Kostenloser KI-Potenzial-Check
+                Kennenlerngespräch buchen
               </Link>
               <a
                 href={CALENDLY_URL}
@@ -370,7 +370,7 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
               {relatedCourses.map((c, idx) => (
                 <Reveal key={c.slug} delay={idx * 0.05}>
                   <Link
-                    href="/business#kurskatalog"
+                    href={`/kurse#${c.slug}`}
                     className="group card block h-full p-7 transition-all hover:shadow-lift"
                   >
                     <p className="text-[10.5px] font-medium uppercase tracking-[0.18em] text-ink-400">
@@ -485,15 +485,14 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
               </span>
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-ink-500">
-              Starten Sie mit dem kostenlosen KI-Potenzial-Check. In drei
-              Minuten erhalten Sie eine individuelle Reihenfolge Ihrer
-              Anwendungen und wissen, welcher nächste Schritt für Ihre
-              Betriebsgröße wirklich passt.
+              Starten Sie mit einem 30-minütigen Kennenlerngespräch. Wir
+              bewerten Machbarkeit, Potenzial und ROI für Ihre konkrete
+              Situation – ehrlich und ohne Verkaufsdruck.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link href="/ki-potenzial-check" className="btn-primary">
+              <Link href="/kontakt" className="btn-primary">
                 <Gauge size={16} strokeWidth={2.4} />
-                KI-Potenzial-Check starten
+                Kennenlerngespräch buchen
               </Link>
               <a
                 href={CALENDLY_URL}

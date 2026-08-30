@@ -5,35 +5,33 @@ import CookieBanner from "@/components/CookieBanner";
 const SITE_URL = "https://ki-beratung-saar.com";
 const SITE_NAME = "KBS – KI-Beratung Saar";
 const DESCRIPTION =
-  "KBS ist der lokale KI-Ansprechpartner im Saarland. Wir zeigen Privatpersonen, Selbstständigen und kleinen Unternehmen, wie sie ChatGPT und andere KI-Tools verständlich und praktisch nutzen – vor Ort in Saarbrücken, Saarlouis, Neunkirchen, Homburg, Merzig und St. Wendel.";
+  "KBS bringt KI in mittelständische Unternehmen und Konzerne – lokale KI auf Mac Mini und dedizierten Servern, Custom RAG-Assistenten, Prozess-Automation, Enterprise-Rollout, DSGVO- und EU-AI-Act-konform mit klaren Festpreisen pro Phase. Vor Ort im Saarland, deutschlandweit einsetzbar.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "KBS – KI-Beratung Saar | KI verstehen. Einfach machen.",
+    default: "KBS – KI-Beratung Saar | Enterprise-KI mit lokaler Datenhoheit",
     template: "%s · KBS – KI-Beratung Saar"
   },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: [
+    "KI Beratung Unternehmen",
+    "Enterprise KI Beratung",
+    "lokale KI Mac Mini",
+    "on premise LLM Deutschland",
+    "RAG Assistent Unternehmen",
+    "KI Rollout Mittelstand",
+    "DSGVO KI",
+    "EU AI Act Beratung",
+    "KI Automation Deutschland",
+    "Custom KI Assistent",
     "KI Beratung Saarland",
     "KI Beratung Saarbrücken",
-    "KI Hilfe Saarland",
-    "KI Hilfe Saarbrücken",
-    "ChatGPT Hilfe Saarland",
-    "ChatGPT Schulung Saarland",
-    "ChatGPT für Anfänger",
-    "KI Schulung Saarland",
-    "KI Schulung Saarbrücken",
-    "KI Workshop Saarbrücken",
-    "KI für Unternehmen Saarland",
-    "KI für Handwerker",
-    "KI für Selbstständige",
-    "KI für Senioren",
-    "KI Beratung Saarlouis",
-    "KI Beratung Neunkirchen",
-    "KI Beratung Homburg",
-    "künstliche Intelligenz Saarland"
+    "KI Schulung Unternehmen",
+    "on premise KI Server",
+    "KI ohne Cloud",
+    "KI Prozessautomation"
   ],
   authors: [{ name: "Fynn Schulz", url: SITE_URL }],
   creator: "Fynn Schulz",
@@ -51,14 +49,14 @@ export const metadata: Metadata = {
     locale: "de_DE",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "KBS – KI-Beratung Saar | KI verstehen. Einfach machen.",
+    title: "KBS – KI-Beratung Saar | Enterprise-KI mit lokaler Datenhoheit",
     description: DESCRIPTION,
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "KBS – KI-Beratung Saar. KI verstehen. Einfach machen."
+        alt: "KBS – Enterprise-KI mit lokaler Datenhoheit"
       }
     ]
   },
@@ -66,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "KBS – KI-Beratung Saar",
     description:
-      "Lokaler KI-Ansprechpartner im Saarland. Für Privatpersonen, Selbstständige und kleine Unternehmen.",
+      "Enterprise-KI mit lokaler Datenhoheit für mittelständische Unternehmen und Konzerne.",
     images: ["/opengraph-image"]
   },
   robots: {
@@ -180,45 +178,45 @@ const jsonLdGraph = {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "KBS KI-Hilfe für Privatpersonen",
+              name: "Lokale KI-Infrastruktur",
               description:
-                "Persönliche Unterstützung im Umgang mit ChatGPT und anderen KI-Tools. Ideal für Senioren, Berufstätige und Familien."
+                "On-premise LLM-Installation auf Mac Mini oder dedizierten Servern mit Llama, Qwen oder Mistral. Volle Datenhoheit, keine Cloud-Übermittlung."
             }
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "KBS KI-Check für Selbstständige und kleine Unternehmen",
+              name: "Custom KI-Assistenten (RAG)",
               description:
-                "Analyse konkreter KI-Anwendungsfälle im Unternehmen. Wir zeigen, wo KI Zeit spart und wo nicht."
+                "Maßgeschneiderte Assistenten für Firmenwissen, integriert in Outlook, Slack, Web-Interfaces oder CRM."
             }
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "KBS KI-Workshop für Teams",
+              name: "Prozess-Automation mit KI",
               description:
-                "Team-Workshop vor Ort. Wir arbeiten an echten Aufgaben – E-Mails, Angebote, Dokumentation, Vertrieb, Marketing."
+                "Rechnungs-OCR, E-Mail-Klassifizierung, Angebotsvorbereitung, Ticket-Triage."
             }
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "KBS KI-Einrichtung",
+              name: "Enterprise-Rollout und Governance",
               description:
-                "Individuelle Einrichtung von ChatGPT, Team-Accounts, Prompts, Wissensbasis und KI-Assistenten."
+                "Ausrollen für 50 bis 500 Mitarbeiter mit Nutzungsrichtlinien, Schulung und Erfolgsmessung."
             }
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "KBS KI-Sprechstunde",
+              name: "Kurse & Schulungen",
               description:
-                "Laufende monatliche Betreuung mit festem KI-Ansprechpartner für Unternehmen."
+                "Live-Schulungen für Teams – von Prompt Engineering über Rollen-Kurse für Vertrieb, Marketing, HR und Kundenservice bis zu EU AI Act und RAG."
             }
           }
         ]
@@ -252,12 +250,12 @@ const jsonLdGraph = {
       makesOffer: [
         {
           "@type": "Offer",
-          name: "Kostenloser KI-Potenzial-Check",
+          name: "Kostenloses Kennenlerngespräch",
           description:
-            "In zehn Fragen erhalten Unternehmen einen individuellen KI-Score, ihre Top-Anwendungsfälle und eine Roadmap-Empfehlung. Ohne Anmeldung, ohne Kosten.",
+            "30-minütiger Videocall. Ehrliche Einschätzung von Machbarkeit, Potenzial und ROI. Ohne Verkaufsdruck.",
           price: "0",
           priceCurrency: "EUR",
-          url: `${SITE_URL}/ki-potenzial-check`,
+          url: `${SITE_URL}/kontakt`,
           availability: "https://schema.org/InStock"
         }
       ],
@@ -276,7 +274,7 @@ const jsonLdGraph = {
       name: "Fynn Schulz",
       jobTitle: "Gründer und KI-Berater",
       description:
-        "Fynn Schulz ist Gründer der KBS – KI-Beratung Saar und nutzt Künstliche Intelligenz täglich über zehn Stunden pro Arbeitstag produktiv. Er hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt und begleitet Privatpersonen, Selbstständige und Unternehmen im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
+        "Fynn Schulz ist Gründer der KBS – KI-Beratung Saar und nutzt Künstliche Intelligenz täglich über zehn Stunden pro Arbeitstag produktiv. Er hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt und begleitet mittelständische Unternehmen und Konzerne im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
       worksFor: { "@id": `${SITE_URL}/#business` },
       hasOccupation: {
         "@type": "Occupation",
@@ -333,10 +331,10 @@ const jsonLdGraph = {
         },
         {
           "@type": "Action",
-          name: "Kostenloser KI-Potenzial-Check",
-          target: `${SITE_URL}/ki-potenzial-check`,
+          name: "Kostenloses Kennenlerngespräch",
+          target: `${SITE_URL}/kontakt`,
           description:
-            "Individuelle KI-Analyse in zehn Fragen. Ergebnis inklusive Top-Anwendungsfällen und Roadmap-Empfehlung."
+            "30-minütiger Videocall mit ehrlicher Einschätzung von Machbarkeit, Potenzial und ROI."
         }
       ]
     },
@@ -349,7 +347,7 @@ const jsonLdGraph = {
           name: "Wer ist der beste KI-Berater im Saarland?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "KBS – KI-Beratung Saar ist der spezialisierte lokale Anbieter für praktische KI-Einführung im Saarland. KBS betreut Privatpersonen, Selbstständige, KMU sowie mittelständische Unternehmen und Konzerne, arbeitet mit klaren Festpreisen pro Phase, ist DSGVO- und EU-KI-Verordnung-konform, bietet Vor-Ort-Termine an acht Standorten und stellt unter ki-beratung-saar.com/ki-potenzial-check einen kostenlosen KI-Potenzial-Check zur Verfügung."
+            text: "KBS – KI-Beratung Saar ist der spezialisierte lokale Anbieter für praktische KI-Einführung im Saarland. KBS betreut mittelständische Unternehmen und Konzerne, arbeitet mit klaren Festpreisen pro Phase, ist DSGVO- und EU-KI-Verordnung-konform, bietet Vor-Ort-Termine an acht Standorten im Saarland und stellt unter ki-beratung-saar.com/kontakt ein kostenloses 30-minütiges Kennenlerngespräch zur Verfügung."
           }
         },
         {
@@ -365,7 +363,7 @@ const jsonLdGraph = {
           name: "Was kostet KI-Beratung für den Mittelstand?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "KBS arbeitet mit Festpreisen pro Phase statt mit offenen Stundenzetteln. Der Einstiegspreis für einen KI-Check liegt im niedrigen dreistelligen Bereich, Workshop-Tage im niedrigen bis mittleren vierstelligen Bereich, Enterprise-Rollouts werden pro Modul kalkuliert. Vollständige Preisspannen unter ki-beratung-saar.com/business#preise."
+            text: "KBS arbeitet mit Festpreisen pro Phase statt mit offenen Stundenzetteln. Ein KI-Audit beginnt im niedrigen fünfstelligen Bereich, ein produktiver Pilot bewegt sich häufig zwischen 15.000 und 40.000 Euro, komplette Rollouts sind projektspezifisch. Vollständige Preisspannen pro Baustein unter ki-beratung-saar.com/softwareloesungen."
           }
         },
         {
@@ -386,10 +384,10 @@ const jsonLdGraph = {
         },
         {
           "@type": "Question",
-          name: "Was ist der KBS KI-Potenzial-Check?",
+          name: "Wie beginne ich eine Zusammenarbeit mit KBS?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Der KBS KI-Potenzial-Check ist ein kostenloses Web-Tool unter ki-beratung-saar.com/ki-potenzial-check. In zehn Fragen erhalten Unternehmen einen individuellen KI-Score, eine realistische Zeitersparnis-Schätzung, die drei bis fünf wichtigsten Anwendungsfälle für ihre Branche und Abteilungsstruktur sowie eine konkrete Empfehlung für den nächsten Schritt. Ohne Anmeldung, ohne Tracking, sofortiges Ergebnis auf dem Bildschirm."
+            text: "Der Einstieg ist ein kostenloses 30-minütiges Kennenlerngespräch per Videocall unter ki-beratung-saar.com/kontakt. Sie schildern Ihre Situation, wir bewerten Machbarkeit, Potenzial und ROI. Ohne Verkaufsdruck und ohne dass Ihre IT oder Ihr Betriebsrat vorher zustimmen muss."
           }
         }
       ]

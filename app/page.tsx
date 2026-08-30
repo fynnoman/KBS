@@ -1,67 +1,94 @@
+import type { Metadata } from "next";
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import HomeCalendly from "@/components/HomeCalendly";
-import AudienceCards from "@/components/AudienceCards";
-import ScrollScaleBackground from "@/components/ScrollScaleBackground";
-import QuoteWall from "@/components/QuoteWall";
-import UseCases from "@/components/UseCases";
-import StickyProcess from "@/components/StickyProcess";
-import Industries from "@/components/Industries";
-import About from "@/components/About";
-import BusinessBridge from "@/components/BusinessBridge";
-import HomeCatalogsNote from "@/components/HomeCatalogsNote";
-import FAQ from "@/components/FAQ";
-import PromiseBanner from "@/components/PromiseBanner";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
+import InlineCTA from "@/components/InlineCTA";
+import BusinessHero from "@/components/business/BusinessHero";
+import BusinessProcess from "@/components/business/BusinessProcess";
+import BusinessReferences from "@/components/business/BusinessReferences";
+import BusinessFAQ from "@/components/business/BusinessFAQ";
+import BusinessCTA from "@/components/business/BusinessCTA";
+import { SITE_URL, CALENDLY_URL } from "@/lib/config";
+
+const DESCRIPTION =
+  "KBS bringt KI in mittelständische Unternehmen und Konzerne – lokale KI auf Mac Mini und dedizierten Servern, Custom RAG-Assistenten, Prozess-Automation, Enterprise-Rollout, DSGVO- und EU-AI-Act-konform mit klaren Festpreisen pro Phase.";
+
+export const metadata: Metadata = {
+  title: "KBS – KI-Beratung Saar | Enterprise-KI mit lokaler Datenhoheit",
+  description: DESCRIPTION,
+  alternates: { canonical: SITE_URL },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: SITE_URL,
+    siteName: "KBS – KI-Beratung Saar",
+    title: "KBS – KI-Beratung Saar | Enterprise-KI mit lokaler Datenhoheit",
+    description: DESCRIPTION,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "KBS – Enterprise-KI mit lokaler Datenhoheit"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "KBS – Enterprise-KI",
+    description: DESCRIPTION,
+    images: ["/opengraph-image"]
+  }
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE_URL}/#service`,
+  name: "KBS – Enterprise-KI-Beratung und Implementierung",
+  serviceType: "Enterprise AI Consulting and Implementation",
+  provider: { "@id": `${SITE_URL}/#business` },
+  areaServed: { "@type": "Country", name: "Deutschland" },
+  description: DESCRIPTION,
+  audience: {
+    "@type": "BusinessAudience",
+    audienceType:
+      "Mittelständische Unternehmen und Konzerne mit 20 bis 500 Mitarbeitern"
+  }
+};
 
 export default function Home() {
   return (
     <main className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
-      <Hero />
-      <HomeCalendly />
-      <AudienceCards />
-
-      <ScrollScaleBackground
-        src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=80"
-        alt="Modernes Büro im Saarland – Ort der persönlichen KI-Beratung"
-        eyebrow="Der lokale KI-Ansprechpartner"
-        title={
-          <>
-            Kein Beratungshaus.
-            <br />
-            <span className="display italic">Nur ein Anruf.</span>
-          </>
-        }
-        intro="KBS ist wie ein IT-Service für Ihre KI-Nutzung. Statt monatelanger Strategien: praktische Hilfe, sobald Sie ins Stocken kommen."
-      />
-
-      <QuoteWall />
-      <UseCases />
-      <StickyProcess />
-
-      <ScrollScaleBackground
-        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80"
-        alt="Team arbeitet gemeinsam an KI-Anwendungsfällen"
-        eyebrow="Im Team, vor Ort, im Saarland"
-        title={
-          <>
-            Wir arbeiten an
-            <br />
-            <span className="display italic">Ihren echten Aufgaben.</span>
-          </>
-        }
-        intro="Kein Katalog aus 80 KI-Tools, sondern Ihre echten E-Mails, Angebote und Prozesse – während wir gemeinsam am Tisch sitzen."
-      />
-
-      <Industries />
+      <BusinessHero />
       <About />
-      <BusinessBridge />
-      <HomeCatalogsNote />
-      <FAQ />
-      <PromiseBanner />
-      <Contact />
+      <InlineCTA
+        eyebrow="Unsere Softwarelösungen"
+        title="Lokale KI, Custom-Assistenten und Prozess-Automation – klare Bausteine mit Festpreisen."
+        primaryLabel="Softwarelösungen ansehen"
+        primaryHref="/softwareloesungen"
+        secondaryLabel="Termin buchen"
+        secondaryHref={CALENDLY_URL}
+        secondaryExternal
+      />
+      <BusinessProcess />
+      <InlineCTA
+        eyebrow="Kurse & Schulungen"
+        title="Von Prompt Engineering bis EU AI Act – Live-Schulungen für Ihr Team, inhouse oder offen."
+        primaryLabel="Kurse ansehen"
+        primaryHref="/kurse"
+        secondaryLabel="Termin buchen"
+        secondaryHref={CALENDLY_URL}
+        secondaryExternal
+      />
+      <BusinessReferences />
+      <BusinessFAQ />
+      <BusinessCTA />
       <Footer />
     </main>
   );
