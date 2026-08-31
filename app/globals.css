@@ -106,6 +106,52 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(14, 18, 26, 0.14), transparent);
   }
+  .rule-strong {
+    height: 1px;
+    background: rgba(14, 18, 26, 0.22);
+  }
+
+  /* Amtlicher Rahmen: eckiger als card, feste dünne Linie, minimaler Radius */
+  .doc-frame {
+    background: #FFFFFF;
+    border: 1px solid rgba(14, 18, 26, 0.14);
+    border-radius: 4px;
+  }
+  .doc-frame-hairline {
+    background: #FFFFFF;
+    border: 1px solid rgba(14, 18, 26, 0.10);
+    border-radius: 2px;
+  }
+
+  /* Behördliches Metakürzel: uppercase, engeres Tracking, sehr klein */
+  .meta-caps {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* Aktenzeichen/Section-Index vor H1 (z.B. "§ 01 · Enterprise-KI") */
+  .section-index {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(14, 18, 26, 0.22);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .section-index .paragraph {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: var(--ink);
+  }
 
   .btn-primary {
     display: inline-flex;

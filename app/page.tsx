@@ -7,6 +7,7 @@ import BusinessProcess from "@/components/business/BusinessProcess";
 import BusinessReferences from "@/components/business/BusinessReferences";
 import BusinessFAQ from "@/components/business/BusinessFAQ";
 import BusinessCTA from "@/components/business/BusinessCTA";
+import FoerderungHinweis from "@/components/business/FoerderungHinweis";
 import { SITE_URL, CALENDLY_URL } from "@/lib/config";
 
 const DESCRIPTION =
@@ -76,6 +77,7 @@ export default function Home() {
         secondaryExternal
       />
       <BusinessProcess />
+      <FoerderungHinweis />
       <InlineCTA
         eyebrow="Kurse & Schulungen"
         title="Von Prompt Engineering bis EU AI Act. Live-Schulungen für Ihr Team, inhouse oder offen."

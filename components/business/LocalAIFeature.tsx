@@ -34,7 +34,7 @@ export default function LocalAIFeature() {
   return (
     <section id="lokale-ki" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="relative overflow-hidden rounded-4xl border border-ink-900/10 bg-ink-900 px-8 py-16 text-white sm:px-14 sm:py-20 md:px-20 md:py-24">
+        <div className="relative overflow-hidden rounded-4xl border border-ink-900/10 bg-ink-900 px-5 py-12 text-white sm:px-14 sm:py-20 md:px-20 md:py-24">
           <div className="pointer-events-none absolute -right-40 -top-40 hidden h-[480px] w-[480px] rounded-full bg-accent-500/15 blur-3xl md:block" />
           <div className="pointer-events-none absolute -left-40 -bottom-40 hidden h-[420px] w-[420px] rounded-full bg-accent-500/10 blur-3xl md:block" />
 
@@ -59,12 +59,12 @@ export default function LocalAIFeature() {
             </div>
           </Reveal>
 
-          <div className="relative mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="relative mt-10 grid grid-cols-1 gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((p, i) => {
               const Icon = p.icon;
               return (
                 <Reveal key={p.title} delay={i * 0.06}>
-                  <div className="glass-dark h-full rounded-3xl p-6">
+                  <div className="glass-dark h-full rounded-3xl p-5 sm:p-6">
                     <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-white/15 bg-white/10">
                       <Icon size={16} strokeWidth={2} className="text-accent-400" />
                     </div>

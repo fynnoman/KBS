@@ -434,6 +434,35 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <div
+          aria-label="KBS Amtsbanner"
+          className="sticky top-0 z-[60] hidden w-full border-b border-ink-900/12 bg-white/95 backdrop-blur-sm sm:block"
+        >
+          <div className="mx-auto flex h-8 max-w-6xl items-center justify-between px-6 text-[10.5px] font-medium uppercase tracking-[0.22em] text-ink-500">
+            <span className="inline-flex items-center gap-3">
+              <span className="text-ink-900">KBS</span>
+              <span aria-hidden className="h-3 w-px bg-ink-900/20" />
+              <span>KI-Beratung Saar</span>
+            </span>
+            <span className="hidden items-center gap-3 md:inline-flex">
+              <span>Saarland · Deutschlandweit</span>
+              <span aria-hidden className="h-3 w-px bg-ink-900/20" />
+              <a
+                href="tel:+4915168488999"
+                className="tracking-[0.22em] text-ink-700 transition-colors hover:text-ink-900"
+              >
+                0151 · 68488999
+              </a>
+              <span aria-hidden className="h-3 w-px bg-ink-900/20" />
+              <a
+                href="mailto:info@ki-beratung-saar.com"
+                className="tracking-[0.22em] text-ink-700 transition-colors hover:text-ink-900"
+              >
+                info@ki-beratung-saar.com
+              </a>
+            </span>
+          </div>
+        </div>
         {children}
         <CookieBanner />
       </body>

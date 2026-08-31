@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BusinessCurriculum from "@/components/business/BusinessCurriculum";
 import BusinessCTA from "@/components/business/BusinessCTA";
+import FoerderungHinweis from "@/components/business/FoerderungHinweis";
 import { SITE_URL } from "@/lib/config";
 
 const PAGE_URL = `${SITE_URL}/kurse`;
@@ -36,6 +37,7 @@ export default function KursePage() {
         ]}
       />
       <BusinessCurriculum />
+      <FoerderungHinweis />
       <BusinessCTA />
       <Footer />
     </main>
