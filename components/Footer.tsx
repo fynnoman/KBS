@@ -95,7 +95,11 @@ export default function Footer() {
 
         <div className="mt-14 rule" />
 
-        <div className="mt-8 flex flex-col items-start justify-between gap-4 text-[12.5px] text-ink-400 md:flex-row md:items-center">
+        <p className="mt-8 text-[12px] leading-relaxed text-ink-400">
+          Die von uns verwendeten Bilder wurden mit Hilfe von KI erstellt.
+        </p>
+
+        <div className="mt-4 flex flex-col items-start justify-between gap-4 text-[12.5px] text-ink-400 md:flex-row md:items-center">
           <p>
             © {new Date().getFullYear()} KBS KI-Beratung Saar. Alle Rechte
             vorbehalten.
