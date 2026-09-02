@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import BusinessCurriculum from "@/components/business/BusinessCurriculum";
 import BusinessCTA from "@/components/business/BusinessCTA";
 import FoerderungHinweis from "@/components/business/FoerderungHinweis";
+import FoerderungBadge from "@/components/business/FoerderungBadge";
 import { SITE_URL } from "@/lib/config";
 
 const PAGE_URL = `${SITE_URL}/kurse`;
@@ -36,6 +37,7 @@ export default function KursePage() {
           { label: "Kurse", href: "/kurse" }
         ]}
       />
+      <FoerderungBadge />
       <BusinessCurriculum />
       <FoerderungHinweis />
       <BusinessCTA />

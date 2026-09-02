@@ -5,6 +5,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Reveal from "@/components/Reveal";
+import FoerderungHinweis from "@/components/business/FoerderungHinweis";
+import FoerderungBadge from "@/components/business/FoerderungBadge";
 import { DEPARTMENTS } from "@/lib/data/useCases";
 import { SITE_URL, CALENDLY_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/config";
 
@@ -77,6 +79,7 @@ export default function AnwendungsfaellePage() {
           { label: "Anwendungsfälle", href: "/ki-anwendungsfaelle" }
         ]}
       />
+      <FoerderungBadge />
 
       <section className="relative overflow-hidden pt-10 pb-16 md:pt-14 md:pb-20">
         <div className="pointer-events-none absolute inset-0 -z-10">
@@ -150,6 +153,8 @@ export default function AnwendungsfaellePage() {
           </div>
         </div>
       </section>
+
+      <FoerderungHinweis />
 
       <Footer />
     </main>

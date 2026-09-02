@@ -8,6 +8,7 @@ import BusinessReferences from "@/components/business/BusinessReferences";
 import BusinessFAQ from "@/components/business/BusinessFAQ";
 import BusinessCTA from "@/components/business/BusinessCTA";
 import FoerderungHinweis from "@/components/business/FoerderungHinweis";
+import FoerderungBadge from "@/components/business/FoerderungBadge";
 import { SITE_URL, CALENDLY_URL } from "@/lib/config";
 
 const DESCRIPTION =
@@ -66,6 +67,7 @@ export default function Home() {
       />
       <Navigation />
       <BusinessHero />
+      <FoerderungBadge />
       <BusinessCTA />
       <InlineCTA
         eyebrow="Unsere Softwarelösungen"

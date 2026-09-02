@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import BusinessModules from "@/components/business/BusinessModules";
 import BusinessCTA from "@/components/business/BusinessCTA";
 import FoerderungHinweis from "@/components/business/FoerderungHinweis";
+import FoerderungBadge from "@/components/business/FoerderungBadge";
 import { SITE_URL } from "@/lib/config";
 
 const PAGE_URL = `${SITE_URL}/softwareloesungen`;
@@ -36,6 +37,7 @@ export default function SoftwareloesungenPage() {
           { label: "Softwarelösungen", href: "/softwareloesungen" }
         ]}
       />
+      <FoerderungBadge />
       <BusinessModules />
       <FoerderungHinweis />
       <BusinessCTA />

@@ -3,6 +3,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BusinessCTA from "@/components/business/BusinessCTA";
+import FoerderungHinweis from "@/components/business/FoerderungHinweis";
+import FoerderungBadge from "@/components/business/FoerderungBadge";
 import { SITE_URL } from "@/lib/config";
 
 const PAGE_URL = `${SITE_URL}/kontakt`;
@@ -34,7 +36,9 @@ export default function KontaktPage() {
           { label: "Kontakt", href: "/kontakt" }
         ]}
       />
+      <FoerderungBadge />
       <BusinessCTA />
+      <FoerderungHinweis />
       <Footer />
     </main>
   );

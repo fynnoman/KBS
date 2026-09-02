@@ -20,7 +20,7 @@ const PROGRAMME = [
     name: "INQA-Coaching",
     scope: "Bund · ESF Plus",
     body:
-      "Gefördertes Coaching für KMU zur Einführung neuer digitaler Arbeitsweisen, inklusive KI-gestützter Prozesse."
+      "Gefördertes Coaching für KMU zur Einführung neuer digitaler Arbeitsweisen, inklusive KI-gestützter Prozesse. Bis zu 80 Prozent Zuschuss je nach Voraussetzungen."
   },
   {
     name: "Regionale Programme",
@@ -64,16 +64,20 @@ export default function FoerderungHinweis() {
                 </h2>
 
                 <p className="mt-6 max-w-xl text-[15.5px] leading-relaxed text-ink-600">
-                  Beratungs- und Umsetzungsleistungen von KBS sind in vielen
-                  Fällen über Förderprogramme von Bund, Ländern und EU
-                  bezuschussbar. Ihr Unternehmen stellt den Antrag beim
-                  jeweiligen Fördergeber, wir liefern die passende Angebots-
-                  und Leistungsdokumentation in der geforderten Form.
+                  Viele KBS-Projekte sind über Bundes-, Landes- und
+                  EU-Programme förderfähig. Je nach Programm und
+                  Unternehmensgröße übernimmt der Fördergeber bis zu 80 Prozent
+                  der Kosten. Ihr Unternehmen bezahlt in diesen Fällen nur den
+                  verbleibenden Eigenanteil, nicht den vollen Projektpreis.
+                  Ihr Unternehmen stellt den Antrag beim jeweiligen
+                  Fördergeber, wir liefern die passende Angebots- und
+                  Leistungsdokumentation in der geforderten Form.
                 </p>
 
                 <ul className="mt-7 space-y-2.5">
                   {[
-                    "Bis zu 50 Prozent Zuschuss je nach Programm und Unternehmensgröße",
+                    "Bis zu 80 Prozent Zuschuss je nach Programm und Unternehmensgröße",
+                    "Ihr Eigenanteil kann so auf einen Bruchteil des Listenpreises sinken",
                     "Angebots- und Leistungsnachweise passend zum Antragsverfahren",
                     "Prüfung im kostenlosen Erstgespräch, welche Programme für Sie in Frage kommen"
                   ].map((item) => (
