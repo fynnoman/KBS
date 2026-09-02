@@ -26,7 +26,7 @@ export default function ImpressumPage() {
                 Angaben gemäß § 5 TMG
               </h2>
               <p>
-                Blass Stosse GbR<br />
+                Blass GbR<br />
                 Heiligenbronstr. 7<br />
                 66359 Bous
               </p>
@@ -36,7 +36,6 @@ export default function ImpressumPage() {
                 Vertretungsberechtigte Gesellschafter
               </h2>
               <p>
-                Julian Stosse<br />
                 Michael Blass
               </p>
             </div>
@@ -62,7 +61,7 @@ export default function ImpressumPage() {
                 Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
               </h2>
               <p>
-                Julian Stosse und Michael Blass<br />
+                Michael Blass<br />
                 Anschrift wie oben
               </p>
             </div>

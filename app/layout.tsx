@@ -121,7 +121,7 @@ const jsonLdGraph = {
       currenciesAccepted: "EUR",
       paymentAccepted: "Überweisung, Rechnung",
       vatID: "DE458914838",
-      legalName: "Blass Stosse GbR",
+      legalName: "Blass GbR",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Heiligenbronstr. 7",
