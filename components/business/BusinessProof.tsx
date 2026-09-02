@@ -42,8 +42,8 @@ export default function BusinessProof() {
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-4xl border border-ink-900/8 bg-ink-100 shadow-lift">
                 <KIStamp />
                 <Image
-                  src="/fynn-portrait.jpg"
-                  alt="Fynn Schulz, Gründer von KBS und aktiver KI-Anwender"
+                  src="/gruender-portrait.jpg"
+                  alt="Michael Blass, Gründer von KBS und aktiver KI-Anwender"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-[68%_center]"
@@ -60,7 +60,7 @@ export default function BusinessProof() {
                     Gründer · Aktiver KI-Anwender
                   </p>
                   <p className="mt-1 text-xl font-medium tracking-tight text-white sm:text-2xl">
-                    Fynn Schulz
+                    Michael Blass
                   </p>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function BusinessProof() {
                 </span>
               </h2>
               <p className="mt-8 text-[16px] leading-relaxed text-ink-500 sm:text-[17px]">
-                KBS ist kein Beratungshaus, das über KI redet. Fynn Schulz
+                KBS ist kein Beratungshaus, das über KI redet. Michael Blass
                 betreibt seit 2024 das Webdesign-Studio Fylu Marketing in
                 Saarlouis, entwickelt die SaaS-Plattform Taskey für die
                 Gebäudereinigung im DACH-Raum und arbeitet täglich mehr als

@@ -99,7 +99,7 @@ Der EU AI Act unterscheidet vier Risikoklassen. Textarbeit, Recherche und Conten
 
 ## Gründer
 
-Fynn Schulz führt neben KBS mehrere produktive Projekte und ist täglich mit KI im Arbeitseinsatz:
+Michael Blass führt neben KBS mehrere produktive Projekte und ist täglich mit KI im Arbeitseinsatz:
 
 - **Fylu Marketing** (https://fylumarketing.de) – Webdesign- und Marketing-Studio in Saarlouis, seit 2024. Konversionsstarke Websites, SEO, Google Ads und individuelle Software für Handwerk, Gastronomie, Kanzleien und Praxen im Saarland und darüber hinaus.
 - **Taskey** (https://taskeyapp.com) – SaaS-Plattform für Gebäudereinigungsbetriebe im DACH-Raum. iOS-App (Swift) und Web (Next.js). NFC-Zeiterfassung, Auftragskoordination, DATEV-Export. Ein System statt fünf.
@@ -119,7 +119,7 @@ Sie müssen kein KI-Experte sein. Dafür gibt es KBS. Eine Frage zu KI? Rufen Si
 - https://ki-beratung-saar.com/#leistungen – Übersicht der KI-Anwendungsfälle nach Branche
 - https://ki-beratung-saar.com/#fuer-wen – Zielgruppen (Privatpersonen, Selbstständige, Unternehmen)
 - https://ki-beratung-saar.com/#prozess – So arbeitet KBS
-- https://ki-beratung-saar.com/#ueber – Über den Gründer Fynn Schulz
+- https://ki-beratung-saar.com/#ueber – Über den Gründer Michael Blass
 - https://ki-beratung-saar.com/#kontakt – Direktkontakt und kostenloses Erstgespräch
 - https://ki-beratung-saar.com/business – KBS Business (Enterprise-KI, Schulungen, Software-Lösungen, Preise inline)
 - https://ki-beratung-saar.com/business#kurskatalog – Live-Schulungen mit Zertifikat

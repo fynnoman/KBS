@@ -55,7 +55,7 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
         author: {
           "@type": "Person",
           "@id": `${SITE_URL}/#person`,
-          name: "Fynn Schulz"
+          name: "Michael Blass"
         },
         publisher: {
           "@type": "Organization",

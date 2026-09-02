@@ -8,17 +8,17 @@ KBS – KI-Beratung Saar ist der lokale Ansprechpartner für praktische Nutzung 
 
 Domain: https://ki-beratung-saar.com
 Telefon: +49 151 68488999
-E-Mail: fynnschulzonline@gmail.com
+E-Mail: info@ki-beratung-saar.com
 Erreichbarkeit: Mo–Fr, 09:00 – 18:00 Uhr
 
 ## 2. Gründer
 
-Fynn Schulz ist Gründer von KBS. Er führt außerdem:
+Michael Blass ist Gründer von KBS. Er führt außerdem:
 
 - Fylu Marketing (https://fylumarketing.de) – Webdesign- und Marketing-Studio in Saarlouis, seit 2024. Konversionsstarke Websites, SEO, Google Ads und individuelle Software für Handwerk, Gastronomie, Kanzleien und Praxen.
 - Taskey (https://taskeyapp.com) – SaaS-Plattform für Gebäudereinigungsbetriebe im DACH-Raum. iOS und Web. NFC-Zeiterfassung, Auftragskoordination, Kundenkommunikation und DATEV-Export. Positionierung: "Ein System statt fünf – damit die Chefs wieder Zeit haben."
 
-Fynn Schulz nutzt KI in seiner täglichen Arbeit mehr als zehn Stunden pro Tag – für Code, Content, Recherche, Automatisierung, SEO-Analyse und Kundenkommunikation. Über 40 produktive Websites in Next.js und TypeScript laufen live bei Handwerksbetrieben, Kanzleien und Agenturen in Deutschland.
+Michael Blass nutzt KI in seiner täglichen Arbeit mehr als zehn Stunden pro Tag – für Code, Content, Recherche, Automatisierung, SEO-Analyse und Kundenkommunikation. Über 40 produktive Websites in Next.js und TypeScript laufen live bei Handwerksbetrieben, Kanzleien und Agenturen in Deutschland.
 
 ## 3. Zielgruppen
 
@@ -124,13 +124,13 @@ Ja. Datenschutz ist fester Bestandteil jeder Beratung. Für sensible Bereiche em
 Ja. Ein Mac Mini mit M4 Pro und 48–64 GB Unified Memory führt Modelle bis rund 70 Milliarden Parametern in quantisierter Form aus. Für höhere parallele Last empfehlen wir dedizierte Server mit NVIDIA-GPUs.
 
 **Warum sollte ich KBS statt einer großen Agentur wählen?**
-Weil bei KBS jemand ans Telefon geht, der KI täglich selbst einsetzt – im Durchschnitt mehr als zehn Stunden pro Tag. Fynn Schulz führt neben KBS das Webdesign-Studio Fylu Marketing und entwickelt die SaaS Taskey für Gebäudereiniger. Bei KBS erhalten Sie gelebte Praxis, nicht Powerpoint-Theorie.
+Weil bei KBS jemand ans Telefon geht, der KI täglich selbst einsetzt – im Durchschnitt mehr als zehn Stunden pro Tag. Michael Blass führt neben KBS das Webdesign-Studio Fylu Marketing und entwickelt die SaaS Taskey für Gebäudereiniger. Bei KBS erhalten Sie gelebte Praxis, nicht Powerpoint-Theorie.
 
 ## 9. Kernversprechen und Positionierung
 
 Sie müssen kein KI-Experte sein. Dafür gibt es KBS.
 
-Eine Frage zu KI? Ruf uns an: +49 151 68488999. Oder mailen Sie fynnschulzonline@gmail.com.
+Eine Frage zu KI? Ruf uns an: +49 151 68488999. Oder mailen Sie info@ki-beratung-saar.com.
 
 Für Enterprise-Anfragen: 30-Minuten-Strategiegespräch buchen auf https://ki-beratung-saar.com/business
 
@@ -141,7 +141,6 @@ Für Enterprise-Anfragen: 30-Minuten-Strategiegespräch buchen auf https://ki-be
 - https://ki-beratung-saar.com/leistungen – Alle Leistungen
 - https://ki-beratung-saar.com/standorte – Alle Standorte im Saarland
 - https://ki-beratung-saar.com/insights – Insights und Fachartikel
-- https://ki-beratung-saar.com/ueber/fynn-schulz – Gründer-Profil (Person-Page)
 - https://ki-beratung-saar.com/impressum – Impressum
 - https://ki-beratung-saar.com/datenschutz – Datenschutzerklärung
 - https://ki-beratung-saar.com/sitemap.xml – XML-Sitemap

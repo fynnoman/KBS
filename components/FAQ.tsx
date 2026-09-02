@@ -36,7 +36,7 @@ const FAQS = [
   },
   {
     q: "Warum sollte ich KBS statt einer großen Agentur anrufen?",
-    a: "Weil bei KBS jemand ans Telefon geht, der KI täglich selbst einsetzt, im Schnitt mehr als zehn Stunden pro Tag. Fynn Schulz führt neben KBS das Webdesign-Studio Fylu Marketing in Saarlouis und entwickelt die SaaS-Plattform Taskey für Gebäudereinigungsbetriebe. Bei KBS bekommen Sie deshalb keine Theorie, sondern gelebte KI-Praxis."
+    a: "Weil bei KBS jemand ans Telefon geht, der KI täglich selbst einsetzt, im Schnitt mehr als zehn Stunden pro Tag. Michael Blass führt neben KBS das Webdesign-Studio Fylu Marketing in Saarlouis und entwickelt die SaaS-Plattform Taskey für Gebäudereinigungsbetriebe. Bei KBS bekommen Sie deshalb keine Theorie, sondern gelebte KI-Praxis."
   }
 ];
 

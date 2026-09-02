@@ -39,8 +39,8 @@ export default function About() {
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-4xl border border-ink-900/8 bg-ink-100 shadow-lift">
                 <KIStamp />
                 <Image
-                  src="/fynn-portrait.jpg"
-                  alt="Fynn Schulz, Gründer von KBS im Gespräch mit Kunden"
+                  src="/gruender-portrait.jpg"
+                  alt="Michael Blass, Gründer von KBS im Gespräch mit Kunden"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-[68%_center]"
@@ -57,7 +57,7 @@ export default function About() {
                     Gründer
                   </p>
                   <p className="mt-1 text-xl font-medium tracking-tight text-white sm:text-2xl">
-                    Fynn Schulz
+                    Michael Blass
                   </p>
                 </div>
               </div>
@@ -90,7 +90,7 @@ export default function About() {
             <Reveal delay={0.08}>
               <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-ink-600 sm:text-[17px]">
                 <p>
-                  Ich bin <span className="font-medium text-ink-900">Fynn Schulz</span>.
+                  Ich bin <span className="font-medium text-ink-900">Michael Blass</span>.
                   Neben KBS führe ich <span className="font-medium text-ink-900">
                     Fylu Marketing
                   </span>{" "}

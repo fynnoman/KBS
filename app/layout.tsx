@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     "KI ohne Cloud",
     "KI Prozessautomation"
   ],
-  authors: [{ name: "Fynn Schulz", url: SITE_URL }],
-  creator: "Fynn Schulz",
+  authors: [{ name: "Michael Blass", url: SITE_URL }],
+  creator: "Michael Blass",
   publisher: SITE_NAME,
   category: "Business Consulting",
   alternates: {
@@ -121,7 +121,7 @@ const jsonLdGraph = {
       currenciesAccepted: "EUR",
       paymentAccepted: "Überweisung, Rechnung",
       vatID: "DE458914838",
-      legalName: "Schulz Stosse GbR",
+      legalName: "Blass Stosse GbR",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Heiligenbronstr. 7",
@@ -271,10 +271,10 @@ const jsonLdGraph = {
     {
       "@type": "Person",
       "@id": `${SITE_URL}/#person`,
-      name: "Fynn Schulz",
+      name: "Michael Blass",
       jobTitle: "Gründer und KI-Berater",
       description:
-        "Fynn Schulz ist Gründer der KBS KI-Beratung Saar und nutzt Künstliche Intelligenz täglich über zehn Stunden pro Arbeitstag produktiv. Er hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt und begleitet mittelständische Unternehmen und Konzerne im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
+        "Michael Blass ist Gründer der KBS KI-Beratung Saar und nutzt Künstliche Intelligenz täglich über zehn Stunden pro Arbeitstag produktiv. Er hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt und begleitet mittelständische Unternehmen und Konzerne im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
       worksFor: { "@id": `${SITE_URL}/#business` },
       hasOccupation: {
         "@type": "Occupation",
@@ -307,7 +307,6 @@ const jsonLdGraph = {
       ],
       knowsLanguage: ["Deutsch", "Englisch"],
       sameAs: [
-        "https://github.com/fynnoman",
         "https://fylumarketing.de",
         "https://taskeyapp.com"
       ]

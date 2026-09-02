@@ -31,7 +31,7 @@ export default function DatenschutzPage() {
                 Verantwortlich
               </h2>
               <p>
-                Schulz Stosse GbR<br />
+                Blass Stosse GbR<br />
                 Heiligenbronstr. 7, 66359 Bous<br />
                 info@ki-beratung-saar.com
               </p>
