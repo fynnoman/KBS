@@ -1,6 +1,22 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap"
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-display",
+  display: "swap"
+});
 
 const SITE_URL = "https://ki-beratung-saar.com";
 const SITE_NAME = "KBS KI-Beratung Saar";
@@ -399,8 +415,8 @@ const jsonLdGraph = {
       logo: {
         "@type": "ImageObject",
         url: `${SITE_URL}/kbs-logo.png`,
-        width: 1536,
-        height: 1024
+        width: 512,
+        height: 341
       },
       contactPoint: {
         "@type": "ContactPoint",
@@ -419,14 +435,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de">
+    <html lang="de" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}

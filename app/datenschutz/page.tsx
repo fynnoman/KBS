@@ -11,9 +11,48 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true }
 };
 
+const DATENSCHUTZ_JSONLD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://ki-beratung-saar.com/datenschutz#webpage",
+      url: "https://ki-beratung-saar.com/datenschutz",
+      name: "Datenschutzerklärung · KBS KI-Beratung Saar",
+      description:
+        "Datenschutzerklärung von KBS KI-Beratung Saar. Informationen zum Umgang mit personenbezogenen Daten gemäß DSGVO.",
+      inLanguage: "de-DE",
+      isPartOf: { "@id": "https://ki-beratung-saar.com/#website" },
+      about: { "@id": "https://ki-beratung-saar.com/#business" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ki-beratung-saar.com/datenschutz#breadcrumbs",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Start",
+          item: "https://ki-beratung-saar.com/"
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Datenschutz",
+          item: "https://ki-beratung-saar.com/datenschutz"
+        }
+      ]
+    }
+  ]
+};
+
 export default function DatenschutzPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(DATENSCHUTZ_JSONLD) }}
+      />
       <Navigation />
       <section className="pt-40 pb-24">
         <div className="mx-auto max-w-3xl px-6">

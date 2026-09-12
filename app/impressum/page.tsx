@@ -11,9 +11,48 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true }
 };
 
+const IMPRESSUM_JSONLD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://ki-beratung-saar.com/impressum#webpage",
+      url: "https://ki-beratung-saar.com/impressum",
+      name: "Impressum · KBS KI-Beratung Saar",
+      description:
+        "Impressum von KBS KI-Beratung Saar. Verantwortlich für den Inhalt und rechtliche Angaben gemäß § 5 TMG.",
+      inLanguage: "de-DE",
+      isPartOf: { "@id": "https://ki-beratung-saar.com/#website" },
+      about: { "@id": "https://ki-beratung-saar.com/#business" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://ki-beratung-saar.com/impressum#breadcrumbs",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Start",
+          item: "https://ki-beratung-saar.com/"
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Impressum",
+          item: "https://ki-beratung-saar.com/impressum"
+        }
+      ]
+    }
+  ]
+};
+
 export default function ImpressumPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(IMPRESSUM_JSONLD) }}
+      />
       <Navigation />
       <section className="pt-40 pb-24">
         <div className="mx-auto max-w-3xl px-6">

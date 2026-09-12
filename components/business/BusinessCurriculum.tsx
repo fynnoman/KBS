@@ -214,7 +214,7 @@ export default function BusinessCurriculum() {
                               </div>
                               {!c.pricing.customLabel && (
                                 <p className="text-[11.5px] leading-snug text-ink-500">
-                                  Ab dem 13. Teilnehmer 60 € pro Person. Remote
+                                  Ab dem 13. Teilnehmer 120 € pro Person. Remote
                                   ohne Aufschlag.
                                 </p>
                               )}
@@ -238,6 +238,13 @@ export default function BusinessCurriculum() {
                           <Mail size={13} strokeWidth={2.2} />
                           Direkte E-Mail zu dieser Schulung
                         </a>
+                        <Link
+                          href={`/kurse/${c.slug}`}
+                          className="mt-3 inline-flex w-full items-center justify-between gap-2 rounded-2xl bg-ink-900 px-4 py-3 text-[13px] font-medium text-white transition-all hover:-translate-y-0.5"
+                        >
+                          <span>Kurs im Detail ansehen</span>
+                          <ArrowUpRight size={13} strokeWidth={2.2} />
+                        </Link>
                       </div>
                       </div>
                     </article>

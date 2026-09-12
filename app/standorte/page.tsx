@@ -28,8 +28,51 @@ export const metadata: Metadata = {
 };
 
 export default function StandortePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${PAGE_URL}#collection`,
+        name: "KBS Standorte im Saarland",
+        description: DESCRIPTION,
+        url: PAGE_URL,
+        about: { "@id": `${SITE_URL}/#business` },
+        hasPart: CITIES.map((c) => ({
+          "@type": "WebPage",
+          name: `KI-Beratung ${c.name}`,
+          url: `${SITE_URL}/standorte/${c.slug}`
+        }))
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${PAGE_URL}#itemlist`,
+        name: "Standorte Saarland",
+        numberOfItems: CITIES.length,
+        itemListElement: CITIES.map((c, idx) => ({
+          "@type": "ListItem",
+          position: idx + 1,
+          name: c.name,
+          url: `${SITE_URL}/standorte/${c.slug}`
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${PAGE_URL}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "Standorte", item: PAGE_URL }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
       <Breadcrumbs
         items={[

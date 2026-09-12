@@ -84,7 +84,7 @@ export default function BusinessHero() {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md border border-ink-900/15 bg-ink-100 shadow-lift sm:aspect-[5/4] lg:aspect-[4/5]">
               <KIStamp />
               <Image
-                src="/business-office.png"
+                src="/business-office.jpg"
                 alt="Modernes Büro, konzentrierte KI-gestützte Arbeit"
                 fill
                 priority

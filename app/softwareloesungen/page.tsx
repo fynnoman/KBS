@@ -6,6 +6,7 @@ import BusinessModules from "@/components/business/BusinessModules";
 import BusinessCTA from "@/components/business/BusinessCTA";
 import FoerderungHinweis from "@/components/business/FoerderungHinweis";
 import FoerderungBadge from "@/components/business/FoerderungBadge";
+import { MODULES } from "@/lib/data/modules";
 import { SITE_URL } from "@/lib/config";
 
 const PAGE_URL = `${SITE_URL}/softwareloesungen`;
@@ -28,8 +29,52 @@ export const metadata: Metadata = {
 };
 
 export default function SoftwareloesungenPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${PAGE_URL}#collection`,
+        name: "Softwarelösungen · KBS KI-Beratung Saar",
+        description: DESCRIPTION,
+        url: PAGE_URL,
+        about: { "@id": `${SITE_URL}/#business` },
+        hasPart: MODULES.map((m) => ({
+          "@type": "Service",
+          name: m.title,
+          url: `${SITE_URL}/softwareloesungen/${m.slug}`,
+          provider: { "@id": `${SITE_URL}/#business` }
+        }))
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${PAGE_URL}#itemlist`,
+        name: "KBS Softwarelösungen",
+        numberOfItems: MODULES.length,
+        itemListElement: MODULES.map((m, idx) => ({
+          "@type": "ListItem",
+          position: idx + 1,
+          name: m.title,
+          url: `${SITE_URL}/softwareloesungen/${m.slug}`
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${PAGE_URL}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "Softwarelösungen", item: PAGE_URL }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
       <Breadcrumbs
         items={[

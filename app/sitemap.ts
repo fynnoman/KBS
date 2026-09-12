@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { CITIES } from "@/lib/data/cities";
 import { INDUSTRIES } from "@/lib/data/industries";
 import { DEPARTMENTS } from "@/lib/data/useCases";
+import { MODULES } from "@/lib/data/modules";
+import { COURSES } from "@/lib/data/courses";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://ki-beratung-saar.com";
@@ -41,10 +43,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85
   }));
 
+  const moduleEntries: MetadataRoute.Sitemap = MODULES.map((m) => ({
+    url: `${base}/softwareloesungen/${m.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.85
+  }));
+
+  const courseEntries: MetadataRoute.Sitemap = COURSES.map((c) => ({
+    url: `${base}/kurse/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8
+  }));
+
   return [
     ...staticEntries,
     ...cityEntries,
     ...industryEntries,
-    ...departmentEntries
+    ...departmentEntries,
+    ...moduleEntries,
+    ...courseEntries
   ];
 }

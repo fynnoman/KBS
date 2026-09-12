@@ -27,8 +27,39 @@ export const metadata: Metadata = {
 };
 
 export default function KontaktPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": `${PAGE_URL}#contactpage`,
+        name: "Kontakt · KBS KI-Beratung Saar",
+        description: DESCRIPTION,
+        url: PAGE_URL,
+        about: { "@id": `${SITE_URL}/#business` },
+        mainEntity: { "@id": `${SITE_URL}/#business` },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", "h2", "p"]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${PAGE_URL}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "Kontakt", item: PAGE_URL }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navigation />
       <Breadcrumbs
         items={[
