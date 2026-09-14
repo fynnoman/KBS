@@ -6,11 +6,11 @@ import {
   ArrowRight,
   CalendarClock,
   CheckCircle2,
+  Loader2,
   Send,
   Sparkles
 } from "lucide-react";
-import Reveal from "../Reveal";
-import { CALENDLY_URL, EMAIL } from "@/lib/config";
+import { CALENDLY_URL } from "@/lib/config";
 
 const CALENDLY_JS = "https://assets.calendly.com/assets/external/widget.js";
 const CALENDLY_CSS = "https://assets.calendly.com/assets/external/widget.css";
@@ -87,39 +87,69 @@ function openCalendlyPopup(prefill: { name?: string; email?: string }) {
     });
 }
 
+type SubmitState = "idle" | "sending" | "sent" | "error";
+
 export default function SoftwareIdeaHero() {
   const reduce = useReducedMotion();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [sent, setSent] = useState(false);
+  const [state, setState] = useState<SubmitState>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (state === "sending") return;
     if (!name.trim() || !email.trim() || !message.trim()) return;
 
-    const subject = "Anfrage über die KBS-Softwarelösungen-Seite";
-    const body = [
-      `Name: ${name.trim()}`,
-      `E-Mail: ${email.trim()}`,
-      "",
-      "Idee / Vorstellung:",
-      message.trim()
-    ].join("\n");
+    setState("sending");
+    setErrorMessage(null);
 
-    const mailtoUrl = `mailto:${EMAIL}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          message: message.trim(),
+          source: "softwareloesungen"
+        })
+      });
 
-    window.location.href = mailtoUrl;
-    setSent(true);
-    setTimeout(() => {
-      openCalendlyPopup({ name: name.trim(), email: email.trim() });
-    }, 900);
+      const data = (await res.json().catch(() => null)) as
+        | { ok?: boolean; error?: string }
+        | null;
+
+      if (!res.ok || !data?.ok) {
+        setState("error");
+        setErrorMessage(
+          data?.error === "invalid_email"
+            ? "Bitte prüfen Sie die E-Mail-Adresse."
+            : "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+        );
+        return;
+      }
+
+      setState("sent");
+      setTimeout(() => {
+        openCalendlyPopup({ name: name.trim(), email: email.trim() });
+      }, 900);
+    } catch {
+      setState("error");
+      setErrorMessage(
+        "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+      );
+    }
   }
 
   function openCalendlyAgain() {
     openCalendlyPopup({ name: name.trim(), email: email.trim() });
+  }
+
+  function resetForm() {
+    setState("idle");
+    setErrorMessage(null);
   }
 
   return (
@@ -204,7 +234,7 @@ export default function SoftwareIdeaHero() {
             className="relative"
           >
             <div className="card-lift relative overflow-hidden p-6 sm:p-8">
-              {!sent ? (
+              {state !== "sent" ? (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-700">
                     <Sparkles size={12} strokeWidth={2.4} />
@@ -220,10 +250,11 @@ export default function SoftwareIdeaHero() {
                         <input
                           type="text"
                           required
+                          disabled={state === "sending"}
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           placeholder="Vor- und Nachname"
-                          className="mt-1.5 block w-full rounded-xl border border-ink-900/15 bg-white px-3.5 py-2.5 text-[14.5px] text-ink-900 shadow-sm outline-none transition-all placeholder:text-ink-400 focus:border-accent-500/60 focus:ring-2 focus:ring-accent-500/20"
+                          className="mt-1.5 block w-full rounded-xl border border-ink-900/15 bg-white px-3.5 py-2.5 text-[14.5px] text-ink-900 shadow-sm outline-none transition-all placeholder:text-ink-400 focus:border-accent-500/60 focus:ring-2 focus:ring-accent-500/20 disabled:opacity-60"
                         />
                       </label>
                       <label className="block">
@@ -233,10 +264,11 @@ export default function SoftwareIdeaHero() {
                         <input
                           type="email"
                           required
+                          disabled={state === "sending"}
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="name@firma.de"
-                          className="mt-1.5 block w-full rounded-xl border border-ink-900/15 bg-white px-3.5 py-2.5 text-[14.5px] text-ink-900 shadow-sm outline-none transition-all placeholder:text-ink-400 focus:border-accent-500/60 focus:ring-2 focus:ring-accent-500/20"
+                          className="mt-1.5 block w-full rounded-xl border border-ink-900/15 bg-white px-3.5 py-2.5 text-[14.5px] text-ink-900 shadow-sm outline-none transition-all placeholder:text-ink-400 focus:border-accent-500/60 focus:ring-2 focus:ring-accent-500/20 disabled:opacity-60"
                         />
                       </label>
                     </div>
@@ -247,25 +279,51 @@ export default function SoftwareIdeaHero() {
                       </span>
                       <textarea
                         required
+                        disabled={state === "sending"}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         rows={6}
                         placeholder="z. B. Ich will KI in meinen E-Mails, die Antworten vorschlägt und mir bei der Priorisierung hilft ..."
-                        className="mt-1.5 block w-full resize-y rounded-xl border border-ink-900/15 bg-white px-3.5 py-3 text-[14.5px] leading-relaxed text-ink-900 shadow-sm outline-none transition-all placeholder:text-ink-400 focus:border-accent-500/60 focus:ring-2 focus:ring-accent-500/20"
+                        className="mt-1.5 block w-full resize-y rounded-xl border border-ink-900/15 bg-white px-3.5 py-3 text-[14.5px] leading-relaxed text-ink-900 shadow-sm outline-none transition-all placeholder:text-ink-400 focus:border-accent-500/60 focus:ring-2 focus:ring-accent-500/20 disabled:opacity-60"
                       />
                     </label>
                   </div>
 
+                  {state === "error" && errorMessage && (
+                    <p
+                      role="alert"
+                      className="rounded-xl border border-red-500/25 bg-red-50 px-4 py-2.5 text-[13px] leading-relaxed text-red-700"
+                    >
+                      {errorMessage}
+                    </p>
+                  )}
+
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <p className="text-[12px] leading-relaxed text-ink-500">
-                      Öffnet Ihr E-Mail-Programm mit einer vorbereiteten
-                      Nachricht an{" "}
-                      <span className="font-medium text-ink-700">{EMAIL}</span>.
+                      Ihre Nachricht wird direkt an das KBS-Team gesendet, kein
+                      E-Mail-Programm nötig.
                     </p>
-                    <button type="submit" className="btn-primary">
-                      <Send size={15} strokeWidth={2.2} />
-                      Anfrage senden
-                      <ArrowRight size={15} strokeWidth={2.2} />
+                    <button
+                      type="submit"
+                      disabled={state === "sending"}
+                      className="btn-primary disabled:cursor-not-allowed disabled:opacity-70"
+                    >
+                      {state === "sending" ? (
+                        <>
+                          <Loader2
+                            size={15}
+                            strokeWidth={2.2}
+                            className="animate-spin"
+                          />
+                          Wird gesendet …
+                        </>
+                      ) : (
+                        <>
+                          <Send size={15} strokeWidth={2.2} />
+                          Anfrage senden
+                          <ArrowRight size={15} strokeWidth={2.2} />
+                        </>
+                      )}
                     </button>
                   </div>
                 </form>
@@ -299,7 +357,7 @@ export default function SoftwareIdeaHero() {
                     </button>
                     <button
                       type="button"
-                      onClick={() => setSent(false)}
+                      onClick={resetForm}
                       className="btn-ghost"
                     >
                       Neue Anfrage stellen
