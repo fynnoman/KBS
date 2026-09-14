@@ -6,12 +6,13 @@ import BusinessModules from "@/components/business/BusinessModules";
 import BusinessCTA from "@/components/business/BusinessCTA";
 import FoerderungHinweis from "@/components/business/FoerderungHinweis";
 import FoerderungBadge from "@/components/business/FoerderungBadge";
+import SoftwareIdeaHero from "@/components/business/SoftwareIdeaHero";
 import { MODULES } from "@/lib/data/modules";
 import { SITE_URL } from "@/lib/config";
 
 const PAGE_URL = `${SITE_URL}/softwareloesungen`;
 const DESCRIPTION =
-  "Alle Softwarelösungen von KBS im Überblick: lokale KI-Infrastruktur, Custom RAG-Assistenten, Prozess-Automation, Voice-Agents, Governance-Bausteine und Enterprise-Rollout. Klare Festpreise pro Baustein.";
+  "Alle Softwarelösungen von KBS im Überblick: lokale KI-Infrastruktur, Custom RAG-Assistenten, Prozess-Automation, Voice-Agents, Governance-Bausteine und Enterprise-Rollout.";
 
 export const metadata: Metadata = {
   title: "Softwarelösungen · KBS KI-Beratung Saar",
@@ -82,6 +83,7 @@ export default function SoftwareloesungenPage() {
           { label: "Softwarelösungen", href: "/softwareloesungen" }
         ]}
       />
+      <SoftwareIdeaHero />
       <FoerderungBadge />
       <BusinessModules />
       <FoerderungHinweis />

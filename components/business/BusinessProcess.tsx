@@ -53,9 +53,9 @@ export default function BusinessProcess() {
                   Fünf klare Phasen.
                 </h2>
                 <p className="mt-6 text-[15.5px] leading-relaxed text-ink-500">
-                  Jede Phase hat ein festes Ergebnis, einen festen Preis und
-                  endet mit einer Ja/Nein-Entscheidung von Ihnen. Kein
-                  Vertrags-Lock-in, keine überraschenden Zusatzrechnungen.
+                  Jede Phase hat ein festes Ergebnis und endet mit einer
+                  Ja/Nein-Entscheidung von Ihnen. Kein Vertrags-Lock-in, keine
+                  überraschenden Zusatzrechnungen.
                 </p>
                 <div className="mt-8 rounded-2xl border border-ink-900/10 bg-white p-5">
                   <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-ink-400">

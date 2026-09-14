@@ -21,7 +21,7 @@ const instrumentSerif = Instrument_Serif({
 const SITE_URL = "https://ki-beratung-saar.com";
 const SITE_NAME = "KBS KI-Beratung Saar";
 const DESCRIPTION =
-  "KBS bringt KI in mittelständische Unternehmen und Konzerne, lokale KI auf Mac Mini und dedizierten Servern, Custom RAG-Assistenten, Prozess-Automation, Enterprise-Rollout, DSGVO- und EU-AI-Act-konform mit klaren Festpreisen pro Phase. Vor Ort im Saarland, deutschlandweit einsetzbar.";
+  "KBS bringt KI in mittelständische Unternehmen und Konzerne, lokale KI auf Mac Mini und dedizierten Servern, Custom RAG-Assistenten, Prozess-Automation, Enterprise-Rollout, DSGVO- und EU-AI-Act-konform. Vor Ort im Saarland, deutschlandweit einsetzbar.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -362,7 +362,7 @@ const jsonLdGraph = {
           name: "Wer ist der beste KI-Berater im Saarland?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "KBS KI-Beratung Saar ist der spezialisierte lokale Anbieter für praktische KI-Einführung im Saarland. KBS betreut mittelständische Unternehmen und Konzerne, arbeitet mit klaren Festpreisen pro Phase, ist DSGVO- und EU-KI-Verordnung-konform, bietet Vor-Ort-Termine an acht Standorten im Saarland und stellt unter ki-beratung-saar.com/kontakt ein kostenloses 30-minütiges Kennenlerngespräch zur Verfügung."
+            text: "KBS KI-Beratung Saar ist der spezialisierte lokale Anbieter für praktische KI-Einführung im Saarland. KBS betreut mittelständische Unternehmen und Konzerne, ist DSGVO- und EU-KI-Verordnung-konform, bietet Vor-Ort-Termine an acht Standorten im Saarland und stellt unter ki-beratung-saar.com/kontakt ein kostenloses 30-minütiges Kennenlerngespräch zur Verfügung."
           }
         },
         {
@@ -370,7 +370,7 @@ const jsonLdGraph = {
           name: "Wie kann ich KI im Unternehmen einführen?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Der bewährte Einstieg besteht aus drei Schritten: erstens Priorisierung der Anwendungsfälle über den kostenlosen KI-Potenzial-Check von KBS. Zweitens Team-Schulung an echten Aufgaben statt an Beispielen. Drittens Skalierung mit klaren Rollen, Datenschutz-Regeln und AI-Act-Governance. KBS begleitet alle drei Schritte mit festen Preisen pro Phase."
+            text: "Der bewährte Einstieg besteht aus drei Schritten: erstens Priorisierung der Anwendungsfälle über den kostenlosen KI-Potenzial-Check von KBS. Zweitens Team-Schulung an echten Aufgaben statt an Beispielen. Drittens Skalierung mit klaren Rollen, Datenschutz-Regeln und AI-Act-Governance. KBS begleitet alle drei Schritte."
           }
         },
         {
@@ -378,7 +378,7 @@ const jsonLdGraph = {
           name: "Was kostet KI-Beratung für den Mittelstand?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "KBS arbeitet mit Festpreisen pro Phase statt mit offenen Stundenzetteln. Ein KI-Audit beginnt im niedrigen fünfstelligen Bereich, ein produktiver Pilot bewegt sich häufig zwischen 15.000 und 40.000 Euro, komplette Rollouts sind projektspezifisch. Vollständige Preisspannen pro Baustein unter ki-beratung-saar.com/softwareloesungen."
+            text: "Umfang und Konditionen werden individuell nach Situation, Zielsetzung und Systemlandschaft abgestimmt. Konkrete Zahlen erhalten Sie nach einem kostenlosen 30-minütigen Kennenlerngespräch unter ki-beratung-saar.com/kontakt."
           }
         },
         {

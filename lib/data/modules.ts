@@ -4,22 +4,6 @@ export type ModuleCategory =
   | "automation"
   | "governance";
 
-export type ModulePriceTier = {
-  label: string;
-  price: number;
-  unit?: "einmalig" | "pro Monat" | "pro Woche" | "pro Tag";
-  note?: string;
-};
-
-export type ModulePricing = {
-  /** Wiederverwendbares Baustein-Bundle (Einrichtung + Lizenz pro Monat). */
-  bundle?: { setup: number; monthly: number };
-  /** Zusätzliche Custom-Tiers, z. B. Ausbaustufen für RAG oder Voice-Agent. */
-  tiers?: ModulePriceTier[];
-  /** Optionaler Preishinweis. */
-  note?: string;
-};
-
 export type SoftwareModule = {
   slug: string;
   title: string;
@@ -29,7 +13,6 @@ export type SoftwareModule = {
   features: string[];
   relatedCourse?: string;
   image: string;
-  pricing?: ModulePricing;
 };
 
 export const MODULE_CATEGORY_LABEL: Record<ModuleCategory, string> = {
@@ -50,10 +33,6 @@ export const MODULE_CATEGORY_INTRO: Record<ModuleCategory, string> = {
     "Werkzeuge für Führung, Datenschutz-Beauftragte und den Betriebsrat, damit KI-Einsatz nachvollziehbar bleibt."
 };
 
-const INFRA_BUNDLE = { setup: 2450, monthly: 145 };
-const FACH_BUNDLE = { setup: 3450, monthly: 195 };
-const AUTO_GOV_BUNDLE = { setup: 2950, monthly: 170 };
-
 export const MODULES: SoftwareModule[] = [
   {
     slug: "ai-gateway",
@@ -70,8 +49,7 @@ export const MODULES: SoftwareModule[] = [
       "Einmal-Anmeldung über Ihr bestehendes Firmen-Verzeichnis"
     ],
     relatedCourse: "ki-anwender",
-    image: "/module-images/ai-gateway.jpg",
-    pricing: { bundle: INFRA_BUNDLE }
+    image: "/module-images/ai-gateway.jpg"
   },
   {
     slug: "prompt-library",
@@ -88,8 +66,7 @@ export const MODULES: SoftwareModule[] = [
       "Export in bestehende Werkzeug-Landschaften"
     ],
     relatedCourse: "prompt-engineering",
-    image: "/module-images/prompt-library.jpg",
-    pricing: { bundle: INFRA_BUNDLE }
+    image: "/module-images/prompt-library.jpg"
   },
   {
     slug: "corporate-knowledge",
@@ -106,28 +83,7 @@ export const MODULES: SoftwareModule[] = [
       "Feedback der Nutzer verbessert die Antworten laufend"
     ],
     relatedCourse: "rag",
-    image: "/module-images/corporate-knowledge.jpg",
-    pricing: {
-      bundle: INFRA_BUNDLE,
-      tiers: [
-        {
-          label: "Kompakt · eine Abteilung, eine Wissensquelle",
-          price: 4900,
-          unit: "einmalig"
-        },
-        {
-          label: "Standard · mehrere Quellen, Outlook/Teams-Integration",
-          price: 9250,
-          unit: "einmalig"
-        },
-        {
-          label: "Enterprise · ERP, CRM, DMS mit Rechtekonzept",
-          price: 14950,
-          unit: "einmalig"
-        }
-      ],
-      note: "Umsetzungspreis anstelle des Baustein-Bundles bei individueller Anbindung"
-    }
+    image: "/module-images/corporate-knowledge.jpg"
   },
   {
     slug: "sales-assistant",
@@ -144,8 +100,7 @@ export const MODULES: SoftwareModule[] = [
       "Auswertung mit Zeitgewinn pro Vertriebsmitarbeiter"
     ],
     relatedCourse: "vertrieb",
-    image: "/module-images/sales-assistant.jpg",
-    pricing: { bundle: FACH_BUNDLE }
+    image: "/module-images/sales-assistant.jpg"
   },
   {
     slug: "content-studio",
@@ -162,8 +117,7 @@ export const MODULES: SoftwareModule[] = [
       "Direkte Veröffentlichung in gängige Redaktionssysteme"
     ],
     relatedCourse: "marketing",
-    image: "/module-images/content-studio.jpg",
-    pricing: { bundle: FACH_BUNDLE }
+    image: "/module-images/content-studio.jpg"
   },
   {
     slug: "invoice-ocr",
@@ -180,8 +134,7 @@ export const MODULES: SoftwareModule[] = [
       "Revisionssichere Ablage inkl. Nachweis-Protokoll"
     ],
     relatedCourse: "finanzen",
-    image: "/module-images/invoice-ocr.jpg",
-    pricing: { bundle: FACH_BUNDLE }
+    image: "/module-images/invoice-ocr.jpg"
   },
   {
     slug: "hr-copilot",
@@ -198,8 +151,7 @@ export const MODULES: SoftwareModule[] = [
       "Betriebsrats-freundliche Nutzungsdokumentation"
     ],
     relatedCourse: "hr",
-    image: "/module-images/hr-copilot.jpg",
-    pricing: { bundle: FACH_BUNDLE }
+    image: "/module-images/hr-copilot.jpg"
   },
   {
     slug: "support-triage",
@@ -216,8 +168,7 @@ export const MODULES: SoftwareModule[] = [
       "Auswertung und Bericht zu Bearbeitungszeiten"
     ],
     relatedCourse: "kundenservice",
-    image: "/module-images/support-triage.jpg",
-    pricing: { bundle: AUTO_GOV_BUNDLE }
+    image: "/module-images/support-triage.jpg"
   },
   {
     slug: "voice-reception",
@@ -234,28 +185,7 @@ export const MODULES: SoftwareModule[] = [
       "Nutzungs- und Zufriedenheits-Berichte"
     ],
     relatedCourse: "kundenservice",
-    image: "/module-images/voice-reception.jpg",
-    pricing: {
-      bundle: AUTO_GOV_BUNDLE,
-      tiers: [
-        {
-          label: "Basis · Annahme, Triage, Weiterleitung",
-          price: 3450,
-          unit: "einmalig"
-        },
-        {
-          label: "Ausbau · Terminvereinbarung, CRM-Anbindung",
-          price: 7450,
-          unit: "einmalig"
-        },
-        {
-          label: "Laufender Betrieb",
-          price: 195,
-          unit: "pro Monat"
-        }
-      ],
-      note: "Umsetzungspreis anstelle des Baustein-Bundles bei individueller Voice-Anbindung"
-    }
+    image: "/module-images/voice-reception.jpg"
   },
   {
     slug: "compliance-register",
@@ -272,8 +202,7 @@ export const MODULES: SoftwareModule[] = [
       "Export für interne Prüfer und Aufsichtsbehörden"
     ],
     relatedCourse: "ai-act",
-    image: "/module-images/compliance-register.jpg",
-    pricing: { bundle: AUTO_GOV_BUNDLE }
+    image: "/module-images/compliance-register.jpg"
   },
   {
     slug: "policy-templates",
@@ -290,8 +219,7 @@ export const MODULES: SoftwareModule[] = [
       "Übertragbar auf Konzernstrukturen"
     ],
     relatedCourse: "betriebsvereinbarung",
-    image: "/module-images/policy-templates.jpg",
-    pricing: { bundle: AUTO_GOV_BUNDLE }
+    image: "/module-images/policy-templates.jpg"
   },
   {
     slug: "usage-analytics",
@@ -308,8 +236,7 @@ export const MODULES: SoftwareModule[] = [
       "Führungs-Berichte auf Knopfdruck"
     ],
     relatedCourse: "strategie",
-    image: "/module-images/usage-analytics.jpg",
-    pricing: { bundle: AUTO_GOV_BUNDLE }
+    image: "/module-images/usage-analytics.jpg"
   },
 
   // ── Neue Lösungen aus dem Preiskatalog ────────────────────────
@@ -328,27 +255,7 @@ export const MODULES: SoftwareModule[] = [
       "Volle Datenhoheit, kein Cloud-Sync"
     ],
     relatedCourse: "lokale-ki",
-    image: "/module-images/ai-gateway.jpg",
-    pricing: {
-      tiers: [
-        {
-          label: "Starter · Mac Mini M4 Pro, bis 25 Nutzer",
-          price: 7950,
-          unit: "einmalig"
-        },
-        {
-          label: "Professional · dedizierter Server, bis 100 Nutzer",
-          price: 14250,
-          unit: "einmalig"
-        },
-        {
-          label: "Enterprise · GPU-Server, bis 500 Nutzer",
-          price: 22450,
-          unit: "einmalig"
-        }
-      ],
-      note: "Inkl. Hardware, Installation, Modellauswahl und Einweisung"
-    }
+    image: "/module-images/ai-gateway.jpg"
   },
   {
     slug: "prozess-automation",
@@ -365,13 +272,7 @@ export const MODULES: SoftwareModule[] = [
       "Regelmäßige Nachjustierung nach Nutzung"
     ],
     relatedCourse: "kundenservice",
-    image: "/module-images/support-triage.jpg",
-    pricing: {
-      tiers: [
-        { label: "Ein Prozess", price: 4450, unit: "einmalig" },
-        { label: "Drei Prozesse als Paket", price: 9750, unit: "einmalig" }
-      ]
-    }
+    image: "/module-images/support-triage.jpg"
   },
   {
     slug: "enterprise-rollout",
@@ -388,14 +289,7 @@ export const MODULES: SoftwareModule[] = [
       "Erfolgsmessung und Nachjustierung"
     ],
     relatedCourse: "strategie",
-    image: "/module-images/usage-analytics.jpg",
-    pricing: {
-      tiers: [
-        { label: "Bis 100 Mitarbeiter", price: 6450, unit: "einmalig" },
-        { label: "Bis 300 Mitarbeiter", price: 12250, unit: "einmalig" },
-        { label: "Bis 500 Mitarbeiter", price: 17450, unit: "einmalig" }
-      ]
-    }
+    image: "/module-images/usage-analytics.jpg"
   },
   {
     slug: "rechtssicherheit-ki",
@@ -412,21 +306,7 @@ export const MODULES: SoftwareModule[] = [
       "Schulung Ihrer Verantwortlichen"
     ],
     relatedCourse: "ai-act",
-    image: "/module-images/compliance-register.jpg",
-    pricing: {
-      tiers: [
-        {
-          label: "Prüfung & Risikoklassifizierung",
-          price: 1700,
-          unit: "einmalig"
-        },
-        {
-          label: "Vollpaket inkl. Betriebsvereinbarung & Schulung",
-          price: 3450,
-          unit: "einmalig"
-        }
-      ]
-    }
+    image: "/module-images/compliance-register.jpg"
   },
   {
     slug: "custom-saas",
@@ -442,13 +322,7 @@ export const MODULES: SoftwareModule[] = [
       "Anbindung an bestehende Systeme (SAP, DATEV, Salesforce)",
       "Optionale Wartungs-Vereinbarung nach Go-Live"
     ],
-    image: "/module-images/content-studio.jpg",
-    pricing: {
-      tiers: [
-        { label: "Wochensatz", price: 700, unit: "pro Woche" }
-      ],
-      note: "Mindestumfang 2 Wochen"
-    }
+    image: "/module-images/content-studio.jpg"
   },
   {
     slug: "managed-ki",
@@ -465,10 +339,6 @@ export const MODULES: SoftwareModule[] = [
       "Empfehlung neuer Werkzeuge und Ausbaustufen"
     ],
     relatedCourse: "strategie",
-    image: "/module-images/usage-analytics.jpg",
-    pricing: {
-      tiers: [{ label: "Enterprise-Betreuung", price: 445, unit: "pro Monat" }],
-      note: "Nur für Business-Kunden nach Rollout"
-    }
+    image: "/module-images/usage-analytics.jpg"
   }
 ];

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { Calendar, ArrowRight, ShieldCheck } from "lucide-react";
+import { Calendar, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import Link from "next/link";
 import KIStamp from "../KIStamp";
 
@@ -53,8 +53,8 @@ export default function BusinessHero() {
               Wir installieren lokale KI-Systeme auf Ihrer Hardware, bauen
               maßgeschneiderte Assistenten für Ihr Firmenwissen, rollen
               KI-Workflows über ganze Abteilungen aus und schulen Ihre
-              Belegschaft mit Live-Kursen, DSGVO-konform, ohne Cloud-Zwang
-              und mit klaren Festpreisen pro Phase.
+              Belegschaft mit Live-Kursen, DSGVO-konform und ohne
+              Cloud-Zwang.
             </motion.p>
 
             <motion.div
@@ -63,13 +63,14 @@ export default function BusinessHero() {
               transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="mt-10 flex flex-wrap items-center gap-3"
             >
-              <Link href="#termin" className="btn-primary">
-                <Calendar size={16} strokeWidth={2.4} />
-                Strategiegespräch buchen
+              <Link href="/softwareloesungen#idee" className="btn-primary">
+                <Sparkles size={16} strokeWidth={2.4} />
+                Ihre KI-Idee schildern
+                <ArrowRight size={15} strokeWidth={2.2} />
               </Link>
-              <Link href="/softwareloesungen" className="btn-ghost">
-                Softwarelösungen
-                <ArrowRight size={16} strokeWidth={2.2} />
+              <Link href="#termin" className="btn-ghost">
+                <Calendar size={16} strokeWidth={2.2} />
+                Strategiegespräch buchen
               </Link>
             </motion.div>
           </div>
@@ -148,7 +149,7 @@ export default function BusinessHero() {
           className="mt-12 grid grid-cols-2 gap-2 sm:mt-16 sm:grid-cols-4 md:mt-20"
         >
           {[
-            "Festpreise pro Phase",
+            "Klare Bausteine pro Phase",
             "EU AI Act-konform",
             "Live-Schulungen für Ihr Team",
             "Fester Ansprechpartner nach Go-Live"

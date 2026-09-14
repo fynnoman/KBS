@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: "Wie viel kostet eine Enterprise-Umsetzung?",
-    a: "Preise hängen vom Umfang ab, wir arbeiten mit klaren Festpreisen pro Phase. Ein KI-Audit beginnt im niedrigen fünfstelligen Bereich, ein produktiver Pilot bewegt sich häufig zwischen 15.000 und 40.000 Euro, komplette Rollouts sind projektspezifisch. Konkrete Zahlen erhalten Sie nach dem Discovery-Call."
+    a: "Umfang und Konditionen werden individuell abgestimmt und hängen von Ausgangslage, Zielsetzung und Systemlandschaft ab. Konkrete Zahlen erhalten Sie nach dem Discovery-Call."
   },
   {
     q: "Können Sie in bestehende Systeme (SAP, DATEV, Microsoft 365, Salesforce) integrieren?",

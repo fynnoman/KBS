@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/config";
 
 const PAGE_URL = `${SITE_URL}/ueber-uns`;
 const DESCRIPTION =
-  "Über KBS KI-Beratung Saar. Der lokale KI-Partner im Saarland für Unternehmen und Konzerne. Fester Ansprechpartner, klare Festpreise, produktiv umgesetzte Projekte in Next.js, TypeScript und SwiftUI.";
+  "Über KBS KI-Beratung Saar. Der lokale KI-Partner im Saarland für Unternehmen und Konzerne. Fester Ansprechpartner, produktiv umgesetzte Projekte in Next.js, TypeScript und SwiftUI.";
 
 export const metadata: Metadata = {
   title: "Über uns · KBS KI-Beratung Saar",

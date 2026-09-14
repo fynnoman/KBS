@@ -59,7 +59,7 @@ export default function FoerderungHinweis() {
                   Staatlich förderfähig.
                   <br />
                   <span className="display italic text-ink-500">
-                    Zuschuss statt Vollpreis.
+                    Zuschuss statt Eigenanteil.
                   </span>
                 </h2>
 
@@ -68,16 +68,15 @@ export default function FoerderungHinweis() {
                   EU-Programme förderfähig. Je nach Programm und
                   Unternehmensgröße übernimmt der Fördergeber bis zu 80 Prozent
                   der Kosten. Ihr Unternehmen bezahlt in diesen Fällen nur den
-                  verbleibenden Eigenanteil, nicht den vollen Projektpreis.
-                  Ihr Unternehmen stellt den Antrag beim jeweiligen
-                  Fördergeber, wir liefern die passende Angebots- und
-                  Leistungsdokumentation in der geforderten Form.
+                  verbleibenden Eigenanteil. Ihr Unternehmen stellt den Antrag
+                  beim jeweiligen Fördergeber, wir liefern die passende
+                  Angebots- und Leistungsdokumentation in der geforderten Form.
                 </p>
 
                 <ul className="mt-7 space-y-2.5">
                   {[
                     "Bis zu 80 Prozent Zuschuss je nach Programm und Unternehmensgröße",
-                    "Ihr Eigenanteil kann so auf einen Bruchteil des Listenpreises sinken",
+                    "Ihr Eigenanteil kann so auf einen Bruchteil der Gesamtkosten sinken",
                     "Angebots- und Leistungsnachweise passend zum Antragsverfahren",
                     "Prüfung im kostenlosen Erstgespräch, welche Programme für Sie in Frage kommen"
                   ].map((item) => (

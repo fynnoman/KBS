@@ -27,12 +27,6 @@ const CATEGORY_ORDER: ModuleCategory[] = [
   "governance"
 ];
 
-const euro = new Intl.NumberFormat("de-DE", {
-  style: "currency",
-  currency: "EUR",
-  maximumFractionDigits: 0
-});
-
 const CATEGORY_ICON: Record<ModuleCategory, typeof Layers> = {
   infrastruktur: Layers,
   fachfunktion: Users,
@@ -159,69 +153,6 @@ export default function BusinessModules() {
                         </div>
 
                         <div className="mt-auto pt-6">
-                          {m.pricing && (
-                            <div className="mb-3 rounded-2xl border border-accent-500/25 bg-accent-500/10 p-4">
-                              <p className="text-[10.5px] font-semibold uppercase tracking-[0.16em] text-accent-800">
-                                Preise · netto zzgl. USt.
-                              </p>
-                              <div className="mt-3 space-y-2">
-                                {m.pricing.bundle && (
-                                  <div className="flex items-baseline justify-between gap-3">
-                                    <p className="text-[12.5px] font-medium text-ink-700">
-                                      Baustein-Einrichtung
-                                      <span className="ml-1 text-ink-400">
-                                        + Lizenz
-                                      </span>
-                                    </p>
-                                    <p className="text-right text-[15px] font-semibold tracking-tight text-ink-900">
-                                      {euro.format(m.pricing.bundle.setup)}
-                                      <span className="ml-1 text-[11.5px] font-medium uppercase tracking-[0.14em] text-ink-500">
-                                        einmalig
-                                      </span>
-                                      <br />
-                                      {euro.format(m.pricing.bundle.monthly)}
-                                      <span className="ml-1 text-[11.5px] font-medium uppercase tracking-[0.14em] text-ink-500">
-                                        pro Monat
-                                      </span>
-                                    </p>
-                                  </div>
-                                )}
-                                {m.pricing.tiers && m.pricing.tiers.length > 0 && (
-                                  <div
-                                    className={`${
-                                      m.pricing.bundle
-                                        ? "mt-3 border-t border-accent-500/20 pt-3"
-                                        : ""
-                                    } space-y-1.5`}
-                                  >
-                                    {m.pricing.tiers.map((t) => (
-                                      <div
-                                        key={t.label}
-                                        className="flex items-baseline justify-between gap-3"
-                                      >
-                                        <p className="text-[12.5px] leading-snug text-ink-700">
-                                          {t.label}
-                                        </p>
-                                        <p className="text-right text-[14px] font-semibold tracking-tight text-ink-900">
-                                          {euro.format(t.price)}
-                                          {t.unit && (
-                                            <span className="ml-1 text-[11px] font-medium uppercase tracking-[0.14em] text-ink-500">
-                                              {t.unit}
-                                            </span>
-                                          )}
-                                        </p>
-                                      </div>
-                                    ))}
-                                  </div>
-                                )}
-                                {m.pricing.note && (
-                                  <p className="pt-1 text-[11.5px] leading-snug text-ink-500">
-                                    {m.pricing.note}
-                                  </p>
-                                )}
-                              </div>
-                            </div>
-                          )}
                           {relCourse && (
                             <Link
                               href={`/kurse/${relCourse.slug}`}

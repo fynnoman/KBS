@@ -6,9 +6,7 @@ import {
   ArrowUpRight,
   Calendar,
   Phone,
-  Sparkles,
   ShieldCheck,
-  Tag,
   Layers
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
@@ -79,87 +77,6 @@ export async function generateMetadata({
   };
 }
 
-function formatEUR(v: number) {
-  return new Intl.NumberFormat("de-DE").format(v);
-}
-
-function priceLabel(unit?: string) {
-  switch (unit) {
-    case "pro Monat":
-      return "€ / Monat";
-    case "pro Woche":
-      return "€ / Woche";
-    case "pro Tag":
-      return "€ / Tag";
-    case "einmalig":
-    default:
-      return "€ einmalig";
-  }
-}
-
-function offersForModule(mod: SoftwareModule, url: string) {
-  const offers: Record<string, unknown>[] = [];
-  if (mod.pricing?.bundle) {
-    offers.push({
-      "@type": "Offer",
-      name: `${mod.title} · Baustein-Bundle`,
-      description:
-        "Einmalige Einrichtung plus laufende Betreuungspauschale pro Monat.",
-      url,
-      priceSpecification: [
-        {
-          "@type": "PriceSpecification",
-          name: "Einrichtung",
-          price: mod.pricing.bundle.setup,
-          priceCurrency: "EUR"
-        },
-        {
-          "@type": "UnitPriceSpecification",
-          name: "Laufende Betreuung",
-          price: mod.pricing.bundle.monthly,
-          priceCurrency: "EUR",
-          unitCode: "MON",
-          referenceQuantity: {
-            "@type": "QuantitativeValue",
-            value: 1,
-            unitCode: "MON"
-          }
-        }
-      ],
-      availability: "https://schema.org/InStock",
-      businessFunction: "http://purl.org/goodrelations/v1#ProvideService"
-    });
-  }
-  if (mod.pricing?.tiers) {
-    for (const t of mod.pricing.tiers) {
-      offers.push({
-        "@type": "Offer",
-        name: t.label,
-        price: t.price,
-        priceCurrency: "EUR",
-        priceSpecification: {
-          "@type": t.unit === "einmalig" ? "PriceSpecification" : "UnitPriceSpecification",
-          price: t.price,
-          priceCurrency: "EUR",
-          ...(t.unit && t.unit !== "einmalig"
-            ? {
-                unitCode:
-                  t.unit === "pro Monat"
-                    ? "MON"
-                    : t.unit === "pro Woche"
-                    ? "WEE"
-                    : "DAY"
-              }
-            : {})
-        },
-        availability: "https://schema.org/InStock",
-        url
-      });
-    }
-  }
-  return offers;
-}
-
 export default async function ModulePage({
   params
 }: {
@@ -176,8 +93,6 @@ export default async function ModulePage({
   const otherInCategory = MODULES.filter(
     (m) => m.category === mod.category && m.slug !== mod.slug
   ).slice(0, 5);
-
-  const offers = offersForModule(mod, url);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -201,7 +116,6 @@ export default async function ModulePage({
         },
         url,
         image: `${SITE_URL}/opengraph-image`,
-        offers: offers.length > 0 ? offers : undefined,
         additionalProperty: mod.features.map((f) => ({
           "@type": "PropertyValue",
           name: "Feature",
@@ -326,71 +240,12 @@ export default async function ModulePage({
         </div>
       </section>
 
-      {/* Pricing */}
-      {(mod.pricing?.bundle || mod.pricing?.tiers) && (
-        <section className="border-t border-ink-900/8 bg-white/70 py-16 md:py-20">
-          <div className="mx-auto max-w-6xl px-6">
-            <Reveal>
-              <p className="text-sm uppercase tracking-[0.22em] text-ink-500">
-                <Tag size={12} strokeWidth={2.4} className="mr-2 inline" />
-                Investition
-              </p>
-              <h2 className="mt-3 text-3xl leading-tight tracking-tight text-ink-900 sm:text-4xl">
-                Klare Preise, keine offene Stundenrechnung
-              </h2>
-            </Reveal>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {mod.pricing?.bundle && (
-                <Reveal>
-                  <div className="card p-7">
-                    <p className="text-xs uppercase tracking-[0.22em] text-ink-500">
-                      Baustein-Bundle
-                    </p>
-                    <p className="mt-3 text-2xl tracking-tight text-ink-900">
-                      {formatEUR(mod.pricing.bundle.setup)} € Einrichtung
-                    </p>
-                    <p className="mt-1 text-[15px] text-ink-500">
-                      zzgl. {formatEUR(mod.pricing.bundle.monthly)} € pro Monat für laufende Betreuung
-                    </p>
-                    <p className="mt-5 text-[14px] leading-relaxed text-ink-500">
-                      Enthält Einrichtung, Anbindung an Ihre Systeme, Übergabe
-                      und die laufende Betreuung inklusive Vorlagen-Pflege und Updates.
-                    </p>
-                  </div>
-                </Reveal>
-              )}
-
-              {mod.pricing?.tiers?.map((t, i) => (
-                <Reveal key={i} delay={i * 60}>
-                  <div className="card p-7">
-                    <p className="text-xs uppercase tracking-[0.22em] text-ink-500">
-                      Umsetzungsstufe
-                    </p>
-                    <p className="mt-3 text-lg leading-snug text-ink-900">
-                      {t.label}
-                    </p>
-                    <p className="mt-4 text-2xl tracking-tight text-ink-900">
-                      {formatEUR(t.price)} {priceLabel(t.unit)}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-
-            {mod.pricing?.note && (
-              <p className="mt-6 text-sm italic text-ink-500">{mod.pricing.note}</p>
-            )}
-          </div>
-        </section>
-      )}
-
       {/* Vertrauens-Zeile */}
       <section className="py-14">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <div className="card p-7 md:p-10">
-              <div className="grid gap-6 md:grid-cols-3">
+              <div className="grid gap-6 md:grid-cols-2">
                 <div className="flex items-start gap-3">
                   <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-100 text-accent-700">
                     <ShieldCheck size={16} strokeWidth={2.4} />
@@ -401,19 +256,6 @@ export default async function ModulePage({
                     </p>
                     <p className="mt-1 text-[14px] leading-relaxed text-ink-500">
                       Auf Wunsch komplett auf Ihrem eigenen Server, ohne Cloud-Übermittlung.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-100 text-accent-700">
-                    <Sparkles size={16} strokeWidth={2.4} />
-                  </span>
-                  <div>
-                    <p className="text-[15px] font-semibold text-ink-900">
-                      Festpreise pro Phase
-                    </p>
-                    <p className="mt-1 text-[14px] leading-relaxed text-ink-500">
-                      Klare Baustein-Preise. Keine offene Stundenrechnung, keine Überraschungen.
                     </p>
                   </div>
                 </div>

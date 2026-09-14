@@ -43,7 +43,7 @@ const STANDORT_ANGEBOTE = [
     tag: "Über uns",
     name: "Über KBS",
     intro:
-      "Der lokale KI-Partner im Saarland. Feste Ansprechpartner, klare Festpreise pro Phase, DSGVO- und EU-AI-Act-konform."
+      "Der lokale KI-Partner im Saarland. Feste Ansprechpartner, DSGVO- und EU-AI-Act-konform."
   },
   {
     slug: "kontakt",
