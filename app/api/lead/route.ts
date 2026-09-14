@@ -133,18 +133,39 @@ export async function POST(req: Request) {
     });
 
     if (result.error) {
-      console.error("[api/lead] Resend error", result.error);
+      const err = result.error as {
+        name?: string;
+        message?: string;
+        statusCode?: number;
+      };
+      console.error("[api/lead] Resend error", err);
+
+      const isAuth =
+        err.statusCode === 401 ||
+        err.name === "validation_error" &&
+          typeof err.message === "string" &&
+          /api key|unauthorized/i.test(err.message);
+
       return NextResponse.json(
-        { ok: false, error: "send_failed" },
-        { status: 502 }
+        {
+          ok: false,
+          error: isAuth ? "mail_auth_failed" : "send_failed",
+          detail: {
+            name: err.name ?? null,
+            message: err.message ?? null,
+            statusCode: err.statusCode ?? null
+          }
+        },
+        { status: isAuth ? 401 : 502 }
       );
     }
 
     return NextResponse.json({ ok: true, id: result.data?.id ?? null });
   } catch (err) {
     console.error("[api/lead] unexpected error", err);
+    const message = err instanceof Error ? err.message : String(err);
     return NextResponse.json(
-      { ok: false, error: "unexpected" },
+      { ok: false, error: "unexpected", detail: { message } },
       { status: 500 }
     );
   }
