@@ -71,7 +71,7 @@ export default function DatenschutzPage() {
               </h2>
               <p>
                 Schulz & Stosse GbR<br />
-                Heiligenbronstr. 7, 66359 Bous<br />
+                In der Acht 44, 66333 Völklingen<br />
                 info@ki-beratung-saar.com
               </p>
             </div>

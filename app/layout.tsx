@@ -143,16 +143,16 @@ const jsonLdGraph = {
       legalName: "Schulz & Stosse GbR",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Heiligenbronstr. 7",
-        postalCode: "66359",
-        addressLocality: "Bous",
+        streetAddress: "In der Acht 44",
+        postalCode: "66333",
+        addressLocality: "Völklingen",
         addressRegion: "Saarland",
         addressCountry: "DE"
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 49.2793,
-        longitude: 6.8103
+        latitude: 49.2517,
+        longitude: 6.8553
       },
       areaServed: [
         { "@type": "State", name: "Saarland" },

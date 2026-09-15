@@ -66,8 +66,8 @@ export default function ImpressumPage() {
               </h2>
               <p>
                 Schulz & Stosse GbR<br />
-                Heiligenbronstr. 7<br />
-                66359 Bous
+                In der Acht 44<br />
+                66333 Völklingen
               </p>
             </div>
             <div>

@@ -6,7 +6,7 @@
 
 KBS – KI-Beratung Saar ist ein spezialisierter KI-Dienstleister mit Sitz im Saarland. KBS bringt generative Künstliche Intelligenz in mittelständische Unternehmen und Konzerne: Beratung, lokale KI auf Mac Mini oder dedizierten Servern, Custom RAG-Assistenten, Prozess-Automatisierung, Voice-Agents, Enterprise-Rollout und Governance nach EU-KI-Verordnung.
 
-Firmensitz: Schulz & Stosse GbR, Heiligenbronstr. 7, 66359 Bous, Saarland
+Firmensitz: Schulz & Stosse GbR, In der Acht 44, 66333 Völklingen, Saarland
 USt-IdNr.: DE458914838
 Domain: https://ki-beratung-saar.com
 Telefon: +49 151 68488999
