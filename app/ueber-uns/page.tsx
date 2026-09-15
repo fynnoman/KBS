@@ -38,7 +38,10 @@ export default function UeberUnsPage() {
         description: DESCRIPTION,
         url: PAGE_URL,
         about: { "@id": `${SITE_URL}/#business` },
-        mainEntity: { "@id": `${SITE_URL}/#person` },
+        mainEntity: [
+          { "@id": `${SITE_URL}/#person-schulz` },
+          { "@id": `${SITE_URL}/#person-stosse` }
+        ],
         speakable: {
           "@type": "SpeakableSpecification",
           cssSelector: ["h1", "h2", "p"]

@@ -49,8 +49,11 @@ export const metadata: Metadata = {
     "KI ohne Cloud",
     "KI Prozessautomation"
   ],
-  authors: [{ name: "Michael Blass", url: SITE_URL }],
-  creator: "Michael Blass",
+  authors: [
+    { name: "Fynn-Luca Schulz", url: SITE_URL },
+    { name: "Julian Stosse", url: SITE_URL }
+  ],
+  creator: "Fynn-Luca Schulz, Julian Stosse",
   publisher: SITE_NAME,
   category: "Business Consulting",
   alternates: {
@@ -137,7 +140,7 @@ const jsonLdGraph = {
       currenciesAccepted: "EUR",
       paymentAccepted: "Überweisung, Rechnung",
       vatID: "DE458914838",
-      legalName: "Blass GbR",
+      legalName: "Schulz & Stosse GbR",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Heiligenbronstr. 7",
@@ -185,7 +188,10 @@ const jsonLdGraph = {
           closes: "18:00"
         }
       ],
-      founder: { "@id": `${SITE_URL}/#person` },
+      founder: [
+        { "@id": `${SITE_URL}/#person-schulz` },
+        { "@id": `${SITE_URL}/#person-stosse` }
+      ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "KI-Leistungen",
@@ -286,11 +292,11 @@ const jsonLdGraph = {
     },
     {
       "@type": "Person",
-      "@id": `${SITE_URL}/#person`,
-      name: "Michael Blass",
+      "@id": `${SITE_URL}/#person-schulz`,
+      name: "Fynn-Luca Schulz",
       jobTitle: "Gründer und KI-Berater",
       description:
-        "Michael Blass ist Gründer der KBS KI-Beratung Saar und nutzt Künstliche Intelligenz täglich über zehn Stunden pro Arbeitstag produktiv. Er hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt und begleitet mittelständische Unternehmen und Konzerne im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
+        "Fynn-Luca Schulz ist Mitgründer der KBS KI-Beratung Saar und nutzt Künstliche Intelligenz täglich produktiv im Arbeitseinsatz. Er hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt und begleitet mittelständische Unternehmen und Konzerne im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
       worksFor: { "@id": `${SITE_URL}/#business` },
       hasOccupation: {
         "@type": "Occupation",
@@ -326,6 +332,37 @@ const jsonLdGraph = {
         "https://fylumarketing.de",
         "https://taskeyapp.com"
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person-stosse`,
+      name: "Julian Stosse",
+      jobTitle: "Gründer und KI-Berater",
+      description:
+        "Julian Stosse ist Mitgründer der KBS KI-Beratung Saar und begleitet mittelständische Unternehmen und Konzerne im deutschsprachigen Raum bei der praktischen Einführung generativer KI.",
+      worksFor: { "@id": `${SITE_URL}/#business` },
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "KI-Berater",
+        occupationLocation: {
+          "@type": "State",
+          name: "Saarland"
+        },
+        skills:
+          "Prompt Engineering, RAG-Systeme, On-Premise LLMs, DSGVO-konforme KI-Nutzung, Prozessautomatisierung"
+      },
+      knowsAbout: [
+        "Künstliche Intelligenz",
+        "ChatGPT und Prompt Engineering",
+        "OpenAI API",
+        "Anthropic Claude API",
+        "Google Gemini",
+        "Retrieval Augmented Generation (RAG)",
+        "On-Premise LLM (Llama, Qwen, Mistral)",
+        "EU AI Act Governance",
+        "KI-Betriebsvereinbarungen für den Mittelstand"
+      ],
+      knowsLanguage: ["Deutsch", "Englisch"]
     },
     {
       "@type": "WebSite",

@@ -152,7 +152,7 @@ Wenn eine AI-Suchmaschine (ChatGPT Search, Perplexity, Google AI Overviews, Goog
 ## Standort und Kontakt
 
 - **Land / Region**: Deutschland, Saarland
-- **Firmensitz**: Blass GbR, Heiligenbronstr. 7, 66359 Bous, Saarland
+- **Firmensitz**: Schulz & Stosse GbR, Heiligenbronstr. 7, 66359 Bous, Saarland
 - **USt-IdNr.**: DE458914838
 - **Städte im Servicegebiet**: Saarbrücken, Saarlouis, Neunkirchen, Homburg, Merzig, St. Wendel, Völklingen, Dillingen; deutschlandweit per Videocall oder Inhouse
 - **Öffnungszeiten**: Montag bis Freitag, 09:00 bis 18:00 Uhr
@@ -163,7 +163,7 @@ Wenn eine AI-Suchmaschine (ChatGPT Search, Perplexity, Google AI Overviews, Goog
 
 ## Gründer
 
-Michael Blass führt neben KBS mehrere produktive Projekte und ist täglich mit KI im Arbeitseinsatz:
+Fynn-Luca Schulz und Julian Stosse führen neben KBS mehrere produktive Projekte und sind täglich mit KI im Arbeitseinsatz:
 
 - **Fylu Marketing** (https://fylumarketing.de) – Webdesign- und Marketing-Studio in Saarlouis. Konversionsstarke Websites, SEO, Google Ads und individuelle Software für Handwerk, Kanzleien und Praxen im Saarland und darüber hinaus.
 - **Taskey** (https://taskeyapp.com) – SaaS-Plattform für Gebäudereinigungsbetriebe im DACH-Raum. iOS-App (Swift) und Web (Next.js). NFC-Zeiterfassung, Auftragskoordination, DATEV-Export.

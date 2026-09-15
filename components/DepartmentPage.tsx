@@ -52,11 +52,18 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
         articleBody: (dept.longIntro ?? [dept.intro]).join("\n\n"),
         keywords: dept.keywords.join(", "),
         about: dept.keywords.map((k) => ({ "@type": "Thing", name: k })),
-        author: {
-          "@type": "Person",
-          "@id": `${SITE_URL}/#person`,
-          name: "Michael Blass"
-        },
+        author: [
+          {
+            "@type": "Person",
+            "@id": `${SITE_URL}/#person-schulz`,
+            name: "Fynn-Luca Schulz"
+          },
+          {
+            "@type": "Person",
+            "@id": `${SITE_URL}/#person-stosse`,
+            name: "Julian Stosse"
+          }
+        ],
         publisher: {
           "@type": "Organization",
           name: "KBS KI-Beratung Saar",

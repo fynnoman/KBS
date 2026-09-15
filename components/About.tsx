@@ -40,7 +40,7 @@ export default function About() {
                 <KIStamp />
                 <Image
                   src="/gruender-portrait.jpg"
-                  alt="Michael Blass, Gründer von KBS im Gespräch mit Kunden"
+                  alt="Fynn-Luca Schulz und Julian Stosse, Gründer von KBS im Gespräch mit Kunden"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-[68%_center]"
@@ -57,7 +57,7 @@ export default function About() {
                     Gründer
                   </p>
                   <p className="mt-1 text-xl font-medium tracking-tight text-white sm:text-2xl">
-                    Michael Blass
+                    Fynn-Luca Schulz & Julian Stosse
                   </p>
                 </div>
               </div>
@@ -90,22 +90,22 @@ export default function About() {
             <Reveal delay={0.08}>
               <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-ink-600 sm:text-[17px]">
                 <p>
-                  Ich bin <span className="font-medium text-ink-900">Michael Blass</span>.
-                  Neben KBS führe ich <span className="font-medium text-ink-900">
+                  Wir sind <span className="font-medium text-ink-900">Fynn-Luca Schulz</span>
+                  {" "}und <span className="font-medium text-ink-900">Julian Stosse</span>,
+                  die Gründer von KBS. Neben KBS führen wir <span className="font-medium text-ink-900">
                     Fylu Marketing
-                  </span>{" "}
-                 , ein Webdesign- und Marketing-Studio aus Saarlouis für
+                  </span>, ein Webdesign- und Marketing-Studio aus Saarlouis für
                   konversionsstarke Websites, SEO und Google Ads.
                 </p>
                 <p>
-                  Und ich entwickle <span className="font-medium text-ink-900">Taskey</span>,
+                  Und wir entwickeln <span className="font-medium text-ink-900">Taskey</span>,
                   eine SaaS-Plattform für Gebäudereinigungsbetriebe im
                   DACH-Raum: iOS-App und Web, NFC-Zeiterfassung, Auftrags-
                   koordination und DATEV-Export, damit die Chefs das Telefon
                   wieder weglegen können.
                 </p>
                 <p>
-                  Bei meiner täglichen Arbeit nutze ich{" "}
+                  Bei unserer täglichen Arbeit nutzen wir{" "}
                   <span className="font-medium text-ink-900">KI mehr als zehn Stunden am Tag</span>
                   {" "}für Code, Content, Recherche, Analyse und Automatisierung.
                   Dazu über vierzig produktive Websites in Next.js und
@@ -113,8 +113,8 @@ export default function About() {
                   Agenturen in Deutschland laufen.
                 </p>
                 <p className="text-ink-700">
-                  Wenn ich Ihnen KI zeige, dann weil ich sie täglich selbst
-                  nutze, und weiß, was funktioniert und was nicht.
+                  Wenn wir Ihnen KI zeigen, dann weil wir sie täglich selbst
+                  nutzen, und wissen, was funktioniert und was nicht.
                 </p>
               </div>
             </Reveal>

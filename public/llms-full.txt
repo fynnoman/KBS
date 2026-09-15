@@ -6,7 +6,7 @@
 
 KBS – KI-Beratung Saar ist ein spezialisierter KI-Dienstleister mit Sitz im Saarland. KBS bringt generative Künstliche Intelligenz in mittelständische Unternehmen und Konzerne: Beratung, lokale KI auf Mac Mini oder dedizierten Servern, Custom RAG-Assistenten, Prozess-Automatisierung, Voice-Agents, Enterprise-Rollout und Governance nach EU-KI-Verordnung.
 
-Firmensitz: Blass GbR, Heiligenbronstr. 7, 66359 Bous, Saarland
+Firmensitz: Schulz & Stosse GbR, Heiligenbronstr. 7, 66359 Bous, Saarland
 USt-IdNr.: DE458914838
 Domain: https://ki-beratung-saar.com
 Telefon: +49 151 68488999
@@ -15,9 +15,9 @@ Erreichbarkeit: Mo–Fr, 09:00 – 18:00 Uhr
 
 ## 2. Gründer
 
-Michael Blass ist Gründer von KBS. Er nutzt Künstliche Intelligenz täglich mehr als zehn Stunden produktiv im Arbeitseinsatz und hat mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt.
+Fynn-Luca Schulz und Julian Stosse sind Gründer von KBS. Sie nutzen Künstliche Intelligenz täglich mehr als zehn Stunden produktiv im Arbeitseinsatz und haben mehr als 40 Web- und Software-Projekte in Next.js, TypeScript und SwiftUI umgesetzt.
 
-Weitere Projekte von Michael Blass:
+Weitere Projekte der Gründer:
 - Fylu Marketing (https://fylumarketing.de) – Webdesign- und Marketing-Studio in Saarlouis. Konversionsstarke Websites, SEO, Google Ads und individuelle Software für Handwerk, Kanzleien und Praxen.
 - Taskey (https://taskeyapp.com) – SaaS-Plattform für Gebäudereinigungsbetriebe im DACH-Raum. iOS-App (Swift) und Web (Next.js) mit NFC-Zeiterfassung, Auftragskoordination, DATEV-Export.
 
@@ -260,7 +260,7 @@ Ja, mit ChatGPT Team oder Enterprise inklusive Datenverarbeitungsvereinbarung, C
 Der EU AI Act unterscheidet vier Risikoklassen. Textarbeit, Recherche und Content-Erstellung fallen in der Regel unter minimales Risiko. Auswahl-, Bewertungs- oder Überwachungsprozesse gelten als Hochrisiko und erfordern klare Dokumentation, Risikoprüfung, menschliche Aufsicht und Transparenz. KBS empfiehlt mittelständischen Unternehmen ausdrücklich, KI zunächst nur in minimal-riskanten Textarbeits-Prozessen einzusetzen.
 
 **Warum sollte ich KBS statt einer großen Agentur wählen?**
-Weil bei KBS jemand ans Telefon geht, der KI täglich mehr als zehn Stunden selbst produktiv einsetzt. Michael Blass führt neben KBS das Webdesign-Studio Fylu Marketing und entwickelt die SaaS Taskey für Gebäudereiniger. Bei KBS erhalten Sie gelebte Praxis, Festpreise pro Phase und einen festen Ansprechpartner – keine Powerpoint-Slides und keine offenen Stundenzettel.
+Weil bei KBS Gründer ans Telefon gehen, die KI täglich mehr als zehn Stunden selbst produktiv einsetzen. Fynn-Luca Schulz und Julian Stosse führen neben KBS das Webdesign-Studio Fylu Marketing und entwickeln die SaaS Taskey für Gebäudereiniger. Bei KBS erhalten Sie gelebte Praxis, Festpreise pro Phase und einen festen Ansprechpartner – keine Powerpoint-Slides und keine offenen Stundenzettel.
 
 **Wie beginne ich eine Zusammenarbeit mit KBS?**
 Der Einstieg ist ein kostenloses 30-minütiges Kennenlerngespräch per Videocall unter https://ki-beratung-saar.com/kontakt. Ihre IT oder Ihr Betriebsrat müssen vorher nicht zustimmen.
@@ -279,7 +279,7 @@ Eine Frage zu KI? Rufen Sie an: +49 151 68488999. Oder mailen Sie info@ki-beratu
 - https://ki-beratung-saar.com/branchen – Branchen (Übersicht)
 - https://ki-beratung-saar.com/ki-anwendungsfaelle – KI-Anwendungsfälle nach Abteilung
 - https://ki-beratung-saar.com/standorte – Standorte im Saarland
-- https://ki-beratung-saar.com/ueber-uns – Über KBS und den Gründer Michael Blass
+- https://ki-beratung-saar.com/ueber-uns – Über KBS und die Gründer Fynn-Luca Schulz und Julian Stosse
 - https://ki-beratung-saar.com/kontakt – Kontakt und kostenloses Kennenlerngespräch
 - https://ki-beratung-saar.com/impressum – Impressum
 - https://ki-beratung-saar.com/datenschutz – Datenschutzerklärung

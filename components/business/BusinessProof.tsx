@@ -22,7 +22,7 @@ const PROOF = [
     icon: Zap,
     title: "Tägliche KI-Praxis",
     body:
-      "Über zehn Stunden pro Tag arbeite ich mit KI-Werkzeugen, für Code, Content, Recherche und Automatisierung. Sie bekommen also keine Powerpoint-Beratung, sondern jemanden, der die Werkzeuge tatsächlich täglich beherrscht."
+      "Über zehn Stunden pro Tag arbeiten wir mit KI-Werkzeugen, für Code, Content, Recherche und Automatisierung. Sie bekommen also keine Powerpoint-Beratung, sondern Partner, die die Werkzeuge tatsächlich täglich beherrschen."
   },
   {
     icon: Boxes,
@@ -43,7 +43,7 @@ export default function BusinessProof() {
                 <KIStamp />
                 <Image
                   src="/gruender-portrait.jpg"
-                  alt="Michael Blass, Gründer von KBS und aktiver KI-Anwender"
+                  alt="Fynn-Luca Schulz und Julian Stosse, Gründer von KBS und aktive KI-Anwender"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-[68%_center]"
@@ -57,10 +57,10 @@ export default function BusinessProof() {
                 />
                 <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">
                   <p className="text-[10.5px] font-medium uppercase tracking-[0.2em] text-white/75">
-                    Gründer · Aktiver KI-Anwender
+                    Gründer · Aktive KI-Anwender
                   </p>
                   <p className="mt-1 text-xl font-medium tracking-tight text-white sm:text-2xl">
-                    Michael Blass
+                    Fynn-Luca Schulz & Julian Stosse
                   </p>
                 </div>
               </div>
@@ -78,10 +78,10 @@ export default function BusinessProof() {
                 </span>
               </h2>
               <p className="mt-8 text-[16px] leading-relaxed text-ink-500 sm:text-[17px]">
-                KBS ist kein Beratungshaus, das über KI redet. Michael Blass
-                betreibt seit 2024 das Webdesign-Studio Fylu Marketing in
-                Saarlouis, entwickelt die SaaS-Plattform Taskey für die
-                Gebäudereinigung im DACH-Raum und arbeitet täglich mehr als
+                KBS ist kein Beratungshaus, das über KI redet. Fynn-Luca Schulz
+                und Julian Stosse betreiben seit 2024 das Webdesign-Studio Fylu
+                Marketing in Saarlouis, entwickeln die SaaS-Plattform Taskey für
+                die Gebäudereinigung im DACH-Raum und arbeiten täglich mehr als
                 zehn Stunden aktiv mit KI-Werkzeugen.
               </p>
             </Reveal>
