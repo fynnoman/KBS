@@ -15,6 +15,14 @@ type LeadPayload = {
   email?: unknown;
   message?: unknown;
   source?: unknown;
+  company?: unknown;
+  phone?: unknown;
+  process?: unknown;
+  systemA?: unknown;
+  systemB?: unknown;
+  systems?: unknown;
+  volume?: unknown;
+  context?: unknown;
 };
 
 function isNonEmptyString(v: unknown): v is string {
@@ -32,6 +40,11 @@ function escapeHtml(v: string): string {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+function optionalString(v: unknown, max = 300): string | null {
+  if (!isNonEmptyString(v)) return null;
+  return v.trim().slice(0, max);
 }
 
 export async function POST(req: Request) {
@@ -61,7 +74,7 @@ export async function POST(req: Request) {
   const message = payload.message.trim().slice(0, 5000);
   const source = isNonEmptyString(payload.source)
     ? payload.source.trim().slice(0, 200)
-    : "softwareloesungen";
+    : "website";
 
   if (!isEmail(email)) {
     return NextResponse.json(
@@ -69,6 +82,15 @@ export async function POST(req: Request) {
       { status: 400 }
     );
   }
+
+  const company = optionalString(payload.company);
+  const phone = optionalString(payload.phone);
+  const processName = optionalString(payload.process);
+  const systemA = optionalString(payload.systemA);
+  const systemB = optionalString(payload.systemB);
+  const systems = optionalString(payload.systems);
+  const volume = optionalString(payload.volume);
+  const context = optionalString(payload.context, 2000);
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -81,41 +103,75 @@ export async function POST(req: Request) {
 
   const resend = new Resend(apiKey);
 
-  const subject = `Neue Anfrage über ${source}: ${name}`;
-  const textBody = [
+  const subjectContext =
+    processName ??
+    (systemA && systemB ? `${systemA} ↔ ${systemB}` : null) ??
+    source;
+  const subject = `Neue Anfrage: ${subjectContext} · ${name}`;
+
+  const detailRows: { label: string; value: string }[] = [
+    { label: "Name", value: name },
+    { label: "E-Mail", value: email }
+  ];
+  if (company) detailRows.push({ label: "Unternehmen", value: company });
+  if (phone) detailRows.push({ label: "Telefon", value: phone });
+  if (processName) detailRows.push({ label: "Prozess", value: processName });
+  if (systemA) detailRows.push({ label: "System A", value: systemA });
+  if (systemB) detailRows.push({ label: "System B", value: systemB });
+  if (systems) detailRows.push({ label: "Eingesetzte Software", value: systems });
+  if (volume) detailRows.push({ label: "Volumen", value: volume });
+  detailRows.push({ label: "Quelle", value: source });
+
+  const textLines = [
     `Neue Anfrage über die KBS-Website (${source})`,
     "",
-    `Name: ${name}`,
-    `E-Mail: ${email}`,
+    ...detailRows.map((r) => `${r.label}: ${r.value}`),
     "",
     "Nachricht:",
     message
-  ].join("\n");
+  ];
+  if (context) {
+    textLines.push("", "Zusatz-Kontext:", context);
+  }
+  const textBody = textLines.join("\n");
+
+  const detailRowsHtml = detailRows
+    .map(
+      (r) => `
+        <tr>
+          <td style="padding:4px 12px 4px 0;color:#666;vertical-align:top;">${escapeHtml(
+            r.label
+          )}</td>
+          <td style="padding:4px 0;">${
+            r.label === "E-Mail"
+              ? `<a href="mailto:${escapeHtml(r.value)}">${escapeHtml(r.value)}</a>`
+              : escapeHtml(r.value)
+          }</td>
+        </tr>`
+    )
+    .join("");
 
   const htmlBody = `
     <div style="font-family:Inter,Arial,sans-serif;color:#111;line-height:1.55;font-size:14px;max-width:640px;">
       <p style="margin:0 0 8px 0;font-size:12px;color:#666;text-transform:uppercase;letter-spacing:0.14em;">
         Neue Anfrage · ${escapeHtml(source)}
       </p>
-      <h1 style="margin:0 0 16px 0;font-size:20px;">Anfrage von ${escapeHtml(
-        name
-      )}</h1>
+      <h1 style="margin:0 0 16px 0;font-size:20px;">${escapeHtml(subjectContext)}</h1>
       <table style="border-collapse:collapse;margin:0 0 16px 0;">
-        <tr>
-          <td style="padding:4px 12px 4px 0;color:#666;">Name</td>
-          <td style="padding:4px 0;">${escapeHtml(name)}</td>
-        </tr>
-        <tr>
-          <td style="padding:4px 12px 4px 0;color:#666;">E-Mail</td>
-          <td style="padding:4px 0;"><a href="mailto:${escapeHtml(
-            email
-          )}">${escapeHtml(email)}</a></td>
-        </tr>
+        ${detailRowsHtml}
       </table>
       <p style="margin:0 0 6px 0;color:#666;">Nachricht</p>
       <div style="white-space:pre-wrap;border-left:3px solid #35b810;padding:10px 14px;background:#f7faf6;border-radius:8px;">
         ${escapeHtml(message)}
       </div>
+      ${
+        context
+          ? `<p style="margin:16px 0 6px 0;color:#666;">Zusatz-Kontext</p>
+             <div style="white-space:pre-wrap;padding:10px 14px;background:#f5f6f8;border-radius:8px;font-size:13px;color:#333;">
+               ${escapeHtml(context)}
+             </div>`
+          : ""
+      }
     </div>
   `.trim();
 
