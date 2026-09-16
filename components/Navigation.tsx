@@ -7,6 +7,7 @@ import Logo from "./Logo";
 import { CALENDLY_URL } from "@/lib/config";
 
 const NAV = [
+  { href: "/plattform", label: "Automatisierungen" },
   { href: "/softwareloesungen", label: "Softwarelösungen" },
   { href: "/kurse", label: "Kurse" },
   { href: "/standorte", label: "Standorte" },

@@ -3,6 +3,11 @@ import Logo from "./Logo";
 import { CITIES } from "@/lib/data/cities";
 
 const LEISTUNGEN = [
+  { href: "/plattform", label: "Automatisierungs-Plattform" },
+  { href: "/probleme", label: "Probleme" },
+  { href: "/automatisieren", label: "Automatisierungen" },
+  { href: "/schnittstelle", label: "Schnittstellen" },
+  { href: "/software", label: "Software-Profile" },
   { href: "/softwareloesungen", label: "Softwarelösungen" },
   { href: "/kurse", label: "Kurse & Schulungen" },
   { href: "/ueber-uns", label: "Über uns" },

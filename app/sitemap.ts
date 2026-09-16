@@ -4,6 +4,10 @@ import { INDUSTRIES } from "@/lib/data/industries";
 import { DEPARTMENTS } from "@/lib/data/useCases";
 import { MODULES } from "@/lib/data/modules";
 import { COURSES } from "@/lib/data/courses";
+import { PROBLEMS } from "@/lib/data/platform/problems";
+import { AUTOMATIONS } from "@/lib/data/platform/automations";
+import { INTEGRATIONS } from "@/lib/data/platform/integrations";
+import { SOFTWARES } from "@/lib/data/platform/softwares";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://ki-beratung-saar.com";
@@ -11,6 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticEntries: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: `${base}/plattform`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${base}/probleme`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/automatisieren`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/schnittstelle`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/software`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/softwareloesungen`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${base}/kurse`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/branchen`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
@@ -57,12 +66,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8
   }));
 
+  const problemEntries: MetadataRoute.Sitemap = PROBLEMS.map((p) => ({
+    url: `${base}/probleme/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8
+  }));
+
+  const automationEntries: MetadataRoute.Sitemap = AUTOMATIONS.map((a) => ({
+    url: `${base}/automatisieren/${a.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8
+  }));
+
+  const integrationEntries: MetadataRoute.Sitemap = INTEGRATIONS.map((i) => ({
+    url: `${base}/schnittstelle/${i.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8
+  }));
+
+  const softwareEntries: MetadataRoute.Sitemap = SOFTWARES.map((s) => ({
+    url: `${base}/software/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7
+  }));
+
   return [
     ...staticEntries,
     ...cityEntries,
     ...industryEntries,
     ...departmentEntries,
     ...moduleEntries,
-    ...courseEntries
+    ...courseEntries,
+    ...problemEntries,
+    ...automationEntries,
+    ...integrationEntries,
+    ...softwareEntries
   ];
 }
