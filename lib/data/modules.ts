@@ -1,10 +1,12 @@
+import type { IndexableEntity } from "./indexable";
+
 export type ModuleCategory =
   | "infrastruktur"
   | "fachfunktion"
   | "automation"
   | "governance";
 
-export type SoftwareModule = {
+export type SoftwareModule = IndexableEntity & {
   slug: string;
   title: string;
   category: ModuleCategory;

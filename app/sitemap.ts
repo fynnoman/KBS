@@ -8,6 +8,7 @@ import { PROBLEMS } from "@/lib/data/platform/problems";
 import { AUTOMATIONS } from "@/lib/data/platform/automations";
 import { INTEGRATIONS } from "@/lib/data/platform/integrations";
 import { SOFTWARES } from "@/lib/data/platform/softwares";
+import { isIndexable } from "@/lib/data/indexable";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://ki-beratung-saar.com";
@@ -31,63 +32,63 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/datenschutz`, lastModified: now, changeFrequency: "yearly", priority: 0.2 }
   ];
 
-  const cityEntries: MetadataRoute.Sitemap = CITIES.map((c) => ({
+  const cityEntries: MetadataRoute.Sitemap = CITIES.filter(isIndexable).map((c) => ({
     url: `${base}/standorte/${c.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8
   }));
 
-  const industryEntries: MetadataRoute.Sitemap = INDUSTRIES.map((i) => ({
+  const industryEntries: MetadataRoute.Sitemap = INDUSTRIES.filter(isIndexable).map((i) => ({
     url: `${base}/branchen/${i.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8
   }));
 
-  const departmentEntries: MetadataRoute.Sitemap = DEPARTMENTS.map((d) => ({
+  const departmentEntries: MetadataRoute.Sitemap = DEPARTMENTS.filter(isIndexable).map((d) => ({
     url: `${base}${d.routePath}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.85
   }));
 
-  const moduleEntries: MetadataRoute.Sitemap = MODULES.map((m) => ({
+  const moduleEntries: MetadataRoute.Sitemap = MODULES.filter(isIndexable).map((m) => ({
     url: `${base}/softwareloesungen/${m.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.85
   }));
 
-  const courseEntries: MetadataRoute.Sitemap = COURSES.map((c) => ({
+  const courseEntries: MetadataRoute.Sitemap = COURSES.filter(isIndexable).map((c) => ({
     url: `${base}/kurse/${c.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8
   }));
 
-  const problemEntries: MetadataRoute.Sitemap = PROBLEMS.map((p) => ({
+  const problemEntries: MetadataRoute.Sitemap = PROBLEMS.filter(isIndexable).map((p) => ({
     url: `${base}/probleme/${p.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8
   }));
 
-  const automationEntries: MetadataRoute.Sitemap = AUTOMATIONS.map((a) => ({
+  const automationEntries: MetadataRoute.Sitemap = AUTOMATIONS.filter(isIndexable).map((a) => ({
     url: `${base}/automatisieren/${a.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8
   }));
 
-  const integrationEntries: MetadataRoute.Sitemap = INTEGRATIONS.map((i) => ({
+  const integrationEntries: MetadataRoute.Sitemap = INTEGRATIONS.filter(isIndexable).map((i) => ({
     url: `${base}/schnittstelle/${i.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8
   }));
 
-  const softwareEntries: MetadataRoute.Sitemap = SOFTWARES.map((s) => ({
+  const softwareEntries: MetadataRoute.Sitemap = SOFTWARES.filter(isIndexable).map((s) => ({
     url: `${base}/software/${s.slug}`,
     lastModified: now,
     changeFrequency: "monthly",

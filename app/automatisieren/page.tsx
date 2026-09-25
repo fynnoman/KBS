@@ -10,6 +10,7 @@ import { AUTOMATIONS } from "@/lib/data/platform/automations";
 import { automationsByCategory } from "@/lib/data/platform/links";
 import type { AutomationCategory } from "@/lib/data/platform/types";
 import { CATEGORY_LABEL } from "@/lib/data/platform/types";
+import { isIndexable } from "@/lib/data/indexable";
 import { SITE_URL } from "@/lib/config";
 
 const PATH = "/automatisieren";
@@ -43,9 +44,45 @@ const CATEGORY_ORDER: AutomationCategory[] = [
 
 export default function AutomationsIndex() {
   const grouped = automationsByCategory();
+  const hubUrl = `${SITE_URL}${PATH}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${hubUrl}#collection`,
+        name: "Automatisierungs-Datenbank: Prozesse, die KBS mit KI übernimmt",
+        description:
+          "Öffentliche Datenbank aller KBS-Automatisierungen mit Automatisierungslevel, Technologien, Voraussetzungen und Empfehlung.",
+        inLanguage: "de-DE",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        url: hubUrl,
+        hasPart: AUTOMATIONS.filter(isIndexable).map((a) => ({
+          "@type": "HowTo",
+          "@id": `${SITE_URL}/automatisieren/${a.slug}#howto`,
+          name: a.title,
+          url: `${SITE_URL}/automatisieren/${a.slug}`,
+          description: a.hero.sub
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${hubUrl}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "Plattform", item: `${SITE_URL}/plattform` },
+          { "@type": "ListItem", position: 3, name: "Automatisierungen", item: hubUrl }
+        ]
+      }
+    ]
+  };
 
   return (
     <PlatformShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="border-b border-ink-900/8 bg-white">
         <div className="mx-auto max-w-6xl px-6 pt-10 pb-16 md:pb-20">
           <PlatformCrumbs

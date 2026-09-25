@@ -6,6 +6,7 @@ import SectionHeading from "@/components/platform/SectionHeading";
 import IntegrationStatusBadge from "@/components/platform/IntegrationStatusBadge";
 import { INTEGRATIONS } from "@/lib/data/platform/integrations";
 import { SOFTWARES } from "@/lib/data/platform/softwares";
+import { isIndexable } from "@/lib/data/indexable";
 import { SITE_URL } from "@/lib/config";
 
 const PATH = "/schnittstelle";
@@ -35,9 +36,45 @@ export default function IntegrationsIndex() {
     list.push(i);
     groups.set(key, list);
   }
+  const hubUrl = `${SITE_URL}${PATH}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${hubUrl}#collection`,
+        name: "Schnittstellen: DATEV, HubSpot, Microsoft 365, WhatsApp und mehr",
+        description:
+          "Alle Systemverbindungen im Überblick. Mit Status, übertragbaren Daten und Integrationsweg.",
+        inLanguage: "de-DE",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        url: hubUrl,
+        hasPart: INTEGRATIONS.filter(isIndexable).map((i) => ({
+          "@type": "Article",
+          "@id": `${SITE_URL}/schnittstelle/${i.slug}#article`,
+          headline: `${i.systemA} ↔ ${i.systemB}`,
+          url: `${SITE_URL}/schnittstelle/${i.slug}`,
+          description: i.typicalUseCases[0]
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${hubUrl}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "Plattform", item: `${SITE_URL}/plattform` },
+          { "@type": "ListItem", position: 3, name: "Schnittstellen", item: hubUrl }
+        ]
+      }
+    ]
+  };
 
   return (
     <PlatformShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="border-b border-ink-900/8 bg-white">
         <div className="mx-auto max-w-6xl px-6 pt-10 pb-16 md:pb-20">
           <PlatformCrumbs

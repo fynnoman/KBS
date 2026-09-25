@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { INTEGRATIONS } from "@/lib/data/platform/integrations";
+import { isIndexable } from "@/lib/data/indexable";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://ki-beratung-saar.com";
@@ -11,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.85
     },
-    ...INTEGRATIONS.map((i) => ({
+    ...INTEGRATIONS.filter(isIndexable).map((i) => ({
       url: `${base}/schnittstelle/${i.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,

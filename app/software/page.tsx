@@ -9,6 +9,7 @@ import {
   SOFTWARE_CATEGORY_LABEL,
   type SoftwareCategory
 } from "@/lib/data/platform/types";
+import { isIndexable } from "@/lib/data/indexable";
 import { SITE_URL } from "@/lib/config";
 
 const PATH = "/software";
@@ -50,9 +51,45 @@ export default function SoftwareIndex() {
     list.push(s);
     grouped.set(s.category, list);
   }
+  const hubUrl = `${SITE_URL}${PATH}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${hubUrl}#collection`,
+        name: "Software-Profile: API-Status und Anbindungsmöglichkeiten",
+        description:
+          "Software-Profile mit API-Status, Anbindungsmöglichkeiten und zugehörigen Schnittstellen und Automatisierungen.",
+        inLanguage: "de-DE",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        url: hubUrl,
+        hasPart: SOFTWARES.filter(isIndexable).map((s) => ({
+          "@type": "SoftwareApplication",
+          "@id": `${SITE_URL}/software/${s.slug}#software`,
+          name: s.name,
+          url: `${SITE_URL}/software/${s.slug}`,
+          applicationCategory: SOFTWARE_CATEGORY_LABEL[s.category]
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${hubUrl}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "Plattform", item: `${SITE_URL}/plattform` },
+          { "@type": "ListItem", position: 3, name: "Software", item: hubUrl }
+        ]
+      }
+    ]
+  };
 
   return (
     <PlatformShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="border-b border-ink-900/8 bg-white">
         <div className="mx-auto max-w-6xl px-6 pt-10 pb-16 md:pb-20">
           <PlatformCrumbs

@@ -19,6 +19,7 @@ import {
   SOFTWARE_CATEGORY_LABEL,
   VERIFICATION_LABEL
 } from "@/lib/data/platform/types";
+import { isIndexable, noindexRobots } from "@/lib/data/indexable";
 import { SITE_URL } from "@/lib/config";
 
 export async function generateStaticParams() {
@@ -38,6 +39,7 @@ export async function generateMetadata({
     title: s.seoTitle,
     description: s.seoDescription,
     alternates: { canonical: url },
+    robots: isIndexable(s) ? undefined : noindexRobots(),
     openGraph: {
       title: s.seoTitle,
       description: s.seoDescription,
@@ -63,8 +65,60 @@ export default async function SoftwareDetail({
   const integrations = integrationsExplicit.length ? integrationsExplicit : integrationsAll;
   const automations = resolveAutomations(s.relatedAutomationSlugs);
 
+  const url = `${SITE_URL}/software/${s.slug}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": `${url}#software`,
+        name: s.name,
+        description: s.description,
+        applicationCategory: SOFTWARE_CATEGORY_LABEL[s.category],
+        operatingSystem: "Web",
+        url,
+        ...(s.website ? { sameAs: [s.website] } : {}),
+        publisher: { "@type": "Organization", name: s.vendor },
+        offers: {
+          "@type": "Offer",
+          availability: "https://schema.org/InStock",
+          price: 0,
+          priceCurrency: "EUR",
+          description:
+            "Kostenlose Ersteinschätzung der Anbindung durch KBS KI-Beratung Saar."
+        }
+      },
+      ...(s.faq.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${url}#faq`,
+              mainEntity: s.faq.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer }
+              }))
+            }
+          ]
+        : []),
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Plattform", item: `${SITE_URL}/plattform` },
+          { "@type": "ListItem", position: 2, name: "Software", item: `${SITE_URL}/software` },
+          { "@type": "ListItem", position: 3, name: s.name, item: url }
+        ]
+      }
+    ]
+  };
+
   return (
     <PlatformShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="border-b border-ink-900/8 bg-white">
         <div className="mx-auto max-w-6xl px-6 pt-10 pb-16 md:pb-20">
           <PlatformCrumbs

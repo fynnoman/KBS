@@ -1,3 +1,5 @@
+import type { IndexableEntity } from "./indexable";
+
 export type IndustryUseCase = {
   title: string;
   description: string;
@@ -8,7 +10,7 @@ export type IndustryFaq = {
   a: string;
 };
 
-export type Industry = {
+export type Industry = IndexableEntity & {
   slug: string;
   name: string;
   displayName: string;

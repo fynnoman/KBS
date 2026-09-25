@@ -21,6 +21,7 @@ import {
   SYNC_DIRECTION_LABEL,
   VERIFICATION_LABEL
 } from "@/lib/data/platform/types";
+import { isIndexable, noindexRobots } from "@/lib/data/indexable";
 import { SITE_URL } from "@/lib/config";
 
 export async function generateStaticParams() {
@@ -40,6 +41,7 @@ export async function generateMetadata({
     title: i.seoTitle,
     description: i.seoDescription,
     alternates: { canonical: url },
+    robots: isIndexable(i) ? undefined : noindexRobots(),
     openGraph: {
       title: i.seoTitle,
       description: i.seoDescription,
@@ -84,14 +86,18 @@ export default async function IntegrationDetail({
         inLanguage: "de-DE",
         author: { "@type": "Organization", name: "KBS KI-Beratung Saar" }
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: i.faq.map((f) => ({
-          "@type": "Question",
-          name: f.question,
-          acceptedAnswer: { "@type": "Answer", text: f.answer }
-        }))
-      },
+      ...(i.faq.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: i.faq.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer }
+              }))
+            }
+          ]
+        : []),
       {
         "@type": "BreadcrumbList",
         itemListElement: [

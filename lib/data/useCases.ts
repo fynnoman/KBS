@@ -1,3 +1,5 @@
+import type { IndexableEntity } from "./indexable";
+
 export type UseCaseEffort = "niedrig" | "mittel" | "hoch";
 export type UseCasePriority = "hoch" | "mittel" | "niedrig";
 
@@ -16,7 +18,7 @@ export type UseCaseItem = {
 
 export type DepartmentFaq = { q: string; a: string };
 
-export type Department = {
+export type Department = IndexableEntity & {
   slug: string;
   routePath: string;
   displayName: string;

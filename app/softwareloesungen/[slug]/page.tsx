@@ -20,6 +20,7 @@ import {
   type SoftwareModule
 } from "@/lib/data/modules";
 import { COURSES } from "@/lib/data/courses";
+import { isIndexable, noindexRobots } from "@/lib/data/indexable";
 import {
   SITE_URL,
   CALENDLY_URL,
@@ -50,6 +51,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical: url },
+    robots: isIndexable(mod) ? undefined : noindexRobots(),
     keywords: [
       mod.title,
       MODULE_CATEGORY_LABEL[mod.category],

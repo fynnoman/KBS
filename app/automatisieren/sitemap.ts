@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { AUTOMATIONS } from "@/lib/data/platform/automations";
+import { isIndexable } from "@/lib/data/indexable";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://ki-beratung-saar.com";
@@ -11,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.85
     },
-    ...AUTOMATIONS.map((a) => ({
+    ...AUTOMATIONS.filter(isIndexable).map((a) => ({
       url: `${base}/automatisieren/${a.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,

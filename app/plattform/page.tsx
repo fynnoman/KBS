@@ -60,8 +60,67 @@ const WHAT_KBS_BUILDS = [
 ];
 
 export default function PlatformHome() {
+  const hubUrl = `${SITE_URL}${PATH}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${hubUrl}#collection`,
+        name: "KBS Automatisierungs-Plattform",
+        description:
+          "Beschreiben Sie einen Prozess oder ein Problem und finden Sie in Sekunden die passende Automatisierung, Schnittstelle oder Software.",
+        inLanguage: "de-DE",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        url: hubUrl,
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: 4,
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Probleme",
+              url: `${SITE_URL}/probleme`
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Automatisierungen",
+              url: `${SITE_URL}/automatisieren`
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: "Schnittstellen",
+              url: `${SITE_URL}/schnittstelle`
+            },
+            {
+              "@type": "ListItem",
+              position: 4,
+              name: "Software-Profile",
+              url: `${SITE_URL}/software`
+            }
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${hubUrl}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "Plattform", item: hubUrl }
+        ]
+      }
+    ]
+  };
+
   return (
     <PlatformShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* HERO */}
       <section className="border-b border-ink-900/8 bg-white">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-24">

@@ -7,6 +7,7 @@ import CategoryChip from "@/components/platform/CategoryChip";
 import { PROBLEMS } from "@/lib/data/platform/problems";
 import { problemsByCategory } from "@/lib/data/platform/links";
 import { CATEGORY_LABEL, type ProblemCategory } from "@/lib/data/platform/types";
+import { isIndexable } from "@/lib/data/indexable";
 import { SITE_URL } from "@/lib/config";
 
 const PATH = "/probleme";
@@ -40,9 +41,45 @@ const CATEGORY_ORDER: ProblemCategory[] = [
 
 export default function ProblemsIndex() {
   const grouped = problemsByCategory();
+  const hubUrl = `${SITE_URL}${PATH}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${hubUrl}#collection`,
+        name: "Betriebsprobleme, die KBS mit KI und Automatisierung löst",
+        description:
+          "Alle konkreten Betriebsprobleme im Überblick. Von E-Mail-Bearbeitung über DATEV-Prozesse bis zur fehlenden Schnittstelle.",
+        inLanguage: "de-DE",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        url: hubUrl,
+        hasPart: PROBLEMS.filter(isIndexable).map((p) => ({
+          "@type": "Article",
+          "@id": `${SITE_URL}/probleme/${p.slug}#article`,
+          headline: p.title,
+          url: `${SITE_URL}/probleme/${p.slug}`,
+          description: p.hero.sub
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${hubUrl}#breadcrumbs`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Start", item: `${SITE_URL}/` },
+          { "@type": "ListItem", position: 2, name: "Plattform", item: `${SITE_URL}/plattform` },
+          { "@type": "ListItem", position: 3, name: "Probleme", item: hubUrl }
+        ]
+      }
+    ]
+  };
 
   return (
     <PlatformShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="mx-auto max-w-6xl px-6 pt-10 pb-8">
         <PlatformCrumbs
           items={[

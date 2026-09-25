@@ -2,7 +2,9 @@
 // (economy, industries, use cases, FAQ) so the pages hold real local
 // relevance for both Google and AI Overviews.
 
-export type City = {
+import type { IndexableEntity } from "./indexable";
+
+export type City = IndexableEntity & {
   slug: string;
   name: string;
   intro: string;

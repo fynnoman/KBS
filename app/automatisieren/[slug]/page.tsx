@@ -15,6 +15,7 @@ import ContextualLeadForm from "@/components/platform/ContextualLeadForm";
 import SavingsCalculator from "@/components/platform/SavingsCalculator";
 import { AUTOMATIONS, findAutomation } from "@/lib/data/platform/automations";
 import { resolveProblems, resolveIntegrations } from "@/lib/data/platform/links";
+import { isIndexable, noindexRobots } from "@/lib/data/indexable";
 import { SITE_URL } from "@/lib/config";
 
 export async function generateStaticParams() {
@@ -34,6 +35,7 @@ export async function generateMetadata({
     title: a.seoTitle,
     description: a.seoDescription,
     alternates: { canonical: url },
+    robots: isIndexable(a) ? undefined : noindexRobots(),
     openGraph: {
       title: a.seoTitle,
       description: a.seoDescription,
@@ -71,14 +73,18 @@ export default async function AutomationDetail({
           text: s.detail ?? s.title
         }))
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: a.faq.map((f) => ({
-          "@type": "Question",
-          name: f.question,
-          acceptedAnswer: { "@type": "Answer", text: f.answer }
-        }))
-      },
+      ...(a.faq.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: a.faq.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer }
+              }))
+            }
+          ]
+        : []),
       {
         "@type": "BreadcrumbList",
         itemListElement: [

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import DepartmentPage from "@/components/DepartmentPage";
 import { DEPARTMENTS, findDepartment } from "@/lib/data/useCases";
+import { isIndexable, noindexRobots } from "@/lib/data/indexable";
 import { SITE_URL } from "@/lib/config";
 
 export function generateStaticParams() {
@@ -22,6 +23,7 @@ export async function generateMetadata({
     title: `${d.name} · KBS KI-Beratung Saar`,
     description,
     alternates: { canonical: url },
+    robots: isIndexable(d) ? undefined : noindexRobots(),
     keywords: d.keywords,
     openGraph: {
       title: `${d.name} · KBS`,

@@ -104,15 +104,19 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
           url: `${url}#case-${i + 1}`
         }))
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${url}#faq`,
-        mainEntity: dept.faqs.map((f) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a }
-        }))
-      },
+      ...(dept.faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${url}#faq`,
+              mainEntity: dept.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a }
+              }))
+            }
+          ]
+        : []),
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumbs`,

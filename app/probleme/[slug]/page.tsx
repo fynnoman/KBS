@@ -13,6 +13,7 @@ import RelatedGrid from "@/components/platform/RelatedGrid";
 import ContextualLeadForm from "@/components/platform/ContextualLeadForm";
 import { PROBLEMS, findProblem } from "@/lib/data/platform/problems";
 import { resolveAutomations, resolveIntegrations } from "@/lib/data/platform/links";
+import { isIndexable, noindexRobots } from "@/lib/data/indexable";
 import { SITE_URL } from "@/lib/config";
 
 export async function generateStaticParams() {
@@ -32,6 +33,7 @@ export async function generateMetadata({
     title: p.seoTitle,
     description: p.seoDescription,
     alternates: { canonical: url },
+    robots: isIndexable(p) ? undefined : noindexRobots(),
     openGraph: {
       title: p.seoTitle,
       description: p.seoDescription,
@@ -65,14 +67,18 @@ export default async function ProblemDetail({
         inLanguage: "de-DE",
         author: { "@type": "Organization", name: "KBS KI-Beratung Saar" }
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: p.faq.map((f) => ({
-          "@type": "Question",
-          name: f.question,
-          acceptedAnswer: { "@type": "Answer", text: f.answer }
-        }))
-      },
+      ...(p.faq.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              mainEntity: p.faq.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer }
+              }))
+            }
+          ]
+        : []),
       {
         "@type": "BreadcrumbList",
         itemListElement: [

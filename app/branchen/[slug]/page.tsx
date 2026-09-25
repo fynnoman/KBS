@@ -20,6 +20,7 @@ import Reveal from "@/components/Reveal";
 import { INDUSTRIES, findIndustry } from "@/lib/data/industries";
 import { COURSES } from "@/lib/data/courses";
 import { CITIES } from "@/lib/data/cities";
+import { isIndexable, noindexRobots } from "@/lib/data/indexable";
 import {
   SITE_URL,
   CALENDLY_URL,
@@ -46,6 +47,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical: url },
+    robots: isIndexable(ind) ? undefined : noindexRobots(),
     keywords: ind.keywords,
     openGraph: {
       title: `${ind.tag} · KBS`,
@@ -87,15 +89,19 @@ export default async function IndustryPage({
         audience: { "@type": "Audience", audienceType: ind.name },
         url
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${url}#faq`,
-        mainEntity: ind.faqs.map((f) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a }
-        }))
-      },
+      ...(ind.faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${url}#faq`,
+              mainEntity: ind.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a }
+              }))
+            }
+          ]
+        : []),
       {
         "@type": "BreadcrumbList",
         "@id": `${url}#breadcrumbs`,

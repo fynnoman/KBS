@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Reveal from "@/components/Reveal";
 import { CITIES, findCity } from "@/lib/data/cities";
+import { isIndexable, noindexRobots } from "@/lib/data/indexable";
 import { SITE_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/config";
 
 const STANDORT_ANGEBOTE = [
@@ -72,6 +73,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical: `${SITE_URL}/standorte/${c.slug}` },
+    robots: isIndexable(c) ? undefined : noindexRobots(),
     openGraph: {
       title,
       description,
@@ -161,15 +163,19 @@ export default async function CityPage({
           longitude: c.longitude
         }
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${pageUrl}#faq`,
-        mainEntity: c.faqs.map((f) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a }
-        }))
-      }
+      ...(c.faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${pageUrl}#faq`,
+              mainEntity: c.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a }
+              }))
+            }
+          ]
+        : [])
     ]
   };
 

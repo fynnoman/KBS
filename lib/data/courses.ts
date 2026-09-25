@@ -1,3 +1,5 @@
+import type { IndexableEntity } from "./indexable";
+
 export type CourseCategory =
   | "grundlagen"
   | "rollen"
@@ -12,7 +14,7 @@ export type CoursePricing = {
   customLabel?: string;
 };
 
-export type Course = {
+export type Course = IndexableEntity & {
   slug: string;
   title: string;
   category: CourseCategory;

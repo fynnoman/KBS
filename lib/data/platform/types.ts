@@ -3,6 +3,8 @@
 // Everything is authored in strict factual language: if a fact is unverified,
 // use verificationStatus / dataStatus fields instead of asserting it.
 
+import type { IndexableEntity } from "../indexable";
+
 export type VerificationStatus =
   | "bestaetigt"
   | "wahrscheinlich"
@@ -79,7 +81,7 @@ export interface FaqItem {
   answer: string;
 }
 
-export interface Problem {
+export interface Problem extends IndexableEntity {
   slug: string;
   title: string;
   seoTitle: string;
@@ -111,7 +113,7 @@ export interface Problem {
   };
 }
 
-export interface Automation {
+export interface Automation extends IndexableEntity {
   slug: string;
   title: string;
   seoTitle: string;
@@ -150,7 +152,7 @@ export interface SoftwareApiInfo {
   documentationUrl?: string;
 }
 
-export interface Software {
+export interface Software extends IndexableEntity {
   slug: string;
   name: string;
   seoTitle: string;
@@ -173,7 +175,7 @@ export interface TransferableDataItem {
   status: VerificationStatus;
 }
 
-export interface Integration {
+export interface Integration extends IndexableEntity {
   slug: string; // e.g. "datev-hubspot"
   systemA: string; // display name, e.g. "DATEV"
   systemB: string; // display name, e.g. "HubSpot"

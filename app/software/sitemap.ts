@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SOFTWARES } from "@/lib/data/platform/softwares";
+import { isIndexable } from "@/lib/data/indexable";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://ki-beratung-saar.com";
@@ -11,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8
     },
-    ...SOFTWARES.map((s) => ({
+    ...SOFTWARES.filter(isIndexable).map((s) => ({
       url: `${base}/software/${s.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
