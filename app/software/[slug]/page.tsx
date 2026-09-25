@@ -86,6 +86,10 @@ export default async function SoftwareDetail({
           priceCurrency: "EUR",
           description:
             "Kostenlose Ersteinschätzung der Anbindung durch KBS KI-Beratung Saar."
+        },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", "[data-speakable]"]
         }
       },
       ...(s.faq.length > 0
@@ -143,7 +147,10 @@ export default async function SoftwareDetail({
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.05] text-ink-900 md:text-5xl">
             {s.name} anbinden
           </h1>
-          <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600 md:text-[17px]">
+          <p
+            data-speakable
+            className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600 md:text-[17px]"
+          >
             {s.description}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">

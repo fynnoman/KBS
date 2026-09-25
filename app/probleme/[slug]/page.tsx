@@ -65,7 +65,11 @@ export default async function ProblemDetail({
         headline: p.hero.h1,
         description: p.seoDescription,
         inLanguage: "de-DE",
-        author: { "@type": "Organization", name: "KBS KI-Beratung Saar" }
+        author: { "@type": "Organization", name: "KBS KI-Beratung Saar" },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", "[data-speakable]"]
+        }
       },
       ...(p.faq.length > 0
         ? [
@@ -120,7 +124,10 @@ export default async function ProblemDetail({
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.05] text-ink-900 md:text-5xl">
             {p.hero.h1}
           </h1>
-          <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600 md:text-[17px]">
+          <p
+            data-speakable
+            className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600 md:text-[17px]"
+          >
             {p.hero.sub}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -145,7 +152,10 @@ export default async function ProblemDetail({
           eyebrow="Problem verstehen"
           title="Wie entsteht das Problem?"
         />
-        <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-ink-700">
+        <p
+          data-speakable
+          className="mt-5 max-w-3xl text-[15px] leading-relaxed text-ink-700"
+        >
           {p.problemStatement}
         </p>
         <div className="mt-10 grid gap-8 md:grid-cols-2">

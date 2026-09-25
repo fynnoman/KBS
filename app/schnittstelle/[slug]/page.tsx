@@ -84,7 +84,11 @@ export default async function IntegrationDetail({
         headline: i.seoTitle,
         description: i.seoDescription,
         inLanguage: "de-DE",
-        author: { "@type": "Organization", name: "KBS KI-Beratung Saar" }
+        author: { "@type": "Organization", name: "KBS KI-Beratung Saar" },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", "[data-speakable]"]
+        }
       },
       ...(i.faq.length > 0
         ? [
@@ -148,7 +152,10 @@ export default async function IntegrationDetail({
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.05] text-ink-900 md:text-5xl">
             {i.systemA} mit {i.systemB} verbinden
           </h1>
-          <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600 md:text-[17px]">
+          <p
+            data-speakable
+            className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600 md:text-[17px]"
+          >
             Wir prüfen, welche Daten zwischen beiden Systemen übertragen werden
             können und entwickeln bei Bedarf eine individuelle Schnittstelle
             oder Automatisierung.

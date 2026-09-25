@@ -66,6 +66,10 @@ export default async function AutomationDetail({
         "@type": "HowTo",
         name: a.title,
         description: a.description,
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", "[data-speakable]"]
+        },
         step: a.workflow.map((s, idx) => ({
           "@type": "HowToStep",
           position: idx + 1,
@@ -132,7 +136,10 @@ export default async function AutomationDetail({
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.05] text-ink-900 md:text-5xl">
             {a.hero.h1}
           </h1>
-          <p className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600 md:text-[17px]">
+          <p
+            data-speakable
+            className="mt-4 max-w-2xl text-[16px] leading-relaxed text-ink-600 md:text-[17px]"
+          >
             {a.hero.sub}
           </p>
           <div className="mt-6">
@@ -157,7 +164,10 @@ export default async function AutomationDetail({
 
       <section className="mx-auto max-w-6xl px-6 py-16">
         <SectionHeading eyebrow="Beschreibung" title="Was passiert konkret?" />
-        <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-ink-700">
+        <p
+          data-speakable
+          className="mt-5 max-w-3xl text-[15px] leading-relaxed text-ink-700"
+        >
           {a.description}
         </p>
         <div className="mt-8">
