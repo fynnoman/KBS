@@ -8,7 +8,7 @@ import { PROBLEMS } from "@/lib/data/platform/problems";
 import { AUTOMATIONS } from "@/lib/data/platform/automations";
 import { INTEGRATIONS } from "@/lib/data/platform/integrations";
 import { SOFTWARES } from "@/lib/data/platform/softwares";
-import { SITE_URL } from "@/lib/config";
+import { SITE_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/config";
 
 const PATH = "/plattform";
 
@@ -209,6 +209,34 @@ export default function PlatformHome() {
         </div>
       </section>
 
+      {/* WARUM KBS · Positioning */}
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <SectionHeading
+          eyebrow="Warum KBS"
+          title="Umsetzung statt Positionspapier"
+        />
+        <div className="mt-8 grid gap-6 text-[15.5px] leading-relaxed text-ink-700 md:grid-cols-3">
+          <p>
+            KBS baut. Kein Konzept, kein Foliensatz, keine Beratungs-Trilogie.
+            Von der ersten Machbarkeitsprüfung bis zum betriebsfertigen System
+            bleibt das Team im Projekt. Automatisierungen laufen auf Ihrer
+            Infrastruktur, Schnittstellen verbinden Systeme, die bereits im
+            Einsatz sind.
+          </p>
+          <p>
+            Datenschutz und der EU AI Act sind kein Nachgedanke. In sensiblen
+            Bereichen installieren wir Modelle lokal, ohne Cloud-Übermittlung.
+            Nutzungsregeln, Betriebsrats-Rücksprache und Rollen-Rechte werden
+            im Rollout mitgedacht.
+          </p>
+          <p>
+            Die Herkunft ist saarländisch. Der Wirkungsraum ist deutschlandweit.
+            Termine vor Ort in Saarbrücken, Saarlouis, Homburg oder Neunkirchen
+            genauso wie Remote-Rollouts überregional.
+          </p>
+        </div>
+      </section>
+
       {/* SCHNITTSTELLEN */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeading
@@ -229,6 +257,49 @@ export default function PlatformHome() {
               };
             })}
           />
+        </div>
+      </section>
+
+      {/* PROZESS · Wie eine Zusammenarbeit ablaeuft */}
+      <section className="border-y border-ink-900/8 bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <SectionHeading
+            eyebrow="So läuft ein Projekt"
+            title="Vier Schritte vom Gespräch bis zum Betrieb"
+            sub="Der Weg ist immer derselbe. Länge und Aufwand hängen von der Systemlandschaft ab."
+          />
+          <ol className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Kennenlerngespräch",
+                sub: "30 Minuten Videocall. Ehrliche Einschätzung von Machbarkeit, Potenzial und ROI, ohne Verkaufsdruck."
+              },
+              {
+                title: "Machbarkeit im Prozess prüfen",
+                sub: "Anschauen der bestehenden IT, der beteiligten Systeme und der realen Prozessdaten. Klarheit zu Aufwand und Grenzen."
+              },
+              {
+                title: "Umsetzung und Rollout",
+                sub: "Bau der Automatisierung oder Schnittstelle. Schulung der Nutzer, Nutzungsregeln, Rollen und Rechte."
+              },
+              {
+                title: "Betrieb und Übergabe",
+                sub: "Dokumentierte Übergabe an Ihre IT, damit die Lösung ohne KBS weiterbetrieben werden kann."
+              }
+            ].map((step, idx) => (
+              <li key={step.title} className="card p-6">
+                <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-500">
+                  Schritt {String(idx + 1).padStart(2, "0")}
+                </div>
+                <div className="mt-2 text-lg font-semibold text-ink-900">
+                  {step.title}
+                </div>
+                <p className="mt-2 text-[13.5px] leading-relaxed text-ink-600">
+                  {step.sub}
+                </p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -266,6 +337,37 @@ export default function PlatformHome() {
               Software? Über <Link className="underline underline-offset-2" href="/kontakt">Kontakt</Link> geben Sie
               uns einen Hinweis. Wir ergänzen.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA-Bar */}
+      <section className="border-t border-ink-900/8">
+        <div className="mx-auto max-w-4xl px-6 py-16 text-center">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-500">
+            Nächster Schritt
+          </div>
+          <h2 className="mt-3 text-3xl leading-tight text-ink-900 sm:text-4xl">
+            30 Minuten ehrliche Einschätzung.
+          </h2>
+          <p className="mt-4 text-[15.5px] leading-relaxed text-ink-600">
+            Sie schildern die Ausgangslage. Wir bewerten Machbarkeit, Potenzial
+            und ROI. Ohne Verkaufsdruck und ohne dass Ihre IT vorher zustimmen
+            muss.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center rounded-2xl bg-ink-900 px-5 py-3 text-[14px] font-semibold text-white shadow-soft transition-colors hover:bg-ink-700"
+            >
+              Kennenlerngespräch buchen
+            </Link>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="inline-flex items-center rounded-2xl border border-ink-900/12 bg-white px-5 py-3 text-[14px] font-semibold text-ink-900 transition-colors hover:border-accent-300"
+            >
+              Anrufen · {PHONE_DISPLAY}
+            </a>
           </div>
         </div>
       </section>
