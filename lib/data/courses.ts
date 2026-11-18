@@ -362,6 +362,31 @@ export const COURSES: Course[] = [
     }
   },
   {
+    slug: "laufende-betreuung",
+    title: "Laufende Betreuung",
+    category: "programme",
+    duration: "monatlich · laufend",
+    audience:
+      "Unternehmen nach einem Kurs oder einer Software-Einrichtung",
+    summary:
+      "Nach dem Kurs oder nach der Einführung eines KBS-Moduls geht die Arbeit im Alltag erst richtig los. Unser Betreuungspaket bleibt an Ihrer Seite: regelmäßige Sprechstunden, schnelle Antworten auf Alltagsfragen, Pflege Ihrer Prompt- und Vorlagen-Bibliothek, Unterstützung bei neuen Use Cases und Updates zu relevanten KI-Entwicklungen.",
+    learnings: [
+      "Feste Ansprechperson für Ihr Team",
+      "Monatliche Sprechstunden zu konkreten Fragen aus dem Arbeitsalltag",
+      "Laufende Pflege und Erweiterung Ihrer Prompt- und Vorlagen-Bibliothek",
+      "Reaktive Unterstützung bei neuen Use Cases und Fehlerbildern",
+      "Updates zu Modell-Änderungen, neuen Funktionen und rechtlichen Entwicklungen",
+      "Begleitung bei der Einführung weiterer KBS-Module"
+    ],
+    certificate: "Betreuungspaket, kein Zertifikat",
+    formats: ["Remote", "Inhouse"],
+    image: "/kurse-images/ki-anwender.jpg",
+    pricing: {
+      customLabel:
+        "Kostenpflichtiges Betreuungspaket, Konditionen auf Anfrage"
+    }
+  },
+  {
     slug: "curriculum-3monate",
     title: "Curriculum · 3 Monate mehrstufig",
     category: "programme",
