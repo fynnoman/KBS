@@ -227,6 +227,80 @@
 
 /* Living details: glowing frames and animated accents */
 
+@keyframes kbs-gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes kbs-text-sheen {
+  0% { background-position: -150% 0; }
+  60%, 100% { background-position: 250% 0; }
+}
+@keyframes kbs-drift-a {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(14px, -22px, 0); }
+}
+@keyframes kbs-drift-b {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-18px, -10px, 0); }
+}
+@keyframes kbs-drift-c {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(10px, 20px, 0); }
+}
+@keyframes kbs-ring-draw {
+  0% { stroke-dashoffset: 600; }
+  60%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes kbs-tilt {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(6deg); }
+}
+
+/* Headline word with a living green-to-white gradient */
+.text-living {
+  background: linear-gradient(
+    90deg,
+    #0E121A 0%,
+    #58C038 25%,
+    #0E121A 50%,
+    #58C038 75%,
+    #0E121A 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: kbs-gradient-shift 9s ease-in-out infinite;
+}
+
+/* One-shot sheen that sweeps across light text */
+.text-sheen {
+  position: relative;
+  background: linear-gradient(
+    110deg,
+    currentColor 0%,
+    currentColor 40%,
+    rgba(255, 255, 255, 0.85) 50%,
+    currentColor 60%,
+    currentColor 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: kbs-text-sheen 5.5s ease-in-out infinite;
+}
+
+/* Floating particle utility: three sizes, used alongside kbs-drift-a/b/c */
+.particle {
+  position: absolute;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, rgba(88, 192, 56, 0.9), rgba(88, 192, 56, 0.1) 70%);
+  filter: blur(0.3px);
+}
+
+
 @keyframes kbs-spin {
   to { transform: rotate(360deg); }
 }
@@ -477,7 +551,10 @@
   .glow-cta::after,
   .glow-edge::before,
   .card-lift::after,
-  .card::after { animation: none !important; }
+  .card::after,
+  .text-living,
+  .text-sheen,
+  .particle { animation: none !important; }
 }
 
 ::-webkit-scrollbar { width: 10px; height: 10px; }

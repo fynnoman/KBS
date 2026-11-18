@@ -21,6 +21,76 @@ export default function BusinessHero() {
           className="animate-aurora absolute left-1/3 top-72 h-[380px] w-[380px] rounded-full bg-accent-200 opacity-25 blur-3xl"
           style={{ animationDelay: "-12s", animationDuration: "26s" }}
         />
+
+        {/* Floating particles */}
+        <span
+          className="particle"
+          style={{
+            top: "22%",
+            left: "12%",
+            width: 10,
+            height: 10,
+            animation: "kbs-drift-a 11s ease-in-out infinite"
+          }}
+        />
+        <span
+          className="particle"
+          style={{
+            top: "48%",
+            left: "9%",
+            width: 6,
+            height: 6,
+            opacity: 0.8,
+            animation: "kbs-drift-b 14s ease-in-out infinite"
+          }}
+        />
+        <span
+          className="particle"
+          style={{
+            top: "16%",
+            right: "18%",
+            width: 8,
+            height: 8,
+            animation: "kbs-drift-c 12s ease-in-out infinite"
+          }}
+        />
+        <span
+          className="particle"
+          style={{
+            top: "68%",
+            right: "22%",
+            width: 5,
+            height: 5,
+            opacity: 0.7,
+            animation: "kbs-drift-a 16s ease-in-out infinite reverse"
+          }}
+        />
+        <span
+          className="particle"
+          style={{
+            top: "80%",
+            left: "42%",
+            width: 7,
+            height: 7,
+            opacity: 0.9,
+            animation: "kbs-drift-b 13s ease-in-out infinite"
+          }}
+        />
+
+        {/* Subtle dotted grid */}
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.18]"
+          style={{
+            backgroundImage:
+              "radial-gradient(rgba(14, 18, 26, 0.35) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+            maskImage:
+              "radial-gradient(ellipse 70% 60% at 50% 40%, #000 50%, transparent 85%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse 70% 60% at 50% 40%, #000 50%, transparent 85%)"
+          }}
+        />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
@@ -44,7 +114,7 @@ export default function BusinessHero() {
               transition={{ duration: 0.8, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
               className="text-[42px] leading-[1.02] tracking-tight text-ink-900 sm:text-6xl md:text-[68px]"
             >
-              KI im Unternehmen.
+              <span className="text-living">KI im Unternehmen.</span>
               <br />
               <span className="display italic text-ink-500">
                 Ohne Ihre Daten zu verlieren.

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -480,6 +481,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <ScrollProgress />
         <div
           aria-label="KBS Amtsbanner"
           className="sticky top-0 z-[60] hidden w-full border-b border-ink-900/12 bg-white/95 backdrop-blur-sm sm:block"
