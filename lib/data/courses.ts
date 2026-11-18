@@ -54,7 +54,7 @@ export const COURSES: Course[] = [
     slug: "ki-anwender",
     title: "Zertifizierter KI-Anwender",
     category: "grundlagen",
-    duration: "1 Tag",
+    duration: "3 bis 5 Tage",
     audience: "Alle Mitarbeitenden, ohne technisches Vorwissen",
     summary:
       "Solide Grundlage im Umgang mit ChatGPT, Claude und vergleichbaren Werkzeugen. Nach diesem Kurs nutzen Ihre Mitarbeitenden generative KI produktiv, datenschutzkonform und im Rahmen Ihrer Nutzungsrichtlinien.",
@@ -76,7 +76,7 @@ export const COURSES: Course[] = [
     slug: "prompt-engineering",
     title: "Prompt Engineering Fundamentals",
     category: "grundlagen",
-    duration: "1 Tag",
+    duration: "3 bis 7 Tage",
     audience: "Power-User, Marketing, Vertrieb, Redaktion",
     summary:
       "Präzise Prompts, wiederverwendbare Vorlagen, Qualitätskontrolle. Der Kurs bringt Anwendende auf ein Niveau, auf dem sie eigene Prompt-Bibliotheken für ihr Team aufbauen können.",
@@ -98,7 +98,7 @@ export const COURSES: Course[] = [
     slug: "vertrieb",
     title: "KI im Vertrieb & Business Development",
     category: "rollen",
-    duration: "1 Tag",
+    duration: "3 bis 7 Tage",
     audience: "Vertrieb, Account Management, BDR, Sales Ops",
     summary:
       "Konkrete Werkzeuge für die tägliche Vertriebsarbeit: Recherche, Angebotserstellung, personalisierte E-Mail-Kaskaden, CRM-Automation. Fokus auf messbaren Zeitgewinn pro Vertriebsmitarbeiter.",
@@ -120,7 +120,7 @@ export const COURSES: Course[] = [
     slug: "marketing",
     title: "KI im Marketing & Content",
     category: "rollen",
-    duration: "1 Tag",
+    duration: "3 bis 7 Tage",
     audience: "Marketing, Kommunikation, Content, PR",
     summary:
       "Redaktionsplanung, Content-Produktion, Bildgenerierung, SEO-Recherche und Analytics, alles mit klarem Fokus auf Markenkonsistenz und rechtssichere Verwendung.",
@@ -142,7 +142,7 @@ export const COURSES: Course[] = [
     slug: "finanzen",
     title: "KI in Finanzbuchhaltung & Controlling",
     category: "rollen",
-    duration: "1 Tag",
+    duration: "3 bis 7 Tage",
     audience: "Buchhaltung, Controlling, Finance-Teams",
     summary:
       "Belegverarbeitung, OCR, Reporting-Automation und DATEV-nahe Workflows. Der Kurs zeigt, wo KI verlässlich einsetzbar ist, und wo aus Compliance-Gründen die manuelle Kontrolle bleiben muss.",
@@ -164,7 +164,7 @@ export const COURSES: Course[] = [
     slug: "hr",
     title: "KI in HR & Recruiting",
     category: "rollen",
-    duration: "1 Tag",
+    duration: "3 bis 7 Tage",
     audience: "HR, Recruiting, Personalentwicklung",
     summary:
       "Stellenanzeigen, Vorauswahl, Onboarding-Materialien, Skill-Gap-Analyse. Mit expliziter Abgrenzung der Hochrisiko-Anwendungen nach EU AI Act, damit Ihr HR-Team rechtssicher arbeitet.",
@@ -186,7 +186,7 @@ export const COURSES: Course[] = [
     slug: "kundenservice",
     title: "KI im Kundenservice & Support",
     category: "rollen",
-    duration: "1 Tag",
+    duration: "3 bis 7 Tage",
     audience: "Kundenservice, Support, Beschwerdemanagement",
     summary:
       "Ticket-Triage, Antwort-Vorschläge, Wissensdatenbanken, erste Voice-Agent-Erfahrung. Ziel: kürzere Antwortzeiten, gleichbleibende Qualität, entlastete Teams.",
@@ -230,7 +230,7 @@ export const COURSES: Course[] = [
     slug: "ai-act",
     title: "EU AI Act Verantwortliche/r",
     category: "governance",
-    duration: "2 Tage",
+    duration: "3 bis 7 Tage",
     audience: "Compliance, Datenschutz, Recht, KI-Verantwortliche",
     summary:
       "Vertiefungskurs zur Umsetzung des EU AI Act im eigenen Unternehmen. Am Ende sind Ihre Verantwortlichen in der Lage, KI-Anwendungen selbst zu klassifizieren, zu dokumentieren und interne Audits vorzubereiten.",
@@ -274,7 +274,7 @@ export const COURSES: Course[] = [
     slug: "lokale-ki",
     title: "Lokale KI & On-Premise LLMs für IT",
     category: "technisch",
-    duration: "2 Tage",
+    duration: "3 bis 7 Tage",
     audience: "IT, DevOps, Systemadministration, Infrastruktur",
     summary:
       "Praxiskurs zur Installation, Wartung und Absicherung lokaler LLMs. Von der Hardware-Auswahl über Ollama und LM Studio bis zur produktiven Anbindung an das interne Netz.",
@@ -296,7 +296,7 @@ export const COURSES: Course[] = [
     slug: "rag",
     title: "RAG-Assistenten selber bauen",
     category: "technisch",
-    duration: "2 Tage",
+    duration: "3 bis 7 Tage",
     audience: "Entwickler, Data Engineers, KI-Anwendende mit Code-Erfahrung",
     summary:
       "Aufbaukurs für Entwicklung eigener Retrieval-Augmented-Generation-Systeme. Vom Embedding-Modell über die Vektor-DB bis zur produktiven Evaluation.",
@@ -342,7 +342,7 @@ export const COURSES: Course[] = [
     slug: "multiplikatoren",
     title: "Multiplikatoren-Programm",
     category: "programme",
-    duration: "3 Tage + Begleitung",
+    duration: "3 bis 7 Tage + Begleitung",
     audience: "Interne KI-Champions, Change-Verantwortliche",
     summary:
       "Wir bilden interne KI-Champions aus, die anschließend die Wissensweitergabe im Betrieb übernehmen. Kein Dauerabo, sondern messbare Selbstständigkeit Ihres Teams.",
