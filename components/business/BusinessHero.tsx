@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { Calendar, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import { Calendar, ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import KIStamp from "../KIStamp";
 
@@ -92,52 +92,6 @@ export default function BusinessHero() {
                 sizes="(max-width: 1024px) 100vw, 45vw"
                 className="object-cover"
               />
-              <div
-                className="pointer-events-none absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(180deg, rgba(10,14,20,0) 40%, rgba(10,14,20,0.65) 100%)"
-                }}
-              />
-
-              {/* Floating DSGVO badge on top */}
-              <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-sm border border-ink-900/15 bg-white/90 px-3 py-1.5 text-[10.5px] font-medium uppercase tracking-[0.22em] text-ink-700 backdrop-blur">
-                <ShieldCheck size={12} strokeWidth={2.4} className="text-accent-700" />
-                DSGVO by default
-              </div>
-
-              {/* KPI overlay at bottom */}
-              <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6">
-                <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/75 sm:text-[10.5px]">
-                  Enterprise-KI, lokal betrieben
-                </p>
-                <dl className="mt-3 grid grid-cols-3 gap-2 sm:gap-3">
-                  <div>
-                    <dt className="text-[9px] font-medium uppercase tracking-[0.12em] text-white/55 sm:text-[9.5px] sm:tracking-[0.14em]">
-                      On-Premise
-                    </dt>
-                    <dd className="mt-0.5 text-base font-semibold tracking-tight text-white sm:text-xl">
-                      100%
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[9px] font-medium uppercase tracking-[0.12em] text-white/55 sm:text-[9.5px] sm:tracking-[0.14em]">
-                      Break-Even
-                    </dt>
-                    <dd className="mt-0.5 text-base font-semibold tracking-tight text-white sm:text-xl">
-                      &lt; 6 Mon.
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[9px] font-medium uppercase tracking-[0.12em] text-white/55 sm:text-[9.5px] sm:tracking-[0.14em]">
-                      Skaliert
-                    </dt>
-                    <dd className="mt-0.5 text-base font-semibold tracking-tight text-white sm:text-xl">
-                      500 MA
-                    </dd>
-                  </div>
-                </dl>
-              </div>
             </div>
           </motion.div>
         </div>
