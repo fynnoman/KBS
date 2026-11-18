@@ -70,7 +70,7 @@ export default function BusinessHero() {
               transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="mt-10 flex flex-wrap items-center gap-3"
             >
-              <Link href="/softwareloesungen#idee" className="btn-primary">
+              <Link href="/softwareloesungen#idee" className="btn-primary glow-cta">
                 <Sparkles size={16} strokeWidth={2.4} />
                 Ihre KI-Idee schildern
                 <ArrowRight size={15} strokeWidth={2.2} />
@@ -91,11 +91,11 @@ export default function BusinessHero() {
             {/* Soft accent glow behind the frame */}
             <div
               aria-hidden
-              className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-accent-100/50 via-transparent to-ink-100/40 opacity-70 blur-2xl"
+              className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-accent-100/60 via-transparent to-ink-100/40 opacity-80 blur-2xl"
             />
-            {/* Hero image, gently floating */}
+            {/* Hero image, gently floating with a rotating glow ring */}
             <div
-              className={`relative aspect-[4/3] w-full overflow-hidden rounded-md border border-ink-900/15 bg-ink-100 shadow-lift sm:aspect-[5/4] lg:aspect-[4/5] ${reduce ? "" : "animate-float"}`}
+              className={`glow-ring relative aspect-[4/3] w-full overflow-hidden rounded-md border border-ink-900/15 bg-ink-100 shadow-lift sm:aspect-[5/4] lg:aspect-[4/5] ${reduce ? "" : "animate-float"}`}
             >
               <KIStamp />
               <Image
@@ -124,9 +124,9 @@ export default function BusinessHero() {
           ].map((item) => (
             <div
               key={item}
-              className="flex items-start gap-2 rounded-sm border border-ink-900/12 bg-white/80 px-4 py-3 text-[13px] font-medium text-ink-600 backdrop-blur-sm"
+              className="glow-edge flex items-start gap-2 rounded-sm border border-ink-900/12 bg-white/80 px-4 py-3 text-[13px] font-medium text-ink-600 backdrop-blur-sm transition-colors hover:border-accent-500/40"
             >
-              <span className="mt-1.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent-500" />
+              <span className="mt-1.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent-500 shadow-[0_0_8px_rgba(88,192,56,0.6)]" />
               {item}
             </div>
           ))}

@@ -225,7 +225,120 @@
   }
 }
 
-/* Living details */
+/* Living details: glowing frames and animated accents */
+
+@keyframes kbs-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes kbs-glow-pulse {
+  0%, 100% {
+    opacity: 0.55;
+    box-shadow:
+      0 0 0 1px rgba(88, 192, 56, 0.35),
+      0 0 22px rgba(88, 192, 56, 0.28),
+      0 0 60px rgba(88, 192, 56, 0.18);
+  }
+  50% {
+    opacity: 1;
+    box-shadow:
+      0 0 0 1px rgba(88, 192, 56, 0.6),
+      0 0 36px rgba(88, 192, 56, 0.45),
+      0 0 90px rgba(88, 192, 56, 0.28);
+  }
+}
+@keyframes kbs-border-dash {
+  to { background-position: 400% 0; }
+}
+
+/* Primary pulsing glow around the dark CTA */
+.glow-cta {
+  position: relative;
+  isolation: isolate;
+}
+.glow-cta::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: radial-gradient(60% 120% at 50% 0%, rgba(88, 192, 56, 0.45), transparent 70%);
+  z-index: -1;
+  animation: kbs-glow-pulse 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Rotating conic ring, used as a glowing frame */
+.glow-ring {
+  position: relative;
+  isolation: isolate;
+}
+.glow-ring::before {
+  content: "";
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(88, 192, 56, 0) 0deg,
+    rgba(88, 192, 56, 0) 200deg,
+    rgba(88, 192, 56, 0.85) 275deg,
+    rgba(255, 255, 255, 1) 310deg,
+    rgba(88, 192, 56, 0.85) 345deg,
+    rgba(88, 192, 56, 0) 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: kbs-spin 7s linear infinite;
+  pointer-events: none;
+}
+.glow-ring::after {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: inherit;
+  background: radial-gradient(40% 50% at 50% 50%, rgba(88, 192, 56, 0.28), transparent 70%);
+  z-index: -1;
+  filter: blur(14px);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Animated gradient border that travels along the edge */
+.glow-edge {
+  position: relative;
+}
+.glow-edge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    rgba(88, 192, 56, 0) 0%,
+    rgba(88, 192, 56, 0.65) 25%,
+    rgba(255, 255, 255, 0.9) 45%,
+    rgba(88, 192, 56, 0.65) 65%,
+    rgba(88, 192, 56, 0) 100%
+  );
+  background-size: 400% 100%;
+  background-position: 100% 0;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: kbs-border-dash 6s linear infinite;
+  pointer-events: none;
+}
+.glow-edge:hover::before,
+.glow-edge:focus-within::before {
+  opacity: 1;
+}
+
 @keyframes kbs-float {
   0%, 100% { transform: translate3d(0, 0, 0); }
   50% { transform: translate3d(0, -6px, 0); }
@@ -276,29 +389,95 @@
 }
 
 /* Hover lift that most cards opt into without touching their JSX */
-.card-lift { transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
+.card-lift {
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.card-lift::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    rgba(88, 192, 56, 0) 0%,
+    rgba(88, 192, 56, 0.7) 40%,
+    rgba(255, 255, 255, 0.95) 50%,
+    rgba(88, 192, 56, 0.7) 60%,
+    rgba(88, 192, 56, 0) 100%
+  );
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: kbs-border-dash 6s linear infinite;
+  pointer-events: none;
+}
 .card-lift:hover {
   transform: translateY(-3px);
-  border-color: rgba(88, 192, 56, 0.35);
+  border-color: rgba(88, 192, 56, 0.45);
   box-shadow:
     0 1px 2px rgba(20, 25, 35, 0.04),
     0 36px 90px -32px rgba(20, 25, 35, 0.28),
-    0 0 0 1px rgba(88, 192, 56, 0.08);
+    0 0 0 1px rgba(88, 192, 56, 0.1),
+    0 0 40px rgba(88, 192, 56, 0.18);
 }
-.card { transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
+.card-lift:hover::after { opacity: 1; }
+
+.card {
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    rgba(88, 192, 56, 0) 0%,
+    rgba(88, 192, 56, 0.55) 45%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(88, 192, 56, 0.55) 55%,
+    rgba(88, 192, 56, 0) 100%
+  );
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: kbs-border-dash 7s linear infinite;
+  pointer-events: none;
+}
 .card:hover {
   transform: translateY(-2px);
-  border-color: rgba(14, 18, 26, 0.14);
+  border-color: rgba(88, 192, 56, 0.3);
   box-shadow:
     0 1px 2px rgba(20, 25, 35, 0.04),
-    0 28px 70px -30px rgba(20, 25, 35, 0.22);
+    0 28px 70px -30px rgba(20, 25, 35, 0.22),
+    0 0 30px rgba(88, 192, 56, 0.12);
 }
+.card:hover::after { opacity: 0.9; }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
   .animate-aurora,
   .animate-marquee,
-  .pulse-dot::after { animation: none !important; }
+  .pulse-dot::after,
+  .glow-ring::before,
+  .glow-cta::after,
+  .glow-edge::before,
+  .card-lift::after,
+  .card::after { animation: none !important; }
 }
 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
