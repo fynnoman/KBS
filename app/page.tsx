@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import InlineCTA from "@/components/InlineCTA";
 import BusinessHero from "@/components/business/BusinessHero";
+import BausteineMarquee from "@/components/business/BausteineMarquee";
 import BusinessProcess from "@/components/business/BusinessProcess";
 import BusinessReferences from "@/components/business/BusinessReferences";
 import BusinessFAQ from "@/components/business/BusinessFAQ";
@@ -67,6 +68,7 @@ export default function Home() {
       />
       <Navigation />
       <BusinessHero />
+      <BausteineMarquee />
       <FoerderungBadge />
       <BusinessCTA />
       <InlineCTA

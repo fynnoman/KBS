@@ -12,8 +12,15 @@ export default function BusinessHero() {
   return (
     <section className="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28">
       <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
-        <div className="absolute -left-40 top-10 h-[520px] w-[520px] rounded-full bg-accent-100 opacity-30 blur-3xl" />
-        <div className="absolute -right-40 top-40 h-[560px] w-[560px] rounded-full bg-ink-100 opacity-60 blur-3xl" />
+        <div className="animate-aurora absolute -left-40 top-10 h-[520px] w-[520px] rounded-full bg-accent-100 opacity-40 blur-3xl" />
+        <div
+          className="animate-aurora absolute -right-40 top-40 h-[560px] w-[560px] rounded-full bg-ink-100 opacity-60 blur-3xl"
+          style={{ animationDelay: "-6s", animationDuration: "22s" }}
+        />
+        <div
+          className="animate-aurora absolute left-1/3 top-72 h-[380px] w-[380px] rounded-full bg-accent-200 opacity-25 blur-3xl"
+          style={{ animationDelay: "-12s", animationDuration: "26s" }}
+        />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
@@ -23,7 +30,7 @@ export default function BusinessHero() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="mb-7 inline-flex items-center gap-3 rounded-sm border border-ink-900/15 bg-white/85 px-3 py-1.5 text-[10.5px] font-medium uppercase tracking-[0.22em] text-ink-600 backdrop-blur"
         >
-          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-accent-500" />
+          <span className="pulse-dot" aria-hidden />
           <span className="text-ink-900">KBS Business</span>
           <span aria-hidden className="h-3 w-px bg-ink-900/25" />
           <span>Für mittelständische Unternehmen und Konzerne</span>
@@ -81,8 +88,15 @@ export default function BusinessHero() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="relative lg:mt-4"
           >
-            {/* Hero image */}
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md border border-ink-900/15 bg-ink-100 shadow-lift sm:aspect-[5/4] lg:aspect-[4/5]">
+            {/* Soft accent glow behind the frame */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-accent-100/50 via-transparent to-ink-100/40 opacity-70 blur-2xl"
+            />
+            {/* Hero image, gently floating */}
+            <div
+              className={`relative aspect-[4/3] w-full overflow-hidden rounded-md border border-ink-900/15 bg-ink-100 shadow-lift sm:aspect-[5/4] lg:aspect-[4/5] ${reduce ? "" : "animate-float"}`}
+            >
               <KIStamp />
               <Image
                 src="/business-office.png"
