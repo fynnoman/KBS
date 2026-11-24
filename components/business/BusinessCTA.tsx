@@ -1,9 +1,9 @@
 "use client";
 
-import { CalendarClock, Phone, Mail, ExternalLink } from "lucide-react";
-import { CALENDLY_URL, PHONE_DISPLAY, PHONE_TEL, EMAIL } from "@/lib/config";
+import { CalendarClock, Phone, Mail, ArrowDown } from "lucide-react";
+import { PHONE_DISPLAY, PHONE_TEL, EMAIL } from "@/lib/config";
 import Reveal from "../Reveal";
-import CalendlyEmbed from "../CalendlyEmbed";
+import ContactForm from "./ContactForm";
 
 export default function BusinessCTA() {
   return (
@@ -27,15 +27,10 @@ export default function BusinessCTA() {
               </p>
 
               <div className="mt-8">
-                <a
-                  href={CALENDLY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
+                <a href="#kontaktformular" className="btn-primary">
                   <CalendarClock size={16} strokeWidth={2.4} />
-                  Termin in neuem Tab öffnen
-                  <ExternalLink size={13} strokeWidth={2.2} />
+                  Kennenlerngespräch anfragen
+                  <ArrowDown size={13} strokeWidth={2.2} />
                 </a>
               </div>
 
@@ -89,8 +84,8 @@ export default function BusinessCTA() {
             </div>
           </Reveal>
 
-          <div className="card-lift overflow-hidden p-3 sm:p-4">
-            <CalendlyEmbed height={680} />
+          <div id="kontaktformular" className="scroll-mt-28">
+            <ContactForm />
           </div>
         </div>
       </div>

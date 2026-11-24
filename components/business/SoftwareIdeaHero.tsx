@@ -4,88 +4,11 @@ import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
-  CalendarClock,
   CheckCircle2,
   Loader2,
   Send,
   Sparkles
 } from "lucide-react";
-import { CALENDLY_URL } from "@/lib/config";
-
-const CALENDLY_JS = "https://assets.calendly.com/assets/external/widget.js";
-const CALENDLY_CSS = "https://assets.calendly.com/assets/external/widget.css";
-
-type CalendlyWithPopup = NonNullable<Window["Calendly"]> & {
-  initPopupWidget: (opts: {
-    url: string;
-    prefill?: Record<string, unknown>;
-    utm?: Record<string, unknown>;
-  }) => void;
-};
-
-function ensureCalendlyAssets(): Promise<void> {
-  return new Promise((resolve, reject) => {
-    if (typeof window === "undefined") {
-      reject(new Error("not in browser"));
-      return;
-    }
-
-    if (!document.querySelector(`link[href="${CALENDLY_CSS}"]`)) {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = CALENDLY_CSS;
-      document.head.appendChild(link);
-    }
-
-    if (window.Calendly) {
-      resolve();
-      return;
-    }
-    const existing = document.querySelector<HTMLScriptElement>(
-      `script[src="${CALENDLY_JS}"]`
-    );
-    if (existing) {
-      if (existing.dataset.loaded === "true") {
-        resolve();
-      } else {
-        existing.addEventListener("load", () => resolve(), { once: true });
-        existing.addEventListener(
-          "error",
-          () => reject(new Error("Calendly script failed to load")),
-          { once: true }
-        );
-      }
-      return;
-    }
-    const s = document.createElement("script");
-    s.src = CALENDLY_JS;
-    s.async = true;
-    s.onload = () => {
-      s.dataset.loaded = "true";
-      resolve();
-    };
-    s.onerror = () => reject(new Error("Calendly script failed to load"));
-    document.head.appendChild(s);
-  });
-}
-
-function openCalendlyPopup(prefill: { name?: string; email?: string }) {
-  ensureCalendlyAssets()
-    .then(() => {
-      const cal = window.Calendly as CalendlyWithPopup | undefined;
-      if (cal?.initPopupWidget) {
-        cal.initPopupWidget({
-          url: CALENDLY_URL,
-          prefill
-        });
-      } else {
-        window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
-      }
-    })
-    .catch(() => {
-      window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
-    });
-}
 
 type SubmitState = "idle" | "sending" | "sent" | "error";
 
@@ -132,19 +55,12 @@ export default function SoftwareIdeaHero() {
       }
 
       setState("sent");
-      setTimeout(() => {
-        openCalendlyPopup({ name: name.trim(), email: email.trim() });
-      }, 900);
     } catch {
       setState("error");
       setErrorMessage(
         "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
       );
     }
-  }
-
-  function openCalendlyAgain() {
-    openCalendlyPopup({ name: name.trim(), email: email.trim() });
   }
 
   function resetForm() {
@@ -208,9 +124,9 @@ export default function SoftwareIdeaHero() {
               className="mt-8 space-y-2.5"
             >
               {[
-                "Kein Standardformular – Sie schildern die Situation in Ihren Worten",
+                "Kein Standardformular, Sie schildern die Situation in Ihren Worten",
                 "Antwort direkt vom KBS-Team, keine Warteschleife",
-                "Im Anschluss optional: 30-minütiger Videocall zur Vertiefung"
+                "Im Anschluss optional ein Videocall zur Vertiefung, abgestimmt per E-Mail oder Telefon"
               ].map((item) => (
                 <li
                   key={item}
@@ -340,21 +256,11 @@ export default function SoftwareIdeaHero() {
                     Danke für Ihre Anfrage.
                   </h2>
                   <p className="mt-3 text-[15.5px] leading-relaxed text-ink-500">
-                    Wir werden Ihnen umgehend präzise antworten.
+                    Wir werden Ihnen umgehend präzise antworten. Falls ein
+                    Videocall sinnvoll ist, stimmen wir den Termin direkt per
+                    E-Mail oder Telefon ab.
                   </p>
-                  <p className="mt-6 text-[14px] leading-relaxed text-ink-600">
-                    Direkt einen Videocall dazu buchen? Der Kalender öffnet
-                    sich automatisch.
-                  </p>
-                  <div className="mt-5 flex flex-wrap justify-center gap-3">
-                    <button
-                      type="button"
-                      onClick={openCalendlyAgain}
-                      className="btn-primary"
-                    >
-                      <CalendarClock size={15} strokeWidth={2.2} />
-                      Termin buchen
-                    </button>
+                  <div className="mt-6 flex flex-wrap justify-center gap-3">
                     <button
                       type="button"
                       onClick={resetForm}

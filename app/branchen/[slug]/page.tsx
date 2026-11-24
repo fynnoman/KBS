@@ -5,7 +5,6 @@ import {
   Phone,
   Check,
   ArrowUpRight,
-  Calendar,
   Sparkles,
   ShieldAlert,
   ListChecks,
@@ -21,12 +20,7 @@ import { INDUSTRIES, findIndustry } from "@/lib/data/industries";
 import { COURSES } from "@/lib/data/courses";
 import { CITIES } from "@/lib/data/cities";
 import { isIndexable, noindexRobots } from "@/lib/data/indexable";
-import {
-  SITE_URL,
-  CALENDLY_URL,
-  PHONE_TEL,
-  PHONE_DISPLAY
-} from "@/lib/config";
+import { SITE_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/config";
 
 export async function generateStaticParams() {
   return INDUSTRIES.map((i) => ({ slug: i.slug }));
@@ -163,15 +157,10 @@ export default async function IndustryPage({
               {ind.intro}
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                <Calendar size={16} strokeWidth={2.4} />
-                Erstgespräch buchen
-              </a>
+              <Link href="/kontakt" className="btn-primary">
+                Kontakt aufnehmen
+                <ArrowUpRight size={15} strokeWidth={2.2} />
+              </Link>
               <Link href={`tel:${PHONE_TEL}`} className="btn-ghost">
                 <Phone size={16} strokeWidth={2.2} />
                 {PHONE_DISPLAY}
@@ -487,15 +476,10 @@ export default async function IndustryPage({
               realistisch sind, und wo Sie zuerst anfangen sollten.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                <Calendar size={16} strokeWidth={2.4} />
-                Termin buchen
-              </a>
+              <Link href="/kontakt" className="btn-primary">
+                Kontakt aufnehmen
+                <ArrowUpRight size={15} strokeWidth={2.2} />
+              </Link>
               <Link href={`tel:${PHONE_TEL}`} className="btn-ghost">
                 <Phone size={16} strokeWidth={2.2} />
                 {PHONE_DISPLAY}

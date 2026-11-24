@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, Phone, Calendar } from "lucide-react";
+import { ArrowUpRight, Phone } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -8,7 +8,7 @@ import Reveal from "@/components/Reveal";
 import FoerderungHinweis from "@/components/business/FoerderungHinweis";
 import FoerderungBadge from "@/components/business/FoerderungBadge";
 import { INDUSTRIES } from "@/lib/data/industries";
-import { SITE_URL, CALENDLY_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/config";
+import { SITE_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/config";
 
 const PAGE_URL = `${SITE_URL}/branchen`;
 const DESCRIPTION =
@@ -113,15 +113,10 @@ export default function BranchenPage() {
               genau dieser Branche wichtig sind. Kein generisches KI-Marketing.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                <Calendar size={16} strokeWidth={2.4} />
-                Erstgespräch buchen
-              </a>
+              <Link href="/kontakt" className="btn-primary">
+                Kontakt aufnehmen
+                <ArrowUpRight size={15} strokeWidth={2.2} />
+              </Link>
               <Link href={`tel:${PHONE_TEL}`} className="btn-ghost">
                 <Phone size={16} strokeWidth={2.2} />
                 {PHONE_DISPLAY}

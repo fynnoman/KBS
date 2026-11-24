@@ -10,7 +10,7 @@ import BusinessFAQ from "@/components/business/BusinessFAQ";
 import BusinessCTA from "@/components/business/BusinessCTA";
 import FoerderungHinweis from "@/components/business/FoerderungHinweis";
 import FoerderungBadge from "@/components/business/FoerderungBadge";
-import { SITE_URL, CALENDLY_URL } from "@/lib/config";
+import { SITE_URL } from "@/lib/config";
 
 const DESCRIPTION =
   "KBS bringt KI in mittelständische Unternehmen und Konzerne, lokale KI auf Mac Mini und dedizierten Servern, Custom RAG-Assistenten, Prozess-Automation, Enterprise-Rollout, DSGVO- und EU-AI-Act-konform.";
@@ -76,9 +76,8 @@ export default function Home() {
         title="Lokale KI, Custom-Assistenten und Prozess-Automation. Klare Bausteine für Ihre Systemlandschaft."
         primaryLabel="Softwarelösungen ansehen"
         primaryHref="/softwareloesungen"
-        secondaryLabel="Termin buchen"
-        secondaryHref={CALENDLY_URL}
-        secondaryExternal
+        secondaryLabel="Kontakt aufnehmen"
+        secondaryHref="/kontakt"
       />
       <BusinessProcess />
       <FoerderungHinweis />
@@ -87,9 +86,8 @@ export default function Home() {
         title="Von Prompt Engineering bis EU AI Act. Live-Schulungen für Ihr Team, inhouse oder offen."
         primaryLabel="Kurse ansehen"
         primaryHref="/kurse"
-        secondaryLabel="Termin buchen"
-        secondaryHref={CALENDLY_URL}
-        secondaryExternal
+        secondaryLabel="Kontakt aufnehmen"
+        secondaryHref="/kontakt"
       />
       <BusinessReferences />
       <BusinessFAQ />

@@ -20,7 +20,7 @@ import {
   CATEGORY_INTRO,
   type CourseCategory
 } from "@/lib/data/courses";
-import { EMAIL, CALENDLY_URL } from "@/lib/config";
+import { EMAIL } from "@/lib/config";
 
 const CATEGORY_ORDER: CourseCategory[] = [
   "grundlagen",
@@ -277,15 +277,13 @@ export default function BusinessCurriculum() {
                 </p>
               </div>
             </div>
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/kontakt"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-[14px] font-medium text-ink-900 transition-all hover:-translate-y-0.5"
             >
               Schulungsplan besprechen
               <ArrowUpRight size={15} strokeWidth={2.2} />
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Calendar, Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, ArrowUpRight } from "lucide-react";
 import Logo from "./Logo";
-import { CALENDLY_URL } from "@/lib/config";
 
 const NAV = [
   { href: "/softwareloesungen", label: "Softwarelösungen" },
@@ -65,15 +64,13 @@ export default function Navigation() {
               ))}
             </ul>
 
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/kontakt"
               className="hidden items-center gap-2 rounded-md bg-white px-4 py-2.5 text-[13px] font-medium text-ink-900 shadow-soft transition-all hover:-translate-y-0.5 md:inline-flex"
             >
-              <Calendar size={14} strokeWidth={2.4} />
-              Termin buchen
-            </a>
+              Kontakt aufnehmen
+              <ArrowUpRight size={14} strokeWidth={2.4} />
+            </Link>
 
             <button
               type="button"
@@ -167,16 +164,14 @@ export default function Navigation() {
           </nav>
 
           <div className="border-t border-white/10 p-5">
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/kontakt"
               onClick={() => setOpen(false)}
               className="flex min-h-[52px] w-full items-center justify-center gap-2 rounded-md bg-white px-4 text-[15px] font-medium text-ink-900 shadow-soft transition-transform hover:-translate-y-0.5"
             >
-              <Calendar size={16} strokeWidth={2.4} />
-              Termin buchen
-            </a>
+              Kontakt aufnehmen
+              <ArrowUpRight size={16} strokeWidth={2.4} />
+            </Link>
             <p className="mt-3 text-center text-[11px] uppercase tracking-[0.22em] text-white/40">
               KBS · KI-Beratung Saar
             </p>

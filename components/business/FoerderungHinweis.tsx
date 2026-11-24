@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Landmark, FileText, CircleCheck, ArrowUpRight } from "lucide-react";
 import Reveal from "../Reveal";
-import { CALENDLY_URL } from "@/lib/config";
 
 const PROGRAMME = [
   {
@@ -95,15 +94,10 @@ export default function FoerderungHinweis() {
                 </ul>
 
                 <div className="mt-8 flex flex-wrap items-center gap-3">
-                  <a
-                    href={CALENDLY_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary"
-                  >
+                  <Link href="/kontakt" className="btn-primary">
                     Förderfähigkeit prüfen
                     <ArrowUpRight size={15} strokeWidth={2.2} />
-                  </a>
+                  </Link>
                   <Link href="/kontakt" className="btn-ghost">
                     <FileText size={15} strokeWidth={2.2} />
                     Unterlagen anfordern

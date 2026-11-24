@@ -21,12 +21,7 @@ import {
 } from "@/lib/data/modules";
 import { COURSES } from "@/lib/data/courses";
 import { isIndexable, noindexRobots } from "@/lib/data/indexable";
-import {
-  SITE_URL,
-  CALENDLY_URL,
-  PHONE_TEL,
-  PHONE_DISPLAY
-} from "@/lib/config";
+import { SITE_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/config";
 
 export async function generateStaticParams() {
   return MODULES.map((m) => ({ slug: m.slug }));
@@ -180,17 +175,8 @@ export default async function ModulePage({
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link href="/kontakt" className="btn-primary">
                 <Calendar size={16} strokeWidth={2.4} />
-                Kennenlerngespräch buchen
+                Kennenlerngespräch anfragen
               </Link>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
-                <ArrowUpRight size={16} strokeWidth={2.2} />
-                Termin online buchen
-              </a>
               <a href={`tel:${PHONE_TEL}`} className="btn-ghost">
                 <Phone size={16} strokeWidth={2.2} />
                 {PHONE_DISPLAY}
@@ -358,22 +344,17 @@ export default async function ModulePage({
               {mod.title} für Ihr Unternehmen einführen
             </h2>
             <p className="mt-4 text-[16px] leading-relaxed text-ink-500 sm:text-lg">
-              30 Minuten Videocall. Ehrliche Einschätzung von Machbarkeit,
-              Potenzial und ROI. Ohne Verkaufsdruck.
+              Ehrliche Einschätzung von Machbarkeit, Potenzial und ROI. Ohne
+              Verkaufsdruck. Terminabstimmung per E-Mail oder Telefon.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link href="/kontakt" className="btn-primary">
                 <Calendar size={16} strokeWidth={2.4} />
-                Kennenlerngespräch buchen
+                Kennenlerngespräch anfragen
               </Link>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
-                <ArrowUpRight size={16} strokeWidth={2.2} />
-                Termin online buchen
+              <a href={`tel:${PHONE_TEL}`} className="btn-ghost">
+                <Phone size={16} strokeWidth={2.2} />
+                {PHONE_DISPLAY}
               </a>
             </div>
           </Reveal>

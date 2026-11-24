@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
   Phone,
-  Calendar,
   ArrowUpRight,
   Sparkles,
   ShieldAlert,
@@ -20,12 +19,7 @@ import type { Department } from "@/lib/data/useCases";
 import { DEPARTMENTS } from "@/lib/data/useCases";
 import { COURSES } from "@/lib/data/courses";
 import { CITIES } from "@/lib/data/cities";
-import {
-  SITE_URL,
-  CALENDLY_URL,
-  PHONE_TEL,
-  PHONE_DISPLAY
-} from "@/lib/config";
+import { SITE_URL, PHONE_TEL, PHONE_DISPLAY } from "@/lib/config";
 
 function effortLabel(effort: string) {
   return effort.charAt(0).toUpperCase() + effort.slice(1);
@@ -177,17 +171,8 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link href="/kontakt" className="btn-primary">
                 <Gauge size={16} strokeWidth={2.4} />
-                Kennenlerngespräch buchen
+                Kennenlerngespräch anfragen
               </Link>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
-                <Calendar size={16} strokeWidth={2.2} />
-                Erstgespräch buchen
-              </a>
               <Link href={`tel:${PHONE_TEL}`} className="btn-ghost">
                 <Phone size={16} strokeWidth={2.2} />
                 {PHONE_DISPLAY}
@@ -503,17 +488,8 @@ export default function DepartmentPage({ dept }: { dept: Department }) {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link href="/kontakt" className="btn-primary">
                 <Gauge size={16} strokeWidth={2.4} />
-                Kennenlerngespräch buchen
+                Kennenlerngespräch anfragen
               </Link>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
-                <Calendar size={16} strokeWidth={2.2} />
-                Erstgespräch buchen
-              </a>
               <Link href={`tel:${PHONE_TEL}`} className="btn-ghost">
                 <Phone size={16} strokeWidth={2.2} />
                 {PHONE_DISPLAY}
